@@ -1,0 +1,15 @@
+{
+  "name": "ns8-api-interfaces",
+  "version": "1.0.0",
+  "description": "Interface objects and specs to support ns8 api consumption",
+  "repository": {
+    "type": "git",
+    "url": "git+https://github.com/ns8inc/ns8-api-interfaces.git"
+  },
+  "author": "ns8",
+  "license": "MIT",
+  "bugs": {
+    "url": "https://github.com/ns8inc/ns8-api-interfaces/issues"
+  },
+  "homepage": "https://github.com/ns8inc/ns8-api-interfaces#readme"
+}
