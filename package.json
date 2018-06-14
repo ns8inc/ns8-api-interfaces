@@ -12,5 +12,8 @@
   "bugs": {
     "url": "https://github.com/ns8inc/ns8-api-interfaces/issues"
   },
-  "homepage": "https://github.com/ns8inc/ns8-api-interfaces#readme"
+  "homepage": "https://github.com/ns8inc/ns8-api-interfaces#readme",
+  "keywords": [
+    "ns8", "api", "types", "specs", "interface", "clients"
+  ]
 }
