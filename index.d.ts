@@ -14,7 +14,7 @@ declare module "ns8-api-interfaces" {
         /**
          * The API version for the namespace.
          */
-        export const VERSION = "2.0.0";
+        export const VERSION = "2.0";
         
         /*
           Represents an access token's data.
@@ -881,137 +881,590 @@ declare module "ns8-api-interfaces" {
      * Declarations for: Analytics API
      * Query interface and application data maintenance
     */
+    export namespace Analytics {
+        
+        /**
+         * The API version for the namespace.
+         */
+        export const VERSION = "2.0";
+        
+        export interface QueryResult {
+            "columns"?: Array<any>,
+            "rows"?: Array<any>,
+        }
+        
+        export interface QueryResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+            "data"?: QueryResult,
+        }
+        
+        export interface APIResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
+        
+        export interface APIError {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
+        
+        export interface DuplicateError {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
+        
+        export interface Entity {
+            "name"?: string,
+            "description"?: string,
+            "attributes"?: Attribute,
+        }
+        
+        export interface Attribute {
+            "name"?: string,
+            "title"?: string,
+            "description"?: string,
+            "dataType"?: string,
+            "isElement"?: boolean,
+            "isMetric"?: boolean,
+        }
+        
+        export interface SegmentCreateParams {
+            "accessToken"?: string,
+            "name"?: string,
+            "query"?: any,
+            "appliesTo"?: string,
+            "projectIds"?: Array<number>,
+        }
+        
+        export interface CampaignIdsUpdateParams {
+            "accessToken"?: string,
+            "projectId"?: number,
+            "campaignIds"?: Array<CampaignReferrers>,
+        }
+        
+        export interface CampaignReferrers {
+            
+            /**
+             * A referrer to assign a campaign to
+            */
+            "referrer"?: string,
+            
+            /**
+             * A campaign name
+            */
+            "campaign"?: string,
+        }
+        
+        export interface CampaignReferrersUpdateParams {
+            "accessToken"?: string,
+            "projectId"?: number,
+            "campaignReferrers"?: Array<string>,
+        }
+        
+        export interface Dashboard {
+            
+            /**
+             * The dashboard name
+            */
+            "name"?: string,
+            
+            /**
+             * The date the dashboard was created
+             * format {date}
+            */
+            "createdDate"?: string,
+            
+            /**
+             * The dashboard definition parameters
+            */
+            "params"?: any,
+        }
+        
+        export interface DashboardsUpdateParams {
+            "accessToken"?: string,
+            "projectId"?: number,
+            "dashboards"?: Array<Dashboard>,
+        }
+        
+        export interface QueryParams {
+            
+            /**
+             * The access token for the request
+            */
+            "accessToken"?: string,
+            
+            /**
+             * The query.  See the main site for help on query syntax.
+            */
+            "query": any,
+        }
+    }
     
     /**
-     * The API version for the namespace.
-     */
-    export const VERSION = "2.0.0";
-    
-    export interface QueryResult {
-        "columns"?: Array<any>,
-        "rows"?: Array<any>,
-    }
-    
-    export interface QueryResponse {
+     * Declarations for: NS8 Data Services
+     * Query interface for realtime user scoring and profiling
+    */
+    export namespace DataServices {
         
         /**
-         * format {int32}
-        */
-        "code"?: number,
-        "message"?: string,
-        "data"?: QueryResult,
+         * The API version for the namespace.
+         */
+        export const VERSION = "2.0";
+        
+        export interface APIResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
+        
+        export interface APIError {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
     }
     
-    export interface APIResponse {
+    /**
+     * Declarations for: Monitoring API
+     * Monitoring API
+    */
+    export namespace Monitoring {
         
         /**
-         * format {int32}
-        */
-        "code"?: number,
-        "message"?: string,
+         * The API version for the namespace.
+         */
+        export const VERSION = "2.0";
+        
+        export interface AccessTokenCreateParams {
+            
+            /**
+             * The access token from the owner of the account.  This can be generated from the /login call.
+            */
+            "accessToken": string,
+            
+            /**
+             * The permissions to grant.
+            */
+            "permissions": Array<string>,
+        }
+        
+        export interface APIResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
+        
+        export interface Login {
+            "accessToken"?: string,
+            "expiration"?: string,
+            "user"?: User,
+        }
+        
+        export interface APIError {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
+        
+        export interface DuplicateError {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
+        
+        export interface Station {
+            "url"?: string,
+            "description"?: string,
+            "country"?: string,
+            "longitude"?: string,
+            "latitude"?: string,
+        }
+        
+        export interface AuthorizeParams {
+            "accessToken"?: string,
+        }
+        
+        export interface LoginParams {
+            
+            /**
+             * format {email}
+            */
+            "name": string,
+            
+            /**
+             * format {password}
+            */
+            "password": string,
+            
+            /**
+             * Monitoring uses appId of 6
+             * format {int32}
+            */
+            "appId"?: number,
+            
+            /**
+             * The UTC date of when the token should expire
+            */
+            "expiration"?: string,
+        }
+        
+        export interface UserParams {
+            
+            /**
+             * The application id.  Use 6 for monitoring.
+            */
+            "appId": number,
+            
+            /**
+             * format {email}
+            */
+            "name": string,
+            "password": string,
+            
+            /**
+             * 0 = enabled
+            */
+            "status"?: number,
+        }
+        
+        export interface User {
+            
+            /**
+             * format {int32}
+            */
+            "id"?: number,
+            "name"?: string,
+            "status"?: number,
+            "account"?: any,
+        }
+        
+        export interface Authorization {
+            "expiration"?: string,
+            "user"?: User,
+        }
+        
+        export interface ContactCreateParams {
+            
+            /**
+             * The access token for the request.  The access token must have the 'manage' permission.
+            */
+            "accessToken"?: string,
+            
+            /**
+             * The contact's name.
+            */
+            "name": string,
+            "type": string,
+            
+            /**
+             * The email address of SMS number of the contact, depending on the type selected.
+            */
+            "endpoint": string,
+        }
     }
     
-    export interface APIError {
+    /**
+     * Declarations for: Partner API
+     * Partner API
+    */
+    export namespace Partner {
         
         /**
-         * format {int32}
-        */
-        "code"?: number,
-        "message"?: string,
-    }
-    
-    export interface DuplicateError {
+         * The API version for the namespace.
+         */
+        export const VERSION = "2.0";
         
-        /**
-         * format {int32}
-        */
-        "code"?: number,
-        "message"?: string,
-    }
-    
-    export interface Entity {
-        "name"?: string,
-        "description"?: string,
-        "attributes"?: Attribute,
-    }
-    
-    export interface Attribute {
-        "name"?: string,
-        "title"?: string,
-        "description"?: string,
-        "dataType"?: string,
-        "isElement"?: boolean,
-        "isMetric"?: boolean,
-    }
-    
-    export interface SegmentCreateParams {
-        "accessToken"?: string,
-        "name"?: string,
-        "query"?: any,
-        "appliesTo"?: string,
-        "projectIds"?: Array<number>,
-    }
-    
-    export interface CampaignIdsUpdateParams {
-        "accessToken"?: string,
-        "projectId"?: number,
-        "campaignIds"?: Array<CampaignReferrers>,
-    }
-    
-    export interface CampaignReferrers {
+        export interface ProfileResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+            
+            /**
+             * The partner profile
+            */
+            "data"?: any,
+        }
         
-        /**
-         * A referrer to assign a campaign to
-        */
-        "referrer"?: string,
+        export interface PayeeResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+            
+            /**
+             * The partner's payee
+            */
+            "data"?: any,
+        }
         
-        /**
-         * A campaign name
-        */
-        "campaign"?: string,
-    }
-    
-    export interface CampaignReferrersUpdateParams {
-        "accessToken"?: string,
-        "projectId"?: number,
-        "campaignReferrers"?: Array<string>,
-    }
-    
-    export interface Dashboard {
+        export interface ShowcaseResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+            
+            /**
+             * The partner showcase
+            */
+            "data"?: any,
+        }
         
-        /**
-         * The dashboard name
-        */
-        "name"?: string,
+        export interface ShowcasePostResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+            
+            /**
+             * The showcase id
+            */
+            "data"?: any,
+        }
         
-        /**
-         * The date the dashboard was created
-         * format {date}
-        */
-        "createdDate"?: string,
+        export interface TestimonialResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+            
+            /**
+             * The partner testimonial
+            */
+            "data"?: any,
+        }
         
-        /**
-         * The dashboard definition parameters
-        */
-        "params"?: any,
-    }
-    
-    export interface DashboardsUpdateParams {
-        "accessToken"?: string,
-        "projectId"?: number,
-        "dashboards"?: Array<Dashboard>,
-    }
-    
-    export interface QueryParams {
+        export interface TestimonialsResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+            "data"?: Testimonials,
+        }
         
-        /**
-         * The access token for the request
-        */
-        "accessToken"?: string,
+        export interface ShowcasesResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+            "data"?: Showcases,
+        }
         
-        /**
-         * The query.  See the main site for help on query syntax.
-        */
-        "query": any,
+        export interface Testimonials {
+            "testimonials"?: Array<any>,
+        }
+        
+        export interface ProfilesResponse {
+            
+            /**
+             * The page number of the results.
+            */
+            "currentPage"?: number,
+            
+            /**
+             * Whether there is a next page of results.
+            */
+            "next"?: boolean,
+            
+            /**
+             * An array of partner profiles.
+            */
+            "profiles"?: Array<any>,
+        }
+        
+        export interface Showcases {
+            "showcases"?: Array<any>,
+        }
+        
+        export interface TestimonialPostResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+            
+            /**
+             * The testimonial id
+            */
+            "data"?: any,
+        }
+        
+        export interface APIResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
+        
+        export interface APIError {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
+        
+        export interface DuplicateError {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
+        
+        export interface ProfilePutParams {
+            
+            /**
+             * The access token for the request
+            */
+            "accessToken"?: string,
+            
+            /**
+             * The partner profile.
+            */
+            "profile": any,
+        }
+        
+        export interface ShowcasePutParams {
+            
+            /**
+             * The access token for the request
+            */
+            "accessToken"?: string,
+            
+            /**
+             * The partner showcase.
+            */
+            "showcase": any,
+        }
+        
+        export interface ShowcasePatchParams {
+            
+            /**
+             * The access token for the request
+            */
+            "accessToken"?: string,
+            
+            /**
+             * The partner showcase.
+            */
+            "showcase": any,
+        }
+        
+        export interface ShowcasePostParams {
+            
+            /**
+             * The access token for the request
+            */
+            "accessToken"?: string,
+            
+            /**
+             * The partner showcase.
+            */
+            "showcase": any,
+        }
+        
+        export interface TestimonialPutParams {
+            
+            /**
+             * The access token for the request
+            */
+            "accessToken"?: string,
+            
+            /**
+             * The partner testimonial.
+            */
+            "testimonial": any,
+        }
+        
+        export interface TestimonialPatchParams {
+            
+            /**
+             * The access token for the request
+            */
+            "accessToken"?: string,
+            
+            /**
+             * The partner testimonial.
+            */
+            "testimonial": any,
+        }
+        
+        export interface TestimonialPostParams {
+            
+            /**
+             * The access token for the request
+            */
+            "accessToken"?: string,
+            
+            /**
+             * The partner testimonial.
+            */
+            "testimonial": any,
+        }
+        
+        export interface PayeePutParams {
+            
+            /**
+             * The access token for the request
+            */
+            "accessToken"?: string,
+            
+            /**
+             * The partner payee.
+            */
+            "payee": any,
+        }
     }
 }
