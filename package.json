@@ -1,6 +1,6 @@
 {
   "name": "ns8-api-interfaces",
-  "version": "1.0.0",
+  "version": "1.0.1",
   "types": "index.d.ts",
   "description": "Interface objects and specs to support ns8 api consumption",
   "repository": {
