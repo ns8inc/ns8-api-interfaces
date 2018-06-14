@@ -881,138 +881,140 @@ declare module "ns8-api-interfaces" {
      * Declarations for: Analytics API
      * Query interface and application data maintenance
     */
-    
-    /**
-     * The API version for the namespace.
-     */
-    export const VERSION = "2.0";
-    
-    export interface QueryResult {
-        "columns"?: Array<any>,
-        "rows"?: Array<any>,
-    }
-    
-    export interface QueryResponse {
+    export namespace Analytics {
         
         /**
-         * format {int32}
-        */
-        "code"?: number,
-        "message"?: string,
-        "data"?: QueryResult,
-    }
-    
-    export interface APIResponse {
+         * The API version for the namespace.
+         */
+        export const VERSION = "2.0";
         
-        /**
-         * format {int32}
-        */
-        "code"?: number,
-        "message"?: string,
-    }
-    
-    export interface APIError {
+        export interface QueryResult {
+            "columns"?: Array<any>,
+            "rows"?: Array<any>,
+        }
         
-        /**
-         * format {int32}
-        */
-        "code"?: number,
-        "message"?: string,
-    }
-    
-    export interface DuplicateError {
+        export interface QueryResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+            "data"?: QueryResult,
+        }
         
-        /**
-         * format {int32}
-        */
-        "code"?: number,
-        "message"?: string,
-    }
-    
-    export interface Entity {
-        "name"?: string,
-        "description"?: string,
-        "attributes"?: Attribute,
-    }
-    
-    export interface Attribute {
-        "name"?: string,
-        "title"?: string,
-        "description"?: string,
-        "dataType"?: string,
-        "isElement"?: boolean,
-        "isMetric"?: boolean,
-    }
-    
-    export interface SegmentCreateParams {
-        "accessToken"?: string,
-        "name"?: string,
-        "query"?: any,
-        "appliesTo"?: string,
-        "projectIds"?: Array<number>,
-    }
-    
-    export interface CampaignIdsUpdateParams {
-        "accessToken"?: string,
-        "projectId"?: number,
-        "campaignIds"?: Array<CampaignReferrers>,
-    }
-    
-    export interface CampaignReferrers {
+        export interface APIResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
         
-        /**
-         * A referrer to assign a campaign to
-        */
-        "referrer"?: string,
+        export interface APIError {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
         
-        /**
-         * A campaign name
-        */
-        "campaign"?: string,
-    }
-    
-    export interface CampaignReferrersUpdateParams {
-        "accessToken"?: string,
-        "projectId"?: number,
-        "campaignReferrers"?: Array<string>,
-    }
-    
-    export interface Dashboard {
+        export interface DuplicateError {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
         
-        /**
-         * The dashboard name
-        */
-        "name"?: string,
+        export interface Entity {
+            "name"?: string,
+            "description"?: string,
+            "attributes"?: Attribute,
+        }
         
-        /**
-         * The date the dashboard was created
-         * format {date}
-        */
-        "createdDate"?: string,
+        export interface Attribute {
+            "name"?: string,
+            "title"?: string,
+            "description"?: string,
+            "dataType"?: string,
+            "isElement"?: boolean,
+            "isMetric"?: boolean,
+        }
         
-        /**
-         * The dashboard definition parameters
-        */
-        "params"?: any,
-    }
-    
-    export interface DashboardsUpdateParams {
-        "accessToken"?: string,
-        "projectId"?: number,
-        "dashboards"?: Array<Dashboard>,
-    }
-    
-    export interface QueryParams {
+        export interface SegmentCreateParams {
+            "accessToken"?: string,
+            "name"?: string,
+            "query"?: any,
+            "appliesTo"?: string,
+            "projectIds"?: Array<number>,
+        }
         
-        /**
-         * The access token for the request
-        */
-        "accessToken"?: string,
+        export interface CampaignIdsUpdateParams {
+            "accessToken"?: string,
+            "projectId"?: number,
+            "campaignIds"?: Array<CampaignReferrers>,
+        }
         
-        /**
-         * The query.  See the main site for help on query syntax.
-        */
-        "query": any,
+        export interface CampaignReferrers {
+            
+            /**
+             * A referrer to assign a campaign to
+            */
+            "referrer"?: string,
+            
+            /**
+             * A campaign name
+            */
+            "campaign"?: string,
+        }
+        
+        export interface CampaignReferrersUpdateParams {
+            "accessToken"?: string,
+            "projectId"?: number,
+            "campaignReferrers"?: Array<string>,
+        }
+        
+        export interface Dashboard {
+            
+            /**
+             * The dashboard name
+            */
+            "name"?: string,
+            
+            /**
+             * The date the dashboard was created
+             * format {date}
+            */
+            "createdDate"?: string,
+            
+            /**
+             * The dashboard definition parameters
+            */
+            "params"?: any,
+        }
+        
+        export interface DashboardsUpdateParams {
+            "accessToken"?: string,
+            "projectId"?: number,
+            "dashboards"?: Array<Dashboard>,
+        }
+        
+        export interface QueryParams {
+            
+            /**
+             * The access token for the request
+            */
+            "accessToken"?: string,
+            
+            /**
+             * The query.  See the main site for help on query syntax.
+            */
+            "query": any,
+        }
     }
     
     /**
@@ -1049,146 +1051,148 @@ declare module "ns8-api-interfaces" {
      * Declarations for: Monitoring API
      * Monitoring API
     */
-    
-    /**
-     * The API version for the namespace.
-     */
-    export const VERSION = "2.0";
-    
-    export interface AccessTokenCreateParams {
+    export namespace Monitoring {
         
         /**
-         * The access token from the owner of the account.  This can be generated from the /login call.
-        */
-        "accessToken": string,
+         * The API version for the namespace.
+         */
+        export const VERSION = "2.0";
         
-        /**
-         * The permissions to grant.
-        */
-        "permissions": Array<string>,
-    }
-    
-    export interface APIResponse {
+        export interface AccessTokenCreateParams {
+            
+            /**
+             * The access token from the owner of the account.  This can be generated from the /login call.
+            */
+            "accessToken": string,
+            
+            /**
+             * The permissions to grant.
+            */
+            "permissions": Array<string>,
+        }
         
-        /**
-         * format {int32}
-        */
-        "code"?: number,
-        "message"?: string,
-    }
-    
-    export interface Login {
-        "accessToken"?: string,
-        "expiration"?: string,
-        "user"?: User,
-    }
-    
-    export interface APIError {
+        export interface APIResponse {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
         
-        /**
-         * format {int32}
-        */
-        "code"?: number,
-        "message"?: string,
-    }
-    
-    export interface DuplicateError {
+        export interface Login {
+            "accessToken"?: string,
+            "expiration"?: string,
+            "user"?: User,
+        }
         
-        /**
-         * format {int32}
-        */
-        "code"?: number,
-        "message"?: string,
-    }
-    
-    export interface Station {
-        "url"?: string,
-        "description"?: string,
-        "country"?: string,
-        "longitude"?: string,
-        "latitude"?: string,
-    }
-    
-    export interface AuthorizeParams {
-        "accessToken"?: string,
-    }
-    
-    export interface LoginParams {
+        export interface APIError {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
         
-        /**
-         * format {email}
-        */
-        "name": string,
+        export interface DuplicateError {
+            
+            /**
+             * format {int32}
+            */
+            "code"?: number,
+            "message"?: string,
+        }
         
-        /**
-         * format {password}
-        */
-        "password": string,
+        export interface Station {
+            "url"?: string,
+            "description"?: string,
+            "country"?: string,
+            "longitude"?: string,
+            "latitude"?: string,
+        }
         
-        /**
-         * Monitoring uses appId of 6
-         * format {int32}
-        */
-        "appId"?: number,
+        export interface AuthorizeParams {
+            "accessToken"?: string,
+        }
         
-        /**
-         * The UTC date of when the token should expire
-        */
-        "expiration"?: string,
-    }
-    
-    export interface UserParams {
+        export interface LoginParams {
+            
+            /**
+             * format {email}
+            */
+            "name": string,
+            
+            /**
+             * format {password}
+            */
+            "password": string,
+            
+            /**
+             * Monitoring uses appId of 6
+             * format {int32}
+            */
+            "appId"?: number,
+            
+            /**
+             * The UTC date of when the token should expire
+            */
+            "expiration"?: string,
+        }
         
-        /**
-         * The application id.  Use 6 for monitoring.
-        */
-        "appId": number,
+        export interface UserParams {
+            
+            /**
+             * The application id.  Use 6 for monitoring.
+            */
+            "appId": number,
+            
+            /**
+             * format {email}
+            */
+            "name": string,
+            "password": string,
+            
+            /**
+             * 0 = enabled
+            */
+            "status"?: number,
+        }
         
-        /**
-         * format {email}
-        */
-        "name": string,
-        "password": string,
+        export interface User {
+            
+            /**
+             * format {int32}
+            */
+            "id"?: number,
+            "name"?: string,
+            "status"?: number,
+            "account"?: any,
+        }
         
-        /**
-         * 0 = enabled
-        */
-        "status"?: number,
-    }
-    
-    export interface User {
+        export interface Authorization {
+            "expiration"?: string,
+            "user"?: User,
+        }
         
-        /**
-         * format {int32}
-        */
-        "id"?: number,
-        "name"?: string,
-        "status"?: number,
-        "account"?: any,
-    }
-    
-    export interface Authorization {
-        "expiration"?: string,
-        "user"?: User,
-    }
-    
-    export interface ContactCreateParams {
-        
-        /**
-         * The access token for the request.  The access token must have the 'manage' permission.
-        */
-        "accessToken"?: string,
-        
-        /**
-         * The contact's name.
-        */
-        "name": string,
-        "type": string,
-        
-        /**
-         * The email address of SMS number of the contact, depending on the type selected.
-        */
-        "endpoint": string,
+        export interface ContactCreateParams {
+            
+            /**
+             * The access token for the request.  The access token must have the 'manage' permission.
+            */
+            "accessToken"?: string,
+            
+            /**
+             * The contact's name.
+            */
+            "name": string,
+            "type": string,
+            
+            /**
+             * The email address of SMS number of the contact, depending on the type selected.
+            */
+            "endpoint": string,
+        }
     }
     
     /**
