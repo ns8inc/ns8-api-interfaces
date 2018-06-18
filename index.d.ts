@@ -15,7 +15,7 @@ declare module "ns8-api-interfaces" {
          * The API version for the namespace.
          * 
         */
-        export const VERSION = "2.0";
+        export const VERSION = '2.0';
         
         
         /**
@@ -954,7 +954,7 @@ declare module "ns8-api-interfaces" {
          * The API version for the namespace.
          * 
         */
-        export const VERSION = "2.0";
+        export const VERSION = '2.0';
         
         export interface QueryResult {
             "columns"?: Array<any>,
@@ -1095,7 +1095,7 @@ declare module "ns8-api-interfaces" {
          * The API version for the namespace.
          * 
         */
-        export const VERSION = "2.0";
+        export const VERSION = '2.0';
         
         export interface APIResponse {
             
@@ -1126,7 +1126,7 @@ declare module "ns8-api-interfaces" {
          * The API version for the namespace.
          * 
         */
-        export const VERSION = "2.0";
+        export const VERSION = '2.0';
         
         export interface AccessTokenCreateParams {
             
@@ -1275,7 +1275,7 @@ declare module "ns8-api-interfaces" {
          * The API version for the namespace.
          * 
         */
-        export const VERSION = "2.0";
+        export const VERSION = '2.0';
         
         export interface ProfileResponse {
             
