@@ -1,7 +1,7 @@
-/*
-  Declarations for the NS8 V2 API
 
-  *** This is a generated file, do not edit.
+/**
+ * Declarations for the NS8 V2 API
+ * This is a generated file, do not edit.
 */
 declare module "ns8-api-interfaces" {
     
@@ -13,11 +13,14 @@ declare module "ns8-api-interfaces" {
         
         /**
          * The API version for the namespace.
-         */
+         * 
+        */
         export const VERSION = "2.0";
         
-        /*
-          Represents an access token's data.
+        
+        /**
+         * Represents an access token's data.
+         * 
         */
         export interface AccessToken {
             
@@ -48,6 +51,7 @@ declare module "ns8-api-interfaces" {
             
             /**
              * An array of permissions.
+             * 
             */
             "permissions"?: Permissions,
             
@@ -62,8 +66,10 @@ declare module "ns8-api-interfaces" {
             "adminMode"?: boolean,
         }
         
-        /*
-          Parameters for creating an access token.
+        
+        /**
+         * Parameters for creating an access token.
+         * 
         */
         export interface AccessTokenCreateParams {
             
@@ -89,17 +95,22 @@ declare module "ns8-api-interfaces" {
             
             /**
              * An array of permissions.
+             * 
             */
             "permissions": Permissions,
         }
         
-        /*
-          The access token string used for authentication.
+        
+        /**
+         * The access token string used for authentication.
+         * 
         */
         export type AccessTokenString = string;
         
-        /*
-          Represents an account.  Users can have an account for each application.
+        
+        /**
+         * Represents an account.  Users can have an account for each application.
+         * 
         */
         export interface Account {
             
@@ -139,8 +150,10 @@ declare module "ns8-api-interfaces" {
             "data"?: any,
         }
         
-        /*
-          Parameters to create an account
+        
+        /**
+         * Parameters to create an account
+         * 
         */
         export interface AccountCreateParams {
             
@@ -175,8 +188,10 @@ declare module "ns8-api-interfaces" {
             "discountPct"?: number,
         }
         
-        /*
-          The set of attributes to update. Use the merge-patch format  https://tools.ietf.org/html/rfc7396
+        
+        /**
+         * The set of attributes to update. Use the merge-patch format  https://tools.ietf.org/html/rfc7396
+         * 
         */
         export interface AccountUpdateParams {
             
@@ -201,8 +216,10 @@ declare module "ns8-api-interfaces" {
             "data"?: any,
         }
         
-        /*
-          Represents a product or service available by NS8.
+        
+        /**
+         * Represents a product or service available by NS8.
+         * 
         */
         export interface Application {
             
@@ -267,6 +284,7 @@ declare module "ns8-api-interfaces" {
             
             /**
              * The reporting configuration for the application.
+             * 
             */
             "reporting"?: ApplicationReporting,
             
@@ -281,8 +299,10 @@ declare module "ns8-api-interfaces" {
             "data"?: any,
         }
         
-        /*
-          An application role-based permission.
+        
+        /**
+         * An application role-based permission.
+         * 
         */
         export interface ApplicationPermission {
             
@@ -297,8 +317,10 @@ declare module "ns8-api-interfaces" {
             "description": string,
         }
         
-        /*
-          The reporting configuration for the application.
+        
+        /**
+         * The reporting configuration for the application.
+         * 
         */
         export interface ApplicationReporting {
             
@@ -308,19 +330,23 @@ declare module "ns8-api-interfaces" {
             "apiEndpoint"?: string,
         }
         
-        /*
-          Represents what an access token is authorized for. Authorizations include the user object that created the access token, an account and projects.
+        
+        /**
+         * Represents what an access token is authorized for. Authorizations include the user object that created the access token, an account and projects.
+         * 
         */
         export interface Authorization {
             
             /**
              * The access token string used for authentication.
+             * 
             */
             "accessToken"?: AccessTokenString,
             "user"?: User,
             
             /**
              * Represents an account.  Users can have an account for each application.
+             * 
             */
             "account"?: Account,
             
@@ -330,19 +356,24 @@ declare module "ns8-api-interfaces" {
             "projects"?: Array<Project>,
         }
         
-        /*
-          Parameters for creating an authorization.
+        
+        /**
+         * Parameters for creating an authorization.
+         * 
         */
         export interface AuthorizeParams {
             
             /**
              * The access token string used for authentication.
+             * 
             */
             "accessToken"?: AccessTokenString,
         }
         
-        /*
-          Parameters for creating an authorization based on a user name and password. Pass the application id to authorize a specific account.
+        
+        /**
+         * Parameters for creating an authorization based on a user name and password. Pass the application id to authorize a specific account.
+         * 
         */
         export interface LoginParams {
             
@@ -363,13 +394,16 @@ declare module "ns8-api-interfaces" {
             "appId"?: number,
         }
         
-        /*
-          Parameters for changing a user's password.
+        
+        /**
+         * Parameters for changing a user's password.
+         * 
         */
         export interface PasswordChangeParams {
             
             /**
              * The access token string used for authentication.
+             * 
             */
             "accessToken"?: AccessTokenString,
             
@@ -386,8 +420,10 @@ declare module "ns8-api-interfaces" {
             "newPassword"?: string,
         }
         
-        /*
-          Parameters to complete a password reset.
+        
+        /**
+         * Parameters to complete a password reset.
+         * 
         */
         export interface PasswordResetParams {
             
@@ -402,8 +438,10 @@ declare module "ns8-api-interfaces" {
             "password"?: string,
         }
         
-        /*
-          Represents a Stripe payment.
+        
+        /**
+         * Represents a Stripe payment.
+         * 
         */
         export interface Payment {
             
@@ -458,8 +496,10 @@ declare module "ns8-api-interfaces" {
             "amount_refunded"?: number,
         }
         
-        /*
-          Represents a Stripe payment card.
+        
+        /**
+         * Represents a Stripe payment card.
+         * 
         */
         export interface PaymentCard {
             
@@ -494,8 +534,10 @@ declare module "ns8-api-interfaces" {
             "country"?: string,
         }
         
-        /*
-          Parameters for creating a payment for an account.
+        
+        /**
+         * Parameters for creating a payment for an account.
+         * 
         */
         export interface PaymentCreateParams {
             
@@ -510,8 +552,10 @@ declare module "ns8-api-interfaces" {
             "description"?: string,
         }
         
-        /*
-          The Stripe payment customer associated with the payment methods.
+        
+        /**
+         * The Stripe payment customer associated with the payment methods.
+         * 
         */
         export interface PaymentCustomer {
             
@@ -547,8 +591,10 @@ declare module "ns8-api-interfaces" {
             "currency"?: string,
         }
         
-        /*
-          The payment history for the account.
+        
+        /**
+         * The payment history for the account.
+         * 
         */
         export interface PaymentHistory {
             
@@ -568,8 +614,10 @@ declare module "ns8-api-interfaces" {
             "payments"?: Array<Payment>,
         }
         
-        /*
-          Parameters for creating a Stripe payment method.
+        
+        /**
+         * Parameters for creating a Stripe payment method.
+         * 
         */
         export interface PaymentMethodCreateParams {
             
@@ -579,8 +627,10 @@ declare module "ns8-api-interfaces" {
             "stripeToken"?: string,
         }
         
-        /*
-          Parameters for setting the default payment method for an account.
+        
+        /**
+         * Parameters for setting the default payment method for an account.
+         * 
         */
         export interface PaymentMethodPrimaryParams {
             
@@ -590,13 +640,16 @@ declare module "ns8-api-interfaces" {
             "id"?: string,
         }
         
-        /*
-          The payment methods for a customer.
+        
+        /**
+         * The payment methods for a customer.
+         * 
         */
         export interface PaymentMethods {
             
             /**
              * The Stripe payment customer associated with the payment methods.
+             * 
             */
             "customer"?: PaymentCustomer,
             
@@ -606,13 +659,17 @@ declare module "ns8-api-interfaces" {
             "cards"?: Array<PaymentCard>,
         }
         
-        /*
-          An array of permissions.
+        
+        /**
+         * An array of permissions.
+         * 
         */
         export type Permissions = Array<string>;
         
-        /*
-          Represents a website or other entity within an account. An account can have multiple projects. For example, the analytics product requires management of multiple websites. 
+        
+        /**
+         * Represents a website or other entity within an account. An account can have multiple projects. For example, the analytics product requires management of multiple websites. 
+         * 
         */
         export interface Project {
             
@@ -653,6 +710,7 @@ declare module "ns8-api-interfaces" {
             
             /**
              * The application-specific permissions for a shared project.
+             * 
             */
             "permissions"?: ProjectPermissions,
             
@@ -667,8 +725,10 @@ declare module "ns8-api-interfaces" {
             "data"?: any,
         }
         
-        /*
-          Parameters to create a project.
+        
+        /**
+         * Parameters to create a project.
+         * 
         */
         export interface ProjectCreateParams {
             "name"?: string,
@@ -682,8 +742,10 @@ declare module "ns8-api-interfaces" {
             "projectId"?: number,
         }
         
-        /*
-          The application-specific permissions for a shared project.
+        
+        /**
+         * The application-specific permissions for a shared project.
+         * 
         */
         export type ProjectPermissions = string;
         
@@ -716,6 +778,7 @@ declare module "ns8-api-interfaces" {
             
             /**
              * The application-specific permissions for a shared project.
+             * 
             */
             "permissions"?: ProjectPermissions,
             
@@ -787,8 +850,10 @@ declare module "ns8-api-interfaces" {
             "name": string,
         }
         
-        /*
-          The set of attributes to update. Use the merge-patch format  https://tools.ietf.org/html/rfc7396
+        
+        /**
+         * The set of attributes to update. Use the merge-patch format  https://tools.ietf.org/html/rfc7396
+         * 
         */
         export interface UserUpdateParams {
             "firstName"?: string,
@@ -845,8 +910,10 @@ declare module "ns8-api-interfaces" {
             "key"?: string,
         }
         
-        /*
-          A REST error.
+        
+        /**
+         * A REST error.
+         * 
         */
         export interface Error {
             
@@ -885,7 +952,8 @@ declare module "ns8-api-interfaces" {
         
         /**
          * The API version for the namespace.
-         */
+         * 
+        */
         export const VERSION = "2.0";
         
         export interface QueryResult {
@@ -1025,7 +1093,8 @@ declare module "ns8-api-interfaces" {
         
         /**
          * The API version for the namespace.
-         */
+         * 
+        */
         export const VERSION = "2.0";
         
         export interface APIResponse {
@@ -1055,7 +1124,8 @@ declare module "ns8-api-interfaces" {
         
         /**
          * The API version for the namespace.
-         */
+         * 
+        */
         export const VERSION = "2.0";
         
         export interface AccessTokenCreateParams {
@@ -1203,7 +1273,8 @@ declare module "ns8-api-interfaces" {
         
         /**
          * The API version for the namespace.
-         */
+         * 
+        */
         export const VERSION = "2.0";
         
         export interface ProfileResponse {
