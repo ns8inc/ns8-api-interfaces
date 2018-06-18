@@ -1,6 +1,6 @@
 {
   "name": "ns8-api-interfaces",
-  "version": "2.0.3",
+  "version": "2.0.4",
   "types": "index.d.ts",
   "description": "Interface objects and specs to support ns8 api consumption",
   "repository": {
@@ -14,6 +14,11 @@
   },
   "homepage": "https://github.com/ns8inc/ns8-api-interfaces#readme",
   "keywords": [
-    "ns8", "api", "types", "specs", "interface", "clients"
+    "ns8",
+    "api",
+    "types",
+    "specs",
+    "interface",
+    "clients"
   ]
 }
