@@ -5,6 +5,14 @@
  */
 declare module "ns8-api-interfaces" {
   
+  export namespace Specs {
+    export let Admin;
+    export let Analytics;
+    export let DataServices;
+    export let Monitoring;
+    export let Partner;
+  }
+  
   /**
    * Declarations for: Administration API
    * User/account/project provisioning and authentication
