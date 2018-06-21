@@ -1,6 +1,6 @@
 {
   "name": "ns8-api-interfaces",
-  "version": "2.0.7",
+  "version": "2.0.8",
   "description": "Interface objects and specs to support ns8 api consumption",
   "repository": {
     "type": "git",
