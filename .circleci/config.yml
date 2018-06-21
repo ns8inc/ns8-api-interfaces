@@ -19,7 +19,7 @@ jobs:
           command: |
                    git config user.email "circleci@ns8.com"
                    git config user.name "CircleCI"
-                   yarn version --patch
+                   yarn version --patch --no-commit-hooks
                    git push origin master --tags
 
       - run:
