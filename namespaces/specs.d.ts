@@ -667,6 +667,49 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
+            "/access-token": {
+                "post": {
+                    "tags": string[];
+                    "summary": string;
+                    "description": string;
+                    "parameters": {
+                        "in": string;
+                        "name": string;
+                        "description": string;
+                        "required": boolean;
+                        "schema": {
+                            "$ref": string;
+                        };
+                    }[];
+                    "responses": {
+                        "200": {
+                            "description": string;
+                            "schema": {
+                                "$ref": string;
+                            };
+                        };
+                        "400": {
+                            "description": string;
+                            "schema": {
+                                "$ref": string;
+                            };
+                        };
+                        "401": {
+                            "description": string;
+                            "schema": {
+                                "$ref": string;
+                            };
+                        };
+                        "429": {
+                            "description": string;
+                            "schema": {
+                                "$ref": string;
+                            };
+                        };
+                    };
+                    "x-rate-limit": number;
+                };
+            };
             "/login": {
                 "post": {
                     "tags": string[];
