@@ -667,7 +667,7 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/access-token": {
+            "/access-tokens": {
                 "post": {
                     "tags": string[];
                     "summary": string;
