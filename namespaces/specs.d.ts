@@ -33,6 +33,12 @@ declare const Specs: {
                                     "$ref": string;
                                 };
                             };
+                            "responseSchema": {
+                                "type": string;
+                                "items": {
+                                    "$ref": string;
+                                };
+                            };
                         };
                     };
                 };
@@ -74,10 +80,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "400": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -86,10 +98,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "404": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -98,10 +116,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -126,10 +150,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "400": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -138,10 +168,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "404": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -150,10 +186,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -186,10 +228,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "401": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -198,10 +246,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -234,16 +288,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "401": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -301,16 +364,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "401": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -340,10 +412,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "400": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -352,16 +430,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "409": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -396,10 +483,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "400": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -408,16 +501,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "404": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -443,10 +545,19 @@ declare const Specs: {
                                     "$ref": string;
                                 };
                             };
+                            "responseSchema": {
+                                "type": string;
+                                "items": {
+                                    "$ref": string;
+                                };
+                            };
                         };
                         "400": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -455,16 +566,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "404": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -492,10 +612,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "400": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -504,16 +630,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "404": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -544,16 +679,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "404": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -589,10 +733,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "400": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -601,16 +751,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "404": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -635,10 +794,19 @@ declare const Specs: {
                                     "$ref": string;
                                 };
                             };
+                            "responseSchema": {
+                                "type": string;
+                                "items": {
+                                    "$ref": string;
+                                };
+                            };
                         };
                         "400": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -647,16 +815,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "404": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -687,10 +864,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "400": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -699,10 +882,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -730,10 +919,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "400": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -742,10 +937,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -773,10 +974,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "400": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -785,10 +992,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -813,16 +1026,28 @@ declare const Specs: {
                                     "$ref": string;
                                 };
                             };
+                            "responseSchema": {
+                                "type": string;
+                                "items": {
+                                    "$ref": string;
+                                };
+                            };
                         };
                         "401": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -850,10 +1075,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "400": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -862,10 +1093,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -896,10 +1133,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -938,10 +1181,16 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -970,16 +1219,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "401": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -1006,16 +1264,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "400": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -1040,16 +1307,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "404": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -1068,16 +1344,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "401": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -1108,16 +1393,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "401": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -1149,16 +1443,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "401": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -1191,16 +1494,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "401": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -1226,16 +1538,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "401": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
@@ -1266,16 +1587,25 @@ declare const Specs: {
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "401": {
                             "description": string;
                             "schema": {
                                 "$ref": string;
                             };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "429": {
                             "description": string;
                             "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
                                 "$ref": string;
                             };
                         };
