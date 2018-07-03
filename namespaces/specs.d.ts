@@ -1531,7 +1531,13 @@ declare const Specs: {
                     "parameters": any[];
                     "responses": {
                         "200": {
-                            "$ref": string;
+                            "description": string;
+                            "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
                         };
                         "400": {
                             "description": string;
@@ -2111,6 +2117,18 @@ declare const Specs: {
                     };
                 };
                 "description": string;
+                "example": {
+                    "amount": number;
+                    "created": string;
+                    "description": string;
+                    "currency": string;
+                    "refunded": boolean;
+                    "id": string;
+                    "invoice": string;
+                    "customer_id": string;
+                    "status": string;
+                    "amount_refunded": number;
+                };
             };
             "PaymentCard": {
                 "properties": {
@@ -2223,6 +2241,22 @@ declare const Specs: {
                     };
                 };
                 "description": string;
+                "example": {
+                    "balance": number;
+                    "payments": {
+                        "amount": number;
+                        "created": string;
+                        "description": string;
+                        "currency": string;
+                        "refunded": boolean;
+                        "id": string;
+                        "invoice": string;
+                        "customer_id": string;
+                        "status": string;
+                        "amount_refunded": number;
+                    }[];
+                    "discount": number;
+                };
             };
             "PaymentMethodCreateParams": {
                 "properties": {
