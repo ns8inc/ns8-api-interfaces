@@ -2042,11 +2042,13 @@ declare const Specs: {
                         "type": string;
                         "format": string;
                         "description": string;
+                        "minLength": number;
                     };
                     "newPassword": {
                         "type": string;
                         "format": string;
                         "description": string;
+                        "minLength": number;
                     };
                 };
                 "description": string;
@@ -2065,6 +2067,7 @@ declare const Specs: {
                     "password": {
                         "type": string;
                         "description": string;
+                        "minLength": number;
                     };
                 };
                 "description": string;
