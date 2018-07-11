@@ -2034,10 +2034,8 @@ declare const Specs: {
                 };
             };
             "PasswordChangeParams": {
+                "required": string[];
                 "properties": {
-                    "accessToken": {
-                        "$ref": string;
-                    };
                     "oldPassword": {
                         "type": string;
                         "format": string;
@@ -2055,7 +2053,6 @@ declare const Specs: {
                 "example": {
                     "oldPassword": string;
                     "newPassword": string;
-                    "accessToken": {};
                 };
             };
             "PasswordResetParams": {

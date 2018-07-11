@@ -79,9 +79,8 @@ export declare module Admin {
         appId?: number;
     }
     class PasswordChangeParams {
-        accessToken?: AccessTokenString;
-        oldPassword?: string;
-        newPassword?: string;
+        oldPassword: string;
+        newPassword: string;
     }
     class PasswordResetParams {
         token?: string;
