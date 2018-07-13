@@ -57,6 +57,8 @@ declare const Specs: {
                     "responses": {
                         "200": {
                             "description": string;
+                            "schema": {};
+                            "responseSchema": {};
                         };
                     };
                 };
@@ -1662,6 +1664,14 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                     };
+                    "createdDate": {
+                        "description": string;
+                        "x-type": string;
+                    };
+                    "expiration": {
+                        "description": string;
+                        "x-type": string;
+                    };
                     "adminMode": {
                         "type": string;
                         "description": string;
@@ -1670,9 +1680,11 @@ declare const Specs: {
                 "description": string;
                 "example": {
                     "accountId": number;
+                    "createdDate": string;
                     "permissions": string;
                     "appId": number;
                     "adminMode": boolean;
+                    "expiration": string;
                     "id": string;
                     "type": string;
                     "userId": number;
@@ -1698,6 +1710,10 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                     };
+                    "expiration": {
+                        "description": string;
+                        "x-type": string;
+                    };
                     "permissions": {
                         "$ref": string;
                     };
@@ -1707,6 +1723,7 @@ declare const Specs: {
                     "accountId": number;
                     "permissions": string;
                     "appId": number;
+                    "expiration": string;
                     "userId": number;
                     "projectId": number;
                 };
@@ -1733,6 +1750,14 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                     };
+                    "createdDate": {
+                        "description": string;
+                        "x-type": string;
+                    };
+                    "lastUpdated": {
+                        "description": string;
+                        "x-type": string;
+                    };
                     "type": {
                         "type": string;
                         "description": string;
@@ -1749,6 +1774,8 @@ declare const Specs: {
                 };
                 "description": string;
                 "example": {
+                    "lastUpdated": string;
+                    "createdDate": string;
                     "data": string;
                     "appId": number;
                     "id": number;
@@ -1761,10 +1788,6 @@ declare const Specs: {
             "AccountCreateParams": {
                 "required": string[];
                 "properties": {
-                    "userId": {
-                        "type": string;
-                        "description": string;
-                    };
                     "appId": {
                         "type": string;
                         "description": string;
@@ -1784,6 +1807,8 @@ declare const Specs: {
                     "discountPct": {
                         "type": string;
                         "description": string;
+                        "minimum": number;
+                        "maximum": number;
                     };
                 };
                 "description": string;
@@ -1792,7 +1817,6 @@ declare const Specs: {
                     "appId": number;
                     "partnerId": number;
                     "type": string;
-                    "userId": number;
                     "status": number;
                 };
             };
@@ -1949,6 +1973,10 @@ declare const Specs: {
                     "accessToken": {
                         "$ref": string;
                     };
+                    "expiration": {
+                        "description": string;
+                        "x-type": string;
+                    };
                     "user": {
                         "$ref": string;
                     };
@@ -1973,20 +2001,26 @@ declare const Specs: {
                         "implemented": boolean;
                         "sharedByUserId": number;
                         "id": number;
+                        "type": string;
                         "isDemo": boolean;
                         "userId": number;
                         "enabled": boolean;
                     }[];
+                    "expiration": string;
                     "accessToken": {};
                     "user": {
                         "firstName": string;
                         "lastName": string;
+                        "lastUpdated": string;
+                        "createdDate": string;
                         "name": string;
                         "id": number;
                         "email": string;
                         "status": number;
                     };
                     "account": {
+                        "lastUpdated": string;
+                        "createdDate": string;
                         "data": string;
                         "appId": number;
                         "id": number;
@@ -2025,12 +2059,17 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                     };
+                    "expiration": {
+                        "description": string;
+                        "x-type": string;
+                    };
                 };
                 "description": string;
                 "example": {
                     "password": string;
                     "appId": number;
                     "name": string;
+                    "expiration": string;
                 };
             };
             "PasswordChangeParams": {
@@ -2341,6 +2380,9 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                     };
+                    "type": {
+                        "description": string;
+                    };
                     "enabled": {
                         "type": string;
                         "description": string;
@@ -2375,6 +2417,7 @@ declare const Specs: {
                     "implemented": boolean;
                     "sharedByUserId": number;
                     "id": number;
+                    "type": string;
                     "isDemo": boolean;
                     "userId": number;
                     "enabled": boolean;
@@ -2382,13 +2425,21 @@ declare const Specs: {
             };
             "ProjectCreateParams": {
                 "properties": {
+                    "accountId": {
+                        "description": string;
+                    };
                     "name": {
                         "type": string;
+                    };
+                    "type": {
+                        "description": string;
                     };
                 };
                 "description": string;
                 "example": {
+                    "accountId": string;
                     "name": string;
+                    "type": string;
                 };
             };
             "ProjectDefaultParams": {
@@ -2435,9 +2486,14 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                     };
+                    "createdDate": {
+                        "description": string;
+                        "x-type": string;
+                    };
                 };
                 "example": {
                     "accountId": number;
+                    "createdDate": string;
                     "permissions": {};
                     "appId": number;
                     "sharedByUserId": number;
@@ -2484,10 +2540,20 @@ declare const Specs: {
                     "status": {
                         "type": string;
                     };
+                    "createdDate": {
+                        "description": string;
+                        "x-type": string;
+                    };
+                    "lastUpdated": {
+                        "description": string;
+                        "x-type": string;
+                    };
                 };
                 "example": {
                     "firstName": string;
                     "lastName": string;
+                    "lastUpdated": string;
+                    "createdDate": string;
                     "name": string;
                     "id": number;
                     "email": string;

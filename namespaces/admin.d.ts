@@ -7,6 +7,8 @@ export declare module Admin {
         projectId?: number;
         permissions?: Permissions;
         type?: string;
+        createdDate?: Date;
+        expiration?: Date;
         adminMode?: boolean;
     }
     class AccessTokenCreateParams {
@@ -14,6 +16,7 @@ export declare module Admin {
         appId: number;
         accountId?: number;
         projectId?: number;
+        expiration?: Date;
         permissions: Permissions;
     }
     class AccessTokenString {
@@ -23,12 +26,13 @@ export declare module Admin {
         userId?: number;
         appId?: number;
         status?: number;
+        createdDate?: Date;
+        lastUpdated?: Date;
         type?: string;
         partnerId?: number;
         data?: any;
     }
     class AccountCreateParams {
-        userId: number;
         appId: number;
         status?: number;
         type?: string;
@@ -66,6 +70,7 @@ export declare module Admin {
     }
     class Authorization {
         accessToken?: AccessTokenString;
+        expiration?: Date;
         user?: User;
         account?: Account;
         projects?: Array<Project>;
@@ -77,6 +82,7 @@ export declare module Admin {
         name: string;
         password: string;
         appId?: number;
+        expiration?: Date;
     }
     class PasswordChangeParams {
         oldPassword: string;
@@ -140,6 +146,7 @@ export declare module Admin {
         accountId: number;
         userId?: number;
         name: string;
+        type?: undefined;
         enabled?: boolean;
         isDemo?: boolean;
         implemented?: boolean;
@@ -148,7 +155,9 @@ export declare module Admin {
         data?: any;
     }
     class ProjectCreateParams {
+        accountId?: undefined;
         name?: string;
+        type?: undefined;
     }
     class ProjectDefaultParams {
         projectId?: number;
@@ -163,6 +172,7 @@ export declare module Admin {
         userName?: string;
         permissions?: ProjectPermissions;
         sharedByUserId?: number;
+        createdDate?: Date;
     }
     class ProjectUpdateParams {
         name?: string;
@@ -175,6 +185,8 @@ export declare module Admin {
         lastName?: string;
         email?: string;
         status?: number;
+        createdDate?: Date;
+        lastUpdated?: Date;
     }
     class UserCreateParams {
         name: string;
