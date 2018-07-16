@@ -19,6 +19,9 @@ export declare module Admin {
         expiration?: Date;
         permissions: Permissions;
     }
+    class MFAParams {
+        email: string;
+    }
     class AccessTokenString {
     }
     class Account {

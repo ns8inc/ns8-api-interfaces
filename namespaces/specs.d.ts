@@ -846,7 +846,7 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/access-tokens": {
+            "/access-tokens/basic": {
                 "post": {
                     "tags": string[];
                     "summary": string;
@@ -860,6 +860,116 @@ declare const Specs: {
                             "$ref": string;
                         };
                     }[];
+                    "responses": {
+                        "200": {
+                            "description": string;
+                            "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
+                        };
+                        "400": {
+                            "description": string;
+                            "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
+                        };
+                        "401": {
+                            "description": string;
+                            "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
+                        };
+                        "429": {
+                            "description": string;
+                            "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
+                        };
+                    };
+                    "x-rate-limit": number;
+                };
+            };
+            "/access-tokens/mfa": {
+                "post": {
+                    "tags": string[];
+                    "summary": string;
+                    "description": string;
+                    "parameters": {
+                        "in": string;
+                        "name": string;
+                        "required": boolean;
+                        "schema": {
+                            "$ref": string;
+                        };
+                    }[];
+                    "responses": {
+                        "204": {
+                            "description": string;
+                        };
+                        "400": {
+                            "description": string;
+                            "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
+                        };
+                        "401": {
+                            "description": string;
+                            "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
+                        };
+                        "429": {
+                            "description": string;
+                            "schema": {
+                                "$ref": string;
+                            };
+                            "responseSchema": {
+                                "$ref": string;
+                            };
+                        };
+                    };
+                    "x-rate-limit": number;
+                };
+            };
+            "/access-tokens/mfa/{id}": {
+                "put": {
+                    "tags": string[];
+                    "summary": string;
+                    "parameters": ({
+                        "name": string;
+                        "in": string;
+                        "description": string;
+                        "required": boolean;
+                        "type": string;
+                        "schema"?: undefined;
+                    } | {
+                        "in": string;
+                        "name": string;
+                        "required": boolean;
+                        "schema": {
+                            "$ref": string;
+                        };
+                        "description"?: undefined;
+                        "type"?: undefined;
+                    })[];
                     "responses": {
                         "200": {
                             "description": string;
@@ -1726,6 +1836,18 @@ declare const Specs: {
                     "expiration": string;
                     "userId": number;
                     "projectId": number;
+                };
+            };
+            "MFAParams": {
+                "required": string[];
+                "properties": {
+                    "email": {
+                        "type": string;
+                        "format": string;
+                    };
+                };
+                "example": {
+                    "email": string;
                 };
             };
             "AccessTokenString": {

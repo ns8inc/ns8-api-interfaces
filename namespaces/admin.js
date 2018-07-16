@@ -8,6 +8,9 @@ var Admin;
     class AccessTokenCreateParams {
     }
     Admin.AccessTokenCreateParams = AccessTokenCreateParams;
+    class MFAParams {
+    }
+    Admin.MFAParams = MFAParams;
     class AccessTokenString {
     }
     Admin.AccessTokenString = AccessTokenString;
