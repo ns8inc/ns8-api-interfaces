@@ -19,8 +19,11 @@ export declare module Admin {
         expiration?: Date;
         permissions: Permissions;
     }
-    class MFAParams {
+    class MFACreateParams {
         email: string;
+    }
+    class MFAUpdateParams {
+        password: string;
     }
     class AccessTokenString {
     }

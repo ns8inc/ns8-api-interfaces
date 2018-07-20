@@ -1838,7 +1838,7 @@ declare const Specs: {
                     "projectId": number;
                 };
             };
-            "MFAParams": {
+            "MFACreateParams": {
                 "required": string[];
                 "properties": {
                     "email": {
@@ -1848,6 +1848,20 @@ declare const Specs: {
                 };
                 "example": {
                     "email": string;
+                };
+            };
+            "MFAUpdateParams": {
+                "required": string[];
+                "properties": {
+                    "password": {
+                        "type": string;
+                        "format": string;
+                        "description": string;
+                        "minLength": number;
+                    };
+                };
+                "example": {
+                    "password": string;
                 };
             };
             "AccessTokenString": {
