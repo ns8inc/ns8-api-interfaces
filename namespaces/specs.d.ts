@@ -1800,6 +1800,7 @@ declare const Specs: {
                     "userId": number;
                     "projectId": number;
                 };
+                "additionalProperties": boolean;
             };
             "AccessTokenCreateParams": {
                 "required": string[];
@@ -1837,6 +1838,7 @@ declare const Specs: {
                     "userId": number;
                     "projectId": number;
                 };
+                "additionalProperties": boolean;
             };
             "MFACreateParams": {
                 "required": string[];
@@ -1849,6 +1851,7 @@ declare const Specs: {
                 "example": {
                     "email": string;
                 };
+                "additionalProperties": boolean;
             };
             "MFAUpdateParams": {
                 "required": string[];
@@ -1863,10 +1866,12 @@ declare const Specs: {
                 "example": {
                     "password": string;
                 };
+                "additionalProperties": boolean;
             };
             "AccessTokenString": {
                 "type": string;
                 "description": string;
+                "additionalProperties": boolean;
             };
             "Account": {
                 "properties": {
@@ -1920,6 +1925,7 @@ declare const Specs: {
                     "userId": number;
                     "status": number;
                 };
+                "additionalProperties": boolean;
             };
             "AccountCreateParams": {
                 "required": string[];
@@ -1955,6 +1961,7 @@ declare const Specs: {
                     "type": string;
                     "status": number;
                 };
+                "additionalProperties": boolean;
             };
             "AccountUpdateParams": {
                 "properties": {
@@ -1983,6 +1990,7 @@ declare const Specs: {
                     "type": string;
                     "status": number;
                 };
+                "additionalProperties": boolean;
             };
             "Application": {
                 "properties": {
@@ -2073,6 +2081,7 @@ declare const Specs: {
                         "apiEndpoint": string;
                     };
                 };
+                "additionalProperties": boolean;
             };
             "ApplicationPermission": {
                 "required": string[];
@@ -2091,6 +2100,7 @@ declare const Specs: {
                     "description": string;
                     "id": string;
                 };
+                "additionalProperties": boolean;
             };
             "ApplicationReporting": {
                 "properties": {
@@ -2103,6 +2113,7 @@ declare const Specs: {
                 "example": {
                     "apiEndpoint": string;
                 };
+                "additionalProperties": boolean;
             };
             "Authorization": {
                 "properties": {
@@ -2166,6 +2177,7 @@ declare const Specs: {
                         "status": number;
                     };
                 };
+                "additionalProperties": boolean;
             };
             "AuthorizeParams": {
                 "properties": {
@@ -2177,6 +2189,7 @@ declare const Specs: {
                 "example": {
                     "accessToken": {};
                 };
+                "additionalProperties": boolean;
             };
             "LoginParams": {
                 "required": string[];
@@ -2207,6 +2220,7 @@ declare const Specs: {
                     "name": string;
                     "expiration": string;
                 };
+                "additionalProperties": boolean;
             };
             "PasswordChangeParams": {
                 "required": string[];
@@ -2229,6 +2243,7 @@ declare const Specs: {
                     "oldPassword": string;
                     "newPassword": string;
                 };
+                "additionalProperties": boolean;
             };
             "PasswordResetParams": {
                 "properties": {
@@ -2247,6 +2262,7 @@ declare const Specs: {
                     "password": string;
                     "token": string;
                 };
+                "additionalProperties": boolean;
             };
             "Payment": {
                 "properties": {
@@ -2304,6 +2320,7 @@ declare const Specs: {
                     "status": string;
                     "amount_refunded": number;
                 };
+                "additionalProperties": boolean;
             };
             "PaymentCard": {
                 "properties": {
@@ -2341,6 +2358,7 @@ declare const Specs: {
                     "exp_year": number;
                     "brand": string;
                 };
+                "additionalProperties": boolean;
             };
             "PaymentCreateParams": {
                 "properties": {
@@ -2358,6 +2376,7 @@ declare const Specs: {
                     "amount": number;
                     "description": string;
                 };
+                "additionalProperties": boolean;
             };
             "PaymentCustomer": {
                 "properties": {
@@ -2396,6 +2415,7 @@ declare const Specs: {
                     "currency": string;
                     "email": string;
                 };
+                "additionalProperties": boolean;
             };
             "PaymentHistory": {
                 "properties": {
@@ -2432,6 +2452,7 @@ declare const Specs: {
                     }[];
                     "discount": number;
                 };
+                "additionalProperties": boolean;
             };
             "PaymentMethodCreateParams": {
                 "properties": {
@@ -2444,6 +2465,7 @@ declare const Specs: {
                 "example": {
                     "stripeToken": string;
                 };
+                "additionalProperties": boolean;
             };
             "PaymentMethodPrimaryParams": {
                 "properties": {
@@ -2456,6 +2478,7 @@ declare const Specs: {
                 "example": {
                     "id": string;
                 };
+                "additionalProperties": boolean;
             };
             "PaymentMethods": {
                 "properties": {
@@ -2489,6 +2512,7 @@ declare const Specs: {
                         "email": string;
                     };
                 };
+                "additionalProperties": boolean;
             };
             "Permissions": {
                 "type": string;
@@ -2496,6 +2520,7 @@ declare const Specs: {
                 "items": {
                     "type": string;
                 };
+                "additionalProperties": boolean;
             };
             "Project": {
                 "required": string[];
@@ -2558,6 +2583,7 @@ declare const Specs: {
                     "userId": number;
                     "enabled": boolean;
                 };
+                "additionalProperties": boolean;
             };
             "ProjectCreateParams": {
                 "properties": {
@@ -2577,6 +2603,7 @@ declare const Specs: {
                     "name": string;
                     "type": string;
                 };
+                "additionalProperties": boolean;
             };
             "ProjectDefaultParams": {
                 "properties": {
@@ -2588,10 +2615,12 @@ declare const Specs: {
                 "example": {
                     "projectId": number;
                 };
+                "additionalProperties": boolean;
             };
             "ProjectPermissions": {
                 "type": string;
                 "description": string;
+                "additionalProperties": boolean;
             };
             "ProjectShare": {
                 "properties": {
@@ -2637,6 +2666,7 @@ declare const Specs: {
                     "projectId": number;
                     "userId": number;
                 };
+                "additionalProperties": boolean;
             };
             "ProjectUpdateParams": {
                 "properties": {
@@ -2651,6 +2681,7 @@ declare const Specs: {
                     "name": string;
                     "enabled": boolean;
                 };
+                "additionalProperties": boolean;
             };
             "User": {
                 "properties": {
@@ -2695,6 +2726,7 @@ declare const Specs: {
                     "email": string;
                     "status": number;
                 };
+                "additionalProperties": boolean;
             };
             "UserCreateParams": {
                 "required": string[];
@@ -2738,6 +2770,7 @@ declare const Specs: {
                     "name": string;
                     "email": string;
                 };
+                "additionalProperties": boolean;
             };
             "UserNameParams": {
                 "required": string[];
@@ -2750,6 +2783,7 @@ declare const Specs: {
                 "example": {
                     "name": string;
                 };
+                "additionalProperties": boolean;
             };
             "UserUpdateParams": {
                 "properties": {
@@ -2780,6 +2814,7 @@ declare const Specs: {
                     "timezone": string;
                     "email": string;
                 };
+                "additionalProperties": boolean;
             };
             "VerificationCreateParams": {
                 "required": string[];
@@ -2804,6 +2839,7 @@ declare const Specs: {
                     "templateName": string;
                     "email": string;
                 };
+                "additionalProperties": boolean;
             };
             "VerificationApprovedResponse": {
                 "properties": {
@@ -2816,6 +2852,7 @@ declare const Specs: {
                 "example": {
                     "data": string;
                 };
+                "additionalProperties": boolean;
             };
             "VerificationCreateResponse": {
                 "properties": {
@@ -2827,6 +2864,7 @@ declare const Specs: {
                 "example": {
                     "key": string;
                 };
+                "additionalProperties": boolean;
             };
             "Error": {
                 "required": string[];
@@ -2848,6 +2886,7 @@ declare const Specs: {
                     };
                 };
                 "description": string;
+                "additionalProperties": boolean;
             };
             "Error_errors": {
                 "required": string[];
@@ -2863,6 +2902,7 @@ declare const Specs: {
                         "type": string;
                     };
                 };
+                "additionalProperties": boolean;
             };
         };
     };
@@ -3162,6 +3202,7 @@ declare const Specs: {
                         };
                     };
                 };
+                "additionalProperties": boolean;
             };
             "QueryResponse": {
                 "properties": {
@@ -3176,6 +3217,7 @@ declare const Specs: {
                         "$ref": string;
                     };
                 };
+                "additionalProperties": boolean;
             };
             "APIResponse": {
                 "properties": {
@@ -3191,6 +3233,7 @@ declare const Specs: {
                     "code": number;
                     "message": string;
                 };
+                "additionalProperties": boolean;
             };
             "APIError": {
                 "properties": {
@@ -3206,6 +3249,7 @@ declare const Specs: {
                     "code": number;
                     "message": string;
                 };
+                "additionalProperties": boolean;
             };
             "DuplicateError": {
                 "properties": {
@@ -3217,6 +3261,7 @@ declare const Specs: {
                         "type": string;
                     };
                 };
+                "additionalProperties": boolean;
             };
             "Entity": {
                 "properties": {
@@ -3242,6 +3287,7 @@ declare const Specs: {
                         "title": string;
                     };
                 };
+                "additionalProperties": boolean;
             };
             "Attribute": {
                 "properties": {
@@ -3272,6 +3318,7 @@ declare const Specs: {
                     "description": string;
                     "title": string;
                 };
+                "additionalProperties": boolean;
             };
             "SegmentCreateParams": {
                 "properties": {
@@ -3303,6 +3350,7 @@ declare const Specs: {
                     "projectIds": number[];
                     "accessToken": string;
                 };
+                "additionalProperties": boolean;
             };
             "CampaignIdsUpdateParams": {
                 "properties": {
@@ -3327,6 +3375,7 @@ declare const Specs: {
                     "accessToken": string;
                     "projectId": number;
                 };
+                "additionalProperties": boolean;
             };
             "CampaignReferrers": {
                 "properties": {
@@ -3345,6 +3394,7 @@ declare const Specs: {
                     "referrer": string;
                     "campaign": string;
                 };
+                "additionalProperties": boolean;
             };
             "CampaignReferrersUpdateParams": {
                 "properties": {
@@ -3366,6 +3416,7 @@ declare const Specs: {
                     "accessToken": string;
                     "projectId": number;
                 };
+                "additionalProperties": boolean;
             };
             "Dashboard": {
                 "properties": {
@@ -3389,6 +3440,7 @@ declare const Specs: {
                     "name": string;
                     "params": string;
                 };
+                "additionalProperties": boolean;
             };
             "DashboardsUpdateParams": {
                 "properties": {
@@ -3414,6 +3466,7 @@ declare const Specs: {
                         "params": string;
                     }[];
                 };
+                "additionalProperties": boolean;
             };
             "QueryParams": {
                 "required": string[];
@@ -3432,6 +3485,7 @@ declare const Specs: {
                     "query": string;
                     "accessToken": string;
                 };
+                "additionalProperties": boolean;
             };
         };
     };
@@ -3496,6 +3550,7 @@ declare const Specs: {
                         "type": string;
                     };
                 };
+                "additionalProperties": boolean;
             };
             "APIError": {
                 "properties": {
@@ -3507,6 +3562,7 @@ declare const Specs: {
                         "type": string;
                     };
                 };
+                "additionalProperties": boolean;
             };
         };
     };
@@ -3739,6 +3795,7 @@ declare const Specs: {
                         };
                     };
                 };
+                "additionalProperties": boolean;
             };
             "APIResponse": {
                 "properties": {
@@ -3754,6 +3811,7 @@ declare const Specs: {
                     "code": number;
                     "message": string;
                 };
+                "additionalProperties": boolean;
             };
             "Login": {
                 "properties": {
@@ -3767,6 +3825,7 @@ declare const Specs: {
                         "$ref": string;
                     };
                 };
+                "additionalProperties": boolean;
             };
             "APIError": {
                 "properties": {
@@ -3782,6 +3841,7 @@ declare const Specs: {
                     "code": number;
                     "message": string;
                 };
+                "additionalProperties": boolean;
             };
             "DuplicateError": {
                 "properties": {
@@ -3793,6 +3853,7 @@ declare const Specs: {
                         "type": string;
                     };
                 };
+                "additionalProperties": boolean;
             };
             "Station": {
                 "properties": {
@@ -3819,6 +3880,7 @@ declare const Specs: {
                     "url": string;
                     "longitude": string;
                 };
+                "additionalProperties": boolean;
             };
             "AuthorizeParams": {
                 "properties": {
@@ -3829,6 +3891,7 @@ declare const Specs: {
                 "example": {
                     "accessToken": string;
                 };
+                "additionalProperties": boolean;
             };
             "LoginParams": {
                 "type": string;
@@ -3860,6 +3923,7 @@ declare const Specs: {
                     "name": string;
                     "expiration": string;
                 };
+                "additionalProperties": boolean;
             };
             "UserParams": {
                 "required": string[];
@@ -3887,6 +3951,7 @@ declare const Specs: {
                     "name": string;
                     "status": number;
                 };
+                "additionalProperties": boolean;
             };
             "User": {
                 "properties": {
@@ -3911,6 +3976,7 @@ declare const Specs: {
                     "account": string;
                     "status": number;
                 };
+                "additionalProperties": boolean;
             };
             "Authorization": {
                 "properties": {
@@ -3930,6 +3996,7 @@ declare const Specs: {
                         "status": number;
                     };
                 };
+                "additionalProperties": boolean;
             };
             "ContactCreateParams": {
                 "required": string[];
@@ -3957,6 +4024,7 @@ declare const Specs: {
                     "accessToken": string;
                     "type": string;
                 };
+                "additionalProperties": boolean;
             };
         };
     };
@@ -4640,6 +4708,7 @@ declare const Specs: {
                     "data": string;
                     "message": string;
                 };
+                "additionalProperties": boolean;
             };
             "PayeeResponse": {
                 "properties": {
@@ -4661,6 +4730,7 @@ declare const Specs: {
                     "data": string;
                     "message": string;
                 };
+                "additionalProperties": boolean;
             };
             "ShowcaseResponse": {
                 "properties": {
@@ -4682,6 +4752,7 @@ declare const Specs: {
                     "data": string;
                     "message": string;
                 };
+                "additionalProperties": boolean;
             };
             "ShowcasePostResponse": {
                 "properties": {
@@ -4703,6 +4774,7 @@ declare const Specs: {
                     "data": string;
                     "message": string;
                 };
+                "additionalProperties": boolean;
             };
             "TestimonialResponse": {
                 "properties": {
@@ -4724,6 +4796,7 @@ declare const Specs: {
                     "data": string;
                     "message": string;
                 };
+                "additionalProperties": boolean;
             };
             "TestimonialsResponse": {
                 "properties": {
@@ -4745,6 +4818,7 @@ declare const Specs: {
                     };
                     "message": string;
                 };
+                "additionalProperties": boolean;
             };
             "ShowcasesResponse": {
                 "properties": {
@@ -4766,6 +4840,7 @@ declare const Specs: {
                     };
                     "message": string;
                 };
+                "additionalProperties": boolean;
             };
             "Testimonials": {
                 "properties": {
@@ -4780,6 +4855,7 @@ declare const Specs: {
                 "example": {
                     "testimonials": string[];
                 };
+                "additionalProperties": boolean;
             };
             "ProfilesResponse": {
                 "properties": {
@@ -4805,6 +4881,7 @@ declare const Specs: {
                     "profiles": string[];
                     "currentPage": number;
                 };
+                "additionalProperties": boolean;
             };
             "Showcases": {
                 "properties": {
@@ -4819,6 +4896,7 @@ declare const Specs: {
                 "example": {
                     "showcases": string[];
                 };
+                "additionalProperties": boolean;
             };
             "TestimonialPostResponse": {
                 "properties": {
@@ -4840,6 +4918,7 @@ declare const Specs: {
                     "data": string;
                     "message": string;
                 };
+                "additionalProperties": boolean;
             };
             "APIResponse": {
                 "properties": {
@@ -4855,6 +4934,7 @@ declare const Specs: {
                     "code": number;
                     "message": string;
                 };
+                "additionalProperties": boolean;
             };
             "APIError": {
                 "properties": {
@@ -4866,6 +4946,7 @@ declare const Specs: {
                         "type": string;
                     };
                 };
+                "additionalProperties": boolean;
             };
             "DuplicateError": {
                 "properties": {
@@ -4877,6 +4958,7 @@ declare const Specs: {
                         "type": string;
                     };
                 };
+                "additionalProperties": boolean;
             };
             "ProfilePutParams": {
                 "required": string[];
@@ -4895,6 +4977,7 @@ declare const Specs: {
                     "profile": string;
                     "accessToken": string;
                 };
+                "additionalProperties": boolean;
             };
             "ShowcasePutParams": {
                 "required": string[];
@@ -4913,6 +4996,7 @@ declare const Specs: {
                     "showcase": string;
                     "accessToken": string;
                 };
+                "additionalProperties": boolean;
             };
             "ShowcasePatchParams": {
                 "required": string[];
@@ -4931,6 +5015,7 @@ declare const Specs: {
                     "showcase": string;
                     "accessToken": string;
                 };
+                "additionalProperties": boolean;
             };
             "ShowcasePostParams": {
                 "required": string[];
@@ -4949,6 +5034,7 @@ declare const Specs: {
                     "showcase": string;
                     "accessToken": string;
                 };
+                "additionalProperties": boolean;
             };
             "TestimonialPutParams": {
                 "required": string[];
@@ -4967,6 +5053,7 @@ declare const Specs: {
                     "testimonial": string;
                     "accessToken": string;
                 };
+                "additionalProperties": boolean;
             };
             "TestimonialPatchParams": {
                 "required": string[];
@@ -4985,6 +5072,7 @@ declare const Specs: {
                     "testimonial": string;
                     "accessToken": string;
                 };
+                "additionalProperties": boolean;
             };
             "TestimonialPostParams": {
                 "required": string[];
@@ -5003,6 +5091,7 @@ declare const Specs: {
                     "testimonial": string;
                     "accessToken": string;
                 };
+                "additionalProperties": boolean;
             };
             "PayeePutParams": {
                 "required": string[];
@@ -5021,6 +5110,7 @@ declare const Specs: {
                     "payee": string;
                     "accessToken": string;
                 };
+                "additionalProperties": boolean;
             };
         };
     };
