@@ -846,7 +846,7 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/access-tokens/basic": {
+            "/access-tokens": {
                 "post": {
                     "tags": string[];
                     "summary": string;
@@ -901,262 +901,15 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/access-tokens/mfa": {
-                "post": {
-                    "tags": string[];
-                    "summary": string;
-                    "description": string;
-                    "parameters": {
-                        "in": string;
-                        "name": string;
-                        "required": boolean;
-                        "schema": {
-                            "$ref": string;
-                        };
-                    }[];
-                    "responses": {
-                        "204": {
-                            "description": string;
-                        };
-                        "400": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "401": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "429": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                    };
-                    "x-rate-limit": number;
-                };
-            };
-            "/access-tokens/mfa/{id}": {
-                "put": {
-                    "tags": string[];
-                    "summary": string;
-                    "parameters": ({
-                        "name": string;
-                        "in": string;
-                        "description": string;
-                        "required": boolean;
-                        "type": string;
-                        "schema"?: undefined;
-                    } | {
-                        "in": string;
-                        "name": string;
-                        "required": boolean;
-                        "schema": {
-                            "$ref": string;
-                        };
-                        "description"?: undefined;
-                        "type"?: undefined;
-                    })[];
-                    "responses": {
-                        "200": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "400": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "401": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "429": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                    };
-                    "x-rate-limit": number;
-                };
-            };
-            "/login": {
-                "post": {
-                    "tags": string[];
-                    "summary": string;
-                    "description": string;
-                    "parameters": {
-                        "in": string;
-                        "name": string;
-                        "description": string;
-                        "required": boolean;
-                        "schema": {
-                            "$ref": string;
-                        };
-                    }[];
-                    "responses": {
-                        "200": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "400": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "401": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "429": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                    };
-                    "x-rate-limit": number;
-                };
-            };
-            "/authorize": {
-                "post": {
-                    "tags": string[];
-                    "summary": string;
-                    "description": string;
-                    "parameters": {
-                        "in": string;
-                        "name": string;
-                        "description": string;
-                        "required": boolean;
-                        "schema": {
-                            "$ref": string;
-                        };
-                    }[];
-                    "responses": {
-                        "200": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "400": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "401": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "429": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                    };
-                    "security": {
-                        "Bearer": any[];
-                    }[];
-                    "x-rate-limit": number;
-                };
-            };
-            "/accesstokens": {
+            "/authorization": {
                 "get": {
-                    "tags": string[];
                     "summary": string;
+                    "description": string;
                     "parameters": any[];
                     "responses": {
                         "200": {
                             "description": string;
                             "schema": {
-                                "type": string;
-                                "items": {
-                                    "$ref": string;
-                                };
-                            };
-                            "responseSchema": {
-                                "type": string;
-                                "items": {
-                                    "$ref": string;
-                                };
-                            };
-                        };
-                        "401": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "429": {
-                            "description": string;
-                            "schema": {
                                 "$ref": string;
                             };
                             "responseSchema": {
@@ -1164,104 +917,6 @@ declare const Specs: {
                             };
                         };
                     };
-                    "security": {
-                        "Bearer": any[];
-                    }[];
-                    "x-rate-limit": number;
-                };
-                "post": {
-                    "tags": string[];
-                    "summary": string;
-                    "parameters": {
-                        "in": string;
-                        "name": string;
-                        "description": string;
-                        "required": boolean;
-                        "schema": {
-                            "$ref": string;
-                        };
-                    }[];
-                    "responses": {
-                        "200": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "400": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "401": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "429": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                    };
-                    "security": {
-                        "Bearer": any[];
-                    }[];
-                    "x-rate-limit": number;
-                };
-            };
-            "/accesstokens/{revokeToken}": {
-                "delete": {
-                    "tags": string[];
-                    "summary": string;
-                    "parameters": {
-                        "name": string;
-                        "in": string;
-                        "description": string;
-                        "required": boolean;
-                        "type": string;
-                    }[];
-                    "responses": {
-                        "204": {
-                            "description": string;
-                        };
-                        "401": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                        "429": {
-                            "description": string;
-                            "schema": {
-                                "$ref": string;
-                            };
-                            "responseSchema": {
-                                "$ref": string;
-                            };
-                        };
-                    };
-                    "security": {
-                        "Bearer": any[];
-                    }[];
                     "x-rate-limit": number;
                 };
             };
@@ -1788,18 +1443,6 @@ declare const Specs: {
                     };
                 };
                 "description": string;
-                "example": {
-                    "accountId": number;
-                    "createdDate": string;
-                    "permissions": string;
-                    "appId": number;
-                    "adminMode": boolean;
-                    "expiration": string;
-                    "id": string;
-                    "type": string;
-                    "userId": number;
-                    "projectId": number;
-                };
                 "additionalProperties": boolean;
             };
             "AccessTokenCreateParams": {
@@ -1830,14 +1473,6 @@ declare const Specs: {
                     };
                 };
                 "description": string;
-                "example": {
-                    "accountId": number;
-                    "permissions": string;
-                    "appId": number;
-                    "expiration": string;
-                    "userId": number;
-                    "projectId": number;
-                };
                 "additionalProperties": boolean;
             };
             "MFACreateParams": {
@@ -1847,9 +1482,6 @@ declare const Specs: {
                         "type": string;
                         "format": string;
                     };
-                };
-                "example": {
-                    "email": string;
                 };
                 "additionalProperties": boolean;
             };
@@ -1862,9 +1494,6 @@ declare const Specs: {
                         "description": string;
                         "minLength": number;
                     };
-                };
-                "example": {
-                    "password": string;
                 };
                 "additionalProperties": boolean;
             };
@@ -2186,9 +1815,6 @@ declare const Specs: {
                     };
                 };
                 "description": string;
-                "example": {
-                    "accessToken": {};
-                };
                 "additionalProperties": boolean;
             };
             "LoginParams": {
@@ -2786,6 +2412,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "UserUpdateParams": {
+                "type": string;
                 "properties": {
                     "firstName": {
                         "type": string;
