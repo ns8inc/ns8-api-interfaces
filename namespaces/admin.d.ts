@@ -19,12 +19,6 @@ export declare module Admin {
         expiration?: Date;
         permissions: Array<string>;
     }
-    class MFACreateParams {
-        email: string;
-    }
-    class MFAUpdateParams {
-        password: string;
-    }
     class AccessTokenString {
     }
     class Account {
@@ -32,8 +26,8 @@ export declare module Admin {
         userId?: number;
         appId?: number;
         status?: number;
-        createdDate?: Date;
-        lastUpdated?: Date;
+        createdDate?: string;
+        lastUpdated?: string;
         type?: string;
         partnerId?: number;
         data?: any;
@@ -61,7 +55,7 @@ export declare module Admin {
         website?: string;
         consoleHost?: string;
         commissions?: boolean;
-        permissions?: Array<undefined>;
+        permissions?: Array<any>;
         supportEmail?: string;
         reporting?: undefined;
         userNameFormat?: string;
@@ -77,9 +71,9 @@ export declare module Admin {
     class Authorization {
         accessToken?: string;
         expiration?: Date;
-        user?: undefined;
-        account?: undefined;
-        projects?: Array<undefined>;
+        user?: any;
+        account?: any;
+        projects?: Array<any>;
     }
     class AuthorizeParams {
         accessToken?: string;
@@ -88,7 +82,7 @@ export declare module Admin {
         name: string;
         password: string;
         appId?: number;
-        expiration?: Date;
+        expiration?: string;
     }
     class PasswordChangeParams {
         oldPassword: string;
@@ -133,7 +127,7 @@ export declare module Admin {
     class PaymentHistory {
         discount?: number;
         balance?: number;
-        payments?: Array<undefined>;
+        payments?: Array<any>;
     }
     class PaymentMethodCreateParams {
         stripeToken?: string;
@@ -142,8 +136,8 @@ export declare module Admin {
         id?: string;
     }
     class PaymentMethods {
-        customer?: undefined;
-        cards?: Array<undefined>;
+        customer?: any;
+        cards?: Array<any>;
     }
     class Permissions {
     }
@@ -191,8 +185,8 @@ export declare module Admin {
         lastName?: string;
         email?: string;
         status?: number;
-        createdDate?: Date;
-        lastUpdated?: Date;
+        createdDate?: string;
+        lastUpdated?: string;
     }
     class UserCreateParams {
         name: string;

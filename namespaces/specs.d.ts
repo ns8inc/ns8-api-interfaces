@@ -30,6 +30,7 @@ declare const Specs: {
                             "schema": {
                                 "type": string;
                                 "items": {
+                                    "type": string;
                                     "properties": {
                                         "id": {
                                             "type": string;
@@ -74,6 +75,7 @@ declare const Specs: {
                                             "type": string;
                                             "description": string;
                                             "items": {
+                                                "type": string;
                                                 "required": string[];
                                                 "properties": {
                                                     "id": {
@@ -150,6 +152,7 @@ declare const Specs: {
                             "responseSchema": {
                                 "type": string;
                                 "items": {
+                                    "type": string;
                                     "properties": {
                                         "id": {
                                             "type": string;
@@ -194,6 +197,7 @@ declare const Specs: {
                                             "type": string;
                                             "description": string;
                                             "items": {
+                                                "type": string;
                                                 "required": string[];
                                                 "properties": {
                                                     "id": {
@@ -301,6 +305,7 @@ declare const Specs: {
                         "description": string;
                         "required": boolean;
                         "schema": {
+                            "type": string;
                             "required": string[];
                             "properties": {
                                 "name": {
@@ -311,11 +316,9 @@ declare const Specs: {
                                 "email": {
                                     "type": string;
                                     "format": string;
-                                    "description": string;
                                 };
                                 "password": {
                                     "type": string;
-                                    "format": string;
                                     "minLength": number;
                                 };
                                 "firstName": {
@@ -326,7 +329,6 @@ declare const Specs: {
                                 };
                                 "phone": {
                                     "type": string;
-                                    "format": string;
                                 };
                                 "timezone": {
                                     "type": string;
@@ -349,6 +351,7 @@ declare const Specs: {
                         "200": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -373,12 +376,14 @@ declare const Specs: {
                                         "type": string;
                                     };
                                     "createdDate": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "lastUpdated": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                 };
                                 "example": {
@@ -394,6 +399,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -418,12 +424,14 @@ declare const Specs: {
                                         "type": string;
                                     };
                                     "createdDate": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "lastUpdated": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                 };
                                 "example": {
@@ -830,11 +838,9 @@ declare const Specs: {
                                 };
                                 "phone": {
                                     "type": string;
-                                    "format": string;
                                 };
                                 "timezone": {
                                     "type": string;
-                                    "format": string;
                                 };
                             };
                             "description": string;
@@ -852,6 +858,7 @@ declare const Specs: {
                         "200": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -876,12 +883,14 @@ declare const Specs: {
                                         "type": string;
                                     };
                                     "createdDate": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "lastUpdated": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                 };
                                 "example": {
@@ -897,6 +906,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -921,12 +931,14 @@ declare const Specs: {
                                         "type": string;
                                     };
                                     "createdDate": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "lastUpdated": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                 };
                                 "example": {
@@ -1324,6 +1336,7 @@ declare const Specs: {
                         "description": string;
                         "required": boolean;
                         "schema": {
+                            "type": string;
                             "properties": {
                                 "projectId": {
                                     "type": string;
@@ -1649,6 +1662,7 @@ declare const Specs: {
                         "description": string;
                         "required": boolean;
                         "schema": {
+                            "type": string;
                             "required": string[];
                             "properties": {
                                 "oldPassword": {
@@ -2190,6 +2204,7 @@ declare const Specs: {
                         "description": string;
                         "required": boolean;
                         "schema": {
+                            "type": string;
                             "required": string[];
                             "properties": {
                                 "appId": {
@@ -2230,6 +2245,7 @@ declare const Specs: {
                         "200": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -2248,12 +2264,14 @@ declare const Specs: {
                                         "description": string;
                                     };
                                     "createdDate": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "lastUpdated": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "type": {
                                         "type": string;
@@ -2284,6 +2302,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -2302,12 +2321,14 @@ declare const Specs: {
                                         "description": string;
                                     };
                                     "createdDate": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "lastUpdated": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "type": {
                                         "type": string;
@@ -2651,6 +2672,7 @@ declare const Specs: {
                         "description": string;
                         "required": boolean;
                         "schema": {
+                            "type": string;
                             "properties": {
                                 "status": {
                                     "type": string;
@@ -2685,6 +2707,7 @@ declare const Specs: {
                         "200": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -2703,12 +2726,14 @@ declare const Specs: {
                                         "description": string;
                                     };
                                     "createdDate": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "lastUpdated": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "type": {
                                         "type": string;
@@ -2739,6 +2764,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -2757,12 +2783,14 @@ declare const Specs: {
                                         "description": string;
                                     };
                                     "createdDate": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "lastUpdated": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "type": {
                                         "type": string;
@@ -3104,6 +3132,7 @@ declare const Specs: {
                             "schema": {
                                 "type": string;
                                 "items": {
+                                    "type": string;
                                     "required": string[];
                                     "properties": {
                                         "id": {
@@ -3172,6 +3201,7 @@ declare const Specs: {
                             "responseSchema": {
                                 "type": string;
                                 "items": {
+                                    "type": string;
                                     "required": string[];
                                     "properties": {
                                         "id": {
@@ -3545,6 +3575,7 @@ declare const Specs: {
                         "description": string;
                         "required": boolean;
                         "schema": {
+                            "type": string;
                             "properties": {
                                 "accountId": {
                                     "description": string;
@@ -3569,6 +3600,7 @@ declare const Specs: {
                         "200": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "id": {
@@ -3634,6 +3666,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "id": {
@@ -4274,6 +4307,7 @@ declare const Specs: {
                         "200": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "id": {
@@ -4339,6 +4373,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "id": {
@@ -4714,6 +4749,7 @@ declare const Specs: {
                             "schema": {
                                 "type": string;
                                 "items": {
+                                    "type": string;
                                     "properties": {
                                         "appId": {
                                             "type": string;
@@ -4765,6 +4801,7 @@ declare const Specs: {
                             "responseSchema": {
                                 "type": string;
                                 "items": {
+                                    "type": string;
                                     "properties": {
                                         "appId": {
                                             "type": string;
@@ -5124,6 +5161,7 @@ declare const Specs: {
                         "description": string;
                         "required": boolean;
                         "schema": {
+                            "type": string;
                             "required": string[];
                             "properties": {
                                 "name": {
@@ -5141,8 +5179,9 @@ declare const Specs: {
                                     "description": string;
                                 };
                                 "expiration": {
+                                    "type": string;
+                                    "format": string;
                                     "description": string;
-                                    "x-type": string;
                                 };
                             };
                             "description": string;
@@ -5394,6 +5433,7 @@ declare const Specs: {
             };
             "/authorization": {
                 "get": {
+                    "tags": string[];
                     "summary": string;
                     "description": string;
                     "parameters": any[];
@@ -5401,6 +5441,7 @@ declare const Specs: {
                         "200": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "properties": {
                                     "accessToken": {
                                         "type": string;
@@ -5412,6 +5453,7 @@ declare const Specs: {
                                         "x-type": string;
                                     };
                                     "user": {
+                                        "type": string;
                                         "properties": {
                                             "id": {
                                                 "type": string;
@@ -5436,12 +5478,14 @@ declare const Specs: {
                                                 "type": string;
                                             };
                                             "createdDate": {
+                                                "type": string;
+                                                "format": string;
                                                 "description": string;
-                                                "x-type": string;
                                             };
                                             "lastUpdated": {
+                                                "type": string;
+                                                "format": string;
                                                 "description": string;
-                                                "x-type": string;
                                             };
                                         };
                                         "example": {
@@ -5457,6 +5501,7 @@ declare const Specs: {
                                         "additionalProperties": boolean;
                                     };
                                     "account": {
+                                        "type": string;
                                         "properties": {
                                             "id": {
                                                 "type": string;
@@ -5475,12 +5520,14 @@ declare const Specs: {
                                                 "description": string;
                                             };
                                             "createdDate": {
+                                                "type": string;
+                                                "format": string;
                                                 "description": string;
-                                                "x-type": string;
                                             };
                                             "lastUpdated": {
+                                                "type": string;
+                                                "format": string;
                                                 "description": string;
-                                                "x-type": string;
                                             };
                                             "type": {
                                                 "type": string;
@@ -5514,6 +5561,7 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                         "items": {
+                                            "type": string;
                                             "required": string[];
                                             "properties": {
                                                 "id": {
@@ -5622,6 +5670,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "properties": {
                                     "accessToken": {
                                         "type": string;
@@ -5633,6 +5682,7 @@ declare const Specs: {
                                         "x-type": string;
                                     };
                                     "user": {
+                                        "type": string;
                                         "properties": {
                                             "id": {
                                                 "type": string;
@@ -5657,12 +5707,14 @@ declare const Specs: {
                                                 "type": string;
                                             };
                                             "createdDate": {
+                                                "type": string;
+                                                "format": string;
                                                 "description": string;
-                                                "x-type": string;
                                             };
                                             "lastUpdated": {
+                                                "type": string;
+                                                "format": string;
                                                 "description": string;
-                                                "x-type": string;
                                             };
                                         };
                                         "example": {
@@ -5678,6 +5730,7 @@ declare const Specs: {
                                         "additionalProperties": boolean;
                                     };
                                     "account": {
+                                        "type": string;
                                         "properties": {
                                             "id": {
                                                 "type": string;
@@ -5696,12 +5749,14 @@ declare const Specs: {
                                                 "description": string;
                                             };
                                             "createdDate": {
+                                                "type": string;
+                                                "format": string;
                                                 "description": string;
-                                                "x-type": string;
                                             };
                                             "lastUpdated": {
+                                                "type": string;
+                                                "format": string;
                                                 "description": string;
-                                                "x-type": string;
                                             };
                                             "type": {
                                                 "type": string;
@@ -5735,6 +5790,7 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                         "items": {
+                                            "type": string;
                                             "required": string[];
                                             "properties": {
                                                 "id": {
@@ -6029,6 +6085,7 @@ declare const Specs: {
                         "name": string;
                         "required": boolean;
                         "schema": {
+                            "type": string;
                             "properties": {
                                 "token": {
                                     "type": string;
@@ -6688,8 +6745,10 @@ declare const Specs: {
                         "200": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "properties": {
                                     "customer": {
+                                        "type": string;
                                         "properties": {
                                             "default_source": {
                                                 "type": string;
@@ -6732,6 +6791,7 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                         "items": {
+                                            "type": string;
                                             "properties": {
                                                 "id": {
                                                     "type": string;
@@ -6793,8 +6853,10 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "properties": {
                                     "customer": {
+                                        "type": string;
                                         "properties": {
                                             "default_source": {
                                                 "type": string;
@@ -6837,6 +6899,7 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                         "items": {
+                                            "type": string;
                                             "properties": {
                                                 "id": {
                                                     "type": string;
@@ -7059,6 +7122,7 @@ declare const Specs: {
                         "name": string;
                         "required": boolean;
                         "schema": {
+                            "type": string;
                             "properties": {
                                 "stripeToken": {
                                     "type": string;
@@ -7554,6 +7618,7 @@ declare const Specs: {
                         "name": string;
                         "required": boolean;
                         "schema": {
+                            "type": string;
                             "properties": {
                                 "id": {
                                     "type": string;
@@ -7807,6 +7872,7 @@ declare const Specs: {
                         "200": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "properties": {
                                     "discount": {
                                         "type": string;
@@ -7820,6 +7886,7 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                         "items": {
+                                            "type": string;
                                             "properties": {
                                                 "id": {
                                                     "type": string;
@@ -7899,6 +7966,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "properties": {
                                     "discount": {
                                         "type": string;
@@ -7912,6 +7980,7 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                         "items": {
+                                            "type": string;
                                             "properties": {
                                                 "id": {
                                                     "type": string;
@@ -8225,6 +8294,7 @@ declare const Specs: {
                         "name": string;
                         "required": boolean;
                         "schema": {
+                            "type": string;
                             "properties": {
                                 "amount": {
                                     "type": string;
@@ -8569,34 +8639,13 @@ declare const Specs: {
                 "description": string;
                 "additionalProperties": boolean;
             };
-            "MFACreateParams": {
-                "required": string[];
-                "properties": {
-                    "email": {
-                        "type": string;
-                        "format": string;
-                    };
-                };
-                "additionalProperties": boolean;
-            };
-            "MFAUpdateParams": {
-                "required": string[];
-                "properties": {
-                    "password": {
-                        "type": string;
-                        "format": string;
-                        "description": string;
-                        "minLength": number;
-                    };
-                };
-                "additionalProperties": boolean;
-            };
             "AccessTokenString": {
                 "type": string;
                 "description": string;
                 "additionalProperties": boolean;
             };
             "Account": {
+                "type": string;
                 "properties": {
                     "id": {
                         "type": string;
@@ -8615,12 +8664,14 @@ declare const Specs: {
                         "description": string;
                     };
                     "createdDate": {
+                        "type": string;
+                        "format": string;
                         "description": string;
-                        "x-type": string;
                     };
                     "lastUpdated": {
+                        "type": string;
+                        "format": string;
                         "description": string;
-                        "x-type": string;
                     };
                     "type": {
                         "type": string;
@@ -8651,6 +8702,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "AccountCreateParams": {
+                "type": string;
                 "required": string[];
                 "properties": {
                     "appId": {
@@ -8687,6 +8739,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "AccountUpdateParams": {
+                "type": string;
                 "properties": {
                     "status": {
                         "type": string;
@@ -8716,6 +8769,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "Application": {
+                "type": string;
                 "properties": {
                     "id": {
                         "type": string;
@@ -8760,6 +8814,7 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                         "items": {
+                            "type": string;
                             "required": string[];
                             "properties": {
                                 "id": {
@@ -8833,6 +8888,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "ApplicationPermission": {
+                "type": string;
                 "required": string[];
                 "properties": {
                     "id": {
@@ -8865,6 +8921,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "Authorization": {
+                "type": string;
                 "properties": {
                     "accessToken": {
                         "type": string;
@@ -8876,6 +8933,7 @@ declare const Specs: {
                         "x-type": string;
                     };
                     "user": {
+                        "type": string;
                         "properties": {
                             "id": {
                                 "type": string;
@@ -8900,12 +8958,14 @@ declare const Specs: {
                                 "type": string;
                             };
                             "createdDate": {
+                                "type": string;
+                                "format": string;
                                 "description": string;
-                                "x-type": string;
                             };
                             "lastUpdated": {
+                                "type": string;
+                                "format": string;
                                 "description": string;
-                                "x-type": string;
                             };
                         };
                         "example": {
@@ -8921,6 +8981,7 @@ declare const Specs: {
                         "additionalProperties": boolean;
                     };
                     "account": {
+                        "type": string;
                         "properties": {
                             "id": {
                                 "type": string;
@@ -8939,12 +9000,14 @@ declare const Specs: {
                                 "description": string;
                             };
                             "createdDate": {
+                                "type": string;
+                                "format": string;
                                 "description": string;
-                                "x-type": string;
                             };
                             "lastUpdated": {
+                                "type": string;
+                                "format": string;
                                 "description": string;
-                                "x-type": string;
                             };
                             "type": {
                                 "type": string;
@@ -8978,6 +9041,7 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                         "items": {
+                            "type": string;
                             "required": string[];
                             "properties": {
                                 "id": {
@@ -9086,6 +9150,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "AuthorizeParams": {
+                "type": string;
                 "properties": {
                     "accessToken": {
                         "type": string;
@@ -9097,6 +9162,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "LoginParams": {
+                "type": string;
                 "required": string[];
                 "properties": {
                     "name": {
@@ -9114,8 +9180,9 @@ declare const Specs: {
                         "description": string;
                     };
                     "expiration": {
+                        "type": string;
+                        "format": string;
                         "description": string;
-                        "x-type": string;
                     };
                 };
                 "description": string;
@@ -9128,6 +9195,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "PasswordChangeParams": {
+                "type": string;
                 "required": string[];
                 "properties": {
                     "oldPassword": {
@@ -9151,6 +9219,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "PasswordResetParams": {
+                "type": string;
                 "properties": {
                     "token": {
                         "type": string;
@@ -9170,6 +9239,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "Payment": {
+                "type": string;
                 "properties": {
                     "id": {
                         "type": string;
@@ -9228,6 +9298,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "PaymentCard": {
+                "type": string;
                 "properties": {
                     "id": {
                         "type": string;
@@ -9266,6 +9337,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "PaymentCreateParams": {
+                "type": string;
                 "properties": {
                     "amount": {
                         "type": string;
@@ -9284,6 +9356,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "PaymentCustomer": {
+                "type": string;
                 "properties": {
                     "default_source": {
                         "type": string;
@@ -9323,6 +9396,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "PaymentHistory": {
+                "type": string;
                 "properties": {
                     "discount": {
                         "type": string;
@@ -9336,6 +9410,7 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                         "items": {
+                            "type": string;
                             "properties": {
                                 "id": {
                                     "type": string;
@@ -9415,6 +9490,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "PaymentMethodCreateParams": {
+                "type": string;
                 "properties": {
                     "stripeToken": {
                         "type": string;
@@ -9428,6 +9504,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "PaymentMethodPrimaryParams": {
+                "type": string;
                 "properties": {
                     "id": {
                         "type": string;
@@ -9441,8 +9518,10 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "PaymentMethods": {
+                "type": string;
                 "properties": {
                     "customer": {
+                        "type": string;
                         "properties": {
                             "default_source": {
                                 "type": string;
@@ -9485,6 +9564,7 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                         "items": {
+                            "type": string;
                             "properties": {
                                 "id": {
                                     "type": string;
@@ -9554,6 +9634,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "Project": {
+                "type": string;
                 "required": string[];
                 "properties": {
                     "id": {
@@ -9619,6 +9700,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "ProjectCreateParams": {
+                "type": string;
                 "properties": {
                     "accountId": {
                         "description": string;
@@ -9639,6 +9721,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "ProjectDefaultParams": {
+                "type": string;
                 "properties": {
                     "projectId": {
                         "type": string;
@@ -9656,6 +9739,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "ProjectShare": {
+                "type": string;
                 "properties": {
                     "appId": {
                         "type": string;
@@ -9719,6 +9803,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "User": {
+                "type": string;
                 "properties": {
                     "id": {
                         "type": string;
@@ -9743,12 +9828,14 @@ declare const Specs: {
                         "type": string;
                     };
                     "createdDate": {
+                        "type": string;
+                        "format": string;
                         "description": string;
-                        "x-type": string;
                     };
                     "lastUpdated": {
+                        "type": string;
+                        "format": string;
                         "description": string;
-                        "x-type": string;
                     };
                 };
                 "example": {
@@ -9764,6 +9851,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "UserCreateParams": {
+                "type": string;
                 "required": string[];
                 "properties": {
                     "name": {
@@ -9774,11 +9862,9 @@ declare const Specs: {
                     "email": {
                         "type": string;
                         "format": string;
-                        "description": string;
                     };
                     "password": {
                         "type": string;
-                        "format": string;
                         "minLength": number;
                     };
                     "firstName": {
@@ -9789,7 +9875,6 @@ declare const Specs: {
                     };
                     "phone": {
                         "type": string;
-                        "format": string;
                     };
                     "timezone": {
                         "type": string;
@@ -9835,11 +9920,9 @@ declare const Specs: {
                     };
                     "phone": {
                         "type": string;
-                        "format": string;
                     };
                     "timezone": {
                         "type": string;
-                        "format": string;
                     };
                 };
                 "description": string;
