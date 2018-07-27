@@ -8624,8 +8624,9 @@ declare const Specs: {
                         "description": string;
                     };
                     "expiration": {
+                        "type": string;
+                        "format": string;
                         "description": string;
-                        "x-type": string;
                     };
                     "permissions": {
                         "type": string;
@@ -8637,6 +8638,28 @@ declare const Specs: {
                     };
                 };
                 "description": string;
+                "additionalProperties": boolean;
+            };
+            "MFACreateParams": {
+                "required": string[];
+                "properties": {
+                    "email": {
+                        "type": string;
+                        "format": string;
+                    };
+                };
+                "additionalProperties": boolean;
+            };
+            "MFAUpdateParams": {
+                "required": string[];
+                "properties": {
+                    "password": {
+                        "type": string;
+                        "format": string;
+                        "description": string;
+                        "minLength": number;
+                    };
+                };
                 "additionalProperties": boolean;
             };
             "AccessTokenString": {

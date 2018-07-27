@@ -16,8 +16,14 @@ export declare module Admin {
         appId: number;
         accountId?: number;
         projectId?: number;
-        expiration?: Date;
+        expiration?: string;
         permissions: Array<string>;
+    }
+    class MFACreateParams {
+        email: string;
+    }
+    class MFAUpdateParams {
+        password: string;
     }
     class AccessTokenString {
     }
