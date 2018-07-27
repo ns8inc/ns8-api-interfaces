@@ -450,6 +450,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -485,6 +486,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -523,6 +525,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -558,6 +561,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -596,6 +600,7 @@ declare const Specs: {
                         "404": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -631,6 +636,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -669,6 +675,7 @@ declare const Specs: {
                         "409": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -704,6 +711,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -742,6 +750,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -777,6 +786,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -957,6 +967,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -992,6 +1003,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1030,6 +1042,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1065,6 +1078,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1103,6 +1117,7 @@ declare const Specs: {
                         "404": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1138,6 +1153,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1176,6 +1192,7 @@ declare const Specs: {
                         "409": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1211,6 +1228,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1249,6 +1267,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1284,6 +1303,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1356,6 +1376,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1391,6 +1412,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1429,6 +1451,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1464,6 +1487,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1502,6 +1526,7 @@ declare const Specs: {
                         "404": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1537,6 +1562,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1575,6 +1601,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1610,6 +1637,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1693,6 +1721,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1728,6 +1757,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1766,6 +1796,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1801,6 +1832,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1839,6 +1871,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1874,6 +1907,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -1971,6 +2005,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2006,6 +2041,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2044,6 +2080,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2079,6 +2116,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2117,6 +2155,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2152,6 +2191,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2362,6 +2402,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2397,6 +2438,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2435,6 +2477,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2470,6 +2513,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2508,6 +2552,7 @@ declare const Specs: {
                         "409": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2543,6 +2588,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2581,6 +2627,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2616,6 +2663,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2824,6 +2872,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2859,6 +2908,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2897,6 +2947,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2932,6 +2983,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -2970,6 +3022,7 @@ declare const Specs: {
                         "404": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3005,6 +3058,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3043,6 +3097,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3078,6 +3133,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3271,6 +3327,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3306,6 +3363,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3344,6 +3402,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3379,6 +3438,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3417,6 +3477,7 @@ declare const Specs: {
                         "404": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3452,6 +3513,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3490,6 +3552,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3525,6 +3588,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3735,6 +3799,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3770,6 +3835,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3808,6 +3874,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3843,6 +3910,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3881,6 +3949,7 @@ declare const Specs: {
                         "404": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3916,6 +3985,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3954,6 +4024,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -3989,6 +4060,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4049,6 +4121,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4084,6 +4157,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4122,6 +4196,7 @@ declare const Specs: {
                         "404": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4157,6 +4232,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4195,6 +4271,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4230,6 +4307,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4442,6 +4520,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4477,6 +4556,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4515,6 +4595,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4550,6 +4631,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4588,6 +4670,7 @@ declare const Specs: {
                         "404": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4623,6 +4706,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4661,6 +4745,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4696,6 +4781,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4854,6 +4940,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4889,6 +4976,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4927,6 +5015,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -4962,6 +5051,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -5000,6 +5090,7 @@ declare const Specs: {
                         "404": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -5035,6 +5126,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -5073,6 +5165,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -5108,6 +5201,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -5211,6 +5305,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -5246,6 +5341,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -5284,6 +5380,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -5319,6 +5416,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -5357,6 +5455,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -5392,6 +5491,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -5929,6 +6029,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -5964,6 +6065,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6002,6 +6104,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6037,6 +6140,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6112,6 +6216,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6147,6 +6252,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6185,6 +6291,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6220,6 +6327,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6258,6 +6366,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6293,6 +6402,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6398,6 +6508,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6433,6 +6544,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6471,6 +6583,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6506,6 +6619,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6589,6 +6703,7 @@ declare const Specs: {
                         "404": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6624,6 +6739,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6662,6 +6778,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6697,6 +6814,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6964,6 +7082,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -6999,6 +7118,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7037,6 +7157,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7072,6 +7193,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7143,6 +7265,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7178,6 +7301,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7216,6 +7340,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7251,6 +7376,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7289,6 +7415,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7324,6 +7451,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7385,6 +7513,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7420,6 +7549,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7458,6 +7588,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7493,6 +7624,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7531,6 +7663,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7566,6 +7699,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7639,6 +7773,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7674,6 +7809,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7712,6 +7848,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7747,6 +7884,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7785,6 +7923,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -7820,6 +7959,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -8063,6 +8203,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -8098,6 +8239,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -8136,6 +8278,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -8171,6 +8314,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -8209,6 +8353,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -8244,6 +8389,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -8320,6 +8466,7 @@ declare const Specs: {
                         "400": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -8355,6 +8502,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -8393,6 +8541,7 @@ declare const Specs: {
                         "401": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -8428,6 +8577,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -8466,6 +8616,7 @@ declare const Specs: {
                         "429": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -8501,6 +8652,7 @@ declare const Specs: {
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
+                                "type": string;
                                 "required": string[];
                                 "properties": {
                                     "code": {
@@ -10009,6 +10161,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "Error": {
+                "type": string;
                 "required": string[];
                 "properties": {
                     "code": {
