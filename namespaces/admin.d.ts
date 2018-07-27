@@ -5,7 +5,7 @@ export declare module Admin {
         appId: number;
         accountId?: number;
         projectId?: number;
-        permissions?: Permissions;
+        permissions?: Array<string>;
         type?: string;
         createdDate?: Date;
         expiration?: Date;
@@ -17,7 +17,7 @@ export declare module Admin {
         accountId?: number;
         projectId?: number;
         expiration?: Date;
-        permissions: Permissions;
+        permissions: Array<string>;
     }
     class MFACreateParams {
         email: string;
@@ -61,9 +61,9 @@ export declare module Admin {
         website?: string;
         consoleHost?: string;
         commissions?: boolean;
-        permissions?: Array<ApplicationPermission>;
+        permissions?: Array<undefined>;
         supportEmail?: string;
-        reporting?: ApplicationReporting;
+        reporting?: undefined;
         userNameFormat?: string;
         data?: any;
     }
@@ -75,14 +75,14 @@ export declare module Admin {
         apiEndpoint?: string;
     }
     class Authorization {
-        accessToken?: AccessTokenString;
+        accessToken?: string;
         expiration?: Date;
-        user?: User;
-        account?: Account;
-        projects?: Array<Project>;
+        user?: undefined;
+        account?: undefined;
+        projects?: Array<undefined>;
     }
     class AuthorizeParams {
-        accessToken?: AccessTokenString;
+        accessToken?: string;
     }
     class LoginParams {
         name: string;
@@ -133,7 +133,7 @@ export declare module Admin {
     class PaymentHistory {
         discount?: number;
         balance?: number;
-        payments?: Array<Payment>;
+        payments?: Array<undefined>;
     }
     class PaymentMethodCreateParams {
         stripeToken?: string;
@@ -142,8 +142,8 @@ export declare module Admin {
         id?: string;
     }
     class PaymentMethods {
-        customer?: PaymentCustomer;
-        cards?: Array<PaymentCard>;
+        customer?: undefined;
+        cards?: Array<undefined>;
     }
     class Permissions {
     }
@@ -156,7 +156,7 @@ export declare module Admin {
         enabled?: boolean;
         isDemo?: boolean;
         implemented?: boolean;
-        permissions?: ProjectPermissions;
+        permissions?: string;
         sharedByUserId?: number;
         data?: any;
     }
@@ -176,7 +176,7 @@ export declare module Admin {
         projectId?: number;
         userId?: number;
         userName?: string;
-        permissions?: ProjectPermissions;
+        permissions?: string;
         sharedByUserId?: number;
         createdDate?: Date;
     }
@@ -227,7 +227,7 @@ export declare module Admin {
     class Error {
         code: number;
         message: string;
-        errors?: Array<Error_errors>;
+        errors?: Array<undefined>;
     }
     class Error_errors {
         name?: string;

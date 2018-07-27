@@ -27,12 +27,12 @@ export declare module Partner {
     class TestimonialsResponse {
         code?: number;
         message?: string;
-        data?: Testimonials;
+        data?: undefined;
     }
     class ShowcasesResponse {
         code?: number;
         message?: string;
-        data?: Showcases;
+        data?: undefined;
     }
     class Testimonials {
         testimonials?: Array<any>;

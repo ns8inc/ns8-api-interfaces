@@ -10,7 +10,7 @@ export declare module Monitoring {
     class Login {
         accessToken?: string;
         expiration?: string;
-        user?: User;
+        user?: undefined;
     }
     class APIError {
         code?: number;
@@ -50,7 +50,7 @@ export declare module Monitoring {
     }
     class Authorization {
         expiration?: string;
-        user?: User;
+        user?: undefined;
     }
     class ContactCreateParams {
         accessToken?: string;

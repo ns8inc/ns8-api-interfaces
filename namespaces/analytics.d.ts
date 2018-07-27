@@ -6,7 +6,7 @@ export declare module Analytics {
     class QueryResponse {
         code?: number;
         message?: string;
-        data?: QueryResult;
+        data?: undefined;
     }
     class APIResponse {
         code?: number;
@@ -23,7 +23,7 @@ export declare module Analytics {
     class Entity {
         name?: string;
         description?: string;
-        attributes?: Attribute;
+        attributes?: undefined;
     }
     class Attribute {
         name?: string;
@@ -43,7 +43,7 @@ export declare module Analytics {
     class CampaignIdsUpdateParams {
         accessToken?: string;
         projectId?: number;
-        campaignIds?: Array<CampaignReferrers>;
+        campaignIds?: Array<undefined>;
     }
     class CampaignReferrers {
         referrer?: string;
@@ -62,7 +62,7 @@ export declare module Analytics {
     class DashboardsUpdateParams {
         accessToken?: string;
         projectId?: number;
-        dashboards?: Array<Dashboard>;
+        dashboards?: Array<undefined>;
     }
     class QueryParams {
         accessToken?: string;
