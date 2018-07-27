@@ -227,7 +227,7 @@ export declare module Admin {
     class Error {
         code: number;
         message: string;
-        errors?: Array<undefined>;
+        errors?: Array<any>;
     }
     class Error_errors {
         name?: string;

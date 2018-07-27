@@ -478,6 +478,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -514,6 +515,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -553,6 +555,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -589,6 +592,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -628,6 +632,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -664,6 +669,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -703,6 +709,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -739,6 +746,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -778,6 +786,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -814,6 +823,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -995,6 +1005,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1031,6 +1042,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1070,6 +1082,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1106,6 +1119,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1145,6 +1159,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1181,6 +1196,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1220,6 +1236,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1256,6 +1273,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1295,6 +1313,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1331,6 +1350,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1404,6 +1424,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1440,6 +1461,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1479,6 +1501,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1515,6 +1538,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1554,6 +1578,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1590,6 +1615,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1629,6 +1655,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1665,6 +1692,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1749,6 +1777,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1785,6 +1814,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1824,6 +1854,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1860,6 +1891,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1899,6 +1931,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -1935,6 +1968,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2033,6 +2067,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2069,6 +2104,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2108,6 +2144,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2144,6 +2181,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2183,6 +2221,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2219,6 +2258,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2430,6 +2470,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2466,6 +2507,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2505,6 +2547,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2541,6 +2584,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2580,6 +2624,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2616,6 +2661,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2655,6 +2701,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2691,6 +2738,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2900,6 +2948,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2936,6 +2985,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -2975,6 +3025,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3011,6 +3062,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3050,6 +3102,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3086,6 +3139,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3125,6 +3179,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3161,6 +3216,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3355,6 +3411,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3391,6 +3448,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3430,6 +3488,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3466,6 +3525,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3505,6 +3565,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3541,6 +3602,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3580,6 +3642,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3616,6 +3679,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3827,6 +3891,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3863,6 +3928,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3902,6 +3968,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3938,6 +4005,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -3977,6 +4045,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4013,6 +4082,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4052,6 +4122,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4088,6 +4159,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4149,6 +4221,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4185,6 +4258,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4224,6 +4298,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4260,6 +4335,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4299,6 +4375,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4335,6 +4412,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4548,6 +4626,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4584,6 +4663,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4623,6 +4703,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4659,6 +4740,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4698,6 +4780,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4734,6 +4817,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4773,6 +4857,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4809,6 +4894,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -4968,6 +5054,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -5004,6 +5091,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -5043,6 +5131,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -5079,6 +5168,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -5118,6 +5208,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -5154,6 +5245,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -5193,6 +5285,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -5229,6 +5322,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -5333,6 +5427,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -5369,6 +5464,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -5408,6 +5504,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -5444,6 +5541,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -5483,6 +5581,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -5519,6 +5618,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6057,6 +6157,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6093,6 +6194,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6132,6 +6234,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6168,6 +6271,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6244,6 +6348,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6280,6 +6385,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6319,6 +6425,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6355,6 +6462,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6394,6 +6502,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6430,6 +6539,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6536,6 +6646,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6572,6 +6683,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6611,6 +6723,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6647,6 +6760,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6731,6 +6845,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6767,6 +6882,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6806,6 +6922,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -6842,6 +6959,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7110,6 +7228,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7146,6 +7265,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7185,6 +7305,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7221,6 +7342,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7293,6 +7415,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7329,6 +7452,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7368,6 +7492,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7404,6 +7529,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7443,6 +7569,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7479,6 +7606,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7541,6 +7669,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7577,6 +7706,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7616,6 +7746,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7652,6 +7783,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7691,6 +7823,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7727,6 +7860,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7801,6 +7935,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7837,6 +7972,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7876,6 +8012,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7912,6 +8049,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7951,6 +8089,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -7987,6 +8126,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -8231,6 +8371,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -8267,6 +8408,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -8306,6 +8448,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -8342,6 +8485,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -8381,6 +8525,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -8417,6 +8562,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -8494,6 +8640,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -8530,6 +8677,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -8569,6 +8717,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -8605,6 +8754,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -8644,6 +8794,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -8680,6 +8831,7 @@ declare const Specs: {
                                                     "type": string;
                                                 };
                                             };
+                                            "type": string;
                                             "additionalProperties": boolean;
                                         };
                                     };
@@ -10189,6 +10341,7 @@ declare const Specs: {
                                     "type": string;
                                 };
                             };
+                            "type": string;
                             "additionalProperties": boolean;
                         };
                     };
@@ -10210,6 +10363,7 @@ declare const Specs: {
                         "type": string;
                     };
                 };
+                "type": string;
                 "additionalProperties": boolean;
             };
         };
