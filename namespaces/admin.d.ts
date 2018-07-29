@@ -12,12 +12,9 @@ export declare module Admin {
         adminMode?: boolean;
     }
     class AccessTokenCreateParams {
-        userId: number;
+        name: string;
+        password: string;
         appId: number;
-        accountId?: number;
-        projectId?: number;
-        expiration?: string;
-        permissions: Array<string>;
     }
     class MFACreateParams {
         email: string;

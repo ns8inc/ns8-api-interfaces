@@ -5352,44 +5352,22 @@ declare const Specs: {
                             "type": string;
                             "required": string[];
                             "properties": {
-                                "userId": {
+                                "name": {
                                     "type": string;
-                                    "description": string;
+                                };
+                                "password": {
+                                    "type": string;
                                 };
                                 "appId": {
                                     "type": string;
                                     "description": string;
                                 };
-                                "accountId": {
-                                    "type": string;
-                                    "description": string;
-                                };
-                                "projectId": {
-                                    "type": string;
-                                    "description": string;
-                                };
-                                "expiration": {
-                                    "type": string;
-                                    "format": string;
-                                    "description": string;
-                                };
-                                "permissions": {
-                                    "type": string;
-                                    "description": string;
-                                    "items": {
-                                        "type": string;
-                                    };
-                                    "additionalProperties": boolean;
-                                };
                             };
                             "description": string;
                             "example": {
-                                "accountId": number;
-                                "permissions": string;
+                                "password": string;
                                 "appId": number;
-                                "expiration": string;
-                                "userId": number;
-                                "projectId": number;
+                                "name": string;
                             };
                             "additionalProperties": boolean;
                         };
@@ -9202,44 +9180,22 @@ declare const Specs: {
                 "type": string;
                 "required": string[];
                 "properties": {
-                    "userId": {
+                    "name": {
                         "type": string;
-                        "description": string;
+                    };
+                    "password": {
+                        "type": string;
                     };
                     "appId": {
                         "type": string;
                         "description": string;
                     };
-                    "accountId": {
-                        "type": string;
-                        "description": string;
-                    };
-                    "projectId": {
-                        "type": string;
-                        "description": string;
-                    };
-                    "expiration": {
-                        "type": string;
-                        "format": string;
-                        "description": string;
-                    };
-                    "permissions": {
-                        "type": string;
-                        "description": string;
-                        "items": {
-                            "type": string;
-                        };
-                        "additionalProperties": boolean;
-                    };
                 };
                 "description": string;
                 "example": {
-                    "accountId": number;
-                    "permissions": string;
+                    "password": string;
                     "appId": number;
-                    "expiration": string;
-                    "userId": number;
-                    "projectId": number;
+                    "name": string;
                 };
                 "additionalProperties": boolean;
             };
