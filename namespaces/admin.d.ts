@@ -82,12 +82,6 @@ export declare module Admin {
     class AuthorizeParams {
         accessToken?: undefined;
     }
-    class AccessTokenCreateBasci {
-        name: string;
-        password: string;
-        appId: number;
-        expiration?: string;
-    }
     class PasswordChangeParams {
         oldPassword: string;
         newPassword: string;

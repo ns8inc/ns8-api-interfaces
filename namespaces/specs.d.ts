@@ -9914,31 +9914,6 @@ declare const Specs: {
                 "description": string;
                 "additionalProperties": boolean;
             };
-            "AccessTokenCreateBasci": {
-                "type": string;
-                "required": string[];
-                "properties": {
-                    "name": {
-                        "type": string;
-                        "description": string;
-                    };
-                    "password": {
-                        "type": string;
-                        "description": string;
-                    };
-                    "appId": {
-                        "type": string;
-                        "description": string;
-                    };
-                    "expiration": {
-                        "type": string;
-                        "format": string;
-                        "description": string;
-                    };
-                };
-                "description": string;
-                "additionalProperties": boolean;
-            };
             "PasswordChangeParams": {
                 "type": string;
                 "required": string[];
