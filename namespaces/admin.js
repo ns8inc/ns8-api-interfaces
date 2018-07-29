@@ -38,9 +38,9 @@ var Admin;
     class AuthorizeParams {
     }
     Admin.AuthorizeParams = AuthorizeParams;
-    class LoginParams {
+    class AccessTokenCreateBasci {
     }
-    Admin.LoginParams = LoginParams;
+    Admin.AccessTokenCreateBasci = AccessTokenCreateBasci;
     class PasswordChangeParams {
     }
     Admin.PasswordChangeParams = PasswordChangeParams;

@@ -5352,17 +5352,19 @@ declare const Specs: {
                             "type": string;
                             "required": string[];
                             "properties": {
-                                "name": {
+                                "userId": {
                                     "type": string;
-                                    "description": string;
-                                    "default": string;
-                                };
-                                "password": {
-                                    "type": string;
-                                    "format": string;
                                     "description": string;
                                 };
                                 "appId": {
+                                    "type": string;
+                                    "description": string;
+                                };
+                                "accountId": {
+                                    "type": string;
+                                    "description": string;
+                                };
+                                "projectId": {
                                     "type": string;
                                     "description": string;
                                 };
@@ -5371,13 +5373,23 @@ declare const Specs: {
                                     "format": string;
                                     "description": string;
                                 };
+                                "permissions": {
+                                    "type": string;
+                                    "description": string;
+                                    "items": {
+                                        "type": string;
+                                    };
+                                    "additionalProperties": boolean;
+                                };
                             };
                             "description": string;
                             "example": {
-                                "password": string;
+                                "accountId": number;
+                                "permissions": string;
                                 "appId": number;
-                                "name": string;
                                 "expiration": string;
+                                "userId": number;
+                                "projectId": number;
                             };
                             "additionalProperties": boolean;
                         };
@@ -9221,6 +9233,14 @@ declare const Specs: {
                     };
                 };
                 "description": string;
+                "example": {
+                    "accountId": number;
+                    "permissions": string;
+                    "appId": number;
+                    "expiration": string;
+                    "userId": number;
+                    "projectId": number;
+                };
                 "additionalProperties": boolean;
             };
             "MFACreateParams": {
@@ -9894,18 +9914,16 @@ declare const Specs: {
                 "description": string;
                 "additionalProperties": boolean;
             };
-            "LoginParams": {
+            "AccessTokenCreateBasci": {
                 "type": string;
                 "required": string[];
                 "properties": {
                     "name": {
                         "type": string;
                         "description": string;
-                        "default": string;
                     };
                     "password": {
                         "type": string;
-                        "format": string;
                         "description": string;
                     };
                     "appId": {
@@ -9919,12 +9937,6 @@ declare const Specs: {
                     };
                 };
                 "description": string;
-                "example": {
-                    "password": string;
-                    "appId": number;
-                    "name": string;
-                    "expiration": string;
-                };
                 "additionalProperties": boolean;
             };
             "PasswordChangeParams": {

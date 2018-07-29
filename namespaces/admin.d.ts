@@ -82,10 +82,10 @@ export declare module Admin {
     class AuthorizeParams {
         accessToken?: undefined;
     }
-    class LoginParams {
+    class AccessTokenCreateBasci {
         name: string;
         password: string;
-        appId?: number;
+        appId: number;
         expiration?: string;
     }
     class PasswordChangeParams {
