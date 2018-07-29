@@ -5386,13 +5386,133 @@ declare const Specs: {
                         "200": {
                             "description": string;
                             "schema": {
-                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "id": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "userId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "appId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "accountId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "projectId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "permissions": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "type": string;
+                                        };
+                                        "additionalProperties": boolean;
+                                    };
+                                    "type": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "createdDate": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                    };
+                                    "expiration": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                    };
+                                    "adminMode": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                };
                                 "description": string;
+                                "example": {
+                                    "accountId": number;
+                                    "createdDate": string;
+                                    "permissions": string;
+                                    "appId": number;
+                                    "adminMode": boolean;
+                                    "expiration": string;
+                                    "id": number;
+                                    "type": string;
+                                    "userId": number;
+                                    "projectId": number;
+                                };
                                 "additionalProperties": boolean;
                             };
                             "responseSchema": {
-                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "id": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "userId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "appId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "accountId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "projectId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "permissions": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "type": string;
+                                        };
+                                        "additionalProperties": boolean;
+                                    };
+                                    "type": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "createdDate": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                    };
+                                    "expiration": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                    };
+                                    "adminMode": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                };
                                 "description": string;
+                                "example": {
+                                    "accountId": number;
+                                    "createdDate": string;
+                                    "permissions": string;
+                                    "appId": number;
+                                    "adminMode": boolean;
+                                    "expiration": string;
+                                    "id": number;
+                                    "type": string;
+                                    "userId": number;
+                                    "projectId": number;
+                                };
                                 "additionalProperties": boolean;
                             };
                         };
@@ -5644,8 +5764,68 @@ declare const Specs: {
                                 "type": string;
                                 "properties": {
                                     "accessToken": {
-                                        "type": string;
+                                        "required": string[];
+                                        "properties": {
+                                            "id": {
+                                                "type": string;
+                                                "description": string;
+                                            };
+                                            "userId": {
+                                                "type": string;
+                                                "description": string;
+                                            };
+                                            "appId": {
+                                                "type": string;
+                                                "description": string;
+                                            };
+                                            "accountId": {
+                                                "type": string;
+                                                "description": string;
+                                            };
+                                            "projectId": {
+                                                "type": string;
+                                                "description": string;
+                                            };
+                                            "permissions": {
+                                                "type": string;
+                                                "description": string;
+                                                "items": {
+                                                    "type": string;
+                                                };
+                                                "additionalProperties": boolean;
+                                            };
+                                            "type": {
+                                                "type": string;
+                                                "description": string;
+                                            };
+                                            "createdDate": {
+                                                "type": string;
+                                                "format": string;
+                                                "description": string;
+                                            };
+                                            "expiration": {
+                                                "type": string;
+                                                "format": string;
+                                                "description": string;
+                                            };
+                                            "adminMode": {
+                                                "type": string;
+                                                "description": string;
+                                            };
+                                        };
                                         "description": string;
+                                        "example": {
+                                            "accountId": number;
+                                            "createdDate": string;
+                                            "permissions": string;
+                                            "appId": number;
+                                            "adminMode": boolean;
+                                            "expiration": string;
+                                            "id": number;
+                                            "type": string;
+                                            "userId": number;
+                                            "projectId": number;
+                                        };
                                         "additionalProperties": boolean;
                                     };
                                     "expiration": {
@@ -5845,7 +6025,18 @@ declare const Specs: {
                                         "enabled": boolean;
                                     }[];
                                     "expiration": string;
-                                    "accessToken": {};
+                                    "accessToken": {
+                                        "accountId": number;
+                                        "createdDate": string;
+                                        "permissions": string;
+                                        "appId": number;
+                                        "adminMode": boolean;
+                                        "expiration": string;
+                                        "id": number;
+                                        "type": string;
+                                        "userId": number;
+                                        "projectId": number;
+                                    };
                                     "user": {
                                         "firstName": string;
                                         "lastName": string;
@@ -5874,8 +6065,68 @@ declare const Specs: {
                                 "type": string;
                                 "properties": {
                                     "accessToken": {
-                                        "type": string;
+                                        "required": string[];
+                                        "properties": {
+                                            "id": {
+                                                "type": string;
+                                                "description": string;
+                                            };
+                                            "userId": {
+                                                "type": string;
+                                                "description": string;
+                                            };
+                                            "appId": {
+                                                "type": string;
+                                                "description": string;
+                                            };
+                                            "accountId": {
+                                                "type": string;
+                                                "description": string;
+                                            };
+                                            "projectId": {
+                                                "type": string;
+                                                "description": string;
+                                            };
+                                            "permissions": {
+                                                "type": string;
+                                                "description": string;
+                                                "items": {
+                                                    "type": string;
+                                                };
+                                                "additionalProperties": boolean;
+                                            };
+                                            "type": {
+                                                "type": string;
+                                                "description": string;
+                                            };
+                                            "createdDate": {
+                                                "type": string;
+                                                "format": string;
+                                                "description": string;
+                                            };
+                                            "expiration": {
+                                                "type": string;
+                                                "format": string;
+                                                "description": string;
+                                            };
+                                            "adminMode": {
+                                                "type": string;
+                                                "description": string;
+                                            };
+                                        };
                                         "description": string;
+                                        "example": {
+                                            "accountId": number;
+                                            "createdDate": string;
+                                            "permissions": string;
+                                            "appId": number;
+                                            "adminMode": boolean;
+                                            "expiration": string;
+                                            "id": number;
+                                            "type": string;
+                                            "userId": number;
+                                            "projectId": number;
+                                        };
                                         "additionalProperties": boolean;
                                     };
                                     "expiration": {
@@ -6075,7 +6326,18 @@ declare const Specs: {
                                         "enabled": boolean;
                                     }[];
                                     "expiration": string;
-                                    "accessToken": {};
+                                    "accessToken": {
+                                        "accountId": number;
+                                        "createdDate": string;
+                                        "permissions": string;
+                                        "appId": number;
+                                        "adminMode": boolean;
+                                        "expiration": string;
+                                        "id": number;
+                                        "type": string;
+                                        "userId": number;
+                                        "projectId": number;
+                                    };
                                     "user": {
                                         "firstName": string;
                                         "lastName": string;
@@ -8895,12 +9157,14 @@ declare const Specs: {
                         "description": string;
                     };
                     "createdDate": {
+                        "type": string;
+                        "format": string;
                         "description": string;
-                        "x-type": string;
                     };
                     "expiration": {
+                        "type": string;
+                        "format": string;
                         "description": string;
-                        "x-type": string;
                     };
                     "adminMode": {
                         "type": string;
@@ -8908,6 +9172,18 @@ declare const Specs: {
                     };
                 };
                 "description": string;
+                "example": {
+                    "accountId": number;
+                    "createdDate": string;
+                    "permissions": string;
+                    "appId": number;
+                    "adminMode": boolean;
+                    "expiration": string;
+                    "id": number;
+                    "type": string;
+                    "userId": number;
+                    "projectId": number;
+                };
                 "additionalProperties": boolean;
             };
             "AccessTokenCreateParams": {
@@ -8967,11 +9243,6 @@ declare const Specs: {
                         "minLength": number;
                     };
                 };
-                "additionalProperties": boolean;
-            };
-            "AccessTokenKey": {
-                "type": string;
-                "description": string;
                 "additionalProperties": boolean;
             };
             "Account": {
@@ -9254,8 +9525,68 @@ declare const Specs: {
                 "type": string;
                 "properties": {
                     "accessToken": {
-                        "type": string;
+                        "required": string[];
+                        "properties": {
+                            "id": {
+                                "type": string;
+                                "description": string;
+                            };
+                            "userId": {
+                                "type": string;
+                                "description": string;
+                            };
+                            "appId": {
+                                "type": string;
+                                "description": string;
+                            };
+                            "accountId": {
+                                "type": string;
+                                "description": string;
+                            };
+                            "projectId": {
+                                "type": string;
+                                "description": string;
+                            };
+                            "permissions": {
+                                "type": string;
+                                "description": string;
+                                "items": {
+                                    "type": string;
+                                };
+                                "additionalProperties": boolean;
+                            };
+                            "type": {
+                                "type": string;
+                                "description": string;
+                            };
+                            "createdDate": {
+                                "type": string;
+                                "format": string;
+                                "description": string;
+                            };
+                            "expiration": {
+                                "type": string;
+                                "format": string;
+                                "description": string;
+                            };
+                            "adminMode": {
+                                "type": string;
+                                "description": string;
+                            };
+                        };
                         "description": string;
+                        "example": {
+                            "accountId": number;
+                            "createdDate": string;
+                            "permissions": string;
+                            "appId": number;
+                            "adminMode": boolean;
+                            "expiration": string;
+                            "id": number;
+                            "type": string;
+                            "userId": number;
+                            "projectId": number;
+                        };
                         "additionalProperties": boolean;
                     };
                     "expiration": {
@@ -9455,7 +9786,18 @@ declare const Specs: {
                         "enabled": boolean;
                     }[];
                     "expiration": string;
-                    "accessToken": {};
+                    "accessToken": {
+                        "accountId": number;
+                        "createdDate": string;
+                        "permissions": string;
+                        "appId": number;
+                        "adminMode": boolean;
+                        "expiration": string;
+                        "id": number;
+                        "type": string;
+                        "userId": number;
+                        "projectId": number;
+                    };
                     "user": {
                         "firstName": string;
                         "lastName": string;
@@ -9484,8 +9826,68 @@ declare const Specs: {
                 "type": string;
                 "properties": {
                     "accessToken": {
-                        "type": string;
+                        "required": string[];
+                        "properties": {
+                            "id": {
+                                "type": string;
+                                "description": string;
+                            };
+                            "userId": {
+                                "type": string;
+                                "description": string;
+                            };
+                            "appId": {
+                                "type": string;
+                                "description": string;
+                            };
+                            "accountId": {
+                                "type": string;
+                                "description": string;
+                            };
+                            "projectId": {
+                                "type": string;
+                                "description": string;
+                            };
+                            "permissions": {
+                                "type": string;
+                                "description": string;
+                                "items": {
+                                    "type": string;
+                                };
+                                "additionalProperties": boolean;
+                            };
+                            "type": {
+                                "type": string;
+                                "description": string;
+                            };
+                            "createdDate": {
+                                "type": string;
+                                "format": string;
+                                "description": string;
+                            };
+                            "expiration": {
+                                "type": string;
+                                "format": string;
+                                "description": string;
+                            };
+                            "adminMode": {
+                                "type": string;
+                                "description": string;
+                            };
+                        };
                         "description": string;
+                        "example": {
+                            "accountId": number;
+                            "createdDate": string;
+                            "permissions": string;
+                            "appId": number;
+                            "adminMode": boolean;
+                            "expiration": string;
+                            "id": number;
+                            "type": string;
+                            "userId": number;
+                            "projectId": number;
+                        };
                         "additionalProperties": boolean;
                     };
                 };

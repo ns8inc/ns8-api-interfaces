@@ -1,14 +1,14 @@
 export declare module Admin {
     class AccessToken {
-        id: string;
+        id: number;
         userId: number;
         appId: number;
         accountId?: number;
         projectId?: number;
         permissions?: Array<string>;
         type?: string;
-        createdDate?: Date;
-        expiration?: Date;
+        createdDate?: string;
+        expiration?: string;
         adminMode?: boolean;
     }
     class AccessTokenCreateParams {
@@ -24,8 +24,6 @@ export declare module Admin {
     }
     class MFAUpdateParams {
         password: string;
-    }
-    class AccessTokenKey {
     }
     class Account {
         id?: number;
@@ -75,14 +73,14 @@ export declare module Admin {
         apiEndpoint?: string;
     }
     class Authorization {
-        accessToken?: number;
+        accessToken?: undefined;
         expiration?: string;
         user?: any;
         account?: any;
         projects?: Array<any>;
     }
     class AuthorizeParams {
-        accessToken?: number;
+        accessToken?: undefined;
     }
     class LoginParams {
         name: string;
