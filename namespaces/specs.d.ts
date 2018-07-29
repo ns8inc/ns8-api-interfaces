@@ -5433,7 +5433,7 @@ declare const Specs: {
                                     "appId": number;
                                     "adminMode": boolean;
                                     "expiration": string;
-                                    "id": number;
+                                    "id": string;
                                     "type": string;
                                     "userId": number;
                                     "projectId": number;
@@ -5498,7 +5498,7 @@ declare const Specs: {
                                     "appId": number;
                                     "adminMode": boolean;
                                     "expiration": string;
-                                    "id": number;
+                                    "id": string;
                                     "type": string;
                                     "userId": number;
                                     "projectId": number;
@@ -5811,7 +5811,7 @@ declare const Specs: {
                                             "appId": number;
                                             "adminMode": boolean;
                                             "expiration": string;
-                                            "id": number;
+                                            "id": string;
                                             "type": string;
                                             "userId": number;
                                             "projectId": number;
@@ -6022,7 +6022,7 @@ declare const Specs: {
                                         "appId": number;
                                         "adminMode": boolean;
                                         "expiration": string;
-                                        "id": number;
+                                        "id": string;
                                         "type": string;
                                         "userId": number;
                                         "projectId": number;
@@ -6112,7 +6112,7 @@ declare const Specs: {
                                             "appId": number;
                                             "adminMode": boolean;
                                             "expiration": string;
-                                            "id": number;
+                                            "id": string;
                                             "type": string;
                                             "userId": number;
                                             "projectId": number;
@@ -6323,7 +6323,7 @@ declare const Specs: {
                                         "appId": number;
                                         "adminMode": boolean;
                                         "expiration": string;
-                                        "id": number;
+                                        "id": string;
                                         "type": string;
                                         "userId": number;
                                         "projectId": number;
@@ -9169,7 +9169,7 @@ declare const Specs: {
                     "appId": number;
                     "adminMode": boolean;
                     "expiration": string;
-                    "id": number;
+                    "id": string;
                     "type": string;
                     "userId": number;
                     "projectId": number;
@@ -9558,7 +9558,7 @@ declare const Specs: {
                             "appId": number;
                             "adminMode": boolean;
                             "expiration": string;
-                            "id": number;
+                            "id": string;
                             "type": string;
                             "userId": number;
                             "projectId": number;
@@ -9769,7 +9769,7 @@ declare const Specs: {
                         "appId": number;
                         "adminMode": boolean;
                         "expiration": string;
-                        "id": number;
+                        "id": string;
                         "type": string;
                         "userId": number;
                         "projectId": number;
@@ -9859,7 +9859,7 @@ declare const Specs: {
                             "appId": number;
                             "adminMode": boolean;
                             "expiration": string;
-                            "id": number;
+                            "id": string;
                             "type": string;
                             "userId": number;
                             "projectId": number;

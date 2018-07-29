@@ -1,6 +1,6 @@
 export declare module Admin {
     class AccessToken {
-        id: number;
+        id: string;
         userId: number;
         appId: number;
         accountId?: number;
