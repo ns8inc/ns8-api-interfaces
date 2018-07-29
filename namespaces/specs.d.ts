@@ -5649,8 +5649,9 @@ declare const Specs: {
                                         "additionalProperties": boolean;
                                     };
                                     "expiration": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "user": {
                                         "type": string;
@@ -5878,8 +5879,9 @@ declare const Specs: {
                                         "additionalProperties": boolean;
                                     };
                                     "expiration": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "user": {
                                         "type": string;
@@ -8909,6 +8911,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "AccessTokenCreateParams": {
+                "type": string;
                 "required": string[];
                 "properties": {
                     "userId": {
@@ -8966,7 +8969,7 @@ declare const Specs: {
                 };
                 "additionalProperties": boolean;
             };
-            "AccessTokenString": {
+            "AccessTokenKey": {
                 "type": string;
                 "description": string;
                 "additionalProperties": boolean;
@@ -9256,8 +9259,9 @@ declare const Specs: {
                         "additionalProperties": boolean;
                     };
                     "expiration": {
+                        "type": string;
+                        "format": string;
                         "description": string;
-                        "x-type": string;
                     };
                     "user": {
                         "type": string;

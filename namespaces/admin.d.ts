@@ -25,7 +25,7 @@ export declare module Admin {
     class MFAUpdateParams {
         password: string;
     }
-    class AccessTokenString {
+    class AccessTokenKey {
     }
     class Account {
         id?: number;
@@ -75,14 +75,14 @@ export declare module Admin {
         apiEndpoint?: string;
     }
     class Authorization {
-        accessToken?: string;
-        expiration?: Date;
+        accessToken?: number;
+        expiration?: string;
         user?: any;
         account?: any;
         projects?: Array<any>;
     }
     class AuthorizeParams {
-        accessToken?: string;
+        accessToken?: number;
     }
     class LoginParams {
         name: string;

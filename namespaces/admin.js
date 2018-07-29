@@ -14,9 +14,9 @@ var Admin;
     class MFAUpdateParams {
     }
     Admin.MFAUpdateParams = MFAUpdateParams;
-    class AccessTokenString {
+    class AccessTokenKey {
     }
-    Admin.AccessTokenString = AccessTokenString;
+    Admin.AccessTokenKey = AccessTokenKey;
     class Account {
     }
     Admin.Account = Account;
