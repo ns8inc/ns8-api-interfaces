@@ -3,7 +3,7 @@ export declare module Admin {
         id: string;
         userId: number;
         appId: number;
-        accountId: number;
+        accountId?: number;
         projectId?: number;
         permissions?: Array<string>;
         type?: string;
