@@ -38,6 +38,9 @@ var Admin;
     class AuthorizeParams {
     }
     Admin.AuthorizeParams = AuthorizeParams;
+    class Notification {
+    }
+    Admin.Notification = Notification;
     class PasswordChangeParams {
     }
     Admin.PasswordChangeParams = PasswordChangeParams;
@@ -89,6 +92,12 @@ var Admin;
     class ProjectUpdateParams {
     }
     Admin.ProjectUpdateParams = ProjectUpdateParams;
+    class Stash {
+    }
+    Admin.Stash = Stash;
+    class StashCreateParams {
+    }
+    Admin.StashCreateParams = StashCreateParams;
     class User {
     }
     Admin.User = User;

@@ -3,7 +3,7 @@ export declare module Admin {
         id: string;
         userId: number;
         appId: number;
-        accountId?: number;
+        accountId: number;
         projectId?: number;
         permissions?: Array<string>;
         type?: string;
@@ -78,6 +78,11 @@ export declare module Admin {
     }
     class AuthorizeParams {
         accessToken?: undefined;
+    }
+    class Notification {
+        email: string;
+        templateName: string;
+        templateData: any;
     }
     class PasswordChangeParams {
         oldPassword: string;
@@ -172,6 +177,16 @@ export declare module Admin {
     class ProjectUpdateParams {
         name?: string;
         enabled?: boolean;
+    }
+    class Stash {
+        id?: string;
+        created?: Date;
+        expires?: Date;
+        data?: any;
+    }
+    class StashCreateParams {
+        expires?: Date;
+        data: any;
     }
     class User {
         id?: number;

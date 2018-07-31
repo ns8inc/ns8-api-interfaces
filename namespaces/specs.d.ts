@@ -6806,6 +6806,873 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
+            "/notifications": {
+                "post": {
+                    "tags": string[];
+                    "summary": string;
+                    "parameters": {
+                        "in": string;
+                        "name": string;
+                        "description": string;
+                        "required": boolean;
+                        "schema": {
+                            "type": string;
+                            "required": string[];
+                            "properties": {
+                                "email": {
+                                    "type": string;
+                                    "format": string;
+                                    "description": string;
+                                };
+                                "templateName": {
+                                    "type": string;
+                                    "description": string;
+                                };
+                                "templateData": {
+                                    "type": string;
+                                    "description": string;
+                                    "properties": {};
+                                };
+                            };
+                            "description": string;
+                            "example": {
+                                "templateName": string;
+                                "templateData": string;
+                                "email": string;
+                            };
+                            "additionalProperties": boolean;
+                        };
+                    }[];
+                    "responses": {
+                        "204": {
+                            "description": string;
+                        };
+                        "400": {
+                            "description": string;
+                            "schema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                        };
+                        "401": {
+                            "description": string;
+                            "schema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                        };
+                    };
+                    "security": {
+                        "Bearer": any[];
+                    }[];
+                    "x-permissions": string[];
+                };
+            };
+            "/stash": {
+                "post": {
+                    "tags": string[];
+                    "summary": string;
+                    "parameters": {
+                        "in": string;
+                        "name": string;
+                        "description": string;
+                        "required": boolean;
+                        "schema": {
+                            "type": string;
+                            "required": string[];
+                            "properties": {
+                                "expires": {
+                                    "description": string;
+                                    "x-type": string;
+                                };
+                                "data": {
+                                    "type": string;
+                                    "description": string;
+                                    "properties": {};
+                                };
+                            };
+                            "description": string;
+                            "example": {
+                                "expires": string;
+                                "data": string;
+                            };
+                            "additionalProperties": boolean;
+                        };
+                    }[];
+                    "responses": {
+                        "200": {
+                            "description": string;
+                            "schema": {
+                                "type": string;
+                                "properties": {
+                                    "id": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "created": {
+                                        "description": string;
+                                        "x-type": string;
+                                    };
+                                    "expires": {
+                                        "description": string;
+                                        "x-type": string;
+                                    };
+                                    "data": {
+                                        "type": string;
+                                        "description": string;
+                                        "properties": {};
+                                    };
+                                };
+                                "example": {
+                                    "expires": string;
+                                    "data": string;
+                                    "created": string;
+                                    "id": string;
+                                };
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "properties": {
+                                    "id": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "created": {
+                                        "description": string;
+                                        "x-type": string;
+                                    };
+                                    "expires": {
+                                        "description": string;
+                                        "x-type": string;
+                                    };
+                                    "data": {
+                                        "type": string;
+                                        "description": string;
+                                        "properties": {};
+                                    };
+                                };
+                                "example": {
+                                    "expires": string;
+                                    "data": string;
+                                    "created": string;
+                                    "id": string;
+                                };
+                                "additionalProperties": boolean;
+                            };
+                        };
+                        "400": {
+                            "description": string;
+                            "schema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                        };
+                        "401": {
+                            "description": string;
+                            "schema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                        };
+                        "429": {
+                            "description": string;
+                            "schema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                        };
+                    };
+                    "security": {
+                        "Bearer": any[];
+                    }[];
+                    "x-rate-limit": number;
+                    "x-permissions": string[];
+                };
+            };
+            "/stash/{id}": {
+                "get": {
+                    "tags": string[];
+                    "summary": string;
+                    "parameters": {
+                        "name": string;
+                        "in": string;
+                        "description": string;
+                        "required": boolean;
+                        "type": string;
+                    }[];
+                    "responses": {
+                        "200": {
+                            "description": string;
+                            "schema": {};
+                            "responseSchema": {};
+                        };
+                        "400": {
+                            "description": string;
+                            "schema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                        };
+                        "401": {
+                            "description": string;
+                            "schema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                        };
+                        "404": {
+                            "description": string;
+                            "schema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                        };
+                        "429": {
+                            "description": string;
+                            "schema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                        };
+                    };
+                    "security": {
+                        "Bearer": any[];
+                    }[];
+                    "x-permissions": string[];
+                    "x-rate-limit": number;
+                };
+            };
             "/verifications": {
                 "post": {
                     "tags": string[];
@@ -9870,6 +10737,33 @@ declare const Specs: {
                 "description": string;
                 "additionalProperties": boolean;
             };
+            "Notification": {
+                "type": string;
+                "required": string[];
+                "properties": {
+                    "email": {
+                        "type": string;
+                        "format": string;
+                        "description": string;
+                    };
+                    "templateName": {
+                        "type": string;
+                        "description": string;
+                    };
+                    "templateData": {
+                        "type": string;
+                        "description": string;
+                        "properties": {};
+                    };
+                };
+                "description": string;
+                "example": {
+                    "templateName": string;
+                    "templateData": string;
+                    "email": string;
+                };
+                "additionalProperties": boolean;
+            };
             "PasswordChangeParams": {
                 "type": string;
                 "required": string[];
@@ -10475,6 +11369,56 @@ declare const Specs: {
                 "example": {
                     "name": string;
                     "enabled": boolean;
+                };
+                "additionalProperties": boolean;
+            };
+            "Stash": {
+                "type": string;
+                "properties": {
+                    "id": {
+                        "type": string;
+                        "description": string;
+                    };
+                    "created": {
+                        "description": string;
+                        "x-type": string;
+                    };
+                    "expires": {
+                        "description": string;
+                        "x-type": string;
+                    };
+                    "data": {
+                        "type": string;
+                        "description": string;
+                        "properties": {};
+                    };
+                };
+                "example": {
+                    "expires": string;
+                    "data": string;
+                    "created": string;
+                    "id": string;
+                };
+                "additionalProperties": boolean;
+            };
+            "StashCreateParams": {
+                "type": string;
+                "required": string[];
+                "properties": {
+                    "expires": {
+                        "description": string;
+                        "x-type": string;
+                    };
+                    "data": {
+                        "type": string;
+                        "description": string;
+                        "properties": {};
+                    };
+                };
+                "description": string;
+                "example": {
+                    "expires": string;
+                    "data": string;
                 };
                 "additionalProperties": boolean;
             };
