@@ -44,9 +44,9 @@ var Admin;
     class PasswordChangeParams {
     }
     Admin.PasswordChangeParams = PasswordChangeParams;
-    class PasswordResetParams {
+    class UpdatePasswordParams {
     }
-    Admin.PasswordResetParams = PasswordResetParams;
+    Admin.UpdatePasswordParams = UpdatePasswordParams;
     class Payment {
     }
     Admin.Payment = Payment;

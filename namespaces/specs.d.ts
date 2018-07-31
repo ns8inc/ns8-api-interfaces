@@ -1366,348 +1366,6 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/users/defaultproject": {
-                "post": {
-                    "tags": string[];
-                    "summary": string;
-                    "parameters": {
-                        "in": string;
-                        "name": string;
-                        "description": string;
-                        "required": boolean;
-                        "schema": {
-                            "type": string;
-                            "properties": {
-                                "projectId": {
-                                    "type": string;
-                                    "description": string;
-                                };
-                            };
-                            "example": {
-                                "projectId": number;
-                            };
-                            "additionalProperties": boolean;
-                        };
-                    }[];
-                    "responses": {
-                        "204": {
-                            "description": string;
-                        };
-                        "400": {
-                            "description": string;
-                            "schema": {
-                                "type": string;
-                                "required": string[];
-                                "properties": {
-                                    "code": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "message": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "errors": {
-                                        "type": string;
-                                        "description": string;
-                                        "items": {
-                                            "required": string[];
-                                            "properties": {
-                                                "name": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
-                                                "code": {
-                                                    "type": string;
-                                                };
-                                                "message": {
-                                                    "type": string;
-                                                };
-                                            };
-                                            "type": string;
-                                            "additionalProperties": boolean;
-                                        };
-                                    };
-                                };
-                                "description": string;
-                                "additionalProperties": boolean;
-                            };
-                            "responseSchema": {
-                                "type": string;
-                                "required": string[];
-                                "properties": {
-                                    "code": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "message": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "errors": {
-                                        "type": string;
-                                        "description": string;
-                                        "items": {
-                                            "required": string[];
-                                            "properties": {
-                                                "name": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
-                                                "code": {
-                                                    "type": string;
-                                                };
-                                                "message": {
-                                                    "type": string;
-                                                };
-                                            };
-                                            "type": string;
-                                            "additionalProperties": boolean;
-                                        };
-                                    };
-                                };
-                                "description": string;
-                                "additionalProperties": boolean;
-                            };
-                        };
-                        "401": {
-                            "description": string;
-                            "schema": {
-                                "type": string;
-                                "required": string[];
-                                "properties": {
-                                    "code": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "message": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "errors": {
-                                        "type": string;
-                                        "description": string;
-                                        "items": {
-                                            "required": string[];
-                                            "properties": {
-                                                "name": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
-                                                "code": {
-                                                    "type": string;
-                                                };
-                                                "message": {
-                                                    "type": string;
-                                                };
-                                            };
-                                            "type": string;
-                                            "additionalProperties": boolean;
-                                        };
-                                    };
-                                };
-                                "description": string;
-                                "additionalProperties": boolean;
-                            };
-                            "responseSchema": {
-                                "type": string;
-                                "required": string[];
-                                "properties": {
-                                    "code": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "message": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "errors": {
-                                        "type": string;
-                                        "description": string;
-                                        "items": {
-                                            "required": string[];
-                                            "properties": {
-                                                "name": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
-                                                "code": {
-                                                    "type": string;
-                                                };
-                                                "message": {
-                                                    "type": string;
-                                                };
-                                            };
-                                            "type": string;
-                                            "additionalProperties": boolean;
-                                        };
-                                    };
-                                };
-                                "description": string;
-                                "additionalProperties": boolean;
-                            };
-                        };
-                        "404": {
-                            "description": string;
-                            "schema": {
-                                "type": string;
-                                "required": string[];
-                                "properties": {
-                                    "code": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "message": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "errors": {
-                                        "type": string;
-                                        "description": string;
-                                        "items": {
-                                            "required": string[];
-                                            "properties": {
-                                                "name": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
-                                                "code": {
-                                                    "type": string;
-                                                };
-                                                "message": {
-                                                    "type": string;
-                                                };
-                                            };
-                                            "type": string;
-                                            "additionalProperties": boolean;
-                                        };
-                                    };
-                                };
-                                "description": string;
-                                "additionalProperties": boolean;
-                            };
-                            "responseSchema": {
-                                "type": string;
-                                "required": string[];
-                                "properties": {
-                                    "code": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "message": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "errors": {
-                                        "type": string;
-                                        "description": string;
-                                        "items": {
-                                            "required": string[];
-                                            "properties": {
-                                                "name": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
-                                                "code": {
-                                                    "type": string;
-                                                };
-                                                "message": {
-                                                    "type": string;
-                                                };
-                                            };
-                                            "type": string;
-                                            "additionalProperties": boolean;
-                                        };
-                                    };
-                                };
-                                "description": string;
-                                "additionalProperties": boolean;
-                            };
-                        };
-                        "429": {
-                            "description": string;
-                            "schema": {
-                                "type": string;
-                                "required": string[];
-                                "properties": {
-                                    "code": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "message": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "errors": {
-                                        "type": string;
-                                        "description": string;
-                                        "items": {
-                                            "required": string[];
-                                            "properties": {
-                                                "name": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
-                                                "code": {
-                                                    "type": string;
-                                                };
-                                                "message": {
-                                                    "type": string;
-                                                };
-                                            };
-                                            "type": string;
-                                            "additionalProperties": boolean;
-                                        };
-                                    };
-                                };
-                                "description": string;
-                                "additionalProperties": boolean;
-                            };
-                            "responseSchema": {
-                                "type": string;
-                                "required": string[];
-                                "properties": {
-                                    "code": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "message": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "errors": {
-                                        "type": string;
-                                        "description": string;
-                                        "items": {
-                                            "required": string[];
-                                            "properties": {
-                                                "name": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
-                                                "code": {
-                                                    "type": string;
-                                                };
-                                                "message": {
-                                                    "type": string;
-                                                };
-                                            };
-                                            "type": string;
-                                            "additionalProperties": boolean;
-                                        };
-                                    };
-                                };
-                                "description": string;
-                                "additionalProperties": boolean;
-                            };
-                        };
-                    };
-                    "security": {
-                        "Bearer": any[];
-                    }[];
-                    "x-rate-limit": number;
-                };
-            };
             "/users/password": {
                 "put": {
                     "tags": string[];
@@ -1981,6 +1639,283 @@ declare const Specs: {
                     "security": {
                         "Bearer": any[];
                     }[];
+                    "x-rate-limit": number;
+                };
+            };
+            "/users/{id}/password": {
+                "put": {
+                    "tags": string[];
+                    "summary": string;
+                    "parameters": ({
+                        "name": string;
+                        "in": string;
+                        "description": string;
+                        "required": boolean;
+                        "type": string;
+                        "schema"?: undefined;
+                    } | {
+                        "in": string;
+                        "name": string;
+                        "description": string;
+                        "required": boolean;
+                        "schema": {
+                            "type": string;
+                            "required": string[];
+                            "properties": {
+                                "password": {
+                                    "type": string;
+                                    "description": string;
+                                    "minLength": number;
+                                };
+                            };
+                            "description": string;
+                            "example": {
+                                "password": string;
+                            };
+                            "additionalProperties": boolean;
+                        };
+                        "type"?: undefined;
+                    })[];
+                    "responses": {
+                        "204": {
+                            "description": string;
+                        };
+                        "400": {
+                            "description": string;
+                            "schema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                        };
+                        "401": {
+                            "description": string;
+                            "schema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                        };
+                        "429": {
+                            "description": string;
+                            "schema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                        };
+                    };
+                    "security": {
+                        "Bearer": any[];
+                    }[];
+                    "x-permissions": string[];
                     "x-rate-limit": number;
                 };
             };
@@ -5741,7 +5676,7 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/authorization": {
+            "/authorizations": {
                 "get": {
                     "tags": string[];
                     "summary": string;
@@ -5753,76 +5688,6 @@ declare const Specs: {
                             "schema": {
                                 "type": string;
                                 "properties": {
-                                    "accessToken": {
-                                        "required": string[];
-                                        "properties": {
-                                            "id": {
-                                                "type": string;
-                                                "description": string;
-                                            };
-                                            "userId": {
-                                                "type": string;
-                                                "description": string;
-                                            };
-                                            "appId": {
-                                                "type": string;
-                                                "description": string;
-                                            };
-                                            "accountId": {
-                                                "type": string;
-                                                "description": string;
-                                            };
-                                            "projectId": {
-                                                "type": string;
-                                                "description": string;
-                                            };
-                                            "permissions": {
-                                                "type": string;
-                                                "description": string;
-                                                "items": {
-                                                    "type": string;
-                                                };
-                                                "additionalProperties": boolean;
-                                            };
-                                            "type": {
-                                                "type": string;
-                                                "description": string;
-                                            };
-                                            "createdDate": {
-                                                "type": string;
-                                                "format": string;
-                                                "description": string;
-                                            };
-                                            "expiration": {
-                                                "type": string;
-                                                "format": string;
-                                                "description": string;
-                                            };
-                                            "adminMode": {
-                                                "type": string;
-                                                "description": string;
-                                            };
-                                        };
-                                        "description": string;
-                                        "example": {
-                                            "accountId": number;
-                                            "createdDate": string;
-                                            "permissions": string;
-                                            "appId": number;
-                                            "adminMode": boolean;
-                                            "expiration": string;
-                                            "id": string;
-                                            "type": string;
-                                            "userId": number;
-                                            "projectId": number;
-                                        };
-                                        "additionalProperties": boolean;
-                                    };
-                                    "expiration": {
-                                        "type": string;
-                                        "format": string;
-                                        "description": string;
-                                    };
                                     "user": {
                                         "type": string;
                                         "properties": {
@@ -6014,19 +5879,6 @@ declare const Specs: {
                                         "userId": number;
                                         "enabled": boolean;
                                     }[];
-                                    "expiration": string;
-                                    "accessToken": {
-                                        "accountId": number;
-                                        "createdDate": string;
-                                        "permissions": string;
-                                        "appId": number;
-                                        "adminMode": boolean;
-                                        "expiration": string;
-                                        "id": string;
-                                        "type": string;
-                                        "userId": number;
-                                        "projectId": number;
-                                    };
                                     "user": {
                                         "firstName": string;
                                         "lastName": string;
@@ -6054,76 +5906,6 @@ declare const Specs: {
                             "responseSchema": {
                                 "type": string;
                                 "properties": {
-                                    "accessToken": {
-                                        "required": string[];
-                                        "properties": {
-                                            "id": {
-                                                "type": string;
-                                                "description": string;
-                                            };
-                                            "userId": {
-                                                "type": string;
-                                                "description": string;
-                                            };
-                                            "appId": {
-                                                "type": string;
-                                                "description": string;
-                                            };
-                                            "accountId": {
-                                                "type": string;
-                                                "description": string;
-                                            };
-                                            "projectId": {
-                                                "type": string;
-                                                "description": string;
-                                            };
-                                            "permissions": {
-                                                "type": string;
-                                                "description": string;
-                                                "items": {
-                                                    "type": string;
-                                                };
-                                                "additionalProperties": boolean;
-                                            };
-                                            "type": {
-                                                "type": string;
-                                                "description": string;
-                                            };
-                                            "createdDate": {
-                                                "type": string;
-                                                "format": string;
-                                                "description": string;
-                                            };
-                                            "expiration": {
-                                                "type": string;
-                                                "format": string;
-                                                "description": string;
-                                            };
-                                            "adminMode": {
-                                                "type": string;
-                                                "description": string;
-                                            };
-                                        };
-                                        "description": string;
-                                        "example": {
-                                            "accountId": number;
-                                            "createdDate": string;
-                                            "permissions": string;
-                                            "appId": number;
-                                            "adminMode": boolean;
-                                            "expiration": string;
-                                            "id": string;
-                                            "type": string;
-                                            "userId": number;
-                                            "projectId": number;
-                                        };
-                                        "additionalProperties": boolean;
-                                    };
-                                    "expiration": {
-                                        "type": string;
-                                        "format": string;
-                                        "description": string;
-                                    };
                                     "user": {
                                         "type": string;
                                         "properties": {
@@ -6315,19 +6097,6 @@ declare const Specs: {
                                         "userId": number;
                                         "enabled": boolean;
                                     }[];
-                                    "expiration": string;
-                                    "accessToken": {
-                                        "accountId": number;
-                                        "createdDate": string;
-                                        "permissions": string;
-                                        "appId": number;
-                                        "adminMode": boolean;
-                                        "expiration": string;
-                                        "id": string;
-                                        "type": string;
-                                        "userId": number;
-                                        "projectId": number;
-                                    };
                                     "user": {
                                         "firstName": string;
                                         "lastName": string;
@@ -6350,305 +6119,87 @@ declare const Specs: {
                                         "status": number;
                                     };
                                 };
-                                "additionalProperties": boolean;
-                            };
-                        };
-                    };
-                    "x-rate-limit": number;
-                };
-            };
-            "/reset/{email}": {
-                "post": {
-                    "tags": string[];
-                    "summary": string;
-                    "parameters": ({
-                        "name": string;
-                        "in": string;
-                        "description": string;
-                        "required": boolean;
-                        "type": string;
-                        "format"?: undefined;
-                    } | {
-                        "name": string;
-                        "in": string;
-                        "description": string;
-                        "required": boolean;
-                        "type": string;
-                        "format": string;
-                    })[];
-                    "responses": {
-                        "204": {
-                            "description": string;
-                        };
-                        "400": {
-                            "description": string;
-                            "schema": {
-                                "type": string;
-                                "required": string[];
-                                "properties": {
-                                    "code": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "message": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "errors": {
-                                        "type": string;
-                                        "description": string;
-                                        "items": {
-                                            "required": string[];
-                                            "properties": {
-                                                "name": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
-                                                "code": {
-                                                    "type": string;
-                                                };
-                                                "message": {
-                                                    "type": string;
-                                                };
-                                            };
-                                            "type": string;
-                                            "additionalProperties": boolean;
-                                        };
-                                    };
-                                };
-                                "description": string;
-                                "additionalProperties": boolean;
-                            };
-                            "responseSchema": {
-                                "type": string;
-                                "required": string[];
-                                "properties": {
-                                    "code": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "message": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "errors": {
-                                        "type": string;
-                                        "description": string;
-                                        "items": {
-                                            "required": string[];
-                                            "properties": {
-                                                "name": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
-                                                "code": {
-                                                    "type": string;
-                                                };
-                                                "message": {
-                                                    "type": string;
-                                                };
-                                            };
-                                            "type": string;
-                                            "additionalProperties": boolean;
-                                        };
-                                    };
-                                };
-                                "description": string;
-                                "additionalProperties": boolean;
-                            };
-                        };
-                        "429": {
-                            "description": string;
-                            "schema": {
-                                "type": string;
-                                "required": string[];
-                                "properties": {
-                                    "code": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "message": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "errors": {
-                                        "type": string;
-                                        "description": string;
-                                        "items": {
-                                            "required": string[];
-                                            "properties": {
-                                                "name": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
-                                                "code": {
-                                                    "type": string;
-                                                };
-                                                "message": {
-                                                    "type": string;
-                                                };
-                                            };
-                                            "type": string;
-                                            "additionalProperties": boolean;
-                                        };
-                                    };
-                                };
-                                "description": string;
-                                "additionalProperties": boolean;
-                            };
-                            "responseSchema": {
-                                "type": string;
-                                "required": string[];
-                                "properties": {
-                                    "code": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "message": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "errors": {
-                                        "type": string;
-                                        "description": string;
-                                        "items": {
-                                            "required": string[];
-                                            "properties": {
-                                                "name": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
-                                                "code": {
-                                                    "type": string;
-                                                };
-                                                "message": {
-                                                    "type": string;
-                                                };
-                                            };
-                                            "type": string;
-                                            "additionalProperties": boolean;
-                                        };
-                                    };
-                                };
-                                "description": string;
-                                "additionalProperties": boolean;
-                            };
-                        };
-                    };
-                    "x-rate-limit": number;
-                };
-            };
-            "/reset": {
-                "post": {
-                    "tags": string[];
-                    "summary": string;
-                    "parameters": {
-                        "in": string;
-                        "name": string;
-                        "required": boolean;
-                        "schema": {
-                            "type": string;
-                            "properties": {
-                                "token": {
-                                    "type": string;
-                                    "description": string;
-                                };
-                                "password": {
-                                    "type": string;
-                                    "description": string;
-                                    "minLength": number;
-                                };
-                            };
-                            "description": string;
-                            "example": {
-                                "password": string;
-                                "token": string;
-                            };
-                            "additionalProperties": boolean;
-                        };
-                    }[];
-                    "responses": {
-                        "204": {
-                            "description": string;
-                        };
-                        "400": {
-                            "description": string;
-                            "schema": {
-                                "type": string;
-                                "required": string[];
-                                "properties": {
-                                    "code": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "message": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "errors": {
-                                        "type": string;
-                                        "description": string;
-                                        "items": {
-                                            "required": string[];
-                                            "properties": {
-                                                "name": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
-                                                "code": {
-                                                    "type": string;
-                                                };
-                                                "message": {
-                                                    "type": string;
-                                                };
-                                            };
-                                            "type": string;
-                                            "additionalProperties": boolean;
-                                        };
-                                    };
-                                };
-                                "description": string;
-                                "additionalProperties": boolean;
-                            };
-                            "responseSchema": {
-                                "type": string;
-                                "required": string[];
-                                "properties": {
-                                    "code": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "message": {
-                                        "type": string;
-                                        "description": string;
-                                    };
-                                    "errors": {
-                                        "type": string;
-                                        "description": string;
-                                        "items": {
-                                            "required": string[];
-                                            "properties": {
-                                                "name": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
-                                                "code": {
-                                                    "type": string;
-                                                };
-                                                "message": {
-                                                    "type": string;
-                                                };
-                                            };
-                                            "type": string;
-                                            "additionalProperties": boolean;
-                                        };
-                                    };
-                                };
-                                "description": string;
                                 "additionalProperties": boolean;
                             };
                         };
                         "401": {
+                            "description": string;
+                            "schema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                        };
+                        "404": {
                             "description": string;
                             "schema": {
                                 "type": string;
@@ -10367,76 +9918,6 @@ declare const Specs: {
             "Authorization": {
                 "type": string;
                 "properties": {
-                    "accessToken": {
-                        "required": string[];
-                        "properties": {
-                            "id": {
-                                "type": string;
-                                "description": string;
-                            };
-                            "userId": {
-                                "type": string;
-                                "description": string;
-                            };
-                            "appId": {
-                                "type": string;
-                                "description": string;
-                            };
-                            "accountId": {
-                                "type": string;
-                                "description": string;
-                            };
-                            "projectId": {
-                                "type": string;
-                                "description": string;
-                            };
-                            "permissions": {
-                                "type": string;
-                                "description": string;
-                                "items": {
-                                    "type": string;
-                                };
-                                "additionalProperties": boolean;
-                            };
-                            "type": {
-                                "type": string;
-                                "description": string;
-                            };
-                            "createdDate": {
-                                "type": string;
-                                "format": string;
-                                "description": string;
-                            };
-                            "expiration": {
-                                "type": string;
-                                "format": string;
-                                "description": string;
-                            };
-                            "adminMode": {
-                                "type": string;
-                                "description": string;
-                            };
-                        };
-                        "description": string;
-                        "example": {
-                            "accountId": number;
-                            "createdDate": string;
-                            "permissions": string;
-                            "appId": number;
-                            "adminMode": boolean;
-                            "expiration": string;
-                            "id": string;
-                            "type": string;
-                            "userId": number;
-                            "projectId": number;
-                        };
-                        "additionalProperties": boolean;
-                    };
-                    "expiration": {
-                        "type": string;
-                        "format": string;
-                        "description": string;
-                    };
                     "user": {
                         "type": string;
                         "properties": {
@@ -10628,19 +10109,6 @@ declare const Specs: {
                         "userId": number;
                         "enabled": boolean;
                     }[];
-                    "expiration": string;
-                    "accessToken": {
-                        "accountId": number;
-                        "createdDate": string;
-                        "permissions": string;
-                        "appId": number;
-                        "adminMode": boolean;
-                        "expiration": string;
-                        "id": string;
-                        "type": string;
-                        "userId": number;
-                        "projectId": number;
-                    };
                     "user": {
                         "firstName": string;
                         "lastName": string;
@@ -10788,13 +10256,10 @@ declare const Specs: {
                 };
                 "additionalProperties": boolean;
             };
-            "PasswordResetParams": {
+            "UpdatePasswordParams": {
                 "type": string;
+                "required": string[];
                 "properties": {
-                    "token": {
-                        "type": string;
-                        "description": string;
-                    };
                     "password": {
                         "type": string;
                         "description": string;
@@ -10804,7 +10269,6 @@ declare const Specs: {
                 "description": string;
                 "example": {
                     "password": string;
-                    "token": string;
                 };
                 "additionalProperties": boolean;
             };
@@ -11297,9 +10761,6 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                     };
-                };
-                "example": {
-                    "projectId": number;
                 };
                 "additionalProperties": boolean;
             };

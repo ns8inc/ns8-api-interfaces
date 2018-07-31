@@ -70,8 +70,6 @@ export declare module Admin {
         apiEndpoint?: string;
     }
     class Authorization {
-        accessToken?: undefined;
-        expiration?: string;
         user?: any;
         account?: any;
         projects?: Array<any>;
@@ -88,9 +86,8 @@ export declare module Admin {
         oldPassword: string;
         newPassword: string;
     }
-    class PasswordResetParams {
-        token?: string;
-        password?: string;
+    class UpdatePasswordParams {
+        password: string;
     }
     class Payment {
         id?: string;
