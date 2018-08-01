@@ -35,6 +35,7 @@ export declare module Admin {
     }
     class AccountCreateParams {
         appId: number;
+        userId: number;
         status?: number;
         type?: string;
         partnerId?: number;

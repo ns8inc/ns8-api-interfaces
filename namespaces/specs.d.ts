@@ -2400,6 +2400,10 @@ declare const Specs: {
                                     "type": string;
                                     "description": string;
                                 };
+                                "userId": {
+                                    "type": string;
+                                    "description": string;
+                                };
                                 "status": {
                                     "type": string;
                                     "description": string;
@@ -2425,6 +2429,7 @@ declare const Specs: {
                                 "appId": number;
                                 "partnerId": number;
                                 "type": string;
+                                "userId": number;
                                 "status": number;
                             };
                             "additionalProperties": boolean;
@@ -9891,6 +9896,10 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                     };
+                    "userId": {
+                        "type": string;
+                        "description": string;
+                    };
                     "status": {
                         "type": string;
                         "description": string;
@@ -9916,6 +9925,7 @@ declare const Specs: {
                     "appId": number;
                     "partnerId": number;
                     "type": string;
+                    "userId": number;
                     "status": number;
                 };
                 "additionalProperties": boolean;
