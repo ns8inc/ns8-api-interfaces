@@ -1,6 +1,6 @@
 {
   "name": "ns8-api-interfaces",
-  "version": "2.0.37",
+  "version": "2.0.38",
   "description": "Interface objects and specs to support ns8 api consumption",
   "types": "index.d.ts",
   "main": "index.js",
