@@ -1920,7 +1920,7 @@ declare const Specs: {
                 };
             };
             "/users/name/{name}": {
-                "head": {
+                "get": {
                     "tags": string[];
                     "summary": string;
                     "parameters": {
@@ -1932,7 +1932,129 @@ declare const Specs: {
                     }[];
                     "responses": {
                         "200": {
+                            "type": string;
+                            "properties": {
+                                "id": {
+                                    "type": string;
+                                    "description": string;
+                                };
+                                "name": {
+                                    "type": string;
+                                    "description": string;
+                                };
+                                "firstName": {
+                                    "type": string;
+                                };
+                                "lastName": {
+                                    "type": string;
+                                };
+                                "email": {
+                                    "type": string;
+                                    "format": string;
+                                    "description": string;
+                                };
+                                "status": {
+                                    "type": string;
+                                };
+                                "createdDate": {
+                                    "type": string;
+                                    "format": string;
+                                    "description": string;
+                                };
+                                "lastUpdated": {
+                                    "type": string;
+                                    "format": string;
+                                    "description": string;
+                                };
+                            };
+                            "example": {
+                                "firstName": string;
+                                "lastName": string;
+                                "lastUpdated": string;
+                                "createdDate": string;
+                                "name": string;
+                                "id": number;
+                                "email": string;
+                                "status": number;
+                            };
+                            "additionalProperties": boolean;
+                        };
+                        "401": {
                             "description": string;
+                            "schema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "required": string[];
+                                "properties": {
+                                    "code": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "message": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "errors": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "required": string[];
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
+                                                "code": {
+                                                    "type": string;
+                                                };
+                                                "message": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "type": string;
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "description": string;
+                                "additionalProperties": boolean;
+                            };
                         };
                         "404": {
                             "description": string;
@@ -1942,6 +2064,7 @@ declare const Specs: {
                         };
                     };
                     "x-rate-limit": number;
+                    "x-permissions": string[];
                 };
             };
             "/users/name": {
@@ -3199,6 +3322,7 @@ declare const Specs: {
                                             "description": string;
                                         };
                                         "type": {
+                                            "type": string;
                                             "description": string;
                                         };
                                         "enabled": {
@@ -3237,7 +3361,7 @@ declare const Specs: {
                                         "implemented": boolean;
                                         "sharedByUserId": number;
                                         "id": number;
-                                        "type": string;
+                                        "type": number;
                                         "isDemo": boolean;
                                         "userId": number;
                                         "enabled": boolean;
@@ -3268,6 +3392,7 @@ declare const Specs: {
                                             "description": string;
                                         };
                                         "type": {
+                                            "type": string;
                                             "description": string;
                                         };
                                         "enabled": {
@@ -3306,7 +3431,7 @@ declare const Specs: {
                                         "implemented": boolean;
                                         "sharedByUserId": number;
                                         "id": number;
-                                        "type": string;
+                                        "type": number;
                                         "isDemo": boolean;
                                         "userId": number;
                                         "enabled": boolean;
@@ -3683,6 +3808,7 @@ declare const Specs: {
                                         "description": string;
                                     };
                                     "type": {
+                                        "type": string;
                                         "description": string;
                                     };
                                     "enabled": {
@@ -3721,7 +3847,7 @@ declare const Specs: {
                                     "implemented": boolean;
                                     "sharedByUserId": number;
                                     "id": number;
-                                    "type": string;
+                                    "type": number;
                                     "isDemo": boolean;
                                     "userId": number;
                                     "enabled": boolean;
@@ -3749,6 +3875,7 @@ declare const Specs: {
                                         "description": string;
                                     };
                                     "type": {
+                                        "type": string;
                                         "description": string;
                                     };
                                     "enabled": {
@@ -3787,7 +3914,7 @@ declare const Specs: {
                                     "implemented": boolean;
                                     "sharedByUserId": number;
                                     "id": number;
-                                    "type": string;
+                                    "type": number;
                                     "isDemo": boolean;
                                     "userId": number;
                                     "enabled": boolean;
@@ -4418,6 +4545,7 @@ declare const Specs: {
                                         "description": string;
                                     };
                                     "type": {
+                                        "type": string;
                                         "description": string;
                                     };
                                     "enabled": {
@@ -4456,7 +4584,7 @@ declare const Specs: {
                                     "implemented": boolean;
                                     "sharedByUserId": number;
                                     "id": number;
-                                    "type": string;
+                                    "type": number;
                                     "isDemo": boolean;
                                     "userId": number;
                                     "enabled": boolean;
@@ -4484,6 +4612,7 @@ declare const Specs: {
                                         "description": string;
                                     };
                                     "type": {
+                                        "type": string;
                                         "description": string;
                                     };
                                     "enabled": {
@@ -4522,7 +4651,7 @@ declare const Specs: {
                                     "implemented": boolean;
                                     "sharedByUserId": number;
                                     "id": number;
-                                    "type": string;
+                                    "type": number;
                                     "isDemo": boolean;
                                     "userId": number;
                                     "enabled": boolean;
@@ -5817,6 +5946,7 @@ declare const Specs: {
                                                     "description": string;
                                                 };
                                                 "type": {
+                                                    "type": string;
                                                     "description": string;
                                                 };
                                                 "enabled": {
@@ -5855,7 +5985,7 @@ declare const Specs: {
                                                 "implemented": boolean;
                                                 "sharedByUserId": number;
                                                 "id": number;
-                                                "type": string;
+                                                "type": number;
                                                 "isDemo": boolean;
                                                 "userId": number;
                                                 "enabled": boolean;
@@ -5874,7 +6004,7 @@ declare const Specs: {
                                         "implemented": boolean;
                                         "sharedByUserId": number;
                                         "id": number;
-                                        "type": string;
+                                        "type": number;
                                         "isDemo": boolean;
                                         "userId": number;
                                         "enabled": boolean;
@@ -6035,6 +6165,7 @@ declare const Specs: {
                                                     "description": string;
                                                 };
                                                 "type": {
+                                                    "type": string;
                                                     "description": string;
                                                 };
                                                 "enabled": {
@@ -6073,7 +6204,7 @@ declare const Specs: {
                                                 "implemented": boolean;
                                                 "sharedByUserId": number;
                                                 "id": number;
-                                                "type": string;
+                                                "type": number;
                                                 "isDemo": boolean;
                                                 "userId": number;
                                                 "enabled": boolean;
@@ -6092,7 +6223,7 @@ declare const Specs: {
                                         "implemented": boolean;
                                         "sharedByUserId": number;
                                         "id": number;
-                                        "type": string;
+                                        "type": number;
                                         "isDemo": boolean;
                                         "userId": number;
                                         "enabled": boolean;
@@ -10052,6 +10183,7 @@ declare const Specs: {
                                     "description": string;
                                 };
                                 "type": {
+                                    "type": string;
                                     "description": string;
                                 };
                                 "enabled": {
@@ -10090,7 +10222,7 @@ declare const Specs: {
                                 "implemented": boolean;
                                 "sharedByUserId": number;
                                 "id": number;
-                                "type": string;
+                                "type": number;
                                 "isDemo": boolean;
                                 "userId": number;
                                 "enabled": boolean;
@@ -10109,7 +10241,7 @@ declare const Specs: {
                         "implemented": boolean;
                         "sharedByUserId": number;
                         "id": number;
-                        "type": string;
+                        "type": number;
                         "isDemo": boolean;
                         "userId": number;
                         "enabled": boolean;
@@ -10693,6 +10825,7 @@ declare const Specs: {
                         "description": string;
                     };
                     "type": {
+                        "type": string;
                         "description": string;
                     };
                     "enabled": {
@@ -10731,7 +10864,7 @@ declare const Specs: {
                     "implemented": boolean;
                     "sharedByUserId": number;
                     "id": number;
-                    "type": string;
+                    "type": number;
                     "isDemo": boolean;
                     "userId": number;
                     "enabled": boolean;

@@ -143,7 +143,7 @@ export declare module Admin {
         accountId: number;
         userId?: number;
         name: string;
-        type?: undefined;
+        type?: number;
         enabled?: boolean;
         isDemo?: boolean;
         implemented?: boolean;
