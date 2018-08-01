@@ -3405,13 +3405,15 @@ declare const Specs: {
                                         "data": {
                                             "type": string;
                                             "description": string;
-                                            "properties": {};
+                                            "additionalProperties": boolean;
                                         };
                                     };
                                     "description": string;
                                     "example": {
                                         "accountId": number;
-                                        "data": string;
+                                        "data": {
+                                            "key": string;
+                                        };
                                         "permissions": {};
                                         "name": string;
                                         "implemented": boolean;
@@ -3475,13 +3477,15 @@ declare const Specs: {
                                         "data": {
                                             "type": string;
                                             "description": string;
-                                            "properties": {};
+                                            "additionalProperties": boolean;
                                         };
                                     };
                                     "description": string;
                                     "example": {
                                         "accountId": number;
-                                        "data": string;
+                                        "data": {
+                                            "key": string;
+                                        };
                                         "permissions": {};
                                         "name": string;
                                         "implemented": boolean;
@@ -3891,13 +3895,15 @@ declare const Specs: {
                                     "data": {
                                         "type": string;
                                         "description": string;
-                                        "properties": {};
+                                        "additionalProperties": boolean;
                                     };
                                 };
                                 "description": string;
                                 "example": {
                                     "accountId": number;
-                                    "data": string;
+                                    "data": {
+                                        "key": string;
+                                    };
                                     "permissions": {};
                                     "name": string;
                                     "implemented": boolean;
@@ -3958,13 +3964,15 @@ declare const Specs: {
                                     "data": {
                                         "type": string;
                                         "description": string;
-                                        "properties": {};
+                                        "additionalProperties": boolean;
                                     };
                                 };
                                 "description": string;
                                 "example": {
                                     "accountId": number;
-                                    "data": string;
+                                    "data": {
+                                        "key": string;
+                                    };
                                     "permissions": {};
                                     "name": string;
                                     "implemented": boolean;
@@ -4628,13 +4636,15 @@ declare const Specs: {
                                     "data": {
                                         "type": string;
                                         "description": string;
-                                        "properties": {};
+                                        "additionalProperties": boolean;
                                     };
                                 };
                                 "description": string;
                                 "example": {
                                     "accountId": number;
-                                    "data": string;
+                                    "data": {
+                                        "key": string;
+                                    };
                                     "permissions": {};
                                     "name": string;
                                     "implemented": boolean;
@@ -4695,13 +4705,15 @@ declare const Specs: {
                                     "data": {
                                         "type": string;
                                         "description": string;
-                                        "properties": {};
+                                        "additionalProperties": boolean;
                                     };
                                 };
                                 "description": string;
                                 "example": {
                                     "accountId": number;
-                                    "data": string;
+                                    "data": {
+                                        "key": string;
+                                    };
                                     "permissions": {};
                                     "name": string;
                                     "implemented": boolean;
@@ -6029,13 +6041,15 @@ declare const Specs: {
                                                 "data": {
                                                     "type": string;
                                                     "description": string;
-                                                    "properties": {};
+                                                    "additionalProperties": boolean;
                                                 };
                                             };
                                             "description": string;
                                             "example": {
                                                 "accountId": number;
-                                                "data": string;
+                                                "data": {
+                                                    "key": string;
+                                                };
                                                 "permissions": {};
                                                 "name": string;
                                                 "implemented": boolean;
@@ -6054,7 +6068,9 @@ declare const Specs: {
                                 "example": {
                                     "projects": {
                                         "accountId": number;
-                                        "data": string;
+                                        "data": {
+                                            "key": string;
+                                        };
                                         "permissions": {};
                                         "name": string;
                                         "implemented": boolean;
@@ -6248,13 +6264,15 @@ declare const Specs: {
                                                 "data": {
                                                     "type": string;
                                                     "description": string;
-                                                    "properties": {};
+                                                    "additionalProperties": boolean;
                                                 };
                                             };
                                             "description": string;
                                             "example": {
                                                 "accountId": number;
-                                                "data": string;
+                                                "data": {
+                                                    "key": string;
+                                                };
                                                 "permissions": {};
                                                 "name": string;
                                                 "implemented": boolean;
@@ -6273,7 +6291,9 @@ declare const Specs: {
                                 "example": {
                                     "projects": {
                                         "accountId": number;
-                                        "data": string;
+                                        "data": {
+                                            "key": string;
+                                        };
                                         "permissions": {};
                                         "name": string;
                                         "implemented": boolean;
@@ -6801,7 +6821,7 @@ declare const Specs: {
                                     "data": {
                                         "type": string;
                                         "description": string;
-                                        "additionalProperties": {};
+                                        "additionalProperties": boolean;
                                     };
                                 };
                                 "example": {
@@ -6834,7 +6854,7 @@ declare const Specs: {
                                     "data": {
                                         "type": string;
                                         "description": string;
-                                        "additionalProperties": {};
+                                        "additionalProperties": boolean;
                                     };
                                 };
                                 "example": {
@@ -7121,7 +7141,7 @@ declare const Specs: {
                                     "data": {
                                         "type": string;
                                         "description": string;
-                                        "additionalProperties": {};
+                                        "additionalProperties": boolean;
                                     };
                                 };
                                 "example": {
@@ -7154,7 +7174,7 @@ declare const Specs: {
                                     "data": {
                                         "type": string;
                                         "description": string;
-                                        "additionalProperties": {};
+                                        "additionalProperties": boolean;
                                     };
                                 };
                                 "example": {
@@ -7724,11 +7744,13 @@ declare const Specs: {
                                     "data": {
                                         "type": string;
                                         "description": string;
-                                        "properties": {};
+                                        "additionalProperties": boolean;
                                     };
                                 };
                                 "example": {
-                                    "data": string;
+                                    "data": {
+                                        "key": string;
+                                    };
                                 };
                                 "additionalProperties": boolean;
                             };
@@ -7737,11 +7759,13 @@ declare const Specs: {
                                     "data": {
                                         "type": string;
                                         "description": string;
-                                        "properties": {};
+                                        "additionalProperties": boolean;
                                     };
                                 };
                                 "example": {
-                                    "data": string;
+                                    "data": {
+                                        "key": string;
+                                    };
                                 };
                                 "additionalProperties": boolean;
                             };
@@ -10339,13 +10363,15 @@ declare const Specs: {
                                 "data": {
                                     "type": string;
                                     "description": string;
-                                    "properties": {};
+                                    "additionalProperties": boolean;
                                 };
                             };
                             "description": string;
                             "example": {
                                 "accountId": number;
-                                "data": string;
+                                "data": {
+                                    "key": string;
+                                };
                                 "permissions": {};
                                 "name": string;
                                 "implemented": boolean;
@@ -10364,7 +10390,9 @@ declare const Specs: {
                 "example": {
                     "projects": {
                         "accountId": number;
-                        "data": string;
+                        "data": {
+                            "key": string;
+                        };
                         "permissions": {};
                         "name": string;
                         "implemented": boolean;
@@ -10981,13 +11009,15 @@ declare const Specs: {
                     "data": {
                         "type": string;
                         "description": string;
-                        "properties": {};
+                        "additionalProperties": boolean;
                     };
                 };
                 "description": string;
                 "example": {
                     "accountId": number;
-                    "data": string;
+                    "data": {
+                        "key": string;
+                    };
                     "permissions": {};
                     "name": string;
                     "implemented": boolean;
@@ -11120,7 +11150,7 @@ declare const Specs: {
                     "data": {
                         "type": string;
                         "description": string;
-                        "additionalProperties": {};
+                        "additionalProperties": boolean;
                     };
                 };
                 "example": {
@@ -11318,11 +11348,13 @@ declare const Specs: {
                     "data": {
                         "type": string;
                         "description": string;
-                        "properties": {};
+                        "additionalProperties": boolean;
                     };
                 };
                 "example": {
-                    "data": string;
+                    "data": {
+                        "key": string;
+                    };
                 };
                 "additionalProperties": boolean;
             };
