@@ -92,7 +92,6 @@ declare const Specs: {
                                                     "description": string;
                                                     "id": string;
                                                 };
-                                                "additionalProperties": boolean;
                                             };
                                         };
                                         "supportEmail": {
@@ -111,7 +110,6 @@ declare const Specs: {
                                             "example": {
                                                 "apiEndpoint": string;
                                             };
-                                            "additionalProperties": boolean;
                                         };
                                         "userNameFormat": {
                                             "type": string;
@@ -146,7 +144,6 @@ declare const Specs: {
                                             "apiEndpoint": string;
                                         };
                                     };
-                                    "additionalProperties": boolean;
                                 };
                             };
                             "responseSchema": {
@@ -214,7 +211,6 @@ declare const Specs: {
                                                     "description": string;
                                                     "id": string;
                                                 };
-                                                "additionalProperties": boolean;
                                             };
                                         };
                                         "supportEmail": {
@@ -233,7 +229,6 @@ declare const Specs: {
                                             "example": {
                                                 "apiEndpoint": string;
                                             };
-                                            "additionalProperties": boolean;
                                         };
                                         "userNameFormat": {
                                             "type": string;
@@ -268,7 +263,6 @@ declare const Specs: {
                                             "apiEndpoint": string;
                                         };
                                     };
-                                    "additionalProperties": boolean;
                                 };
                             };
                         };
@@ -344,7 +338,6 @@ declare const Specs: {
                                 "name": string;
                                 "email": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -396,7 +389,6 @@ declare const Specs: {
                                     "email": string;
                                     "status": number;
                                 };
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -444,7 +436,6 @@ declare const Specs: {
                                     "email": string;
                                     "status": number;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "400": {
@@ -479,12 +470,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -516,12 +505,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -556,12 +543,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -593,12 +578,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "404": {
@@ -633,12 +616,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -670,12 +651,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "409": {
@@ -710,12 +689,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -747,12 +724,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -787,12 +762,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -824,12 +797,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -871,7 +842,7 @@ declare const Specs: {
                                 "timezone": string;
                                 "email": string;
                             };
-                            "additionalProperties": boolean;
+                            "additionalProperties": {};
                         };
                     }[];
                     "responses": {
@@ -923,7 +894,6 @@ declare const Specs: {
                                     "email": string;
                                     "status": number;
                                 };
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -971,7 +941,6 @@ declare const Specs: {
                                     "email": string;
                                     "status": number;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "400": {
@@ -1006,12 +975,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -1043,12 +1010,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -1083,12 +1048,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -1120,12 +1083,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "404": {
@@ -1160,12 +1121,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -1197,12 +1156,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "409": {
@@ -1237,12 +1194,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -1274,12 +1229,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -1314,12 +1267,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -1351,12 +1302,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -1397,7 +1346,6 @@ declare const Specs: {
                                 "oldPassword": string;
                                 "newPassword": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -1436,12 +1384,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -1473,12 +1419,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -1513,12 +1457,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -1550,12 +1492,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -1590,12 +1530,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -1627,12 +1565,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -1672,7 +1608,6 @@ declare const Specs: {
                             "example": {
                                 "password": string;
                             };
-                            "additionalProperties": boolean;
                         };
                         "type"?: undefined;
                     })[];
@@ -1712,12 +1647,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -1749,12 +1682,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -1789,12 +1720,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -1826,12 +1755,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -1866,12 +1793,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -1903,12 +1828,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -1979,7 +1902,6 @@ declare const Specs: {
                                     "email": string;
                                     "status": number;
                                 };
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -2027,7 +1949,6 @@ declare const Specs: {
                                     "email": string;
                                     "status": number;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -2062,12 +1983,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -2099,12 +2018,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "404": {
@@ -2138,7 +2055,6 @@ declare const Specs: {
                             "example": {
                                 "name": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -2177,12 +2093,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -2214,12 +2128,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -2254,12 +2166,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -2291,12 +2201,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -2331,12 +2239,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -2368,12 +2274,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -2432,7 +2336,6 @@ declare const Specs: {
                                 "userId": number;
                                 "status": number;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -2493,7 +2396,6 @@ declare const Specs: {
                                     "userId": number;
                                     "status": number;
                                 };
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -2550,7 +2452,6 @@ declare const Specs: {
                                     "userId": number;
                                     "status": number;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "400": {
@@ -2585,12 +2486,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -2622,12 +2521,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -2662,12 +2559,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -2699,12 +2594,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "409": {
@@ -2739,12 +2632,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -2776,12 +2667,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -2816,12 +2705,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -2853,12 +2740,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -2909,7 +2794,6 @@ declare const Specs: {
                                 "type": string;
                                 "status": number;
                             };
-                            "additionalProperties": boolean;
                         };
                         "type"?: undefined;
                     })[];
@@ -2971,7 +2855,6 @@ declare const Specs: {
                                     "userId": number;
                                     "status": number;
                                 };
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -3028,7 +2911,6 @@ declare const Specs: {
                                     "userId": number;
                                     "status": number;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "400": {
@@ -3063,12 +2945,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -3100,12 +2980,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -3140,12 +3018,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -3177,12 +3053,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "404": {
@@ -3217,12 +3091,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -3254,12 +3126,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -3294,12 +3164,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -3331,12 +3199,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -3396,7 +3262,6 @@ declare const Specs: {
                                         "permissions": {
                                             "type": string;
                                             "description": string;
-                                            "additionalProperties": boolean;
                                         };
                                         "sharedByUserId": {
                                             "type": string;
@@ -3422,7 +3287,6 @@ declare const Specs: {
                                         "userId": number;
                                         "enabled": boolean;
                                     };
-                                    "additionalProperties": boolean;
                                 };
                             };
                             "responseSchema": {
@@ -3466,7 +3330,6 @@ declare const Specs: {
                                         "permissions": {
                                             "type": string;
                                             "description": string;
-                                            "additionalProperties": boolean;
                                         };
                                         "sharedByUserId": {
                                             "type": string;
@@ -3492,7 +3355,6 @@ declare const Specs: {
                                         "userId": number;
                                         "enabled": boolean;
                                     };
-                                    "additionalProperties": boolean;
                                 };
                             };
                         };
@@ -3528,12 +3390,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -3565,12 +3425,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -3605,12 +3463,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -3642,12 +3498,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "404": {
@@ -3682,12 +3536,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -3719,12 +3571,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -3759,12 +3609,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -3796,12 +3644,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -3837,7 +3683,6 @@ declare const Specs: {
                                 "name": string;
                                 "type": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -3882,7 +3727,6 @@ declare const Specs: {
                                     "permissions": {
                                         "type": string;
                                         "description": string;
-                                        "additionalProperties": boolean;
                                     };
                                     "sharedByUserId": {
                                         "type": string;
@@ -3908,7 +3752,6 @@ declare const Specs: {
                                     "userId": number;
                                     "enabled": boolean;
                                 };
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -3949,7 +3792,6 @@ declare const Specs: {
                                     "permissions": {
                                         "type": string;
                                         "description": string;
-                                        "additionalProperties": boolean;
                                     };
                                     "sharedByUserId": {
                                         "type": string;
@@ -3975,7 +3817,6 @@ declare const Specs: {
                                     "userId": number;
                                     "enabled": boolean;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "400": {
@@ -4010,12 +3851,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -4047,12 +3886,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -4087,12 +3924,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -4124,12 +3959,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "404": {
@@ -4164,12 +3997,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -4201,12 +4032,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -4241,12 +4070,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -4278,12 +4105,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -4340,12 +4165,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -4377,12 +4200,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "404": {
@@ -4417,12 +4238,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -4454,12 +4273,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -4494,12 +4311,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -4531,12 +4346,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -4573,7 +4386,6 @@ declare const Specs: {
                                 "name": string;
                                 "enabled": boolean;
                             };
-                            "additionalProperties": boolean;
                         };
                         "type"?: undefined;
                     })[];
@@ -4619,7 +4431,6 @@ declare const Specs: {
                                     "permissions": {
                                         "type": string;
                                         "description": string;
-                                        "additionalProperties": boolean;
                                     };
                                     "sharedByUserId": {
                                         "type": string;
@@ -4645,7 +4456,6 @@ declare const Specs: {
                                     "userId": number;
                                     "enabled": boolean;
                                 };
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -4686,7 +4496,6 @@ declare const Specs: {
                                     "permissions": {
                                         "type": string;
                                         "description": string;
-                                        "additionalProperties": boolean;
                                     };
                                     "sharedByUserId": {
                                         "type": string;
@@ -4712,7 +4521,6 @@ declare const Specs: {
                                     "userId": number;
                                     "enabled": boolean;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "400": {
@@ -4747,12 +4555,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -4784,12 +4590,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -4824,12 +4628,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -4861,12 +4663,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "404": {
@@ -4901,12 +4701,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -4938,12 +4736,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -4978,12 +4774,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -5015,12 +4809,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -5066,7 +4858,6 @@ declare const Specs: {
                                         "permissions": {
                                             "type": string;
                                             "description": string;
-                                            "additionalProperties": boolean;
                                         };
                                         "sharedByUserId": {
                                             "type": string;
@@ -5087,7 +4878,6 @@ declare const Specs: {
                                         "projectId": number;
                                         "userId": number;
                                     };
-                                    "additionalProperties": boolean;
                                 };
                             };
                             "responseSchema": {
@@ -5118,7 +4908,6 @@ declare const Specs: {
                                         "permissions": {
                                             "type": string;
                                             "description": string;
-                                            "additionalProperties": boolean;
                                         };
                                         "sharedByUserId": {
                                             "type": string;
@@ -5139,7 +4928,6 @@ declare const Specs: {
                                         "projectId": number;
                                         "userId": number;
                                     };
-                                    "additionalProperties": boolean;
                                 };
                             };
                         };
@@ -5175,12 +4963,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -5212,12 +4998,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -5252,12 +5036,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -5289,12 +5071,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "404": {
@@ -5329,12 +5109,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -5366,12 +5144,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -5406,12 +5182,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -5443,12 +5217,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -5489,7 +5261,6 @@ declare const Specs: {
                                 "appId": number;
                                 "name": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -5524,7 +5295,6 @@ declare const Specs: {
                                         "items": {
                                             "type": string;
                                         };
-                                        "additionalProperties": boolean;
                                     };
                                     "type": {
                                         "type": string;
@@ -5558,7 +5328,6 @@ declare const Specs: {
                                     "userId": number;
                                     "projectId": number;
                                 };
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "required": string[];
@@ -5589,7 +5358,6 @@ declare const Specs: {
                                         "items": {
                                             "type": string;
                                         };
-                                        "additionalProperties": boolean;
                                     };
                                     "type": {
                                         "type": string;
@@ -5623,7 +5391,6 @@ declare const Specs: {
                                     "userId": number;
                                     "projectId": number;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "400": {
@@ -5658,12 +5425,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -5695,12 +5460,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -5735,12 +5498,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -5772,12 +5533,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -5812,12 +5571,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -5849,12 +5606,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -5919,7 +5674,6 @@ declare const Specs: {
                                             "email": string;
                                             "status": number;
                                         };
-                                        "additionalProperties": boolean;
                                     };
                                     "account": {
                                         "type": string;
@@ -5976,7 +5730,6 @@ declare const Specs: {
                                             "userId": number;
                                             "status": number;
                                         };
-                                        "additionalProperties": boolean;
                                     };
                                     "projects": {
                                         "type": string;
@@ -6020,7 +5773,6 @@ declare const Specs: {
                                                 "permissions": {
                                                     "type": string;
                                                     "description": string;
-                                                    "additionalProperties": boolean;
                                                 };
                                                 "sharedByUserId": {
                                                     "type": string;
@@ -6046,7 +5798,6 @@ declare const Specs: {
                                                 "userId": number;
                                                 "enabled": boolean;
                                             };
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
@@ -6087,7 +5838,6 @@ declare const Specs: {
                                         "status": number;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -6138,7 +5888,6 @@ declare const Specs: {
                                             "email": string;
                                             "status": number;
                                         };
-                                        "additionalProperties": boolean;
                                     };
                                     "account": {
                                         "type": string;
@@ -6195,7 +5944,6 @@ declare const Specs: {
                                             "userId": number;
                                             "status": number;
                                         };
-                                        "additionalProperties": boolean;
                                     };
                                     "projects": {
                                         "type": string;
@@ -6239,7 +5987,6 @@ declare const Specs: {
                                                 "permissions": {
                                                     "type": string;
                                                     "description": string;
-                                                    "additionalProperties": boolean;
                                                 };
                                                 "sharedByUserId": {
                                                     "type": string;
@@ -6265,7 +6012,6 @@ declare const Specs: {
                                                 "userId": number;
                                                 "enabled": boolean;
                                             };
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
@@ -6306,7 +6052,6 @@ declare const Specs: {
                                         "status": number;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -6341,12 +6086,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -6378,12 +6121,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "404": {
@@ -6418,12 +6159,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -6455,12 +6194,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -6495,12 +6232,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -6532,12 +6267,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -6578,7 +6311,6 @@ declare const Specs: {
                                 "templateData": string;
                                 "email": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -6617,12 +6349,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -6654,12 +6384,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -6694,12 +6422,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -6731,12 +6457,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -6775,7 +6499,6 @@ declare const Specs: {
                                 "expires": string;
                                 "data": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -6810,7 +6533,6 @@ declare const Specs: {
                                     "created": string;
                                     "id": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -6841,7 +6563,6 @@ declare const Specs: {
                                     "created": string;
                                     "id": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "400": {
@@ -6876,12 +6597,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -6913,12 +6632,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -6953,12 +6670,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -6990,12 +6705,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -7030,12 +6743,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -7067,12 +6778,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -7126,7 +6835,6 @@ declare const Specs: {
                                     "created": string;
                                     "id": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -7157,7 +6865,6 @@ declare const Specs: {
                                     "created": string;
                                     "id": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "400": {
@@ -7192,12 +6899,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -7229,12 +6934,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -7269,12 +6972,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -7306,12 +7007,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "404": {
@@ -7346,12 +7045,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -7383,12 +7080,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -7423,12 +7118,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -7460,12 +7153,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -7508,7 +7199,6 @@ declare const Specs: {
                                 "templateName": string;
                                 "email": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -7524,7 +7214,6 @@ declare const Specs: {
                                 "example": {
                                     "key": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "properties": {
@@ -7536,7 +7225,6 @@ declare const Specs: {
                                 "example": {
                                     "key": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "400": {
@@ -7571,12 +7259,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -7608,12 +7294,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -7648,12 +7332,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -7685,12 +7367,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -7722,7 +7402,6 @@ declare const Specs: {
                                 "example": {
                                     "data": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "properties": {
@@ -7735,7 +7414,6 @@ declare const Specs: {
                                 "example": {
                                     "data": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "404": {
@@ -7770,12 +7448,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -7807,12 +7483,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -7847,12 +7521,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -7884,12 +7556,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -7945,7 +7615,6 @@ declare const Specs: {
                                             "currency": string;
                                             "email": string;
                                         };
-                                        "additionalProperties": boolean;
                                     };
                                     "cards": {
                                         "type": string;
@@ -7987,7 +7656,6 @@ declare const Specs: {
                                                 "exp_year": number;
                                                 "brand": string;
                                             };
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
@@ -8010,7 +7678,6 @@ declare const Specs: {
                                         "email": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -8053,7 +7720,6 @@ declare const Specs: {
                                             "currency": string;
                                             "email": string;
                                         };
-                                        "additionalProperties": boolean;
                                     };
                                     "cards": {
                                         "type": string;
@@ -8095,7 +7761,6 @@ declare const Specs: {
                                                 "exp_year": number;
                                                 "brand": string;
                                             };
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
@@ -8118,7 +7783,6 @@ declare const Specs: {
                                         "email": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -8153,12 +7817,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -8190,12 +7852,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -8230,12 +7890,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -8267,12 +7925,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -8301,7 +7957,6 @@ declare const Specs: {
                             "example": {
                                 "stripeToken": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -8340,12 +7995,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -8377,12 +8030,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -8417,12 +8068,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -8454,12 +8103,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -8494,12 +8141,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -8531,12 +8176,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -8594,12 +8237,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -8631,12 +8272,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -8671,12 +8310,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -8708,12 +8345,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -8748,12 +8383,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -8785,12 +8418,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -8821,7 +8452,6 @@ declare const Specs: {
                             "example": {
                                 "id": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -8860,12 +8490,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -8897,12 +8525,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -8937,12 +8563,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -8974,12 +8598,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -9014,12 +8636,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -9051,12 +8671,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -9146,7 +8764,6 @@ declare const Specs: {
                                                 "status": string;
                                                 "amount_refunded": number;
                                             };
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
@@ -9167,7 +8784,6 @@ declare const Specs: {
                                     }[];
                                     "discount": number;
                                 };
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -9240,7 +8856,6 @@ declare const Specs: {
                                                 "status": string;
                                                 "amount_refunded": number;
                                             };
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
@@ -9261,7 +8876,6 @@ declare const Specs: {
                                     }[];
                                     "discount": number;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "400": {
@@ -9296,12 +8910,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -9333,12 +8945,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -9373,12 +8983,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -9410,12 +9018,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -9450,12 +9056,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -9487,12 +9091,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -9526,7 +9128,6 @@ declare const Specs: {
                                 "amount": number;
                                 "description": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -9565,12 +9166,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -9602,12 +9201,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "401": {
@@ -9642,12 +9239,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -9679,12 +9274,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                         "429": {
@@ -9719,12 +9312,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                             "responseSchema": {
                                 "type": string;
@@ -9756,12 +9347,10 @@ declare const Specs: {
                                                 };
                                             };
                                             "type": string;
-                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
                                 "description": string;
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -9810,7 +9399,6 @@ declare const Specs: {
                         "items": {
                             "type": string;
                         };
-                        "additionalProperties": boolean;
                     };
                     "type": {
                         "type": string;
@@ -9844,7 +9432,6 @@ declare const Specs: {
                     "userId": number;
                     "projectId": number;
                 };
-                "additionalProperties": boolean;
             };
             "AccessTokenCreateParams": {
                 "type": string;
@@ -9867,7 +9454,6 @@ declare const Specs: {
                     "appId": number;
                     "name": string;
                 };
-                "additionalProperties": boolean;
             };
             "MFACreateParams": {
                 "required": string[];
@@ -9877,7 +9463,6 @@ declare const Specs: {
                         "format": string;
                     };
                 };
-                "additionalProperties": boolean;
             };
             "MFAUpdateParams": {
                 "required": string[];
@@ -9889,7 +9474,6 @@ declare const Specs: {
                         "minLength": number;
                     };
                 };
-                "additionalProperties": boolean;
             };
             "Account": {
                 "type": string;
@@ -9946,7 +9530,6 @@ declare const Specs: {
                     "userId": number;
                     "status": number;
                 };
-                "additionalProperties": boolean;
             };
             "AccountCreateParams": {
                 "type": string;
@@ -9988,7 +9571,6 @@ declare const Specs: {
                     "userId": number;
                     "status": number;
                 };
-                "additionalProperties": boolean;
             };
             "AccountUpdateParams": {
                 "type": string;
@@ -10018,7 +9600,6 @@ declare const Specs: {
                     "type": string;
                     "status": number;
                 };
-                "additionalProperties": boolean;
             };
             "Application": {
                 "type": string;
@@ -10083,7 +9664,6 @@ declare const Specs: {
                                 "description": string;
                                 "id": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     };
                     "supportEmail": {
@@ -10102,7 +9682,6 @@ declare const Specs: {
                         "example": {
                             "apiEndpoint": string;
                         };
-                        "additionalProperties": boolean;
                     };
                     "userNameFormat": {
                         "type": string;
@@ -10137,7 +9716,6 @@ declare const Specs: {
                         "apiEndpoint": string;
                     };
                 };
-                "additionalProperties": boolean;
             };
             "ApplicationPermission": {
                 "type": string;
@@ -10157,7 +9735,6 @@ declare const Specs: {
                     "description": string;
                     "id": string;
                 };
-                "additionalProperties": boolean;
             };
             "ApplicationReporting": {
                 "properties": {
@@ -10170,7 +9747,6 @@ declare const Specs: {
                 "example": {
                     "apiEndpoint": string;
                 };
-                "additionalProperties": boolean;
             };
             "Authorization": {
                 "type": string;
@@ -10221,7 +9797,6 @@ declare const Specs: {
                             "email": string;
                             "status": number;
                         };
-                        "additionalProperties": boolean;
                     };
                     "account": {
                         "type": string;
@@ -10278,7 +9853,6 @@ declare const Specs: {
                             "userId": number;
                             "status": number;
                         };
-                        "additionalProperties": boolean;
                     };
                     "projects": {
                         "type": string;
@@ -10322,7 +9896,6 @@ declare const Specs: {
                                 "permissions": {
                                     "type": string;
                                     "description": string;
-                                    "additionalProperties": boolean;
                                 };
                                 "sharedByUserId": {
                                     "type": string;
@@ -10348,7 +9921,6 @@ declare const Specs: {
                                 "userId": number;
                                 "enabled": boolean;
                             };
-                            "additionalProperties": boolean;
                         };
                     };
                 };
@@ -10389,7 +9961,6 @@ declare const Specs: {
                         "status": number;
                     };
                 };
-                "additionalProperties": boolean;
             };
             "AuthorizeParams": {
                 "type": string;
@@ -10423,7 +9994,6 @@ declare const Specs: {
                                 "items": {
                                     "type": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                             "type": {
                                 "type": string;
@@ -10457,11 +10027,9 @@ declare const Specs: {
                             "userId": number;
                             "projectId": number;
                         };
-                        "additionalProperties": boolean;
                     };
                 };
                 "description": string;
-                "additionalProperties": boolean;
             };
             "Notification": {
                 "type": string;
@@ -10488,7 +10056,6 @@ declare const Specs: {
                     "templateData": string;
                     "email": string;
                 };
-                "additionalProperties": boolean;
             };
             "PasswordChangeParams": {
                 "type": string;
@@ -10512,7 +10079,6 @@ declare const Specs: {
                     "oldPassword": string;
                     "newPassword": string;
                 };
-                "additionalProperties": boolean;
             };
             "UpdatePasswordParams": {
                 "type": string;
@@ -10528,7 +10094,6 @@ declare const Specs: {
                 "example": {
                     "password": string;
                 };
-                "additionalProperties": boolean;
             };
             "Payment": {
                 "type": string;
@@ -10587,7 +10152,6 @@ declare const Specs: {
                     "status": string;
                     "amount_refunded": number;
                 };
-                "additionalProperties": boolean;
             };
             "PaymentCard": {
                 "type": string;
@@ -10626,7 +10190,6 @@ declare const Specs: {
                     "exp_year": number;
                     "brand": string;
                 };
-                "additionalProperties": boolean;
             };
             "PaymentCreateParams": {
                 "type": string;
@@ -10645,7 +10208,6 @@ declare const Specs: {
                     "amount": number;
                     "description": string;
                 };
-                "additionalProperties": boolean;
             };
             "PaymentCustomer": {
                 "type": string;
@@ -10685,7 +10247,6 @@ declare const Specs: {
                     "currency": string;
                     "email": string;
                 };
-                "additionalProperties": boolean;
             };
             "PaymentHistory": {
                 "type": string;
@@ -10758,7 +10319,6 @@ declare const Specs: {
                                 "status": string;
                                 "amount_refunded": number;
                             };
-                            "additionalProperties": boolean;
                         };
                     };
                 };
@@ -10779,7 +10339,6 @@ declare const Specs: {
                     }[];
                     "discount": number;
                 };
-                "additionalProperties": boolean;
             };
             "PaymentMethodCreateParams": {
                 "type": string;
@@ -10793,7 +10352,6 @@ declare const Specs: {
                 "example": {
                     "stripeToken": string;
                 };
-                "additionalProperties": boolean;
             };
             "PaymentMethodPrimaryParams": {
                 "type": string;
@@ -10807,7 +10365,6 @@ declare const Specs: {
                 "example": {
                     "id": string;
                 };
-                "additionalProperties": boolean;
             };
             "PaymentMethods": {
                 "type": string;
@@ -10850,7 +10407,6 @@ declare const Specs: {
                             "currency": string;
                             "email": string;
                         };
-                        "additionalProperties": boolean;
                     };
                     "cards": {
                         "type": string;
@@ -10892,7 +10448,6 @@ declare const Specs: {
                                 "exp_year": number;
                                 "brand": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     };
                 };
@@ -10915,7 +10470,6 @@ declare const Specs: {
                         "email": string;
                     };
                 };
-                "additionalProperties": boolean;
             };
             "Permissions": {
                 "type": string;
@@ -10923,7 +10477,6 @@ declare const Specs: {
                 "items": {
                     "type": string;
                 };
-                "additionalProperties": boolean;
             };
             "Project": {
                 "type": string;
@@ -10964,7 +10517,6 @@ declare const Specs: {
                     "permissions": {
                         "type": string;
                         "description": string;
-                        "additionalProperties": boolean;
                     };
                     "sharedByUserId": {
                         "type": string;
@@ -10990,7 +10542,6 @@ declare const Specs: {
                     "userId": number;
                     "enabled": boolean;
                 };
-                "additionalProperties": boolean;
             };
             "ProjectCreateParams": {
                 "type": string;
@@ -11011,7 +10562,6 @@ declare const Specs: {
                     "name": string;
                     "type": string;
                 };
-                "additionalProperties": boolean;
             };
             "ProjectDefaultParams": {
                 "type": string;
@@ -11021,12 +10571,10 @@ declare const Specs: {
                         "description": string;
                     };
                 };
-                "additionalProperties": boolean;
             };
             "ProjectPermissions": {
                 "type": string;
                 "description": string;
-                "additionalProperties": boolean;
             };
             "ProjectShare": {
                 "type": string;
@@ -11054,7 +10602,6 @@ declare const Specs: {
                     "permissions": {
                         "type": string;
                         "description": string;
-                        "additionalProperties": boolean;
                     };
                     "sharedByUserId": {
                         "type": string;
@@ -11075,7 +10622,6 @@ declare const Specs: {
                     "projectId": number;
                     "userId": number;
                 };
-                "additionalProperties": boolean;
             };
             "ProjectUpdateParams": {
                 "properties": {
@@ -11090,7 +10636,6 @@ declare const Specs: {
                     "name": string;
                     "enabled": boolean;
                 };
-                "additionalProperties": boolean;
             };
             "Stash": {
                 "type": string;
@@ -11121,7 +10666,6 @@ declare const Specs: {
                     "created": string;
                     "id": string;
                 };
-                "additionalProperties": boolean;
             };
             "StashCreateParams": {
                 "type": string;
@@ -11143,7 +10687,6 @@ declare const Specs: {
                     "expires": string;
                     "data": string;
                 };
-                "additionalProperties": boolean;
             };
             "User": {
                 "type": string;
@@ -11191,7 +10734,6 @@ declare const Specs: {
                     "email": string;
                     "status": number;
                 };
-                "additionalProperties": boolean;
             };
             "UserCreateParams": {
                 "type": string;
@@ -11233,7 +10775,6 @@ declare const Specs: {
                     "name": string;
                     "email": string;
                 };
-                "additionalProperties": boolean;
             };
             "UserNameParams": {
                 "required": string[];
@@ -11246,7 +10787,6 @@ declare const Specs: {
                 "example": {
                     "name": string;
                 };
-                "additionalProperties": boolean;
             };
             "UserUpdateParams": {
                 "type": string;
@@ -11276,7 +10816,7 @@ declare const Specs: {
                     "timezone": string;
                     "email": string;
                 };
-                "additionalProperties": boolean;
+                "additionalProperties": {};
             };
             "VerificationCreateParams": {
                 "required": string[];
@@ -11301,7 +10841,6 @@ declare const Specs: {
                     "templateName": string;
                     "email": string;
                 };
-                "additionalProperties": boolean;
             };
             "VerificationApprovedResponse": {
                 "properties": {
@@ -11314,7 +10853,6 @@ declare const Specs: {
                 "example": {
                     "data": string;
                 };
-                "additionalProperties": boolean;
             };
             "VerificationCreateResponse": {
                 "properties": {
@@ -11326,7 +10864,6 @@ declare const Specs: {
                 "example": {
                     "key": string;
                 };
-                "additionalProperties": boolean;
             };
             "Error": {
                 "type": string;
@@ -11358,12 +10895,10 @@ declare const Specs: {
                                 };
                             };
                             "type": string;
-                            "additionalProperties": boolean;
                         };
                     };
                 };
                 "description": string;
-                "additionalProperties": boolean;
             };
             "Error_errors": {
                 "required": string[];
@@ -11380,7 +10915,6 @@ declare const Specs: {
                     };
                 };
                 "type": string;
-                "additionalProperties": boolean;
             };
         };
     };
@@ -11489,7 +11023,6 @@ declare const Specs: {
                                             "description": string;
                                             "title": string;
                                         };
-                                        "additionalProperties": boolean;
                                     };
                                 };
                                 "example": {
@@ -11504,7 +11037,6 @@ declare const Specs: {
                                         "title": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -11536,7 +11068,6 @@ declare const Specs: {
                                 "query": string;
                                 "accessToken": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -11573,7 +11104,6 @@ declare const Specs: {
                                         "description": string;
                                         "title": string;
                                     };
-                                    "additionalProperties": boolean;
                                 };
                             };
                         };
@@ -11640,7 +11170,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -11683,7 +11212,6 @@ declare const Specs: {
                                 "projectIds": number[];
                                 "accessToken": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -11703,7 +11231,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "409": {
@@ -11718,7 +11245,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -11737,7 +11263,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -11771,7 +11296,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -11813,7 +11337,6 @@ declare const Specs: {
                                             "referrer": string;
                                             "campaign": string;
                                         };
-                                        "additionalProperties": boolean;
                                     };
                                 };
                             };
@@ -11825,7 +11348,6 @@ declare const Specs: {
                                 "accessToken": string;
                                 "projectId": number;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -11845,7 +11367,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -11880,7 +11401,6 @@ declare const Specs: {
                                 "accessToken": string;
                                 "projectId": number;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -11900,7 +11420,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -11947,7 +11466,6 @@ declare const Specs: {
                                             "name": string;
                                             "params": string;
                                         };
-                                        "additionalProperties": boolean;
                                     };
                                 };
                             };
@@ -11960,7 +11478,6 @@ declare const Specs: {
                                     "params": string;
                                 }[];
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -11980,7 +11497,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -12005,7 +11521,6 @@ declare const Specs: {
                         };
                     };
                 };
-                "additionalProperties": boolean;
             };
             "QueryResponse": {
                 "properties": {
@@ -12033,10 +11548,8 @@ declare const Specs: {
                                 };
                             };
                         };
-                        "additionalProperties": boolean;
                     };
                 };
-                "additionalProperties": boolean;
             };
             "APIResponse": {
                 "properties": {
@@ -12052,7 +11565,6 @@ declare const Specs: {
                     "code": number;
                     "message": string;
                 };
-                "additionalProperties": boolean;
             };
             "APIError": {
                 "properties": {
@@ -12068,7 +11580,6 @@ declare const Specs: {
                     "code": number;
                     "message": string;
                 };
-                "additionalProperties": boolean;
             };
             "DuplicateError": {
                 "properties": {
@@ -12080,7 +11591,6 @@ declare const Specs: {
                         "type": string;
                     };
                 };
-                "additionalProperties": boolean;
             };
             "Entity": {
                 "properties": {
@@ -12119,7 +11629,6 @@ declare const Specs: {
                             "description": string;
                             "title": string;
                         };
-                        "additionalProperties": boolean;
                     };
                 };
                 "example": {
@@ -12134,7 +11643,6 @@ declare const Specs: {
                         "title": string;
                     };
                 };
-                "additionalProperties": boolean;
             };
             "Attribute": {
                 "properties": {
@@ -12165,7 +11673,6 @@ declare const Specs: {
                     "description": string;
                     "title": string;
                 };
-                "additionalProperties": boolean;
             };
             "SegmentCreateParams": {
                 "properties": {
@@ -12197,7 +11704,6 @@ declare const Specs: {
                     "projectIds": number[];
                     "accessToken": string;
                 };
-                "additionalProperties": boolean;
             };
             "CampaignIdsUpdateParams": {
                 "properties": {
@@ -12226,7 +11732,6 @@ declare const Specs: {
                                 "referrer": string;
                                 "campaign": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     };
                 };
@@ -12238,7 +11743,6 @@ declare const Specs: {
                     "accessToken": string;
                     "projectId": number;
                 };
-                "additionalProperties": boolean;
             };
             "CampaignReferrers": {
                 "properties": {
@@ -12257,7 +11761,6 @@ declare const Specs: {
                     "referrer": string;
                     "campaign": string;
                 };
-                "additionalProperties": boolean;
             };
             "CampaignReferrersUpdateParams": {
                 "properties": {
@@ -12279,7 +11782,6 @@ declare const Specs: {
                     "accessToken": string;
                     "projectId": number;
                 };
-                "additionalProperties": boolean;
             };
             "Dashboard": {
                 "properties": {
@@ -12303,7 +11805,6 @@ declare const Specs: {
                     "name": string;
                     "params": string;
                 };
-                "additionalProperties": boolean;
             };
             "DashboardsUpdateParams": {
                 "properties": {
@@ -12337,7 +11838,6 @@ declare const Specs: {
                                 "name": string;
                                 "params": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     };
                 };
@@ -12350,7 +11850,6 @@ declare const Specs: {
                         "params": string;
                     }[];
                 };
-                "additionalProperties": boolean;
             };
             "QueryParams": {
                 "required": string[];
@@ -12369,7 +11868,6 @@ declare const Specs: {
                     "query": string;
                     "accessToken": string;
                 };
-                "additionalProperties": boolean;
             };
         };
     };
@@ -12425,7 +11923,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -12443,7 +11940,6 @@ declare const Specs: {
                         "type": string;
                     };
                 };
-                "additionalProperties": boolean;
             };
             "APIError": {
                 "properties": {
@@ -12455,7 +11951,6 @@ declare const Specs: {
                         "type": string;
                     };
                 };
-                "additionalProperties": boolean;
             };
         };
     };
@@ -12510,7 +12005,6 @@ declare const Specs: {
                                 "name": string;
                                 "status": number;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -12530,7 +12024,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "409": {
@@ -12545,7 +12038,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -12564,7 +12056,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -12610,7 +12101,6 @@ declare const Specs: {
                                 "name": string;
                                 "expiration": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -12644,7 +12134,6 @@ declare const Specs: {
                                             "account": string;
                                             "status": number;
                                         };
-                                        "additionalProperties": boolean;
                                     };
                                 };
                                 "example": {
@@ -12656,7 +12145,6 @@ declare const Specs: {
                                         "status": number;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -12675,7 +12163,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -12700,7 +12187,6 @@ declare const Specs: {
                             "example": {
                                 "accessToken": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -12734,7 +12220,6 @@ declare const Specs: {
                                             "account": string;
                                             "status": number;
                                         };
-                                        "additionalProperties": boolean;
                                     };
                                 };
                                 "example": {
@@ -12746,7 +12231,6 @@ declare const Specs: {
                                         "status": number;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -12765,7 +12249,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -12806,7 +12289,6 @@ declare const Specs: {
                                         "url": string;
                                         "longitude": string;
                                     };
-                                    "additionalProperties": boolean;
                                 };
                             };
                         };
@@ -12826,7 +12308,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -12860,7 +12341,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -12899,7 +12379,6 @@ declare const Specs: {
                                 "accessToken": string;
                                 "type": string;
                             };
-                            "additionalProperties": boolean;
                         };
                     }[];
                     "responses": {
@@ -12919,7 +12398,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "409": {
@@ -12934,7 +12412,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -12953,7 +12430,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -12987,7 +12463,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -13012,7 +12487,6 @@ declare const Specs: {
                         };
                     };
                 };
-                "additionalProperties": boolean;
             };
             "APIResponse": {
                 "properties": {
@@ -13028,7 +12502,6 @@ declare const Specs: {
                     "code": number;
                     "message": string;
                 };
-                "additionalProperties": boolean;
             };
             "Login": {
                 "properties": {
@@ -13061,10 +12534,8 @@ declare const Specs: {
                             "account": string;
                             "status": number;
                         };
-                        "additionalProperties": boolean;
                     };
                 };
-                "additionalProperties": boolean;
             };
             "APIError": {
                 "properties": {
@@ -13080,7 +12551,6 @@ declare const Specs: {
                     "code": number;
                     "message": string;
                 };
-                "additionalProperties": boolean;
             };
             "DuplicateError": {
                 "properties": {
@@ -13092,7 +12562,6 @@ declare const Specs: {
                         "type": string;
                     };
                 };
-                "additionalProperties": boolean;
             };
             "Station": {
                 "properties": {
@@ -13119,7 +12588,6 @@ declare const Specs: {
                     "url": string;
                     "longitude": string;
                 };
-                "additionalProperties": boolean;
             };
             "AuthorizeParams": {
                 "properties": {
@@ -13130,7 +12598,6 @@ declare const Specs: {
                 "example": {
                     "accessToken": string;
                 };
-                "additionalProperties": boolean;
             };
             "LoginParams": {
                 "type": string;
@@ -13162,7 +12629,6 @@ declare const Specs: {
                     "name": string;
                     "expiration": string;
                 };
-                "additionalProperties": boolean;
             };
             "UserParams": {
                 "required": string[];
@@ -13190,7 +12656,6 @@ declare const Specs: {
                     "name": string;
                     "status": number;
                 };
-                "additionalProperties": boolean;
             };
             "User": {
                 "properties": {
@@ -13215,7 +12680,6 @@ declare const Specs: {
                     "account": string;
                     "status": number;
                 };
-                "additionalProperties": boolean;
             };
             "Authorization": {
                 "properties": {
@@ -13245,7 +12709,6 @@ declare const Specs: {
                             "account": string;
                             "status": number;
                         };
-                        "additionalProperties": boolean;
                     };
                 };
                 "example": {
@@ -13257,7 +12720,6 @@ declare const Specs: {
                         "status": number;
                     };
                 };
-                "additionalProperties": boolean;
             };
             "ContactCreateParams": {
                 "required": string[];
@@ -13285,7 +12747,6 @@ declare const Specs: {
                     "accessToken": string;
                     "type": string;
                 };
-                "additionalProperties": boolean;
             };
         };
     };
@@ -13369,7 +12830,6 @@ declare const Specs: {
                                     "profiles": string[];
                                     "currentPage": number;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -13384,7 +12844,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -13424,7 +12883,6 @@ declare const Specs: {
                                     "data": string;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -13439,7 +12897,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -13475,7 +12932,6 @@ declare const Specs: {
                                 "profile": string;
                                 "accessToken": string;
                             };
-                            "additionalProperties": boolean;
                         };
                         "description"?: undefined;
                         "type"?: undefined;
@@ -13499,7 +12955,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -13535,7 +12990,6 @@ declare const Specs: {
                                 "profile": string;
                                 "accessToken": string;
                             };
-                            "additionalProperties": boolean;
                         };
                         "description"?: undefined;
                         "type"?: undefined;
@@ -13559,7 +13013,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -13599,7 +13052,6 @@ declare const Specs: {
                                     "data": string;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -13614,7 +13066,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -13650,7 +13101,6 @@ declare const Specs: {
                                 "payee": string;
                                 "accessToken": string;
                             };
-                            "additionalProperties": boolean;
                         };
                         "description"?: undefined;
                         "type"?: undefined;
@@ -13674,7 +13124,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -13710,7 +13159,6 @@ declare const Specs: {
                                 "payee": string;
                                 "accessToken": string;
                             };
-                            "additionalProperties": boolean;
                         };
                         "description"?: undefined;
                         "type"?: undefined;
@@ -13734,7 +13182,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -13774,7 +13221,6 @@ declare const Specs: {
                                     "data": string;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -13789,7 +13235,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -13825,7 +13270,6 @@ declare const Specs: {
                                 "showcase": string;
                                 "accessToken": string;
                             };
-                            "additionalProperties": boolean;
                         };
                         "description"?: undefined;
                         "type"?: undefined;
@@ -13849,7 +13293,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -13881,7 +13324,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -13896,7 +13338,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -13932,7 +13373,6 @@ declare const Specs: {
                                 "showcase": string;
                                 "accessToken": string;
                             };
-                            "additionalProperties": boolean;
                         };
                         "description"?: undefined;
                         "type"?: undefined;
@@ -13956,7 +13396,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -13998,7 +13437,6 @@ declare const Specs: {
                                         "example": {
                                             "showcases": string[];
                                         };
-                                        "additionalProperties": boolean;
                                     };
                                 };
                                 "example": {
@@ -14008,7 +13446,6 @@ declare const Specs: {
                                     };
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -14023,7 +13460,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -14059,7 +13495,6 @@ declare const Specs: {
                                 "showcase": string;
                                 "accessToken": string;
                             };
-                            "additionalProperties": boolean;
                         };
                         "description"?: undefined;
                         "type"?: undefined;
@@ -14087,7 +13522,6 @@ declare const Specs: {
                                     "data": string;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -14102,7 +13536,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -14142,7 +13575,6 @@ declare const Specs: {
                                     "data": string;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -14157,7 +13589,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -14193,7 +13624,6 @@ declare const Specs: {
                                 "testimonial": string;
                                 "accessToken": string;
                             };
-                            "additionalProperties": boolean;
                         };
                         "description"?: undefined;
                         "type"?: undefined;
@@ -14217,7 +13647,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -14249,7 +13678,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -14264,7 +13692,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -14300,7 +13727,6 @@ declare const Specs: {
                                 "testimonial": string;
                                 "accessToken": string;
                             };
-                            "additionalProperties": boolean;
                         };
                         "description"?: undefined;
                         "type"?: undefined;
@@ -14324,7 +13750,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -14366,7 +13791,6 @@ declare const Specs: {
                                         "example": {
                                             "testimonials": string[];
                                         };
-                                        "additionalProperties": boolean;
                                     };
                                 };
                                 "example": {
@@ -14376,7 +13800,6 @@ declare const Specs: {
                                     };
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -14391,7 +13814,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -14427,7 +13849,6 @@ declare const Specs: {
                                 "testimonial": string;
                                 "accessToken": string;
                             };
-                            "additionalProperties": boolean;
                         };
                         "description"?: undefined;
                         "type"?: undefined;
@@ -14455,7 +13876,6 @@ declare const Specs: {
                                     "data": string;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -14470,7 +13890,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -14504,7 +13923,6 @@ declare const Specs: {
                                     "code": number;
                                     "message": string;
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                         "default": {
@@ -14519,7 +13937,6 @@ declare const Specs: {
                                         "type": string;
                                     };
                                 };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -14547,7 +13964,6 @@ declare const Specs: {
                     "data": string;
                     "message": string;
                 };
-                "additionalProperties": boolean;
             };
             "PayeeResponse": {
                 "properties": {
@@ -14569,7 +13985,6 @@ declare const Specs: {
                     "data": string;
                     "message": string;
                 };
-                "additionalProperties": boolean;
             };
             "ShowcaseResponse": {
                 "properties": {
@@ -14591,7 +14006,6 @@ declare const Specs: {
                     "data": string;
                     "message": string;
                 };
-                "additionalProperties": boolean;
             };
             "ShowcasePostResponse": {
                 "properties": {
@@ -14613,7 +14027,6 @@ declare const Specs: {
                     "data": string;
                     "message": string;
                 };
-                "additionalProperties": boolean;
             };
             "TestimonialResponse": {
                 "properties": {
@@ -14635,7 +14048,6 @@ declare const Specs: {
                     "data": string;
                     "message": string;
                 };
-                "additionalProperties": boolean;
             };
             "TestimonialsResponse": {
                 "properties": {
@@ -14659,7 +14071,6 @@ declare const Specs: {
                         "example": {
                             "testimonials": string[];
                         };
-                        "additionalProperties": boolean;
                     };
                 };
                 "example": {
@@ -14669,7 +14080,6 @@ declare const Specs: {
                     };
                     "message": string;
                 };
-                "additionalProperties": boolean;
             };
             "ShowcasesResponse": {
                 "properties": {
@@ -14693,7 +14103,6 @@ declare const Specs: {
                         "example": {
                             "showcases": string[];
                         };
-                        "additionalProperties": boolean;
                     };
                 };
                 "example": {
@@ -14703,7 +14112,6 @@ declare const Specs: {
                     };
                     "message": string;
                 };
-                "additionalProperties": boolean;
             };
             "Testimonials": {
                 "properties": {
@@ -14718,7 +14126,6 @@ declare const Specs: {
                 "example": {
                     "testimonials": string[];
                 };
-                "additionalProperties": boolean;
             };
             "ProfilesResponse": {
                 "properties": {
@@ -14744,7 +14151,6 @@ declare const Specs: {
                     "profiles": string[];
                     "currentPage": number;
                 };
-                "additionalProperties": boolean;
             };
             "Showcases": {
                 "properties": {
@@ -14759,7 +14165,6 @@ declare const Specs: {
                 "example": {
                     "showcases": string[];
                 };
-                "additionalProperties": boolean;
             };
             "TestimonialPostResponse": {
                 "properties": {
@@ -14781,7 +14186,6 @@ declare const Specs: {
                     "data": string;
                     "message": string;
                 };
-                "additionalProperties": boolean;
             };
             "APIResponse": {
                 "properties": {
@@ -14797,7 +14201,6 @@ declare const Specs: {
                     "code": number;
                     "message": string;
                 };
-                "additionalProperties": boolean;
             };
             "APIError": {
                 "properties": {
@@ -14809,7 +14212,6 @@ declare const Specs: {
                         "type": string;
                     };
                 };
-                "additionalProperties": boolean;
             };
             "DuplicateError": {
                 "properties": {
@@ -14821,7 +14223,6 @@ declare const Specs: {
                         "type": string;
                     };
                 };
-                "additionalProperties": boolean;
             };
             "ProfilePutParams": {
                 "required": string[];
@@ -14840,7 +14241,6 @@ declare const Specs: {
                     "profile": string;
                     "accessToken": string;
                 };
-                "additionalProperties": boolean;
             };
             "ShowcasePutParams": {
                 "required": string[];
@@ -14859,7 +14259,6 @@ declare const Specs: {
                     "showcase": string;
                     "accessToken": string;
                 };
-                "additionalProperties": boolean;
             };
             "ShowcasePatchParams": {
                 "required": string[];
@@ -14878,7 +14277,6 @@ declare const Specs: {
                     "showcase": string;
                     "accessToken": string;
                 };
-                "additionalProperties": boolean;
             };
             "ShowcasePostParams": {
                 "required": string[];
@@ -14897,7 +14295,6 @@ declare const Specs: {
                     "showcase": string;
                     "accessToken": string;
                 };
-                "additionalProperties": boolean;
             };
             "TestimonialPutParams": {
                 "required": string[];
@@ -14916,7 +14313,6 @@ declare const Specs: {
                     "testimonial": string;
                     "accessToken": string;
                 };
-                "additionalProperties": boolean;
             };
             "TestimonialPatchParams": {
                 "required": string[];
@@ -14935,7 +14331,6 @@ declare const Specs: {
                     "testimonial": string;
                     "accessToken": string;
                 };
-                "additionalProperties": boolean;
             };
             "TestimonialPostParams": {
                 "required": string[];
@@ -14954,7 +14349,6 @@ declare const Specs: {
                     "testimonial": string;
                     "accessToken": string;
                 };
-                "additionalProperties": boolean;
             };
             "PayeePutParams": {
                 "required": string[];
@@ -14973,7 +14367,6 @@ declare const Specs: {
                     "payee": string;
                     "accessToken": string;
                 };
-                "additionalProperties": boolean;
             };
         };
     };
