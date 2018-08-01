@@ -177,12 +177,12 @@ export declare module Admin {
     }
     class Stash {
         id?: string;
-        created?: Date;
-        expires?: Date;
+        created?: string;
+        expires?: string;
         data?: any;
     }
     class StashCreateParams {
-        expires?: Date;
+        expires?: string;
         data: any;
     }
     class User {

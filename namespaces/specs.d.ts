@@ -6573,8 +6573,9 @@ declare const Specs: {
                             "required": string[];
                             "properties": {
                                 "expires": {
+                                    "type": string;
+                                    "format": string;
                                     "description": string;
-                                    "x-type": string;
                                 };
                                 "data": {
                                     "type": string;
@@ -6601,12 +6602,14 @@ declare const Specs: {
                                         "description": string;
                                     };
                                     "created": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "expires": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "data": {
                                         "type": string;
@@ -6630,12 +6633,14 @@ declare const Specs: {
                                         "description": string;
                                     };
                                     "created": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "expires": {
+                                        "type": string;
+                                        "format": string;
                                         "description": string;
-                                        "x-type": string;
                                     };
                                     "data": {
                                         "type": string;
@@ -10841,12 +10846,14 @@ declare const Specs: {
                         "description": string;
                     };
                     "created": {
+                        "type": string;
+                        "format": string;
                         "description": string;
-                        "x-type": string;
                     };
                     "expires": {
+                        "type": string;
+                        "format": string;
                         "description": string;
-                        "x-type": string;
                     };
                     "data": {
                         "type": string;
@@ -10867,8 +10874,9 @@ declare const Specs: {
                 "required": string[];
                 "properties": {
                     "expires": {
+                        "type": string;
+                        "format": string;
                         "description": string;
-                        "x-type": string;
                     };
                     "data": {
                         "type": string;
