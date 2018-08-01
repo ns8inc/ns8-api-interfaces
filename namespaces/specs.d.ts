@@ -6801,12 +6801,14 @@ declare const Specs: {
                                     "data": {
                                         "type": string;
                                         "description": string;
-                                        "properties": {};
+                                        "additionalProperties": {};
                                     };
                                 };
                                 "example": {
                                     "expires": string;
-                                    "data": string;
+                                    "data": {
+                                        "key": string;
+                                    };
                                     "created": string;
                                     "id": string;
                                 };
@@ -6832,12 +6834,14 @@ declare const Specs: {
                                     "data": {
                                         "type": string;
                                         "description": string;
-                                        "properties": {};
+                                        "additionalProperties": {};
                                     };
                                 };
                                 "example": {
                                     "expires": string;
-                                    "data": string;
+                                    "data": {
+                                        "key": string;
+                                    };
                                     "created": string;
                                     "id": string;
                                 };
@@ -7117,12 +7121,14 @@ declare const Specs: {
                                     "data": {
                                         "type": string;
                                         "description": string;
-                                        "properties": {};
+                                        "additionalProperties": {};
                                     };
                                 };
                                 "example": {
                                     "expires": string;
-                                    "data": string;
+                                    "data": {
+                                        "key": string;
+                                    };
                                     "created": string;
                                     "id": string;
                                 };
@@ -7148,12 +7154,14 @@ declare const Specs: {
                                     "data": {
                                         "type": string;
                                         "description": string;
-                                        "properties": {};
+                                        "additionalProperties": {};
                                     };
                                 };
                                 "example": {
                                     "expires": string;
-                                    "data": string;
+                                    "data": {
+                                        "key": string;
+                                    };
                                     "created": string;
                                     "id": string;
                                 };
@@ -11112,12 +11120,14 @@ declare const Specs: {
                     "data": {
                         "type": string;
                         "description": string;
-                        "properties": {};
+                        "additionalProperties": {};
                     };
                 };
                 "example": {
                     "expires": string;
-                    "data": string;
+                    "data": {
+                        "key": string;
+                    };
                     "created": string;
                     "id": string;
                 };
