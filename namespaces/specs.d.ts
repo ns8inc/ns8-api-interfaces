@@ -7097,8 +7097,68 @@ declare const Specs: {
                     "responses": {
                         "200": {
                             "description": string;
-                            "schema": {};
-                            "responseSchema": {};
+                            "schema": {
+                                "type": string;
+                                "properties": {
+                                    "id": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "created": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                    };
+                                    "expires": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                    };
+                                    "data": {
+                                        "type": string;
+                                        "description": string;
+                                        "properties": {};
+                                    };
+                                };
+                                "example": {
+                                    "expires": string;
+                                    "data": string;
+                                    "created": string;
+                                    "id": string;
+                                };
+                                "additionalProperties": boolean;
+                            };
+                            "responseSchema": {
+                                "type": string;
+                                "properties": {
+                                    "id": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "created": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                    };
+                                    "expires": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                    };
+                                    "data": {
+                                        "type": string;
+                                        "description": string;
+                                        "properties": {};
+                                    };
+                                };
+                                "example": {
+                                    "expires": string;
+                                    "data": string;
+                                    "created": string;
+                                    "id": string;
+                                };
+                                "additionalProperties": boolean;
+                            };
                         };
                         "400": {
                             "description": string;
