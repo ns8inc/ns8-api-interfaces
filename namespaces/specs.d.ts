@@ -1932,52 +1932,103 @@ declare const Specs: {
                     }[];
                     "responses": {
                         "200": {
-                            "type": string;
-                            "properties": {
-                                "id": {
-                                    "type": string;
-                                    "description": string;
+                            "description": string;
+                            "schema": {
+                                "type": string;
+                                "properties": {
+                                    "id": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "name": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "firstName": {
+                                        "type": string;
+                                    };
+                                    "lastName": {
+                                        "type": string;
+                                    };
+                                    "email": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                    };
+                                    "status": {
+                                        "type": string;
+                                    };
+                                    "createdDate": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                    };
+                                    "lastUpdated": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                    };
                                 };
-                                "name": {
-                                    "type": string;
-                                    "description": string;
+                                "example": {
+                                    "firstName": string;
+                                    "lastName": string;
+                                    "lastUpdated": string;
+                                    "createdDate": string;
+                                    "name": string;
+                                    "id": number;
+                                    "email": string;
+                                    "status": number;
                                 };
-                                "firstName": {
-                                    "type": string;
-                                };
-                                "lastName": {
-                                    "type": string;
-                                };
-                                "email": {
-                                    "type": string;
-                                    "format": string;
-                                    "description": string;
-                                };
-                                "status": {
-                                    "type": string;
-                                };
-                                "createdDate": {
-                                    "type": string;
-                                    "format": string;
-                                    "description": string;
-                                };
-                                "lastUpdated": {
-                                    "type": string;
-                                    "format": string;
-                                    "description": string;
-                                };
+                                "additionalProperties": boolean;
                             };
-                            "example": {
-                                "firstName": string;
-                                "lastName": string;
-                                "lastUpdated": string;
-                                "createdDate": string;
-                                "name": string;
-                                "id": number;
-                                "email": string;
-                                "status": number;
+                            "responseSchema": {
+                                "type": string;
+                                "properties": {
+                                    "id": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "name": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "firstName": {
+                                        "type": string;
+                                    };
+                                    "lastName": {
+                                        "type": string;
+                                    };
+                                    "email": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                    };
+                                    "status": {
+                                        "type": string;
+                                    };
+                                    "createdDate": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                    };
+                                    "lastUpdated": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                    };
+                                };
+                                "example": {
+                                    "firstName": string;
+                                    "lastName": string;
+                                    "lastUpdated": string;
+                                    "createdDate": string;
+                                    "name": string;
+                                    "id": number;
+                                    "email": string;
+                                    "status": number;
+                                };
+                                "additionalProperties": boolean;
                             };
-                            "additionalProperties": boolean;
                         };
                         "401": {
                             "description": string;
