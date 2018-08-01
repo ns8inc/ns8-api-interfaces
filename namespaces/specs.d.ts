@@ -844,7 +844,6 @@ declare const Specs: {
                         "description": string;
                         "required": boolean;
                         "schema": {
-                            "type": string;
                             "properties": {
                                 "firstName": {
                                     "type": string;
@@ -11289,7 +11288,6 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "UserUpdateParams": {
-                "type": string;
                 "properties": {
                     "firstName": {
                         "type": string;
