@@ -178,7 +178,6 @@ export declare module Admin {
     }
     class Stash {
         id?: string;
-        created?: string;
         expires?: string;
         data?: any;
     }
