@@ -142,9 +142,10 @@ export declare module Admin {
     class Project {
         id: number;
         accountId: number;
+        appId?: number;
         userId?: number;
         name: string;
-        type?: number;
+        type?: string;
         enabled?: boolean;
         isDemo?: boolean;
         implemented?: boolean;
@@ -153,8 +154,7 @@ export declare module Admin {
         data?: any;
     }
     class ProjectCreateParams {
-        accountId?: undefined;
-        name?: string;
+        name: string;
         type?: undefined;
     }
     class ProjectDefaultParams {
@@ -170,11 +170,13 @@ export declare module Admin {
         userName?: string;
         permissions?: string;
         sharedByUserId?: number;
-        createdDate?: Date;
+        createdDate?: string;
     }
     class ProjectUpdateParams {
         name?: string;
         enabled?: boolean;
+        type?: string;
+        data?: any;
     }
     class Stash {
         id?: string;

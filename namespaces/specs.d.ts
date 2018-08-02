@@ -3382,6 +3382,10 @@ declare const Specs: {
                                             "type": string;
                                             "description": string;
                                         };
+                                        "appId": {
+                                            "type": string;
+                                            "description": string;
+                                        };
                                         "userId": {
                                             "type": string;
                                             "description": string;
@@ -3397,6 +3401,7 @@ declare const Specs: {
                                         "enabled": {
                                             "type": string;
                                             "description": string;
+                                            "default": boolean;
                                         };
                                         "isDemo": {
                                             "type": string;
@@ -3428,11 +3433,12 @@ declare const Specs: {
                                             "key": string;
                                         };
                                         "permissions": {};
+                                        "appId": number;
                                         "name": string;
                                         "implemented": boolean;
                                         "sharedByUserId": number;
                                         "id": number;
-                                        "type": number;
+                                        "type": string;
                                         "isDemo": boolean;
                                         "userId": number;
                                         "enabled": boolean;
@@ -3454,6 +3460,10 @@ declare const Specs: {
                                             "type": string;
                                             "description": string;
                                         };
+                                        "appId": {
+                                            "type": string;
+                                            "description": string;
+                                        };
                                         "userId": {
                                             "type": string;
                                             "description": string;
@@ -3469,6 +3479,7 @@ declare const Specs: {
                                         "enabled": {
                                             "type": string;
                                             "description": string;
+                                            "default": boolean;
                                         };
                                         "isDemo": {
                                             "type": string;
@@ -3500,11 +3511,12 @@ declare const Specs: {
                                             "key": string;
                                         };
                                         "permissions": {};
+                                        "appId": number;
                                         "name": string;
                                         "implemented": boolean;
                                         "sharedByUserId": number;
                                         "id": number;
-                                        "type": number;
+                                        "type": string;
                                         "isDemo": boolean;
                                         "userId": number;
                                         "enabled": boolean;
@@ -3837,10 +3849,8 @@ declare const Specs: {
                         "required": boolean;
                         "schema": {
                             "type": string;
+                            "required": string[];
                             "properties": {
-                                "accountId": {
-                                    "description": string;
-                                };
                                 "name": {
                                     "type": string;
                                 };
@@ -3850,7 +3860,6 @@ declare const Specs: {
                             };
                             "description": string;
                             "example": {
-                                "accountId": string;
                                 "name": string;
                                 "type": string;
                             };
@@ -3872,6 +3881,10 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
+                                    "appId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
                                     "userId": {
                                         "type": string;
                                         "description": string;
@@ -3887,6 +3900,7 @@ declare const Specs: {
                                     "enabled": {
                                         "type": string;
                                         "description": string;
+                                        "default": boolean;
                                     };
                                     "isDemo": {
                                         "type": string;
@@ -3918,11 +3932,12 @@ declare const Specs: {
                                         "key": string;
                                     };
                                     "permissions": {};
+                                    "appId": number;
                                     "name": string;
                                     "implemented": boolean;
                                     "sharedByUserId": number;
                                     "id": number;
-                                    "type": number;
+                                    "type": string;
                                     "isDemo": boolean;
                                     "userId": number;
                                     "enabled": boolean;
@@ -3941,6 +3956,10 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
+                                    "appId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
                                     "userId": {
                                         "type": string;
                                         "description": string;
@@ -3956,6 +3975,7 @@ declare const Specs: {
                                     "enabled": {
                                         "type": string;
                                         "description": string;
+                                        "default": boolean;
                                     };
                                     "isDemo": {
                                         "type": string;
@@ -3987,11 +4007,12 @@ declare const Specs: {
                                         "key": string;
                                     };
                                     "permissions": {};
+                                    "appId": number;
                                     "name": string;
                                     "implemented": boolean;
                                     "sharedByUserId": number;
                                     "id": number;
-                                    "type": number;
+                                    "type": string;
                                     "isDemo": boolean;
                                     "userId": number;
                                     "enabled": boolean;
@@ -4589,9 +4610,21 @@ declare const Specs: {
                                 "enabled": {
                                     "type": string;
                                 };
+                                "type": {
+                                    "type": string;
+                                };
+                                "data": {
+                                    "type": string;
+                                    "additionalProperties": boolean;
+                                };
                             };
+                            "description": string;
                             "example": {
+                                "data": {
+                                    "key": string;
+                                };
                                 "name": string;
+                                "type": string;
                                 "enabled": boolean;
                             };
                             "additionalProperties": boolean;
@@ -4613,6 +4646,10 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
+                                    "appId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
                                     "userId": {
                                         "type": string;
                                         "description": string;
@@ -4628,6 +4665,7 @@ declare const Specs: {
                                     "enabled": {
                                         "type": string;
                                         "description": string;
+                                        "default": boolean;
                                     };
                                     "isDemo": {
                                         "type": string;
@@ -4659,11 +4697,12 @@ declare const Specs: {
                                         "key": string;
                                     };
                                     "permissions": {};
+                                    "appId": number;
                                     "name": string;
                                     "implemented": boolean;
                                     "sharedByUserId": number;
                                     "id": number;
-                                    "type": number;
+                                    "type": string;
                                     "isDemo": boolean;
                                     "userId": number;
                                     "enabled": boolean;
@@ -4682,6 +4721,10 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
+                                    "appId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
                                     "userId": {
                                         "type": string;
                                         "description": string;
@@ -4697,6 +4740,7 @@ declare const Specs: {
                                     "enabled": {
                                         "type": string;
                                         "description": string;
+                                        "default": boolean;
                                     };
                                     "isDemo": {
                                         "type": string;
@@ -4728,11 +4772,12 @@ declare const Specs: {
                                         "key": string;
                                     };
                                     "permissions": {};
+                                    "appId": number;
                                     "name": string;
                                     "implemented": boolean;
                                     "sharedByUserId": number;
                                     "id": number;
-                                    "type": number;
+                                    "type": string;
                                     "isDemo": boolean;
                                     "userId": number;
                                     "enabled": boolean;
@@ -5055,7 +5100,7 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/projectshares": {
+            "/project-shares": {
                 "get": {
                     "tags": string[];
                     "summary": string;
@@ -5098,8 +5143,9 @@ declare const Specs: {
                                             "description": string;
                                         };
                                         "createdDate": {
+                                            "type": string;
+                                            "format": string;
                                             "description": string;
-                                            "x-type": string;
                                         };
                                     };
                                     "example": {
@@ -5150,8 +5196,9 @@ declare const Specs: {
                                             "description": string;
                                         };
                                         "createdDate": {
+                                            "type": string;
+                                            "format": string;
                                             "description": string;
-                                            "x-type": string;
                                         };
                                     };
                                     "example": {
@@ -6020,6 +6067,10 @@ declare const Specs: {
                                                     "type": string;
                                                     "description": string;
                                                 };
+                                                "appId": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
                                                 "userId": {
                                                     "type": string;
                                                     "description": string;
@@ -6035,6 +6086,7 @@ declare const Specs: {
                                                 "enabled": {
                                                     "type": string;
                                                     "description": string;
+                                                    "default": boolean;
                                                 };
                                                 "isDemo": {
                                                     "type": string;
@@ -6066,11 +6118,12 @@ declare const Specs: {
                                                     "key": string;
                                                 };
                                                 "permissions": {};
+                                                "appId": number;
                                                 "name": string;
                                                 "implemented": boolean;
                                                 "sharedByUserId": number;
                                                 "id": number;
-                                                "type": number;
+                                                "type": string;
                                                 "isDemo": boolean;
                                                 "userId": number;
                                                 "enabled": boolean;
@@ -6087,11 +6140,12 @@ declare const Specs: {
                                             "key": string;
                                         };
                                         "permissions": {};
+                                        "appId": number;
                                         "name": string;
                                         "implemented": boolean;
                                         "sharedByUserId": number;
                                         "id": number;
-                                        "type": number;
+                                        "type": string;
                                         "isDemo": boolean;
                                         "userId": number;
                                         "enabled": boolean;
@@ -6247,6 +6301,10 @@ declare const Specs: {
                                                     "type": string;
                                                     "description": string;
                                                 };
+                                                "appId": {
+                                                    "type": string;
+                                                    "description": string;
+                                                };
                                                 "userId": {
                                                     "type": string;
                                                     "description": string;
@@ -6262,6 +6320,7 @@ declare const Specs: {
                                                 "enabled": {
                                                     "type": string;
                                                     "description": string;
+                                                    "default": boolean;
                                                 };
                                                 "isDemo": {
                                                     "type": string;
@@ -6293,11 +6352,12 @@ declare const Specs: {
                                                     "key": string;
                                                 };
                                                 "permissions": {};
+                                                "appId": number;
                                                 "name": string;
                                                 "implemented": boolean;
                                                 "sharedByUserId": number;
                                                 "id": number;
-                                                "type": number;
+                                                "type": string;
                                                 "isDemo": boolean;
                                                 "userId": number;
                                                 "enabled": boolean;
@@ -6314,11 +6374,12 @@ declare const Specs: {
                                             "key": string;
                                         };
                                         "permissions": {};
+                                        "appId": number;
                                         "name": string;
                                         "implemented": boolean;
                                         "sharedByUserId": number;
                                         "id": number;
-                                        "type": number;
+                                        "type": string;
                                         "isDemo": boolean;
                                         "userId": number;
                                         "enabled": boolean;
@@ -10338,6 +10399,10 @@ declare const Specs: {
                                     "type": string;
                                     "description": string;
                                 };
+                                "appId": {
+                                    "type": string;
+                                    "description": string;
+                                };
                                 "userId": {
                                     "type": string;
                                     "description": string;
@@ -10353,6 +10418,7 @@ declare const Specs: {
                                 "enabled": {
                                     "type": string;
                                     "description": string;
+                                    "default": boolean;
                                 };
                                 "isDemo": {
                                     "type": string;
@@ -10384,11 +10450,12 @@ declare const Specs: {
                                     "key": string;
                                 };
                                 "permissions": {};
+                                "appId": number;
                                 "name": string;
                                 "implemented": boolean;
                                 "sharedByUserId": number;
                                 "id": number;
-                                "type": number;
+                                "type": string;
                                 "isDemo": boolean;
                                 "userId": number;
                                 "enabled": boolean;
@@ -10405,11 +10472,12 @@ declare const Specs: {
                             "key": string;
                         };
                         "permissions": {};
+                        "appId": number;
                         "name": string;
                         "implemented": boolean;
                         "sharedByUserId": number;
                         "id": number;
-                        "type": number;
+                        "type": string;
                         "isDemo": boolean;
                         "userId": number;
                         "enabled": boolean;
@@ -10988,6 +11056,10 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                     };
+                    "appId": {
+                        "type": string;
+                        "description": string;
+                    };
                     "userId": {
                         "type": string;
                         "description": string;
@@ -11003,6 +11075,7 @@ declare const Specs: {
                     "enabled": {
                         "type": string;
                         "description": string;
+                        "default": boolean;
                     };
                     "isDemo": {
                         "type": string;
@@ -11034,11 +11107,12 @@ declare const Specs: {
                         "key": string;
                     };
                     "permissions": {};
+                    "appId": number;
                     "name": string;
                     "implemented": boolean;
                     "sharedByUserId": number;
                     "id": number;
-                    "type": number;
+                    "type": string;
                     "isDemo": boolean;
                     "userId": number;
                     "enabled": boolean;
@@ -11047,10 +11121,8 @@ declare const Specs: {
             };
             "ProjectCreateParams": {
                 "type": string;
+                "required": string[];
                 "properties": {
-                    "accountId": {
-                        "description": string;
-                    };
                     "name": {
                         "type": string;
                     };
@@ -11060,7 +11132,6 @@ declare const Specs: {
                 };
                 "description": string;
                 "example": {
-                    "accountId": string;
                     "name": string;
                     "type": string;
                 };
@@ -11114,8 +11185,9 @@ declare const Specs: {
                         "description": string;
                     };
                     "createdDate": {
+                        "type": string;
+                        "format": string;
                         "description": string;
-                        "x-type": string;
                     };
                 };
                 "example": {
@@ -11138,9 +11210,21 @@ declare const Specs: {
                     "enabled": {
                         "type": string;
                     };
+                    "type": {
+                        "type": string;
+                    };
+                    "data": {
+                        "type": string;
+                        "additionalProperties": boolean;
+                    };
                 };
+                "description": string;
                 "example": {
+                    "data": {
+                        "key": string;
+                    };
                     "name": string;
+                    "type": string;
                     "enabled": boolean;
                 };
                 "additionalProperties": boolean;
