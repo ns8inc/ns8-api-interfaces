@@ -383,11 +383,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                 };
                                 "example": {
@@ -431,11 +433,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                 };
                                 "example": {
@@ -909,11 +913,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                 };
                                 "example": {
@@ -957,11 +963,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                 };
                                 "example": {
@@ -1965,11 +1973,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                 };
                                 "example": {
@@ -2013,11 +2023,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                 };
                                 "example": {
@@ -2464,11 +2476,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "type": {
                                         "type": string;
@@ -2523,11 +2537,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "type": {
                                         "type": string;
@@ -2948,11 +2964,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "type": {
                                         "type": string;
@@ -3007,11 +3025,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "type": {
                                         "type": string;
@@ -5146,6 +5166,7 @@ declare const Specs: {
                                             "type": string;
                                             "format": string;
                                             "description": string;
+                                            "convertStringToDate": boolean;
                                         };
                                     };
                                     "example": {
@@ -5199,6 +5220,7 @@ declare const Specs: {
                                             "type": string;
                                             "format": string;
                                             "description": string;
+                                            "convertStringToDate": boolean;
                                         };
                                     };
                                     "example": {
@@ -5606,11 +5628,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "expiration": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "adminMode": {
                                         "type": string;
@@ -5671,11 +5695,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "expiration": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "adminMode": {
                                         "type": string;
@@ -5974,11 +6000,13 @@ declare const Specs: {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
+                                                "convertStringToDate": boolean;
                                             };
                                             "lastUpdated": {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
+                                                "convertStringToDate": boolean;
                                             };
                                         };
                                         "example": {
@@ -6016,11 +6044,13 @@ declare const Specs: {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
+                                                "convertStringToDate": boolean;
                                             };
                                             "lastUpdated": {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
+                                                "convertStringToDate": boolean;
                                             };
                                             "type": {
                                                 "type": string;
@@ -6208,11 +6238,13 @@ declare const Specs: {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
+                                                "convertStringToDate": boolean;
                                             };
                                             "lastUpdated": {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
+                                                "convertStringToDate": boolean;
                                             };
                                         };
                                         "example": {
@@ -6250,11 +6282,13 @@ declare const Specs: {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
+                                                "convertStringToDate": boolean;
                                             };
                                             "lastUpdated": {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
+                                                "convertStringToDate": boolean;
                                             };
                                             "type": {
                                                 "type": string;
@@ -6867,6 +6901,7 @@ declare const Specs: {
                                     "type": string;
                                     "format": string;
                                     "description": string;
+                                    "convertStringToDate": boolean;
                                 };
                                 "data": {
                                     "type": string;
@@ -6898,6 +6933,7 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "data": {
                                         "type": string;
@@ -6925,6 +6961,7 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "data": {
                                         "type": string;
@@ -7206,6 +7243,7 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "data": {
                                         "type": string;
@@ -7233,6 +7271,7 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "data": {
                                         "type": string;
@@ -9916,11 +9955,13 @@ declare const Specs: {
                         "type": string;
                         "format": string;
                         "description": string;
+                        "convertStringToDate": boolean;
                     };
                     "expiration": {
                         "type": string;
                         "format": string;
                         "description": string;
+                        "convertStringToDate": boolean;
                     };
                     "adminMode": {
                         "type": string;
@@ -10010,11 +10051,13 @@ declare const Specs: {
                         "type": string;
                         "format": string;
                         "description": string;
+                        "convertStringToDate": boolean;
                     };
                     "lastUpdated": {
                         "type": string;
                         "format": string;
                         "description": string;
+                        "convertStringToDate": boolean;
                     };
                     "type": {
                         "type": string;
@@ -10306,11 +10349,13 @@ declare const Specs: {
                                 "type": string;
                                 "format": string;
                                 "description": string;
+                                "convertStringToDate": boolean;
                             };
                             "lastUpdated": {
                                 "type": string;
                                 "format": string;
                                 "description": string;
+                                "convertStringToDate": boolean;
                             };
                         };
                         "example": {
@@ -10348,11 +10393,13 @@ declare const Specs: {
                                 "type": string;
                                 "format": string;
                                 "description": string;
+                                "convertStringToDate": boolean;
                             };
                             "lastUpdated": {
                                 "type": string;
                                 "format": string;
                                 "description": string;
+                                "convertStringToDate": boolean;
                             };
                             "type": {
                                 "type": string;
@@ -10550,11 +10597,13 @@ declare const Specs: {
                                 "type": string;
                                 "format": string;
                                 "description": string;
+                                "convertStringToDate": boolean;
                             };
                             "expiration": {
                                 "type": string;
                                 "format": string;
                                 "description": string;
+                                "convertStringToDate": boolean;
                             };
                             "adminMode": {
                                 "type": string;
@@ -11188,6 +11237,7 @@ declare const Specs: {
                         "type": string;
                         "format": string;
                         "description": string;
+                        "convertStringToDate": boolean;
                     };
                 };
                 "example": {
@@ -11240,6 +11290,7 @@ declare const Specs: {
                         "type": string;
                         "format": string;
                         "description": string;
+                        "convertStringToDate": boolean;
                     };
                     "data": {
                         "type": string;
@@ -11264,6 +11315,7 @@ declare const Specs: {
                         "type": string;
                         "format": string;
                         "description": string;
+                        "convertStringToDate": boolean;
                     };
                     "data": {
                         "type": string;
@@ -11309,11 +11361,13 @@ declare const Specs: {
                         "type": string;
                         "format": string;
                         "description": string;
+                        "convertStringToDate": boolean;
                     };
                     "lastUpdated": {
                         "type": string;
                         "format": string;
                         "description": string;
+                        "convertStringToDate": boolean;
                     };
                 };
                 "example": {
