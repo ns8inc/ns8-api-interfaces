@@ -23,9 +23,9 @@ export declare module Admin {
         password: string;
     }
     class Account {
-        id?: number;
-        userId?: number;
-        appId?: number;
+        id: number;
+        userId: number;
+        appId: number;
         status?: number;
         createdDate?: string;
         lastUpdated?: string;
@@ -179,7 +179,7 @@ export declare module Admin {
         data?: any;
     }
     class Stash {
-        id?: string;
+        id: string;
         expires?: string;
         data?: any;
     }
@@ -188,8 +188,8 @@ export declare module Admin {
         data: any;
     }
     class User {
-        id?: number;
-        name?: string;
+        id: number;
+        name: string;
         firstName?: string;
         lastName?: string;
         email?: string;

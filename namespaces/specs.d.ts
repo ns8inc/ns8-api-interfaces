@@ -356,6 +356,7 @@ declare const Specs: {
                             "description": string;
                             "schema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -406,6 +407,7 @@ declare const Specs: {
                             };
                             "responseSchema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -886,6 +888,7 @@ declare const Specs: {
                             "description": string;
                             "schema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -936,6 +939,7 @@ declare const Specs: {
                             };
                             "responseSchema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -1946,6 +1950,7 @@ declare const Specs: {
                             "description": string;
                             "schema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -1996,6 +2001,7 @@ declare const Specs: {
                             };
                             "responseSchema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -2455,6 +2461,7 @@ declare const Specs: {
                             "description": string;
                             "schema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -2516,6 +2523,7 @@ declare const Specs: {
                             };
                             "responseSchema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -2943,6 +2951,7 @@ declare const Specs: {
                             "description": string;
                             "schema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -3004,6 +3013,7 @@ declare const Specs: {
                             };
                             "responseSchema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -5973,6 +5983,7 @@ declare const Specs: {
                                 "properties": {
                                     "user": {
                                         "type": string;
+                                        "required": string[];
                                         "properties": {
                                             "id": {
                                                 "type": string;
@@ -6023,6 +6034,7 @@ declare const Specs: {
                                     };
                                     "account": {
                                         "type": string;
+                                        "required": string[];
                                         "properties": {
                                             "id": {
                                                 "type": string;
@@ -6211,6 +6223,7 @@ declare const Specs: {
                                 "properties": {
                                     "user": {
                                         "type": string;
+                                        "required": string[];
                                         "properties": {
                                             "id": {
                                                 "type": string;
@@ -6261,6 +6274,7 @@ declare const Specs: {
                                     };
                                     "account": {
                                         "type": string;
+                                        "required": string[];
                                         "properties": {
                                             "id": {
                                                 "type": string;
@@ -6924,6 +6938,7 @@ declare const Specs: {
                             "description": string;
                             "schema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -6952,6 +6967,7 @@ declare const Specs: {
                             };
                             "responseSchema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -7234,6 +7250,7 @@ declare const Specs: {
                             "description": string;
                             "schema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -7262,6 +7279,7 @@ declare const Specs: {
                             };
                             "responseSchema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "id": {
                                         "type": string;
@@ -10030,6 +10048,7 @@ declare const Specs: {
             };
             "Account": {
                 "type": string;
+                "required": string[];
                 "properties": {
                     "id": {
                         "type": string;
@@ -10322,6 +10341,7 @@ declare const Specs: {
                 "properties": {
                     "user": {
                         "type": string;
+                        "required": string[];
                         "properties": {
                             "id": {
                                 "type": string;
@@ -10372,6 +10392,7 @@ declare const Specs: {
                     };
                     "account": {
                         "type": string;
+                        "required": string[];
                         "properties": {
                             "id": {
                                 "type": string;
@@ -11281,6 +11302,7 @@ declare const Specs: {
             };
             "Stash": {
                 "type": string;
+                "required": string[];
                 "properties": {
                     "id": {
                         "type": string;
@@ -11334,6 +11356,7 @@ declare const Specs: {
             };
             "User": {
                 "type": string;
+                "required": string[];
                 "properties": {
                     "id": {
                         "type": string;
