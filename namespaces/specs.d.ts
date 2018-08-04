@@ -3877,9 +3877,17 @@ declare const Specs: {
                                 "type": {
                                     "description": string;
                                 };
+                                "data": {
+                                    "type": string;
+                                    "description": string;
+                                    "additionalProperties": boolean;
+                                };
                             };
                             "description": string;
                             "example": {
+                                "data": {
+                                    "key": string;
+                                };
                                 "name": string;
                                 "type": string;
                             };
@@ -5091,6 +5099,9 @@ declare const Specs: {
                                 "type": {
                                     "type": string;
                                 };
+                                "implemented": {
+                                    "type": string;
+                                };
                                 "data": {
                                     "type": string;
                                     "additionalProperties": boolean;
@@ -5102,6 +5113,7 @@ declare const Specs: {
                                     "key": string;
                                 };
                                 "name": string;
+                                "implemented": boolean;
                                 "type": string;
                                 "enabled": boolean;
                             };
@@ -11614,9 +11626,17 @@ declare const Specs: {
                     "type": {
                         "description": string;
                     };
+                    "data": {
+                        "type": string;
+                        "description": string;
+                        "additionalProperties": boolean;
+                    };
                 };
                 "description": string;
                 "example": {
+                    "data": {
+                        "key": string;
+                    };
                     "name": string;
                     "type": string;
                 };
@@ -11699,6 +11719,9 @@ declare const Specs: {
                     "type": {
                         "type": string;
                     };
+                    "implemented": {
+                        "type": string;
+                    };
                     "data": {
                         "type": string;
                         "additionalProperties": boolean;
@@ -11710,6 +11733,7 @@ declare const Specs: {
                         "key": string;
                     };
                     "name": string;
+                    "implemented": boolean;
                     "type": string;
                     "enabled": boolean;
                 };

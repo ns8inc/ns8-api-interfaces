@@ -155,6 +155,7 @@ export declare module Admin {
     class ProjectCreateParams {
         name: string;
         type?: undefined;
+        data?: any;
     }
     class ProjectDefaultParams {
         projectId?: number;
@@ -175,6 +176,7 @@ export declare module Admin {
         name?: string;
         enabled?: boolean;
         type?: string;
+        implemented?: boolean;
         data?: any;
     }
     class Stash {
