@@ -3416,10 +3416,6 @@ declare const Specs: {
                                             "type": string;
                                             "description": string;
                                         };
-                                        "userId": {
-                                            "type": string;
-                                            "description": string;
-                                        };
                                         "name": {
                                             "type": string;
                                             "description": string;
@@ -3470,7 +3466,6 @@ declare const Specs: {
                                         "id": number;
                                         "type": string;
                                         "isDemo": boolean;
-                                        "userId": number;
                                         "enabled": boolean;
                                     };
                                     "additionalProperties": boolean;
@@ -3494,10 +3489,6 @@ declare const Specs: {
                                             "type": string;
                                             "description": string;
                                         };
-                                        "userId": {
-                                            "type": string;
-                                            "description": string;
-                                        };
                                         "name": {
                                             "type": string;
                                             "description": string;
@@ -3548,7 +3539,6 @@ declare const Specs: {
                                         "id": number;
                                         "type": string;
                                         "isDemo": boolean;
-                                        "userId": number;
                                         "enabled": boolean;
                                     };
                                     "additionalProperties": boolean;
@@ -3915,10 +3905,6 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "userId": {
-                                        "type": string;
-                                        "description": string;
-                                    };
                                     "name": {
                                         "type": string;
                                         "description": string;
@@ -3969,7 +3955,6 @@ declare const Specs: {
                                     "id": number;
                                     "type": string;
                                     "isDemo": boolean;
-                                    "userId": number;
                                     "enabled": boolean;
                                 };
                                 "additionalProperties": boolean;
@@ -3990,10 +3975,6 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "userId": {
-                                        "type": string;
-                                        "description": string;
-                                    };
                                     "name": {
                                         "type": string;
                                         "description": string;
@@ -4044,7 +4025,6 @@ declare const Specs: {
                                     "id": number;
                                     "type": string;
                                     "isDemo": boolean;
-                                    "userId": number;
                                     "enabled": boolean;
                                 };
                                 "additionalProperties": boolean;
@@ -4395,10 +4375,6 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "userId": {
-                                        "type": string;
-                                        "description": string;
-                                    };
                                     "name": {
                                         "type": string;
                                         "description": string;
@@ -4449,7 +4425,6 @@ declare const Specs: {
                                     "id": number;
                                     "type": string;
                                     "isDemo": boolean;
-                                    "userId": number;
                                     "enabled": boolean;
                                 };
                                 "additionalProperties": boolean;
@@ -4470,10 +4445,6 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "userId": {
-                                        "type": string;
-                                        "description": string;
-                                    };
                                     "name": {
                                         "type": string;
                                         "description": string;
@@ -4524,7 +4495,6 @@ declare const Specs: {
                                     "id": number;
                                     "type": string;
                                     "isDemo": boolean;
-                                    "userId": number;
                                     "enabled": boolean;
                                 };
                                 "additionalProperties": boolean;
@@ -5158,10 +5128,6 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "userId": {
-                                        "type": string;
-                                        "description": string;
-                                    };
                                     "name": {
                                         "type": string;
                                         "description": string;
@@ -5212,7 +5178,6 @@ declare const Specs: {
                                     "id": number;
                                     "type": string;
                                     "isDemo": boolean;
-                                    "userId": number;
                                     "enabled": boolean;
                                 };
                                 "additionalProperties": boolean;
@@ -5233,10 +5198,6 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "userId": {
-                                        "type": string;
-                                        "description": string;
-                                    };
                                     "name": {
                                         "type": string;
                                         "description": string;
@@ -5287,7 +5248,6 @@ declare const Specs: {
                                     "id": number;
                                     "type": string;
                                     "isDemo": boolean;
-                                    "userId": number;
                                     "enabled": boolean;
                                 };
                                 "additionalProperties": boolean;
@@ -6591,10 +6551,6 @@ declare const Specs: {
                                                     "type": string;
                                                     "description": string;
                                                 };
-                                                "userId": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
                                                 "name": {
                                                     "type": string;
                                                     "description": string;
@@ -6645,7 +6601,6 @@ declare const Specs: {
                                                 "id": number;
                                                 "type": string;
                                                 "isDemo": boolean;
-                                                "userId": number;
                                                 "enabled": boolean;
                                             };
                                             "additionalProperties": boolean;
@@ -6667,7 +6622,6 @@ declare const Specs: {
                                         "id": number;
                                         "type": string;
                                         "isDemo": boolean;
-                                        "userId": number;
                                         "enabled": boolean;
                                     }[];
                                     "user": {
@@ -6831,10 +6785,6 @@ declare const Specs: {
                                                     "type": string;
                                                     "description": string;
                                                 };
-                                                "userId": {
-                                                    "type": string;
-                                                    "description": string;
-                                                };
                                                 "name": {
                                                     "type": string;
                                                     "description": string;
@@ -6885,7 +6835,6 @@ declare const Specs: {
                                                 "id": number;
                                                 "type": string;
                                                 "isDemo": boolean;
-                                                "userId": number;
                                                 "enabled": boolean;
                                             };
                                             "additionalProperties": boolean;
@@ -6907,7 +6856,6 @@ declare const Specs: {
                                         "id": number;
                                         "type": string;
                                         "isDemo": boolean;
-                                        "userId": number;
                                         "enabled": boolean;
                                     }[];
                                     "user": {
@@ -10949,10 +10897,6 @@ declare const Specs: {
                                     "type": string;
                                     "description": string;
                                 };
-                                "userId": {
-                                    "type": string;
-                                    "description": string;
-                                };
                                 "name": {
                                     "type": string;
                                     "description": string;
@@ -11003,7 +10947,6 @@ declare const Specs: {
                                 "id": number;
                                 "type": string;
                                 "isDemo": boolean;
-                                "userId": number;
                                 "enabled": boolean;
                             };
                             "additionalProperties": boolean;
@@ -11025,7 +10968,6 @@ declare const Specs: {
                         "id": number;
                         "type": string;
                         "isDemo": boolean;
-                        "userId": number;
                         "enabled": boolean;
                     }[];
                     "user": {
@@ -11608,10 +11550,6 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                     };
-                    "userId": {
-                        "type": string;
-                        "description": string;
-                    };
                     "name": {
                         "type": string;
                         "description": string;
@@ -11662,7 +11600,6 @@ declare const Specs: {
                     "id": number;
                     "type": string;
                     "isDemo": boolean;
-                    "userId": number;
                     "enabled": boolean;
                 };
                 "additionalProperties": boolean;
