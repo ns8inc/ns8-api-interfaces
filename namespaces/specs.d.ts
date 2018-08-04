@@ -6430,6 +6430,7 @@ declare const Specs: {
                             "description": string;
                             "schema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "user": {
                                         "type": string;
@@ -6618,9 +6619,28 @@ declare const Specs: {
                                             "additionalProperties": boolean;
                                         };
                                     };
+                                    "expiration": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                        "convertStringToDate": boolean;
+                                    };
+                                    "currentProjectId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "projectId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "adminMode": {
+                                        "type": string;
+                                        "description": string;
+                                    };
                                 };
                                 "description": string;
                                 "example": {
+                                    "currentProjectId": number;
                                     "projects": {
                                         "accountId": number;
                                         "data": {
@@ -6636,6 +6656,8 @@ declare const Specs: {
                                         "isDemo": boolean;
                                         "enabled": boolean;
                                     }[];
+                                    "adminMode": boolean;
+                                    "expiration": string;
                                     "user": {
                                         "firstName": string;
                                         "lastName": string;
@@ -6646,6 +6668,7 @@ declare const Specs: {
                                         "email": string;
                                         "status": number;
                                     };
+                                    "projectId": number;
                                     "account": {
                                         "lastUpdated": string;
                                         "createdDate": string;
@@ -6664,6 +6687,7 @@ declare const Specs: {
                             };
                             "responseSchema": {
                                 "type": string;
+                                "required": string[];
                                 "properties": {
                                     "user": {
                                         "type": string;
@@ -6852,9 +6876,28 @@ declare const Specs: {
                                             "additionalProperties": boolean;
                                         };
                                     };
+                                    "expiration": {
+                                        "type": string;
+                                        "format": string;
+                                        "description": string;
+                                        "convertStringToDate": boolean;
+                                    };
+                                    "currentProjectId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "projectId": {
+                                        "type": string;
+                                        "description": string;
+                                    };
+                                    "adminMode": {
+                                        "type": string;
+                                        "description": string;
+                                    };
                                 };
                                 "description": string;
                                 "example": {
+                                    "currentProjectId": number;
                                     "projects": {
                                         "accountId": number;
                                         "data": {
@@ -6870,6 +6913,8 @@ declare const Specs: {
                                         "isDemo": boolean;
                                         "enabled": boolean;
                                     }[];
+                                    "adminMode": boolean;
+                                    "expiration": string;
                                     "user": {
                                         "firstName": string;
                                         "lastName": string;
@@ -6880,6 +6925,7 @@ declare const Specs: {
                                         "email": string;
                                         "status": number;
                                     };
+                                    "projectId": number;
                                     "account": {
                                         "lastUpdated": string;
                                         "createdDate": string;
@@ -10776,6 +10822,7 @@ declare const Specs: {
             };
             "Authorization": {
                 "type": string;
+                "required": string[];
                 "properties": {
                     "user": {
                         "type": string;
@@ -10964,9 +11011,28 @@ declare const Specs: {
                             "additionalProperties": boolean;
                         };
                     };
+                    "expiration": {
+                        "type": string;
+                        "format": string;
+                        "description": string;
+                        "convertStringToDate": boolean;
+                    };
+                    "currentProjectId": {
+                        "type": string;
+                        "description": string;
+                    };
+                    "projectId": {
+                        "type": string;
+                        "description": string;
+                    };
+                    "adminMode": {
+                        "type": string;
+                        "description": string;
+                    };
                 };
                 "description": string;
                 "example": {
+                    "currentProjectId": number;
                     "projects": {
                         "accountId": number;
                         "data": {
@@ -10982,6 +11048,8 @@ declare const Specs: {
                         "isDemo": boolean;
                         "enabled": boolean;
                     }[];
+                    "adminMode": boolean;
+                    "expiration": string;
                     "user": {
                         "firstName": string;
                         "lastName": string;
@@ -10992,6 +11060,7 @@ declare const Specs: {
                         "email": string;
                         "status": number;
                     };
+                    "projectId": number;
                     "account": {
                         "lastUpdated": string;
                         "createdDate": string;

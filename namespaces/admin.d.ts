@@ -71,9 +71,13 @@ export declare module Admin {
         apiEndpoint?: string;
     }
     class Authorization {
-        user?: any;
-        account?: any;
+        user: any;
+        account: any;
         projects?: Array<any>;
+        expiration?: string;
+        currentProjectId?: number;
+        projectId?: number;
+        adminMode?: boolean;
     }
     class AuthorizeParams {
         accessToken?: undefined;
