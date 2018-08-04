@@ -142,8 +142,8 @@ export declare module Admin {
     class Project {
         id: number;
         accountId: number;
-        appId?: number;
-        userId?: number;
+        appId: number;
+        userId: number;
         name: string;
         type?: string;
         enabled?: boolean;
