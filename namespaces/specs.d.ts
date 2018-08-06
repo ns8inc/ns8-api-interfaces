@@ -118,20 +118,12 @@ declare const Specs: {
                                             "description": string;
                                             "default": string;
                                         };
-                                        "data": {
-                                            "type": string;
-                                            "description": string;
-                                            "additionalProperties": boolean;
-                                        };
                                     };
                                     "description": string;
                                     "example": {
                                         "allowSignups": boolean;
                                         "website": string;
                                         "userNameFormat": string;
-                                        "data": {
-                                            "key": string;
-                                        };
                                         "description": string;
                                         "minimumPrepay": number;
                                         "supportEmail": string;
@@ -242,20 +234,12 @@ declare const Specs: {
                                             "description": string;
                                             "default": string;
                                         };
-                                        "data": {
-                                            "type": string;
-                                            "description": string;
-                                            "additionalProperties": boolean;
-                                        };
                                     };
                                     "description": string;
                                     "example": {
                                         "allowSignups": boolean;
                                         "website": string;
                                         "userNameFormat": string;
-                                        "data": {
-                                            "key": string;
-                                        };
                                         "description": string;
                                         "minimumPrepay": number;
                                         "supportEmail": string;
@@ -2547,19 +2531,11 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "data": {
-                                        "type": string;
-                                        "description": string;
-                                        "additionalProperties": boolean;
-                                    };
                                 };
                                 "description": string;
                                 "example": {
                                     "lastUpdated": string;
                                     "createdDate": string;
-                                    "data": {
-                                        "key": string;
-                                    };
                                     "appId": number;
                                     "id": number;
                                     "partnerId": number;
@@ -2609,19 +2585,11 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "data": {
-                                        "type": string;
-                                        "description": string;
-                                        "additionalProperties": boolean;
-                                    };
                                 };
                                 "description": string;
                                 "example": {
                                     "lastUpdated": string;
                                     "createdDate": string;
-                                    "data": {
-                                        "key": string;
-                                    };
                                     "appId": number;
                                     "id": number;
                                     "partnerId": number;
@@ -2975,17 +2943,9 @@ declare const Specs: {
                                     "type": string;
                                     "description": string;
                                 };
-                                "data": {
-                                    "type": string;
-                                    "description": string;
-                                    "additionalProperties": boolean;
-                                };
                             };
                             "description": string;
                             "example": {
-                                "data": {
-                                    "key": string;
-                                };
                                 "partnerId": number;
                                 "type": string;
                                 "status": number;
@@ -3037,19 +2997,11 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "data": {
-                                        "type": string;
-                                        "description": string;
-                                        "additionalProperties": boolean;
-                                    };
                                 };
                                 "description": string;
                                 "example": {
                                     "lastUpdated": string;
                                     "createdDate": string;
-                                    "data": {
-                                        "key": string;
-                                    };
                                     "appId": number;
                                     "id": number;
                                     "partnerId": number;
@@ -3099,19 +3051,11 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "data": {
-                                        "type": string;
-                                        "description": string;
-                                        "additionalProperties": boolean;
-                                    };
                                 };
                                 "description": string;
                                 "example": {
                                     "lastUpdated": string;
                                     "createdDate": string;
-                                    "data": {
-                                        "key": string;
-                                    };
                                     "appId": number;
                                     "id": number;
                                     "partnerId": number;
@@ -3494,18 +3438,10 @@ declare const Specs: {
                                             "type": string;
                                             "description": string;
                                         };
-                                        "data": {
-                                            "type": string;
-                                            "description": string;
-                                            "additionalProperties": boolean;
-                                        };
                                     };
                                     "description": string;
                                     "example": {
                                         "accountId": number;
-                                        "data": {
-                                            "key": string;
-                                        };
                                         "permissions": {};
                                         "appId": number;
                                         "name": string;
@@ -3567,18 +3503,10 @@ declare const Specs: {
                                             "type": string;
                                             "description": string;
                                         };
-                                        "data": {
-                                            "type": string;
-                                            "description": string;
-                                            "additionalProperties": boolean;
-                                        };
                                     };
                                     "description": string;
                                     "example": {
                                         "accountId": number;
-                                        "data": {
-                                            "key": string;
-                                        };
                                         "permissions": {};
                                         "appId": number;
                                         "name": string;
@@ -3925,17 +3853,9 @@ declare const Specs: {
                                 "type": {
                                     "description": string;
                                 };
-                                "data": {
-                                    "type": string;
-                                    "description": string;
-                                    "additionalProperties": boolean;
-                                };
                             };
                             "description": string;
                             "example": {
-                                "data": {
-                                    "key": string;
-                                };
                                 "name": string;
                                 "type": string;
                             };
@@ -3991,18 +3911,10 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "data": {
-                                        "type": string;
-                                        "description": string;
-                                        "additionalProperties": boolean;
-                                    };
                                 };
                                 "description": string;
                                 "example": {
                                     "accountId": number;
-                                    "data": {
-                                        "key": string;
-                                    };
                                     "permissions": {};
                                     "appId": number;
                                     "name": string;
@@ -4061,18 +3973,10 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "data": {
-                                        "type": string;
-                                        "description": string;
-                                        "additionalProperties": boolean;
-                                    };
                                 };
                                 "description": string;
                                 "example": {
                                     "accountId": number;
-                                    "data": {
-                                        "key": string;
-                                    };
                                     "permissions": {};
                                     "appId": number;
                                     "name": string;
@@ -4461,18 +4365,10 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "data": {
-                                        "type": string;
-                                        "description": string;
-                                        "additionalProperties": boolean;
-                                    };
                                 };
                                 "description": string;
                                 "example": {
                                     "accountId": number;
-                                    "data": {
-                                        "key": string;
-                                    };
                                     "permissions": {};
                                     "appId": number;
                                     "name": string;
@@ -4531,18 +4427,10 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "data": {
-                                        "type": string;
-                                        "description": string;
-                                        "additionalProperties": boolean;
-                                    };
                                 };
                                 "description": string;
                                 "example": {
                                     "accountId": number;
-                                    "data": {
-                                        "key": string;
-                                    };
                                     "permissions": {};
                                     "appId": number;
                                     "name": string;
@@ -5150,16 +5038,9 @@ declare const Specs: {
                                 "implemented": {
                                     "type": string;
                                 };
-                                "data": {
-                                    "type": string;
-                                    "additionalProperties": boolean;
-                                };
                             };
                             "description": string;
                             "example": {
-                                "data": {
-                                    "key": string;
-                                };
                                 "name": string;
                                 "implemented": boolean;
                                 "type": string;
@@ -5218,18 +5099,10 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "data": {
-                                        "type": string;
-                                        "description": string;
-                                        "additionalProperties": boolean;
-                                    };
                                 };
                                 "description": string;
                                 "example": {
                                     "accountId": number;
-                                    "data": {
-                                        "key": string;
-                                    };
                                     "permissions": {};
                                     "appId": number;
                                     "name": string;
@@ -5288,18 +5161,10 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "data": {
-                                        "type": string;
-                                        "description": string;
-                                        "additionalProperties": boolean;
-                                    };
                                 };
                                 "description": string;
                                 "example": {
                                     "accountId": number;
-                                    "data": {
-                                        "key": string;
-                                    };
                                     "permissions": {};
                                     "appId": number;
                                     "name": string;
@@ -6144,10 +6009,6 @@ declare const Specs: {
                                         "description": string;
                                         "convertStringToDate": boolean;
                                     };
-                                    "adminMode": {
-                                        "type": string;
-                                        "description": string;
-                                    };
                                 };
                                 "description": string;
                                 "example": {
@@ -6155,7 +6016,6 @@ declare const Specs: {
                                     "createdDate": string;
                                     "permissions": string;
                                     "appId": number;
-                                    "adminMode": boolean;
                                     "expiration": string;
                                     "id": string;
                                     "type": string;
@@ -6211,10 +6071,6 @@ declare const Specs: {
                                         "description": string;
                                         "convertStringToDate": boolean;
                                     };
-                                    "adminMode": {
-                                        "type": string;
-                                        "description": string;
-                                    };
                                 };
                                 "description": string;
                                 "example": {
@@ -6222,7 +6078,6 @@ declare const Specs: {
                                     "createdDate": string;
                                     "permissions": string;
                                     "appId": number;
-                                    "adminMode": boolean;
                                     "expiration": string;
                                     "id": string;
                                     "type": string;
@@ -6579,19 +6434,11 @@ declare const Specs: {
                                                 "type": string;
                                                 "description": string;
                                             };
-                                            "data": {
-                                                "type": string;
-                                                "description": string;
-                                                "additionalProperties": boolean;
-                                            };
                                         };
                                         "description": string;
                                         "example": {
                                             "lastUpdated": string;
                                             "createdDate": string;
-                                            "data": {
-                                                "key": string;
-                                            };
                                             "appId": number;
                                             "id": number;
                                             "partnerId": number;
@@ -6650,18 +6497,10 @@ declare const Specs: {
                                                     "type": string;
                                                     "description": string;
                                                 };
-                                                "data": {
-                                                    "type": string;
-                                                    "description": string;
-                                                    "additionalProperties": boolean;
-                                                };
                                             };
                                             "description": string;
                                             "example": {
                                                 "accountId": number;
-                                                "data": {
-                                                    "key": string;
-                                                };
                                                 "permissions": {};
                                                 "appId": number;
                                                 "name": string;
@@ -6689,19 +6528,12 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "adminMode": {
-                                        "type": string;
-                                        "description": string;
-                                    };
                                 };
                                 "description": string;
                                 "example": {
                                     "currentProjectId": number;
                                     "projects": {
                                         "accountId": number;
-                                        "data": {
-                                            "key": string;
-                                        };
                                         "permissions": {};
                                         "appId": number;
                                         "name": string;
@@ -6712,7 +6544,6 @@ declare const Specs: {
                                         "isDemo": boolean;
                                         "enabled": boolean;
                                     }[];
-                                    "adminMode": boolean;
                                     "expiration": string;
                                     "user": {
                                         "firstName": string;
@@ -6730,9 +6561,6 @@ declare const Specs: {
                                     "account": {
                                         "lastUpdated": string;
                                         "createdDate": string;
-                                        "data": {
-                                            "key": string;
-                                        };
                                         "appId": number;
                                         "id": number;
                                         "partnerId": number;
@@ -6846,19 +6674,11 @@ declare const Specs: {
                                                 "type": string;
                                                 "description": string;
                                             };
-                                            "data": {
-                                                "type": string;
-                                                "description": string;
-                                                "additionalProperties": boolean;
-                                            };
                                         };
                                         "description": string;
                                         "example": {
                                             "lastUpdated": string;
                                             "createdDate": string;
-                                            "data": {
-                                                "key": string;
-                                            };
                                             "appId": number;
                                             "id": number;
                                             "partnerId": number;
@@ -6917,18 +6737,10 @@ declare const Specs: {
                                                     "type": string;
                                                     "description": string;
                                                 };
-                                                "data": {
-                                                    "type": string;
-                                                    "description": string;
-                                                    "additionalProperties": boolean;
-                                                };
                                             };
                                             "description": string;
                                             "example": {
                                                 "accountId": number;
-                                                "data": {
-                                                    "key": string;
-                                                };
                                                 "permissions": {};
                                                 "appId": number;
                                                 "name": string;
@@ -6956,19 +6768,12 @@ declare const Specs: {
                                         "type": string;
                                         "description": string;
                                     };
-                                    "adminMode": {
-                                        "type": string;
-                                        "description": string;
-                                    };
                                 };
                                 "description": string;
                                 "example": {
                                     "currentProjectId": number;
                                     "projects": {
                                         "accountId": number;
-                                        "data": {
-                                            "key": string;
-                                        };
                                         "permissions": {};
                                         "appId": number;
                                         "name": string;
@@ -6979,7 +6784,6 @@ declare const Specs: {
                                         "isDemo": boolean;
                                         "enabled": boolean;
                                     }[];
-                                    "adminMode": boolean;
                                     "expiration": string;
                                     "user": {
                                         "firstName": string;
@@ -6997,9 +6801,6 @@ declare const Specs: {
                                     "account": {
                                         "lastUpdated": string;
                                         "createdDate": string;
-                                        "data": {
-                                            "key": string;
-                                        };
                                         "appId": number;
                                         "id": number;
                                         "partnerId": number;
@@ -10533,10 +10334,6 @@ declare const Specs: {
                         "description": string;
                         "convertStringToDate": boolean;
                     };
-                    "adminMode": {
-                        "type": string;
-                        "description": string;
-                    };
                 };
                 "description": string;
                 "example": {
@@ -10544,7 +10341,6 @@ declare const Specs: {
                     "createdDate": string;
                     "permissions": string;
                     "appId": number;
-                    "adminMode": boolean;
                     "expiration": string;
                     "id": string;
                     "type": string;
@@ -10638,19 +10434,11 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                     };
-                    "data": {
-                        "type": string;
-                        "description": string;
-                        "additionalProperties": boolean;
-                    };
                 };
                 "description": string;
                 "example": {
                     "lastUpdated": string;
                     "createdDate": string;
-                    "data": {
-                        "key": string;
-                    };
                     "appId": number;
                     "id": number;
                     "partnerId": number;
@@ -10717,17 +10505,9 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                     };
-                    "data": {
-                        "type": string;
-                        "description": string;
-                        "additionalProperties": boolean;
-                    };
                 };
                 "description": string;
                 "example": {
-                    "data": {
-                        "key": string;
-                    };
                     "partnerId": number;
                     "type": string;
                     "status": number;
@@ -10823,20 +10603,12 @@ declare const Specs: {
                         "description": string;
                         "default": string;
                     };
-                    "data": {
-                        "type": string;
-                        "description": string;
-                        "additionalProperties": boolean;
-                    };
                 };
                 "description": string;
                 "example": {
                     "allowSignups": boolean;
                     "website": string;
                     "userNameFormat": string;
-                    "data": {
-                        "key": string;
-                    };
                     "description": string;
                     "minimumPrepay": number;
                     "supportEmail": string;
@@ -10991,19 +10763,11 @@ declare const Specs: {
                                 "type": string;
                                 "description": string;
                             };
-                            "data": {
-                                "type": string;
-                                "description": string;
-                                "additionalProperties": boolean;
-                            };
                         };
                         "description": string;
                         "example": {
                             "lastUpdated": string;
                             "createdDate": string;
-                            "data": {
-                                "key": string;
-                            };
                             "appId": number;
                             "id": number;
                             "partnerId": number;
@@ -11062,18 +10826,10 @@ declare const Specs: {
                                     "type": string;
                                     "description": string;
                                 };
-                                "data": {
-                                    "type": string;
-                                    "description": string;
-                                    "additionalProperties": boolean;
-                                };
                             };
                             "description": string;
                             "example": {
                                 "accountId": number;
-                                "data": {
-                                    "key": string;
-                                };
                                 "permissions": {};
                                 "appId": number;
                                 "name": string;
@@ -11101,19 +10857,12 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                     };
-                    "adminMode": {
-                        "type": string;
-                        "description": string;
-                    };
                 };
                 "description": string;
                 "example": {
                     "currentProjectId": number;
                     "projects": {
                         "accountId": number;
-                        "data": {
-                            "key": string;
-                        };
                         "permissions": {};
                         "appId": number;
                         "name": string;
@@ -11124,7 +10873,6 @@ declare const Specs: {
                         "isDemo": boolean;
                         "enabled": boolean;
                     }[];
-                    "adminMode": boolean;
                     "expiration": string;
                     "user": {
                         "firstName": string;
@@ -11142,9 +10890,6 @@ declare const Specs: {
                     "account": {
                         "lastUpdated": string;
                         "createdDate": string;
-                        "data": {
-                            "key": string;
-                        };
                         "appId": number;
                         "id": number;
                         "partnerId": number;
@@ -11205,10 +10950,6 @@ declare const Specs: {
                                 "description": string;
                                 "convertStringToDate": boolean;
                             };
-                            "adminMode": {
-                                "type": string;
-                                "description": string;
-                            };
                         };
                         "description": string;
                         "example": {
@@ -11216,7 +10957,6 @@ declare const Specs: {
                             "createdDate": string;
                             "permissions": string;
                             "appId": number;
-                            "adminMode": boolean;
                             "expiration": string;
                             "id": string;
                             "type": string;
@@ -11739,18 +11479,10 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                     };
-                    "data": {
-                        "type": string;
-                        "description": string;
-                        "additionalProperties": boolean;
-                    };
                 };
                 "description": string;
                 "example": {
                     "accountId": number;
-                    "data": {
-                        "key": string;
-                    };
                     "permissions": {};
                     "appId": number;
                     "name": string;
@@ -11773,17 +11505,9 @@ declare const Specs: {
                     "type": {
                         "description": string;
                     };
-                    "data": {
-                        "type": string;
-                        "description": string;
-                        "additionalProperties": boolean;
-                    };
                 };
                 "description": string;
                 "example": {
-                    "data": {
-                        "key": string;
-                    };
                     "name": string;
                     "type": string;
                 };
@@ -11869,16 +11593,9 @@ declare const Specs: {
                     "implemented": {
                         "type": string;
                     };
-                    "data": {
-                        "type": string;
-                        "additionalProperties": boolean;
-                    };
                 };
                 "description": string;
                 "example": {
-                    "data": {
-                        "key": string;
-                    };
                     "name": string;
                     "implemented": boolean;
                     "type": string;

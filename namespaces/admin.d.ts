@@ -9,7 +9,6 @@ export declare module Admin {
         type?: string;
         createdDate?: string;
         expiration?: string;
-        adminMode?: boolean;
     }
     class AccessTokenCreateParams {
         name: string;
@@ -31,7 +30,6 @@ export declare module Admin {
         lastUpdated?: string;
         type?: string;
         partnerId?: number;
-        data?: any;
     }
     class AccountCreateParams {
         appId: number;
@@ -45,7 +43,6 @@ export declare module Admin {
         status?: number;
         type?: string;
         partnerId?: number;
-        data?: any;
     }
     class Application {
         id?: number;
@@ -61,7 +58,6 @@ export declare module Admin {
         supportEmail?: string;
         reporting?: undefined;
         userNameFormat?: string;
-        data?: any;
     }
     class ApplicationPermission {
         id: string;
@@ -77,7 +73,6 @@ export declare module Admin {
         expiration?: string;
         currentProjectId?: number;
         projectId?: number;
-        adminMode?: boolean;
     }
     class AuthorizeParams {
         accessToken?: undefined;
@@ -154,12 +149,10 @@ export declare module Admin {
         implemented?: boolean;
         permissions?: string;
         sharedByUserId?: number;
-        data?: any;
     }
     class ProjectCreateParams {
         name: string;
         type?: undefined;
-        data?: any;
     }
     class ProjectDefaultParams {
         projectId?: number;
@@ -181,7 +174,6 @@ export declare module Admin {
         enabled?: boolean;
         type?: string;
         implemented?: boolean;
-        data?: any;
     }
     class Stash {
         id: string;
