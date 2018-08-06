@@ -199,6 +199,8 @@ export declare module Admin {
         lastName?: string;
         email?: string;
         status?: number;
+        phone?: string;
+        timezone?: string;
         createdDate?: string;
         lastUpdated?: string;
     }

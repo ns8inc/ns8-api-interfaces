@@ -380,6 +380,12 @@ declare const Specs: {
                                     "status": {
                                         "type": string;
                                     };
+                                    "phone": {
+                                        "type": string;
+                                    };
+                                    "timezone": {
+                                        "type": string;
+                                    };
                                     "createdDate": {
                                         "type": string;
                                         "format": string;
@@ -398,6 +404,8 @@ declare const Specs: {
                                     "lastName": string;
                                     "lastUpdated": string;
                                     "createdDate": string;
+                                    "phone": string;
+                                    "timezone": string;
                                     "name": string;
                                     "id": number;
                                     "email": string;
@@ -431,6 +439,12 @@ declare const Specs: {
                                     "status": {
                                         "type": string;
                                     };
+                                    "phone": {
+                                        "type": string;
+                                    };
+                                    "timezone": {
+                                        "type": string;
+                                    };
                                     "createdDate": {
                                         "type": string;
                                         "format": string;
@@ -449,6 +463,8 @@ declare const Specs: {
                                     "lastName": string;
                                     "lastUpdated": string;
                                     "createdDate": string;
+                                    "phone": string;
+                                    "timezone": string;
                                     "name": string;
                                     "id": number;
                                     "email": string;
@@ -912,6 +928,12 @@ declare const Specs: {
                                     "status": {
                                         "type": string;
                                     };
+                                    "phone": {
+                                        "type": string;
+                                    };
+                                    "timezone": {
+                                        "type": string;
+                                    };
                                     "createdDate": {
                                         "type": string;
                                         "format": string;
@@ -930,6 +952,8 @@ declare const Specs: {
                                     "lastName": string;
                                     "lastUpdated": string;
                                     "createdDate": string;
+                                    "phone": string;
+                                    "timezone": string;
                                     "name": string;
                                     "id": number;
                                     "email": string;
@@ -963,6 +987,12 @@ declare const Specs: {
                                     "status": {
                                         "type": string;
                                     };
+                                    "phone": {
+                                        "type": string;
+                                    };
+                                    "timezone": {
+                                        "type": string;
+                                    };
                                     "createdDate": {
                                         "type": string;
                                         "format": string;
@@ -981,6 +1011,8 @@ declare const Specs: {
                                     "lastName": string;
                                     "lastUpdated": string;
                                     "createdDate": string;
+                                    "phone": string;
+                                    "timezone": string;
                                     "name": string;
                                     "id": number;
                                     "email": string;
@@ -1974,6 +2006,12 @@ declare const Specs: {
                                     "status": {
                                         "type": string;
                                     };
+                                    "phone": {
+                                        "type": string;
+                                    };
+                                    "timezone": {
+                                        "type": string;
+                                    };
                                     "createdDate": {
                                         "type": string;
                                         "format": string;
@@ -1992,6 +2030,8 @@ declare const Specs: {
                                     "lastName": string;
                                     "lastUpdated": string;
                                     "createdDate": string;
+                                    "phone": string;
+                                    "timezone": string;
                                     "name": string;
                                     "id": number;
                                     "email": string;
@@ -2025,6 +2065,12 @@ declare const Specs: {
                                     "status": {
                                         "type": string;
                                     };
+                                    "phone": {
+                                        "type": string;
+                                    };
+                                    "timezone": {
+                                        "type": string;
+                                    };
                                     "createdDate": {
                                         "type": string;
                                         "format": string;
@@ -2043,6 +2089,8 @@ declare const Specs: {
                                     "lastName": string;
                                     "lastUpdated": string;
                                     "createdDate": string;
+                                    "phone": string;
+                                    "timezone": string;
                                     "name": string;
                                     "id": number;
                                     "email": string;
@@ -6458,6 +6506,12 @@ declare const Specs: {
                                             "status": {
                                                 "type": string;
                                             };
+                                            "phone": {
+                                                "type": string;
+                                            };
+                                            "timezone": {
+                                                "type": string;
+                                            };
                                             "createdDate": {
                                                 "type": string;
                                                 "format": string;
@@ -6476,6 +6530,8 @@ declare const Specs: {
                                             "lastName": string;
                                             "lastUpdated": string;
                                             "createdDate": string;
+                                            "phone": string;
+                                            "timezone": string;
                                             "name": string;
                                             "id": number;
                                             "email": string;
@@ -6663,6 +6719,8 @@ declare const Specs: {
                                         "lastName": string;
                                         "lastUpdated": string;
                                         "createdDate": string;
+                                        "phone": string;
+                                        "timezone": string;
                                         "name": string;
                                         "id": number;
                                         "email": string;
@@ -6715,6 +6773,12 @@ declare const Specs: {
                                             "status": {
                                                 "type": string;
                                             };
+                                            "phone": {
+                                                "type": string;
+                                            };
+                                            "timezone": {
+                                                "type": string;
+                                            };
                                             "createdDate": {
                                                 "type": string;
                                                 "format": string;
@@ -6733,6 +6797,8 @@ declare const Specs: {
                                             "lastName": string;
                                             "lastUpdated": string;
                                             "createdDate": string;
+                                            "phone": string;
+                                            "timezone": string;
                                             "name": string;
                                             "id": number;
                                             "email": string;
@@ -6920,6 +6986,8 @@ declare const Specs: {
                                         "lastName": string;
                                         "lastUpdated": string;
                                         "createdDate": string;
+                                        "phone": string;
+                                        "timezone": string;
                                         "name": string;
                                         "id": number;
                                         "email": string;
@@ -10850,6 +10918,12 @@ declare const Specs: {
                             "status": {
                                 "type": string;
                             };
+                            "phone": {
+                                "type": string;
+                            };
+                            "timezone": {
+                                "type": string;
+                            };
                             "createdDate": {
                                 "type": string;
                                 "format": string;
@@ -10868,6 +10942,8 @@ declare const Specs: {
                             "lastName": string;
                             "lastUpdated": string;
                             "createdDate": string;
+                            "phone": string;
+                            "timezone": string;
                             "name": string;
                             "id": number;
                             "email": string;
@@ -11055,6 +11131,8 @@ declare const Specs: {
                         "lastName": string;
                         "lastUpdated": string;
                         "createdDate": string;
+                        "phone": string;
+                        "timezone": string;
                         "name": string;
                         "id": number;
                         "email": string;
@@ -11888,6 +11966,12 @@ declare const Specs: {
                     "status": {
                         "type": string;
                     };
+                    "phone": {
+                        "type": string;
+                    };
+                    "timezone": {
+                        "type": string;
+                    };
                     "createdDate": {
                         "type": string;
                         "format": string;
@@ -11906,6 +11990,8 @@ declare const Specs: {
                     "lastName": string;
                     "lastUpdated": string;
                     "createdDate": string;
+                    "phone": string;
+                    "timezone": string;
                     "name": string;
                     "id": number;
                     "email": string;
