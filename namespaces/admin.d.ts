@@ -15,12 +15,6 @@ export declare module Admin {
         password: string;
         appId: number;
     }
-    class MFACreateParams {
-        email: string;
-    }
-    class MFAUpdateParams {
-        password: string;
-    }
     class Account {
         id: number;
         userId: number;

@@ -8,12 +8,6 @@ var Admin;
     class AccessTokenCreateParams {
     }
     Admin.AccessTokenCreateParams = AccessTokenCreateParams;
-    class MFACreateParams {
-    }
-    Admin.MFACreateParams = MFACreateParams;
-    class MFAUpdateParams {
-    }
-    Admin.MFAUpdateParams = MFAUpdateParams;
     class Account {
     }
     Admin.Account = Account;

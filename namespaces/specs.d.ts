@@ -317,6 +317,7 @@ declare const Specs: {
                                 };
                                 "phone": {
                                     "type": string;
+                                    "pattern": string;
                                 };
                                 "timezone": {
                                     "type": string;
@@ -867,6 +868,7 @@ declare const Specs: {
                                 };
                                 "phone": {
                                     "type": string;
+                                    "pattern": string;
                                 };
                                 "timezone": {
                                     "type": string;
@@ -10372,28 +10374,6 @@ declare const Specs: {
                 };
                 "additionalProperties": boolean;
             };
-            "MFACreateParams": {
-                "required": string[];
-                "properties": {
-                    "email": {
-                        "type": string;
-                        "format": string;
-                    };
-                };
-                "additionalProperties": boolean;
-            };
-            "MFAUpdateParams": {
-                "required": string[];
-                "properties": {
-                    "password": {
-                        "type": string;
-                        "format": string;
-                        "description": string;
-                        "minLength": number;
-                    };
-                };
-                "additionalProperties": boolean;
-            };
             "Account": {
                 "type": string;
                 "required": string[];
@@ -11741,6 +11721,7 @@ declare const Specs: {
                     };
                     "phone": {
                         "type": string;
+                        "pattern": string;
                     };
                     "timezone": {
                         "type": string;
@@ -11785,6 +11766,7 @@ declare const Specs: {
                     };
                     "phone": {
                         "type": string;
+                        "pattern": string;
                     };
                     "timezone": {
                         "type": string;
