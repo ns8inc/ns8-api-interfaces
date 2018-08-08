@@ -300,6 +300,7 @@ declare const Specs: {
                                     "type": string;
                                     "description": string;
                                     "minLength": number;
+                                    "x-transform": string;
                                 };
                                 "email": {
                                     "type": string;
@@ -11704,6 +11705,7 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                         "minLength": number;
+                        "x-transform": string;
                     };
                     "email": {
                         "type": string;
