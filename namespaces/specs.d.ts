@@ -300,7 +300,7 @@ declare const Specs: {
                                     "type": string;
                                     "description": string;
                                     "minLength": number;
-                                    "x-transform": string[];
+                                    "transform": string[];
                                 };
                                 "email": {
                                     "type": string;
@@ -376,13 +376,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                 };
                                 "example": {
@@ -435,13 +435,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                 };
                                 "example": {
@@ -925,13 +925,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                 };
                                 "example": {
@@ -984,13 +984,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                 };
                                 "example": {
@@ -2003,13 +2003,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                 };
                                 "example": {
@@ -2062,13 +2062,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                 };
                                 "example": {
@@ -2518,13 +2518,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "type": {
                                         "type": string;
@@ -2572,13 +2572,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "type": {
                                         "type": string;
@@ -2984,13 +2984,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "type": {
                                         "type": string;
@@ -3038,13 +3038,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "lastUpdated": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "type": {
                                         "type": string;
@@ -5542,7 +5542,7 @@ declare const Specs: {
                                             "type": string;
                                             "format": string;
                                             "description": string;
-                                            "x-transform": string;
+                                            "convertStringToDate": boolean;
                                         };
                                     };
                                     "example": {
@@ -5596,7 +5596,7 @@ declare const Specs: {
                                             "type": string;
                                             "format": string;
                                             "description": string;
-                                            "x-transform": string;
+                                            "convertStringToDate": boolean;
                                         };
                                     };
                                     "example": {
@@ -6004,13 +6004,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "expiration": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                 };
                                 "description": string;
@@ -6066,13 +6066,13 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "expiration": {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                 };
                                 "description": string;
@@ -6374,13 +6374,13 @@ declare const Specs: {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
-                                                "x-transform": string;
+                                                "convertStringToDate": boolean;
                                             };
                                             "lastUpdated": {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
-                                                "x-transform": string;
+                                                "convertStringToDate": boolean;
                                             };
                                         };
                                         "example": {
@@ -6421,13 +6421,13 @@ declare const Specs: {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
-                                                "x-transform": string;
+                                                "convertStringToDate": boolean;
                                             };
                                             "lastUpdated": {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
-                                                "x-transform": string;
+                                                "convertStringToDate": boolean;
                                             };
                                             "type": {
                                                 "type": string;
@@ -6521,7 +6521,7 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "currentProjectId": {
                                         "type": string;
@@ -6614,13 +6614,13 @@ declare const Specs: {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
-                                                "x-transform": string;
+                                                "convertStringToDate": boolean;
                                             };
                                             "lastUpdated": {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
-                                                "x-transform": string;
+                                                "convertStringToDate": boolean;
                                             };
                                         };
                                         "example": {
@@ -6661,13 +6661,13 @@ declare const Specs: {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
-                                                "x-transform": string;
+                                                "convertStringToDate": boolean;
                                             };
                                             "lastUpdated": {
                                                 "type": string;
                                                 "format": string;
                                                 "description": string;
-                                                "x-transform": string;
+                                                "convertStringToDate": boolean;
                                             };
                                             "type": {
                                                 "type": string;
@@ -6761,7 +6761,7 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "currentProjectId": {
                                         "type": string;
@@ -7271,7 +7271,7 @@ declare const Specs: {
                                     "type": string;
                                     "format": string;
                                     "description": string;
-                                    "x-transform": string;
+                                    "convertStringToDate": boolean;
                                 };
                                 "data": {
                                     "type": string;
@@ -7304,7 +7304,7 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "data": {
                                         "type": string;
@@ -7333,7 +7333,7 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "data": {
                                         "type": string;
@@ -7616,7 +7616,7 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "data": {
                                         "type": string;
@@ -7645,7 +7645,7 @@ declare const Specs: {
                                         "type": string;
                                         "format": string;
                                         "description": string;
-                                        "x-transform": string;
+                                        "convertStringToDate": boolean;
                                     };
                                     "data": {
                                         "type": string;
@@ -10329,13 +10329,13 @@ declare const Specs: {
                         "type": string;
                         "format": string;
                         "description": string;
-                        "x-transform": string;
+                        "convertStringToDate": boolean;
                     };
                     "expiration": {
                         "type": string;
                         "format": string;
                         "description": string;
-                        "x-transform": string;
+                        "convertStringToDate": boolean;
                     };
                 };
                 "description": string;
@@ -10399,13 +10399,13 @@ declare const Specs: {
                         "type": string;
                         "format": string;
                         "description": string;
-                        "x-transform": string;
+                        "convertStringToDate": boolean;
                     };
                     "lastUpdated": {
                         "type": string;
                         "format": string;
                         "description": string;
-                        "x-transform": string;
+                        "convertStringToDate": boolean;
                     };
                     "type": {
                         "type": string;
@@ -10681,13 +10681,13 @@ declare const Specs: {
                                 "type": string;
                                 "format": string;
                                 "description": string;
-                                "x-transform": string;
+                                "convertStringToDate": boolean;
                             };
                             "lastUpdated": {
                                 "type": string;
                                 "format": string;
                                 "description": string;
-                                "x-transform": string;
+                                "convertStringToDate": boolean;
                             };
                         };
                         "example": {
@@ -10728,13 +10728,13 @@ declare const Specs: {
                                 "type": string;
                                 "format": string;
                                 "description": string;
-                                "x-transform": string;
+                                "convertStringToDate": boolean;
                             };
                             "lastUpdated": {
                                 "type": string;
                                 "format": string;
                                 "description": string;
-                                "x-transform": string;
+                                "convertStringToDate": boolean;
                             };
                             "type": {
                                 "type": string;
@@ -10828,7 +10828,7 @@ declare const Specs: {
                         "type": string;
                         "format": string;
                         "description": string;
-                        "x-transform": string;
+                        "convertStringToDate": boolean;
                     };
                     "currentProjectId": {
                         "type": string;
@@ -10923,13 +10923,13 @@ declare const Specs: {
                                 "type": string;
                                 "format": string;
                                 "description": string;
-                                "x-transform": string;
+                                "convertStringToDate": boolean;
                             };
                             "expiration": {
                                 "type": string;
                                 "format": string;
                                 "description": string;
-                                "x-transform": string;
+                                "convertStringToDate": boolean;
                             };
                         };
                         "description": string;
@@ -11545,7 +11545,7 @@ declare const Specs: {
                         "type": string;
                         "format": string;
                         "description": string;
-                        "x-transform": string;
+                        "convertStringToDate": boolean;
                     };
                 };
                 "example": {
@@ -11596,7 +11596,7 @@ declare const Specs: {
                         "type": string;
                         "format": string;
                         "description": string;
-                        "x-transform": string;
+                        "convertStringToDate": boolean;
                     };
                     "data": {
                         "type": string;
@@ -11621,7 +11621,7 @@ declare const Specs: {
                         "type": string;
                         "format": string;
                         "description": string;
-                        "x-transform": string;
+                        "convertStringToDate": boolean;
                     };
                     "data": {
                         "type": string;
@@ -11674,13 +11674,13 @@ declare const Specs: {
                         "type": string;
                         "format": string;
                         "description": string;
-                        "x-transform": string;
+                        "convertStringToDate": boolean;
                     };
                     "lastUpdated": {
                         "type": string;
                         "format": string;
                         "description": string;
-                        "x-transform": string;
+                        "convertStringToDate": boolean;
                     };
                 };
                 "example": {
@@ -11705,7 +11705,7 @@ declare const Specs: {
                         "type": string;
                         "description": string;
                         "minLength": number;
-                        "x-transform": string[];
+                        "transform": string[];
                     };
                     "email": {
                         "type": string;
