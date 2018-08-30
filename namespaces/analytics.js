@@ -44,5 +44,11 @@ var Analytics;
     class QueryParams {
     }
     Analytics.QueryParams = QueryParams;
+    class inline_response_200_data {
+    }
+    Analytics.inline_response_200_data = inline_response_200_data;
+    class inline_response_200 {
+    }
+    Analytics.inline_response_200 = inline_response_200;
 })(Analytics = exports.Analytics || (exports.Analytics = {}));
 //# sourceMappingURL=analytics.js.map

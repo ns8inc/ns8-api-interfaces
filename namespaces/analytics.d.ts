@@ -23,7 +23,7 @@ export declare module Analytics {
     class Entity {
         name?: string;
         description?: string;
-        attributes?: any;
+        attributes?: Array<any>;
     }
     class Attribute {
         name?: string;
@@ -67,5 +67,17 @@ export declare module Analytics {
     class QueryParams {
         accessToken?: string;
         query: any;
+    }
+    class inline_response_200_data {
+        sessions?: any;
+        pages?: any;
+        events?: any;
+        timings?: any;
+        users?: any;
+        people?: any;
+    }
+    class inline_response_200 {
+        code?: number;
+        data?: undefined;
     }
 }

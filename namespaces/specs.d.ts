@@ -11965,58 +11965,444 @@ declare const Specs: {
                             "schema": {
                                 "type": string;
                                 "properties": {
-                                    "name": {
+                                    "code": {
                                         "type": string;
+                                        "description": string;
                                     };
-                                    "description": {
-                                        "type": string;
-                                    };
-                                    "attributes": {
-                                        "type": string;
+                                    "data": {
                                         "properties": {
-                                            "name": {
+                                            "sessions": {
                                                 "type": string;
+                                                "properties": {
+                                                    "name": {
+                                                        "type": string;
+                                                    };
+                                                    "description": {
+                                                        "type": string;
+                                                    };
+                                                    "attributes": {
+                                                        "type": string;
+                                                        "items": {
+                                                            "type": string;
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": string;
+                                                                };
+                                                                "title": {
+                                                                    "type": string;
+                                                                };
+                                                                "description": {
+                                                                    "type": string;
+                                                                };
+                                                                "dataType": {
+                                                                    "type": string;
+                                                                };
+                                                                "isElement": {
+                                                                    "type": string;
+                                                                };
+                                                                "isMetric": {
+                                                                    "type": string;
+                                                                };
+                                                            };
+                                                            "example": {
+                                                                "isElement": boolean;
+                                                                "dataType": string;
+                                                                "name": string;
+                                                                "isMetric": boolean;
+                                                                "description": string;
+                                                                "title": string;
+                                                            };
+                                                            "additionalProperties": boolean;
+                                                        };
+                                                    };
+                                                };
+                                                "example": {
+                                                    "name": string;
+                                                    "description": string;
+                                                    "attributes": {
+                                                        "isElement": boolean;
+                                                        "dataType": string;
+                                                        "name": string;
+                                                        "isMetric": boolean;
+                                                        "description": string;
+                                                        "title": string;
+                                                    }[];
+                                                };
+                                                "additionalProperties": boolean;
                                             };
-                                            "title": {
+                                            "pages": {
                                                 "type": string;
+                                                "properties": {
+                                                    "name": {
+                                                        "type": string;
+                                                    };
+                                                    "description": {
+                                                        "type": string;
+                                                    };
+                                                    "attributes": {
+                                                        "type": string;
+                                                        "items": {
+                                                            "type": string;
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": string;
+                                                                };
+                                                                "title": {
+                                                                    "type": string;
+                                                                };
+                                                                "description": {
+                                                                    "type": string;
+                                                                };
+                                                                "dataType": {
+                                                                    "type": string;
+                                                                };
+                                                                "isElement": {
+                                                                    "type": string;
+                                                                };
+                                                                "isMetric": {
+                                                                    "type": string;
+                                                                };
+                                                            };
+                                                            "example": {
+                                                                "isElement": boolean;
+                                                                "dataType": string;
+                                                                "name": string;
+                                                                "isMetric": boolean;
+                                                                "description": string;
+                                                                "title": string;
+                                                            };
+                                                            "additionalProperties": boolean;
+                                                        };
+                                                    };
+                                                };
+                                                "example": {
+                                                    "name": string;
+                                                    "description": string;
+                                                    "attributes": {
+                                                        "isElement": boolean;
+                                                        "dataType": string;
+                                                        "name": string;
+                                                        "isMetric": boolean;
+                                                        "description": string;
+                                                        "title": string;
+                                                    }[];
+                                                };
+                                                "additionalProperties": boolean;
                                             };
-                                            "description": {
+                                            "events": {
                                                 "type": string;
+                                                "properties": {
+                                                    "name": {
+                                                        "type": string;
+                                                    };
+                                                    "description": {
+                                                        "type": string;
+                                                    };
+                                                    "attributes": {
+                                                        "type": string;
+                                                        "items": {
+                                                            "type": string;
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": string;
+                                                                };
+                                                                "title": {
+                                                                    "type": string;
+                                                                };
+                                                                "description": {
+                                                                    "type": string;
+                                                                };
+                                                                "dataType": {
+                                                                    "type": string;
+                                                                };
+                                                                "isElement": {
+                                                                    "type": string;
+                                                                };
+                                                                "isMetric": {
+                                                                    "type": string;
+                                                                };
+                                                            };
+                                                            "example": {
+                                                                "isElement": boolean;
+                                                                "dataType": string;
+                                                                "name": string;
+                                                                "isMetric": boolean;
+                                                                "description": string;
+                                                                "title": string;
+                                                            };
+                                                            "additionalProperties": boolean;
+                                                        };
+                                                    };
+                                                };
+                                                "example": {
+                                                    "name": string;
+                                                    "description": string;
+                                                    "attributes": {
+                                                        "isElement": boolean;
+                                                        "dataType": string;
+                                                        "name": string;
+                                                        "isMetric": boolean;
+                                                        "description": string;
+                                                        "title": string;
+                                                    }[];
+                                                };
+                                                "additionalProperties": boolean;
                                             };
-                                            "dataType": {
+                                            "timings": {
                                                 "type": string;
+                                                "properties": {
+                                                    "name": {
+                                                        "type": string;
+                                                    };
+                                                    "description": {
+                                                        "type": string;
+                                                    };
+                                                    "attributes": {
+                                                        "type": string;
+                                                        "items": {
+                                                            "type": string;
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": string;
+                                                                };
+                                                                "title": {
+                                                                    "type": string;
+                                                                };
+                                                                "description": {
+                                                                    "type": string;
+                                                                };
+                                                                "dataType": {
+                                                                    "type": string;
+                                                                };
+                                                                "isElement": {
+                                                                    "type": string;
+                                                                };
+                                                                "isMetric": {
+                                                                    "type": string;
+                                                                };
+                                                            };
+                                                            "example": {
+                                                                "isElement": boolean;
+                                                                "dataType": string;
+                                                                "name": string;
+                                                                "isMetric": boolean;
+                                                                "description": string;
+                                                                "title": string;
+                                                            };
+                                                            "additionalProperties": boolean;
+                                                        };
+                                                    };
+                                                };
+                                                "example": {
+                                                    "name": string;
+                                                    "description": string;
+                                                    "attributes": {
+                                                        "isElement": boolean;
+                                                        "dataType": string;
+                                                        "name": string;
+                                                        "isMetric": boolean;
+                                                        "description": string;
+                                                        "title": string;
+                                                    }[];
+                                                };
+                                                "additionalProperties": boolean;
                                             };
-                                            "isElement": {
+                                            "users": {
                                                 "type": string;
+                                                "properties": {
+                                                    "name": {
+                                                        "type": string;
+                                                    };
+                                                    "description": {
+                                                        "type": string;
+                                                    };
+                                                    "attributes": {
+                                                        "type": string;
+                                                        "items": {
+                                                            "type": string;
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": string;
+                                                                };
+                                                                "title": {
+                                                                    "type": string;
+                                                                };
+                                                                "description": {
+                                                                    "type": string;
+                                                                };
+                                                                "dataType": {
+                                                                    "type": string;
+                                                                };
+                                                                "isElement": {
+                                                                    "type": string;
+                                                                };
+                                                                "isMetric": {
+                                                                    "type": string;
+                                                                };
+                                                            };
+                                                            "example": {
+                                                                "isElement": boolean;
+                                                                "dataType": string;
+                                                                "name": string;
+                                                                "isMetric": boolean;
+                                                                "description": string;
+                                                                "title": string;
+                                                            };
+                                                            "additionalProperties": boolean;
+                                                        };
+                                                    };
+                                                };
+                                                "example": {
+                                                    "name": string;
+                                                    "description": string;
+                                                    "attributes": {
+                                                        "isElement": boolean;
+                                                        "dataType": string;
+                                                        "name": string;
+                                                        "isMetric": boolean;
+                                                        "description": string;
+                                                        "title": string;
+                                                    }[];
+                                                };
+                                                "additionalProperties": boolean;
                                             };
-                                            "isMetric": {
+                                            "people": {
                                                 "type": string;
+                                                "properties": {
+                                                    "name": {
+                                                        "type": string;
+                                                    };
+                                                    "description": {
+                                                        "type": string;
+                                                    };
+                                                    "attributes": {
+                                                        "type": string;
+                                                        "items": {
+                                                            "type": string;
+                                                            "properties": {
+                                                                "name": {
+                                                                    "type": string;
+                                                                };
+                                                                "title": {
+                                                                    "type": string;
+                                                                };
+                                                                "description": {
+                                                                    "type": string;
+                                                                };
+                                                                "dataType": {
+                                                                    "type": string;
+                                                                };
+                                                                "isElement": {
+                                                                    "type": string;
+                                                                };
+                                                                "isMetric": {
+                                                                    "type": string;
+                                                                };
+                                                            };
+                                                            "example": {
+                                                                "isElement": boolean;
+                                                                "dataType": string;
+                                                                "name": string;
+                                                                "isMetric": boolean;
+                                                                "description": string;
+                                                                "title": string;
+                                                            };
+                                                            "additionalProperties": boolean;
+                                                        };
+                                                    };
+                                                };
+                                                "example": {
+                                                    "name": string;
+                                                    "description": string;
+                                                    "attributes": {
+                                                        "isElement": boolean;
+                                                        "dataType": string;
+                                                        "name": string;
+                                                        "isMetric": boolean;
+                                                        "description": string;
+                                                        "title": string;
+                                                    }[];
+                                                };
+                                                "additionalProperties": boolean;
                                             };
                                         };
                                         "example": {
-                                            "isElement": boolean;
-                                            "dataType": string;
-                                            "name": string;
-                                            "isMetric": boolean;
-                                            "description": string;
-                                            "title": string;
+                                            "sessions": {
+                                                "name": string;
+                                                "description": string;
+                                                "attributes": {
+                                                    "isElement": boolean;
+                                                    "dataType": string;
+                                                    "name": string;
+                                                    "isMetric": boolean;
+                                                    "description": string;
+                                                    "title": string;
+                                                }[];
+                                            };
+                                            "pages": {
+                                                "name": string;
+                                                "description": string;
+                                                "attributes": {
+                                                    "isElement": boolean;
+                                                    "dataType": string;
+                                                    "name": string;
+                                                    "isMetric": boolean;
+                                                    "description": string;
+                                                    "title": string;
+                                                }[];
+                                            };
+                                            "timings": {
+                                                "name": string;
+                                                "description": string;
+                                                "attributes": {
+                                                    "isElement": boolean;
+                                                    "dataType": string;
+                                                    "name": string;
+                                                    "isMetric": boolean;
+                                                    "description": string;
+                                                    "title": string;
+                                                }[];
+                                            };
+                                            "people": {
+                                                "name": string;
+                                                "description": string;
+                                                "attributes": {
+                                                    "isElement": boolean;
+                                                    "dataType": string;
+                                                    "name": string;
+                                                    "isMetric": boolean;
+                                                    "description": string;
+                                                    "title": string;
+                                                }[];
+                                            };
+                                            "events": {
+                                                "name": string;
+                                                "description": string;
+                                                "attributes": {
+                                                    "isElement": boolean;
+                                                    "dataType": string;
+                                                    "name": string;
+                                                    "isMetric": boolean;
+                                                    "description": string;
+                                                    "title": string;
+                                                }[];
+                                            };
+                                            "users": {
+                                                "name": string;
+                                                "description": string;
+                                                "attributes": {
+                                                    "isElement": boolean;
+                                                    "dataType": string;
+                                                    "name": string;
+                                                    "isMetric": boolean;
+                                                    "description": string;
+                                                    "title": string;
+                                                }[];
+                                            };
                                         };
                                         "additionalProperties": boolean;
                                     };
                                 };
-                                "example": {
-                                    "name": string;
-                                    "description": string;
-                                    "attributes": {
-                                        "isElement": boolean;
-                                        "dataType": string;
-                                        "name": string;
-                                        "isMetric": boolean;
-                                        "description": string;
-                                        "title": string;
-                                    };
-                                };
-                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -12606,35 +12992,38 @@ declare const Specs: {
                     };
                     "attributes": {
                         "type": string;
-                        "properties": {
-                            "name": {
-                                "type": string;
+                        "items": {
+                            "type": string;
+                            "properties": {
+                                "name": {
+                                    "type": string;
+                                };
+                                "title": {
+                                    "type": string;
+                                };
+                                "description": {
+                                    "type": string;
+                                };
+                                "dataType": {
+                                    "type": string;
+                                };
+                                "isElement": {
+                                    "type": string;
+                                };
+                                "isMetric": {
+                                    "type": string;
+                                };
                             };
-                            "title": {
-                                "type": string;
+                            "example": {
+                                "isElement": boolean;
+                                "dataType": string;
+                                "name": string;
+                                "isMetric": boolean;
+                                "description": string;
+                                "title": string;
                             };
-                            "description": {
-                                "type": string;
-                            };
-                            "dataType": {
-                                "type": string;
-                            };
-                            "isElement": {
-                                "type": string;
-                            };
-                            "isMetric": {
-                                "type": string;
-                            };
+                            "additionalProperties": boolean;
                         };
-                        "example": {
-                            "isElement": boolean;
-                            "dataType": string;
-                            "name": string;
-                            "isMetric": boolean;
-                            "description": string;
-                            "title": string;
-                        };
-                        "additionalProperties": boolean;
                     };
                 };
                 "example": {
@@ -12647,7 +13036,7 @@ declare const Specs: {
                         "isMetric": boolean;
                         "description": string;
                         "title": string;
-                    };
+                    }[];
                 };
                 "additionalProperties": boolean;
             };
@@ -12884,6 +13273,958 @@ declare const Specs: {
                 "example": {
                     "query": string;
                     "accessToken": string;
+                };
+                "additionalProperties": boolean;
+            };
+            "inline_response_200_data": {
+                "properties": {
+                    "sessions": {
+                        "type": string;
+                        "properties": {
+                            "name": {
+                                "type": string;
+                            };
+                            "description": {
+                                "type": string;
+                            };
+                            "attributes": {
+                                "type": string;
+                                "items": {
+                                    "type": string;
+                                    "properties": {
+                                        "name": {
+                                            "type": string;
+                                        };
+                                        "title": {
+                                            "type": string;
+                                        };
+                                        "description": {
+                                            "type": string;
+                                        };
+                                        "dataType": {
+                                            "type": string;
+                                        };
+                                        "isElement": {
+                                            "type": string;
+                                        };
+                                        "isMetric": {
+                                            "type": string;
+                                        };
+                                    };
+                                    "example": {
+                                        "isElement": boolean;
+                                        "dataType": string;
+                                        "name": string;
+                                        "isMetric": boolean;
+                                        "description": string;
+                                        "title": string;
+                                    };
+                                    "additionalProperties": boolean;
+                                };
+                            };
+                        };
+                        "example": {
+                            "name": string;
+                            "description": string;
+                            "attributes": {
+                                "isElement": boolean;
+                                "dataType": string;
+                                "name": string;
+                                "isMetric": boolean;
+                                "description": string;
+                                "title": string;
+                            }[];
+                        };
+                        "additionalProperties": boolean;
+                    };
+                    "pages": {
+                        "type": string;
+                        "properties": {
+                            "name": {
+                                "type": string;
+                            };
+                            "description": {
+                                "type": string;
+                            };
+                            "attributes": {
+                                "type": string;
+                                "items": {
+                                    "type": string;
+                                    "properties": {
+                                        "name": {
+                                            "type": string;
+                                        };
+                                        "title": {
+                                            "type": string;
+                                        };
+                                        "description": {
+                                            "type": string;
+                                        };
+                                        "dataType": {
+                                            "type": string;
+                                        };
+                                        "isElement": {
+                                            "type": string;
+                                        };
+                                        "isMetric": {
+                                            "type": string;
+                                        };
+                                    };
+                                    "example": {
+                                        "isElement": boolean;
+                                        "dataType": string;
+                                        "name": string;
+                                        "isMetric": boolean;
+                                        "description": string;
+                                        "title": string;
+                                    };
+                                    "additionalProperties": boolean;
+                                };
+                            };
+                        };
+                        "example": {
+                            "name": string;
+                            "description": string;
+                            "attributes": {
+                                "isElement": boolean;
+                                "dataType": string;
+                                "name": string;
+                                "isMetric": boolean;
+                                "description": string;
+                                "title": string;
+                            }[];
+                        };
+                        "additionalProperties": boolean;
+                    };
+                    "events": {
+                        "type": string;
+                        "properties": {
+                            "name": {
+                                "type": string;
+                            };
+                            "description": {
+                                "type": string;
+                            };
+                            "attributes": {
+                                "type": string;
+                                "items": {
+                                    "type": string;
+                                    "properties": {
+                                        "name": {
+                                            "type": string;
+                                        };
+                                        "title": {
+                                            "type": string;
+                                        };
+                                        "description": {
+                                            "type": string;
+                                        };
+                                        "dataType": {
+                                            "type": string;
+                                        };
+                                        "isElement": {
+                                            "type": string;
+                                        };
+                                        "isMetric": {
+                                            "type": string;
+                                        };
+                                    };
+                                    "example": {
+                                        "isElement": boolean;
+                                        "dataType": string;
+                                        "name": string;
+                                        "isMetric": boolean;
+                                        "description": string;
+                                        "title": string;
+                                    };
+                                    "additionalProperties": boolean;
+                                };
+                            };
+                        };
+                        "example": {
+                            "name": string;
+                            "description": string;
+                            "attributes": {
+                                "isElement": boolean;
+                                "dataType": string;
+                                "name": string;
+                                "isMetric": boolean;
+                                "description": string;
+                                "title": string;
+                            }[];
+                        };
+                        "additionalProperties": boolean;
+                    };
+                    "timings": {
+                        "type": string;
+                        "properties": {
+                            "name": {
+                                "type": string;
+                            };
+                            "description": {
+                                "type": string;
+                            };
+                            "attributes": {
+                                "type": string;
+                                "items": {
+                                    "type": string;
+                                    "properties": {
+                                        "name": {
+                                            "type": string;
+                                        };
+                                        "title": {
+                                            "type": string;
+                                        };
+                                        "description": {
+                                            "type": string;
+                                        };
+                                        "dataType": {
+                                            "type": string;
+                                        };
+                                        "isElement": {
+                                            "type": string;
+                                        };
+                                        "isMetric": {
+                                            "type": string;
+                                        };
+                                    };
+                                    "example": {
+                                        "isElement": boolean;
+                                        "dataType": string;
+                                        "name": string;
+                                        "isMetric": boolean;
+                                        "description": string;
+                                        "title": string;
+                                    };
+                                    "additionalProperties": boolean;
+                                };
+                            };
+                        };
+                        "example": {
+                            "name": string;
+                            "description": string;
+                            "attributes": {
+                                "isElement": boolean;
+                                "dataType": string;
+                                "name": string;
+                                "isMetric": boolean;
+                                "description": string;
+                                "title": string;
+                            }[];
+                        };
+                        "additionalProperties": boolean;
+                    };
+                    "users": {
+                        "type": string;
+                        "properties": {
+                            "name": {
+                                "type": string;
+                            };
+                            "description": {
+                                "type": string;
+                            };
+                            "attributes": {
+                                "type": string;
+                                "items": {
+                                    "type": string;
+                                    "properties": {
+                                        "name": {
+                                            "type": string;
+                                        };
+                                        "title": {
+                                            "type": string;
+                                        };
+                                        "description": {
+                                            "type": string;
+                                        };
+                                        "dataType": {
+                                            "type": string;
+                                        };
+                                        "isElement": {
+                                            "type": string;
+                                        };
+                                        "isMetric": {
+                                            "type": string;
+                                        };
+                                    };
+                                    "example": {
+                                        "isElement": boolean;
+                                        "dataType": string;
+                                        "name": string;
+                                        "isMetric": boolean;
+                                        "description": string;
+                                        "title": string;
+                                    };
+                                    "additionalProperties": boolean;
+                                };
+                            };
+                        };
+                        "example": {
+                            "name": string;
+                            "description": string;
+                            "attributes": {
+                                "isElement": boolean;
+                                "dataType": string;
+                                "name": string;
+                                "isMetric": boolean;
+                                "description": string;
+                                "title": string;
+                            }[];
+                        };
+                        "additionalProperties": boolean;
+                    };
+                    "people": {
+                        "type": string;
+                        "properties": {
+                            "name": {
+                                "type": string;
+                            };
+                            "description": {
+                                "type": string;
+                            };
+                            "attributes": {
+                                "type": string;
+                                "items": {
+                                    "type": string;
+                                    "properties": {
+                                        "name": {
+                                            "type": string;
+                                        };
+                                        "title": {
+                                            "type": string;
+                                        };
+                                        "description": {
+                                            "type": string;
+                                        };
+                                        "dataType": {
+                                            "type": string;
+                                        };
+                                        "isElement": {
+                                            "type": string;
+                                        };
+                                        "isMetric": {
+                                            "type": string;
+                                        };
+                                    };
+                                    "example": {
+                                        "isElement": boolean;
+                                        "dataType": string;
+                                        "name": string;
+                                        "isMetric": boolean;
+                                        "description": string;
+                                        "title": string;
+                                    };
+                                    "additionalProperties": boolean;
+                                };
+                            };
+                        };
+                        "example": {
+                            "name": string;
+                            "description": string;
+                            "attributes": {
+                                "isElement": boolean;
+                                "dataType": string;
+                                "name": string;
+                                "isMetric": boolean;
+                                "description": string;
+                                "title": string;
+                            }[];
+                        };
+                        "additionalProperties": boolean;
+                    };
+                };
+                "example": {
+                    "sessions": {
+                        "name": string;
+                        "description": string;
+                        "attributes": {
+                            "isElement": boolean;
+                            "dataType": string;
+                            "name": string;
+                            "isMetric": boolean;
+                            "description": string;
+                            "title": string;
+                        }[];
+                    };
+                    "pages": {
+                        "name": string;
+                        "description": string;
+                        "attributes": {
+                            "isElement": boolean;
+                            "dataType": string;
+                            "name": string;
+                            "isMetric": boolean;
+                            "description": string;
+                            "title": string;
+                        }[];
+                    };
+                    "timings": {
+                        "name": string;
+                        "description": string;
+                        "attributes": {
+                            "isElement": boolean;
+                            "dataType": string;
+                            "name": string;
+                            "isMetric": boolean;
+                            "description": string;
+                            "title": string;
+                        }[];
+                    };
+                    "people": {
+                        "name": string;
+                        "description": string;
+                        "attributes": {
+                            "isElement": boolean;
+                            "dataType": string;
+                            "name": string;
+                            "isMetric": boolean;
+                            "description": string;
+                            "title": string;
+                        }[];
+                    };
+                    "events": {
+                        "name": string;
+                        "description": string;
+                        "attributes": {
+                            "isElement": boolean;
+                            "dataType": string;
+                            "name": string;
+                            "isMetric": boolean;
+                            "description": string;
+                            "title": string;
+                        }[];
+                    };
+                    "users": {
+                        "name": string;
+                        "description": string;
+                        "attributes": {
+                            "isElement": boolean;
+                            "dataType": string;
+                            "name": string;
+                            "isMetric": boolean;
+                            "description": string;
+                            "title": string;
+                        }[];
+                    };
+                };
+                "additionalProperties": boolean;
+            };
+            "inline_response_200": {
+                "properties": {
+                    "code": {
+                        "type": string;
+                        "description": string;
+                    };
+                    "data": {
+                        "properties": {
+                            "sessions": {
+                                "type": string;
+                                "properties": {
+                                    "name": {
+                                        "type": string;
+                                    };
+                                    "description": {
+                                        "type": string;
+                                    };
+                                    "attributes": {
+                                        "type": string;
+                                        "items": {
+                                            "type": string;
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                };
+                                                "title": {
+                                                    "type": string;
+                                                };
+                                                "description": {
+                                                    "type": string;
+                                                };
+                                                "dataType": {
+                                                    "type": string;
+                                                };
+                                                "isElement": {
+                                                    "type": string;
+                                                };
+                                                "isMetric": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "example": {
+                                                "isElement": boolean;
+                                                "dataType": string;
+                                                "name": string;
+                                                "isMetric": boolean;
+                                                "description": string;
+                                                "title": string;
+                                            };
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "example": {
+                                    "name": string;
+                                    "description": string;
+                                    "attributes": {
+                                        "isElement": boolean;
+                                        "dataType": string;
+                                        "name": string;
+                                        "isMetric": boolean;
+                                        "description": string;
+                                        "title": string;
+                                    }[];
+                                };
+                                "additionalProperties": boolean;
+                            };
+                            "pages": {
+                                "type": string;
+                                "properties": {
+                                    "name": {
+                                        "type": string;
+                                    };
+                                    "description": {
+                                        "type": string;
+                                    };
+                                    "attributes": {
+                                        "type": string;
+                                        "items": {
+                                            "type": string;
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                };
+                                                "title": {
+                                                    "type": string;
+                                                };
+                                                "description": {
+                                                    "type": string;
+                                                };
+                                                "dataType": {
+                                                    "type": string;
+                                                };
+                                                "isElement": {
+                                                    "type": string;
+                                                };
+                                                "isMetric": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "example": {
+                                                "isElement": boolean;
+                                                "dataType": string;
+                                                "name": string;
+                                                "isMetric": boolean;
+                                                "description": string;
+                                                "title": string;
+                                            };
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "example": {
+                                    "name": string;
+                                    "description": string;
+                                    "attributes": {
+                                        "isElement": boolean;
+                                        "dataType": string;
+                                        "name": string;
+                                        "isMetric": boolean;
+                                        "description": string;
+                                        "title": string;
+                                    }[];
+                                };
+                                "additionalProperties": boolean;
+                            };
+                            "events": {
+                                "type": string;
+                                "properties": {
+                                    "name": {
+                                        "type": string;
+                                    };
+                                    "description": {
+                                        "type": string;
+                                    };
+                                    "attributes": {
+                                        "type": string;
+                                        "items": {
+                                            "type": string;
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                };
+                                                "title": {
+                                                    "type": string;
+                                                };
+                                                "description": {
+                                                    "type": string;
+                                                };
+                                                "dataType": {
+                                                    "type": string;
+                                                };
+                                                "isElement": {
+                                                    "type": string;
+                                                };
+                                                "isMetric": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "example": {
+                                                "isElement": boolean;
+                                                "dataType": string;
+                                                "name": string;
+                                                "isMetric": boolean;
+                                                "description": string;
+                                                "title": string;
+                                            };
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "example": {
+                                    "name": string;
+                                    "description": string;
+                                    "attributes": {
+                                        "isElement": boolean;
+                                        "dataType": string;
+                                        "name": string;
+                                        "isMetric": boolean;
+                                        "description": string;
+                                        "title": string;
+                                    }[];
+                                };
+                                "additionalProperties": boolean;
+                            };
+                            "timings": {
+                                "type": string;
+                                "properties": {
+                                    "name": {
+                                        "type": string;
+                                    };
+                                    "description": {
+                                        "type": string;
+                                    };
+                                    "attributes": {
+                                        "type": string;
+                                        "items": {
+                                            "type": string;
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                };
+                                                "title": {
+                                                    "type": string;
+                                                };
+                                                "description": {
+                                                    "type": string;
+                                                };
+                                                "dataType": {
+                                                    "type": string;
+                                                };
+                                                "isElement": {
+                                                    "type": string;
+                                                };
+                                                "isMetric": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "example": {
+                                                "isElement": boolean;
+                                                "dataType": string;
+                                                "name": string;
+                                                "isMetric": boolean;
+                                                "description": string;
+                                                "title": string;
+                                            };
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "example": {
+                                    "name": string;
+                                    "description": string;
+                                    "attributes": {
+                                        "isElement": boolean;
+                                        "dataType": string;
+                                        "name": string;
+                                        "isMetric": boolean;
+                                        "description": string;
+                                        "title": string;
+                                    }[];
+                                };
+                                "additionalProperties": boolean;
+                            };
+                            "users": {
+                                "type": string;
+                                "properties": {
+                                    "name": {
+                                        "type": string;
+                                    };
+                                    "description": {
+                                        "type": string;
+                                    };
+                                    "attributes": {
+                                        "type": string;
+                                        "items": {
+                                            "type": string;
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                };
+                                                "title": {
+                                                    "type": string;
+                                                };
+                                                "description": {
+                                                    "type": string;
+                                                };
+                                                "dataType": {
+                                                    "type": string;
+                                                };
+                                                "isElement": {
+                                                    "type": string;
+                                                };
+                                                "isMetric": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "example": {
+                                                "isElement": boolean;
+                                                "dataType": string;
+                                                "name": string;
+                                                "isMetric": boolean;
+                                                "description": string;
+                                                "title": string;
+                                            };
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "example": {
+                                    "name": string;
+                                    "description": string;
+                                    "attributes": {
+                                        "isElement": boolean;
+                                        "dataType": string;
+                                        "name": string;
+                                        "isMetric": boolean;
+                                        "description": string;
+                                        "title": string;
+                                    }[];
+                                };
+                                "additionalProperties": boolean;
+                            };
+                            "people": {
+                                "type": string;
+                                "properties": {
+                                    "name": {
+                                        "type": string;
+                                    };
+                                    "description": {
+                                        "type": string;
+                                    };
+                                    "attributes": {
+                                        "type": string;
+                                        "items": {
+                                            "type": string;
+                                            "properties": {
+                                                "name": {
+                                                    "type": string;
+                                                };
+                                                "title": {
+                                                    "type": string;
+                                                };
+                                                "description": {
+                                                    "type": string;
+                                                };
+                                                "dataType": {
+                                                    "type": string;
+                                                };
+                                                "isElement": {
+                                                    "type": string;
+                                                };
+                                                "isMetric": {
+                                                    "type": string;
+                                                };
+                                            };
+                                            "example": {
+                                                "isElement": boolean;
+                                                "dataType": string;
+                                                "name": string;
+                                                "isMetric": boolean;
+                                                "description": string;
+                                                "title": string;
+                                            };
+                                            "additionalProperties": boolean;
+                                        };
+                                    };
+                                };
+                                "example": {
+                                    "name": string;
+                                    "description": string;
+                                    "attributes": {
+                                        "isElement": boolean;
+                                        "dataType": string;
+                                        "name": string;
+                                        "isMetric": boolean;
+                                        "description": string;
+                                        "title": string;
+                                    }[];
+                                };
+                                "additionalProperties": boolean;
+                            };
+                        };
+                        "example": {
+                            "sessions": {
+                                "name": string;
+                                "description": string;
+                                "attributes": {
+                                    "isElement": boolean;
+                                    "dataType": string;
+                                    "name": string;
+                                    "isMetric": boolean;
+                                    "description": string;
+                                    "title": string;
+                                }[];
+                            };
+                            "pages": {
+                                "name": string;
+                                "description": string;
+                                "attributes": {
+                                    "isElement": boolean;
+                                    "dataType": string;
+                                    "name": string;
+                                    "isMetric": boolean;
+                                    "description": string;
+                                    "title": string;
+                                }[];
+                            };
+                            "timings": {
+                                "name": string;
+                                "description": string;
+                                "attributes": {
+                                    "isElement": boolean;
+                                    "dataType": string;
+                                    "name": string;
+                                    "isMetric": boolean;
+                                    "description": string;
+                                    "title": string;
+                                }[];
+                            };
+                            "people": {
+                                "name": string;
+                                "description": string;
+                                "attributes": {
+                                    "isElement": boolean;
+                                    "dataType": string;
+                                    "name": string;
+                                    "isMetric": boolean;
+                                    "description": string;
+                                    "title": string;
+                                }[];
+                            };
+                            "events": {
+                                "name": string;
+                                "description": string;
+                                "attributes": {
+                                    "isElement": boolean;
+                                    "dataType": string;
+                                    "name": string;
+                                    "isMetric": boolean;
+                                    "description": string;
+                                    "title": string;
+                                }[];
+                            };
+                            "users": {
+                                "name": string;
+                                "description": string;
+                                "attributes": {
+                                    "isElement": boolean;
+                                    "dataType": string;
+                                    "name": string;
+                                    "isMetric": boolean;
+                                    "description": string;
+                                    "title": string;
+                                }[];
+                            };
+                        };
+                        "additionalProperties": boolean;
+                    };
+                };
+                "example": {
+                    "code": number;
+                    "data": {
+                        "sessions": {
+                            "name": string;
+                            "description": string;
+                            "attributes": {
+                                "isElement": boolean;
+                                "dataType": string;
+                                "name": string;
+                                "isMetric": boolean;
+                                "description": string;
+                                "title": string;
+                            }[];
+                        };
+                        "pages": {
+                            "name": string;
+                            "description": string;
+                            "attributes": {
+                                "isElement": boolean;
+                                "dataType": string;
+                                "name": string;
+                                "isMetric": boolean;
+                                "description": string;
+                                "title": string;
+                            }[];
+                        };
+                        "timings": {
+                            "name": string;
+                            "description": string;
+                            "attributes": {
+                                "isElement": boolean;
+                                "dataType": string;
+                                "name": string;
+                                "isMetric": boolean;
+                                "description": string;
+                                "title": string;
+                            }[];
+                        };
+                        "people": {
+                            "name": string;
+                            "description": string;
+                            "attributes": {
+                                "isElement": boolean;
+                                "dataType": string;
+                                "name": string;
+                                "isMetric": boolean;
+                                "description": string;
+                                "title": string;
+                            }[];
+                        };
+                        "events": {
+                            "name": string;
+                            "description": string;
+                            "attributes": {
+                                "isElement": boolean;
+                                "dataType": string;
+                                "name": string;
+                                "isMetric": boolean;
+                                "description": string;
+                                "title": string;
+                            }[];
+                        };
+                        "users": {
+                            "name": string;
+                            "description": string;
+                            "attributes": {
+                                "isElement": boolean;
+                                "dataType": string;
+                                "name": string;
+                                "isMetric": boolean;
+                                "description": string;
+                                "title": string;
+                            }[];
+                        };
+                    };
                 };
                 "additionalProperties": boolean;
             };
