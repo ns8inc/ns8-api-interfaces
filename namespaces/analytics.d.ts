@@ -23,7 +23,7 @@ export declare module Analytics {
     class Entity {
         name?: string;
         description?: string;
-        attributes?: undefined;
+        attributes?: any;
     }
     class Attribute {
         name?: string;

@@ -11963,6 +11963,7 @@ declare const Specs: {
                         "200": {
                             "description": string;
                             "schema": {
+                                "type": string;
                                 "properties": {
                                     "name": {
                                         "type": string;
@@ -11971,6 +11972,7 @@ declare const Specs: {
                                         "type": string;
                                     };
                                     "attributes": {
+                                        "type": string;
                                         "properties": {
                                             "name": {
                                                 "type": string;
@@ -12055,6 +12057,7 @@ declare const Specs: {
                             "schema": {
                                 "type": string;
                                 "items": {
+                                    "type": string;
                                     "properties": {
                                         "name": {
                                             "type": string;
@@ -12593,6 +12596,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "Entity": {
+                "type": string;
                 "properties": {
                     "name": {
                         "type": string;
@@ -12601,6 +12605,7 @@ declare const Specs: {
                         "type": string;
                     };
                     "attributes": {
+                        "type": string;
                         "properties": {
                             "name": {
                                 "type": string;
@@ -12647,6 +12652,7 @@ declare const Specs: {
                 "additionalProperties": boolean;
             };
             "Attribute": {
+                "type": string;
                 "properties": {
                     "name": {
                         "type": string;
