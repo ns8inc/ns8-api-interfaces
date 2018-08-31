@@ -68,16 +68,12 @@ export declare module Analytics {
         accessToken?: string;
         query: any;
     }
-    class inline_response_200_data {
+    class inline_response_200 {
         sessions?: any;
         pages?: any;
         events?: any;
         timings?: any;
         users?: any;
         people?: any;
-    }
-    class inline_response_200 {
-        code?: number;
-        data?: undefined;
     }
 }
