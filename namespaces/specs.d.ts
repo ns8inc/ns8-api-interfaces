@@ -12396,7 +12396,7 @@ declare const Specs: {
                     };
                 };
             };
-            "/analytics/attributes/search": {
+            "/analytics/attributes": {
                 "get": {
                     "tags": string[];
                     "summary": string;
@@ -12406,14 +12406,14 @@ declare const Specs: {
                         "description": string;
                         "required": boolean;
                         "type": string;
-                        "default"?: undefined;
+                        "default": string;
                     } | {
                         "name": string;
                         "in": string;
                         "description": string;
                         "required": boolean;
                         "type": string;
-                        "default": string;
+                        "default"?: undefined;
                     })[];
                     "responses": {
                         "200": {
@@ -12426,6 +12426,9 @@ declare const Specs: {
                             };
                         };
                     };
+                    "security": {
+                        "Bearer": any[];
+                    }[];
                 };
             };
             "/analytics/segments": {
@@ -12801,6 +12804,13 @@ declare const Specs: {
                         };
                     };
                 };
+            };
+        };
+        "securityDefinitions": {
+            "Bearer": {
+                "type": string;
+                "name": string;
+                "in": string;
             };
         };
         "definitions": {
