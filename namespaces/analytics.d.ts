@@ -61,7 +61,6 @@ export declare module Analytics {
         dashboards?: Array<undefined>;
     }
     class QueryParams {
-        accessToken?: string;
         query: any;
     }
     class inline_response_200 {

@@ -12337,10 +12337,6 @@ declare const Specs: {
                         "schema": {
                             "required": string[];
                             "properties": {
-                                "accessToken": {
-                                    "type": string;
-                                    "description": string;
-                                };
                                 "query": {
                                     "type": string;
                                     "description": string;
@@ -12349,7 +12345,6 @@ declare const Specs: {
                             };
                             "example": {
                                 "query": string;
-                                "accessToken": string;
                             };
                             "additionalProperties": boolean;
                         };
@@ -12357,9 +12352,14 @@ declare const Specs: {
                     "responses": {
                         "200": {
                             "description": string;
-                            "schema": {};
+                            "schema": {
+                                "type": string;
+                            };
                         };
                     };
+                    "security": {
+                        "Bearer": any[];
+                    }[];
                 };
             };
             "/analytics/attributes": {
@@ -12795,6 +12795,7 @@ declare const Specs: {
                     };
                     "rows": {
                         "type": string;
+                        "description": string;
                         "additionalProperties": boolean;
                     };
                 };
@@ -13123,10 +13124,6 @@ declare const Specs: {
             "QueryParams": {
                 "required": string[];
                 "properties": {
-                    "accessToken": {
-                        "type": string;
-                        "description": string;
-                    };
                     "query": {
                         "type": string;
                         "description": string;
@@ -13135,7 +13132,6 @@ declare const Specs: {
                 };
                 "example": {
                     "query": string;
-                    "accessToken": string;
                 };
                 "additionalProperties": boolean;
             };
