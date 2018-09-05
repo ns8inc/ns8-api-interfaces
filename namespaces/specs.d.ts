@@ -12357,41 +12357,7 @@ declare const Specs: {
                     "responses": {
                         "200": {
                             "description": string;
-                            "schema": {
-                                "type": string;
-                                "items": {
-                                    "type": string;
-                                    "properties": {
-                                        "name": {
-                                            "type": string;
-                                        };
-                                        "title": {
-                                            "type": string;
-                                        };
-                                        "description": {
-                                            "type": string;
-                                        };
-                                        "dataType": {
-                                            "type": string;
-                                        };
-                                        "isElement": {
-                                            "type": string;
-                                        };
-                                        "isMetric": {
-                                            "type": string;
-                                        };
-                                    };
-                                    "example": {
-                                        "isElement": boolean;
-                                        "dataType": string;
-                                        "name": string;
-                                        "isMetric": boolean;
-                                        "description": string;
-                                        "title": string;
-                                    };
-                                    "additionalProperties": boolean;
-                                };
-                            };
+                            "schema": {};
                         };
                     };
                 };
@@ -12814,51 +12780,21 @@ declare const Specs: {
             };
         };
         "definitions": {
-            "QueryResult": {
+            "QueryResponse": {
+                "type": string;
                 "properties": {
+                    "query": {
+                        "type": string;
+                        "description": string;
+                        "additionalProperties": boolean;
+                    };
                     "columns": {
                         "type": string;
-                        "items": {
-                            "type": string;
-                            "properties": {};
-                        };
+                        "description": string;
+                        "additionalProperties": boolean;
                     };
                     "rows": {
                         "type": string;
-                        "items": {
-                            "type": string;
-                            "properties": {};
-                        };
-                    };
-                };
-                "additionalProperties": boolean;
-            };
-            "QueryResponse": {
-                "properties": {
-                    "code": {
-                        "type": string;
-                        "format": string;
-                    };
-                    "message": {
-                        "type": string;
-                    };
-                    "data": {
-                        "properties": {
-                            "columns": {
-                                "type": string;
-                                "items": {
-                                    "type": string;
-                                    "properties": {};
-                                };
-                            };
-                            "rows": {
-                                "type": string;
-                                "items": {
-                                    "type": string;
-                                    "properties": {};
-                                };
-                            };
-                        };
                         "additionalProperties": boolean;
                     };
                 };

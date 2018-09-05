@@ -2,9 +2,6 @@
 Object.defineProperty(exports, "__esModule", { value: true });
 var Analytics;
 (function (Analytics) {
-    class QueryResult {
-    }
-    Analytics.QueryResult = QueryResult;
     class QueryResponse {
     }
     Analytics.QueryResponse = QueryResponse;
