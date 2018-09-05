@@ -1,8 +1,8 @@
 export declare module Analytics {
     class QueryResponse {
         query?: any;
-        columns?: any;
-        rows?: any;
+        columns?: Array<any>;
+        rows?: Array<any>;
     }
     class APIResponse {
         code?: number;

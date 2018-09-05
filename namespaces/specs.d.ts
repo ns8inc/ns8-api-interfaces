@@ -12354,6 +12354,41 @@ declare const Specs: {
                             "description": string;
                             "schema": {
                                 "type": string;
+                                "properties": {
+                                    "query": {
+                                        "type": string;
+                                        "description": string;
+                                        "additionalProperties": boolean;
+                                    };
+                                    "columns": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "type": string;
+                                            "additionalProperties": {};
+                                        };
+                                    };
+                                    "rows": {
+                                        "type": string;
+                                        "description": string;
+                                        "items": {
+                                            "type": string;
+                                            "additionalProperties": {};
+                                        };
+                                    };
+                                };
+                                "example": {
+                                    "columns": {
+                                        "key": string;
+                                    }[];
+                                    "query": {
+                                        "key": string;
+                                    };
+                                    "rows": {
+                                        "key": string;
+                                    }[];
+                                };
+                                "additionalProperties": boolean;
                             };
                         };
                     };
@@ -12791,13 +12826,30 @@ declare const Specs: {
                     "columns": {
                         "type": string;
                         "description": string;
-                        "additionalProperties": boolean;
+                        "items": {
+                            "type": string;
+                            "additionalProperties": {};
+                        };
                     };
                     "rows": {
                         "type": string;
                         "description": string;
-                        "additionalProperties": boolean;
+                        "items": {
+                            "type": string;
+                            "additionalProperties": {};
+                        };
                     };
+                };
+                "example": {
+                    "columns": {
+                        "key": string;
+                    }[];
+                    "query": {
+                        "key": string;
+                    };
+                    "rows": {
+                        "key": string;
+                    }[];
                 };
                 "additionalProperties": boolean;
             };
