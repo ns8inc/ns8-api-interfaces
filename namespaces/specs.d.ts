@@ -12365,7 +12365,7 @@ declare const Specs: {
                                         "description": string;
                                         "items": {
                                             "type": string;
-                                            "additionalProperties": {};
+                                            "properties": {};
                                         };
                                     };
                                     "rows": {
@@ -12373,20 +12373,16 @@ declare const Specs: {
                                         "description": string;
                                         "items": {
                                             "type": string;
-                                            "additionalProperties": {};
+                                            "properties": {};
                                         };
                                     };
                                 };
                                 "example": {
-                                    "columns": {
-                                        "key": string;
-                                    }[];
+                                    "columns": string[];
                                     "query": {
                                         "key": string;
                                     };
-                                    "rows": {
-                                        "key": string;
-                                    }[];
+                                    "rows": string[];
                                 };
                                 "additionalProperties": boolean;
                             };
@@ -12828,7 +12824,7 @@ declare const Specs: {
                         "description": string;
                         "items": {
                             "type": string;
-                            "additionalProperties": {};
+                            "properties": {};
                         };
                     };
                     "rows": {
@@ -12836,20 +12832,16 @@ declare const Specs: {
                         "description": string;
                         "items": {
                             "type": string;
-                            "additionalProperties": {};
+                            "properties": {};
                         };
                     };
                 };
                 "example": {
-                    "columns": {
-                        "key": string;
-                    }[];
+                    "columns": string[];
                     "query": {
                         "key": string;
                     };
-                    "rows": {
-                        "key": string;
-                    }[];
+                    "rows": string[];
                 };
                 "additionalProperties": boolean;
             };
