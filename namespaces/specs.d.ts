@@ -7850,7 +7850,7 @@ declare const Specs: {
                                         "description": string;
                                         "items": {
                                             "type": string;
-                                            "additionalProperties": {};
+                                            "additionalProperties": boolean;
                                         };
                                     };
                                     "rows": {
@@ -7858,7 +7858,7 @@ declare const Specs: {
                                         "description": string;
                                         "items": {
                                             "type": string;
-                                            "additionalProperties": {};
+                                            "additionalProperties": boolean;
                                         };
                                     };
                                 };
@@ -8313,7 +8313,7 @@ declare const Specs: {
                         "description": string;
                         "items": {
                             "type": string;
-                            "additionalProperties": {};
+                            "additionalProperties": boolean;
                         };
                     };
                     "rows": {
@@ -8321,7 +8321,7 @@ declare const Specs: {
                         "description": string;
                         "items": {
                             "type": string;
-                            "additionalProperties": {};
+                            "additionalProperties": boolean;
                         };
                     };
                 };
