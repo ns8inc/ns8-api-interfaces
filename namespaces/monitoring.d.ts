@@ -1,4 +1,4 @@
-export declare module Monitoring {
+export declare namespace Monitoring {
     class AccessTokenCreateParams {
         accessToken: string;
         permissions: Array<string>;

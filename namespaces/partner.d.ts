@@ -1,4 +1,4 @@
-export declare module Partner {
+export declare namespace Partner {
     class ProfileResponse {
         code?: number;
         message?: string;

@@ -1,4 +1,4 @@
-export declare module DataServices {
+export declare namespace DataServices {
     class APIResponse {
         code?: number;
         message?: string;

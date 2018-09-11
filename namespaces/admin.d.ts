@@ -1,4 +1,4 @@
-export declare module Admin {
+export declare namespace Admin {
     class AccessToken {
         id: string;
         userId: number;

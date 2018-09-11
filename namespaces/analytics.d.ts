@@ -1,4 +1,4 @@
-export declare module Analytics {
+export declare namespace Analytics {
     class QueryResponse {
         query?: any;
         columns?: Array<any>;
