@@ -8291,6 +8291,820 @@ declare const Specs: {
                     };
                 };
             };
+            "/protect/order": {
+                post: {
+                    summary: string;
+                    parameters: {
+                        in: string;
+                        name: string;
+                        description: string;
+                        required: boolean;
+                        schema: {
+                            required: string[];
+                            properties: {
+                                platformOrderId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                shopId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                platform: {
+                                    type: string;
+                                    description: string;
+                                };
+                                tax: {
+                                    type: string;
+                                    description: string;
+                                };
+                                currency: {
+                                    type: string;
+                                    description: string;
+                                };
+                                billingAddress: {
+                                    properties: {
+                                        address1: {
+                                            type: string;
+                                        };
+                                        address2: {
+                                            type: string;
+                                        };
+                                        city: {
+                                            type: string;
+                                        };
+                                        zip: {
+                                            type: string;
+                                        };
+                                        provinceCode: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        countryCode: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        company: {
+                                            type: string;
+                                        };
+                                    };
+                                    example: {
+                                        zip: string;
+                                        address2: string;
+                                        city: string;
+                                        address1: string;
+                                        provinceCode: string;
+                                        countryCode: string;
+                                        company: string;
+                                    };
+                                    additionalProperties: boolean;
+                                };
+                                shippingAddress: {
+                                    properties: {
+                                        address1: {
+                                            type: string;
+                                        };
+                                        address2: {
+                                            type: string;
+                                        };
+                                        city: {
+                                            type: string;
+                                        };
+                                        zip: {
+                                            type: string;
+                                        };
+                                        provinceCode: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        countryCode: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        company: {
+                                            type: string;
+                                        };
+                                    };
+                                    example: {
+                                        zip: string;
+                                        address2: string;
+                                        city: string;
+                                        address1: string;
+                                        provinceCode: string;
+                                        countryCode: string;
+                                        company: string;
+                                    };
+                                    additionalProperties: boolean;
+                                };
+                                createdAt: {
+                                    type: string;
+                                    format: string;
+                                    convertStringToDate: boolean;
+                                };
+                                updatedAt: {
+                                    type: string;
+                                    format: string;
+                                    convertStringToDate: boolean;
+                                };
+                                customer: {
+                                    required: string[];
+                                    properties: {
+                                        platformCustomerId: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        firstName: {
+                                            type: string;
+                                        };
+                                        lastName: {
+                                            type: string;
+                                        };
+                                        email: {
+                                            type: string;
+                                        };
+                                        phone: {
+                                            type: string;
+                                        };
+                                        createdAt: {
+                                            type: string;
+                                            format: string;
+                                            convertStringToDate: boolean;
+                                        };
+                                        updatedAt: {
+                                            type: string;
+                                            format: string;
+                                            convertStringToDate: boolean;
+                                        };
+                                        gender: {
+                                            type: string;
+                                            enum: string[];
+                                        };
+                                        birthday: {
+                                            type: string;
+                                            format: string;
+                                        };
+                                        company: {
+                                            type: string;
+                                        };
+                                        ordersCount: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        totalSpent: {
+                                            type: string;
+                                        };
+                                        isEmailVerified: {
+                                            type: string;
+                                        };
+                                        isPayingCustomer: {
+                                            type: string;
+                                        };
+                                    };
+                                    example: {
+                                        birthday: string;
+                                        lastName: string;
+                                        totalSpent: number;
+                                        gender: string;
+                                        platformCustomerId: string;
+                                        isEmailVerified: boolean;
+                                        firstName: string;
+                                        createdAt: string;
+                                        ordersCount: number;
+                                        isPayingCustomer: boolean;
+                                        phone: string;
+                                        company: string;
+                                        email: string;
+                                        updatedAt: string;
+                                    };
+                                    additionalProperties: boolean;
+                                };
+                                status: {
+                                    type: string;
+                                    description: string;
+                                    enum: string[];
+                                };
+                                processingMethod: {
+                                    type: string;
+                                    description: string;
+                                    enum: string[];
+                                };
+                                sourceName: {
+                                    type: string;
+                                    description: string;
+                                    enum: string[];
+                                };
+                                totalPrice: {
+                                    type: string;
+                                    description: string;
+                                };
+                                transctions: {
+                                    type: string;
+                                    items: {
+                                        required: string[];
+                                        properties: {
+                                            platformTransactionId: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            amount: {
+                                                type: string;
+                                            };
+                                            createdAt: {
+                                                type: string;
+                                                format: string;
+                                                convertStringToDate: boolean;
+                                            };
+                                            gateway: {
+                                                type: string;
+                                            };
+                                            sourceName: {
+                                                type: string;
+                                            };
+                                            paymentDetails: {
+                                                properties: {
+                                                    creditCardNumber: {
+                                                        type: string;
+                                                    };
+                                                    creditCardCompany: {
+                                                        type: string;
+                                                    };
+                                                    cardExpiration: {
+                                                        type: string;
+                                                    };
+                                                    cardHolder: {
+                                                        type: string;
+                                                    };
+                                                    avsResultCode: {
+                                                        type: string;
+                                                    };
+                                                    cvvResultCode: {
+                                                        type: string;
+                                                    };
+                                                    creditCardBin: {
+                                                        type: string;
+                                                    };
+                                                    method: {
+                                                        type: string;
+                                                    };
+                                                    gateway: {
+                                                        type: string;
+                                                    };
+                                                };
+                                                example: {
+                                                    avsResultCode: string;
+                                                    cvvResultCode: string;
+                                                    method: string;
+                                                    creditCardNumber: string;
+                                                    creditCardBin: string;
+                                                    creditCardCompany: string;
+                                                    cardHolder: string;
+                                                    cardExpiration: string;
+                                                    gateway: string;
+                                                };
+                                                additionalProperties: boolean;
+                                            };
+                                            kind: {
+                                                type: string;
+                                                enum: string[];
+                                            };
+                                            status: {
+                                                type: string;
+                                            };
+                                            currency: {
+                                                type: string;
+                                            };
+                                        };
+                                        example: {
+                                            createdAt: string;
+                                            amount: number;
+                                            platformTransactionId: string;
+                                            kind: string;
+                                            currency: string;
+                                            sourceName: string;
+                                            paymentDetails: {
+                                                avsResultCode: string;
+                                                cvvResultCode: string;
+                                                method: string;
+                                                creditCardNumber: string;
+                                                creditCardBin: string;
+                                                creditCardCompany: string;
+                                                cardHolder: string;
+                                                cardExpiration: string;
+                                                gateway: string;
+                                            };
+                                            gateway: string;
+                                            status: string;
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                };
+                                canceledAt: {
+                                    type: string;
+                                    format: string;
+                                    convertStringToDate: boolean;
+                                };
+                                canceledBy: {
+                                    type: string;
+                                };
+                                cancelReason: {
+                                    type: string;
+                                };
+                                approvedAt: {
+                                    type: string;
+                                    format: string;
+                                    convertStringToDate: boolean;
+                                };
+                                approvedBy: {
+                                    type: string;
+                                };
+                                hasGiftCard: {
+                                    type: string;
+                                    description: string;
+                                };
+                            };
+                            example: {
+                                totalPrice: number;
+                                approvedBy: string;
+                                canceledBy: string;
+                                tax: number;
+                                approvedAt: string;
+                                platform: string;
+                                createdAt: string;
+                                transctions: {
+                                    createdAt: string;
+                                    amount: number;
+                                    platformTransactionId: string;
+                                    kind: string;
+                                    currency: string;
+                                    sourceName: string;
+                                    paymentDetails: {
+                                        avsResultCode: string;
+                                        cvvResultCode: string;
+                                        method: string;
+                                        creditCardNumber: string;
+                                        creditCardBin: string;
+                                        creditCardCompany: string;
+                                        cardHolder: string;
+                                        cardExpiration: string;
+                                        gateway: string;
+                                    };
+                                    gateway: string;
+                                    status: string;
+                                }[];
+                                canceledAt: string;
+                                hasGiftCard: boolean;
+                                processingMethod: string;
+                                shippingAddress: {
+                                    zip: string;
+                                    address2: string;
+                                    city: string;
+                                    address1: string;
+                                    provinceCode: string;
+                                    countryCode: string;
+                                    company: string;
+                                };
+                                currency: string;
+                                shopId: number;
+                                billingAddress: {
+                                    zip: string;
+                                    address2: string;
+                                    city: string;
+                                    address1: string;
+                                    provinceCode: string;
+                                    countryCode: string;
+                                    company: string;
+                                };
+                                sourceName: string;
+                                platformOrderId: string;
+                                cancelReason: string;
+                                updatedAt: string;
+                                customer: {
+                                    birthday: string;
+                                    lastName: string;
+                                    totalSpent: number;
+                                    gender: string;
+                                    platformCustomerId: string;
+                                    isEmailVerified: boolean;
+                                    firstName: string;
+                                    createdAt: string;
+                                    ordersCount: number;
+                                    isPayingCustomer: boolean;
+                                    phone: string;
+                                    company: string;
+                                    email: string;
+                                    updatedAt: string;
+                                };
+                                status: string;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    }[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                required: string[];
+                                properties: {
+                                    platformOrderId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    shopId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    platform: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    tax: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    currency: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    billingAddress: {
+                                        properties: {
+                                            address1: {
+                                                type: string;
+                                            };
+                                            address2: {
+                                                type: string;
+                                            };
+                                            city: {
+                                                type: string;
+                                            };
+                                            zip: {
+                                                type: string;
+                                            };
+                                            provinceCode: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            countryCode: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            company: {
+                                                type: string;
+                                            };
+                                        };
+                                        example: {
+                                            zip: string;
+                                            address2: string;
+                                            city: string;
+                                            address1: string;
+                                            provinceCode: string;
+                                            countryCode: string;
+                                            company: string;
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                    shippingAddress: {
+                                        properties: {
+                                            address1: {
+                                                type: string;
+                                            };
+                                            address2: {
+                                                type: string;
+                                            };
+                                            city: {
+                                                type: string;
+                                            };
+                                            zip: {
+                                                type: string;
+                                            };
+                                            provinceCode: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            countryCode: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            company: {
+                                                type: string;
+                                            };
+                                        };
+                                        example: {
+                                            zip: string;
+                                            address2: string;
+                                            city: string;
+                                            address1: string;
+                                            provinceCode: string;
+                                            countryCode: string;
+                                            company: string;
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                    createdAt: {
+                                        type: string;
+                                        format: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    updatedAt: {
+                                        type: string;
+                                        format: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    customer: {
+                                        required: string[];
+                                        properties: {
+                                            platformCustomerId: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            firstName: {
+                                                type: string;
+                                            };
+                                            lastName: {
+                                                type: string;
+                                            };
+                                            email: {
+                                                type: string;
+                                            };
+                                            phone: {
+                                                type: string;
+                                            };
+                                            createdAt: {
+                                                type: string;
+                                                format: string;
+                                                convertStringToDate: boolean;
+                                            };
+                                            updatedAt: {
+                                                type: string;
+                                                format: string;
+                                                convertStringToDate: boolean;
+                                            };
+                                            gender: {
+                                                type: string;
+                                                enum: string[];
+                                            };
+                                            birthday: {
+                                                type: string;
+                                                format: string;
+                                            };
+                                            company: {
+                                                type: string;
+                                            };
+                                            ordersCount: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            totalSpent: {
+                                                type: string;
+                                            };
+                                            isEmailVerified: {
+                                                type: string;
+                                            };
+                                            isPayingCustomer: {
+                                                type: string;
+                                            };
+                                        };
+                                        example: {
+                                            birthday: string;
+                                            lastName: string;
+                                            totalSpent: number;
+                                            gender: string;
+                                            platformCustomerId: string;
+                                            isEmailVerified: boolean;
+                                            firstName: string;
+                                            createdAt: string;
+                                            ordersCount: number;
+                                            isPayingCustomer: boolean;
+                                            phone: string;
+                                            company: string;
+                                            email: string;
+                                            updatedAt: string;
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                    status: {
+                                        type: string;
+                                        description: string;
+                                        enum: string[];
+                                    };
+                                    processingMethod: {
+                                        type: string;
+                                        description: string;
+                                        enum: string[];
+                                    };
+                                    sourceName: {
+                                        type: string;
+                                        description: string;
+                                        enum: string[];
+                                    };
+                                    totalPrice: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    transctions: {
+                                        type: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                platformTransactionId: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                amount: {
+                                                    type: string;
+                                                };
+                                                createdAt: {
+                                                    type: string;
+                                                    format: string;
+                                                    convertStringToDate: boolean;
+                                                };
+                                                gateway: {
+                                                    type: string;
+                                                };
+                                                sourceName: {
+                                                    type: string;
+                                                };
+                                                paymentDetails: {
+                                                    properties: {
+                                                        creditCardNumber: {
+                                                            type: string;
+                                                        };
+                                                        creditCardCompany: {
+                                                            type: string;
+                                                        };
+                                                        cardExpiration: {
+                                                            type: string;
+                                                        };
+                                                        cardHolder: {
+                                                            type: string;
+                                                        };
+                                                        avsResultCode: {
+                                                            type: string;
+                                                        };
+                                                        cvvResultCode: {
+                                                            type: string;
+                                                        };
+                                                        creditCardBin: {
+                                                            type: string;
+                                                        };
+                                                        method: {
+                                                            type: string;
+                                                        };
+                                                        gateway: {
+                                                            type: string;
+                                                        };
+                                                    };
+                                                    example: {
+                                                        avsResultCode: string;
+                                                        cvvResultCode: string;
+                                                        method: string;
+                                                        creditCardNumber: string;
+                                                        creditCardBin: string;
+                                                        creditCardCompany: string;
+                                                        cardHolder: string;
+                                                        cardExpiration: string;
+                                                        gateway: string;
+                                                    };
+                                                    additionalProperties: boolean;
+                                                };
+                                                kind: {
+                                                    type: string;
+                                                    enum: string[];
+                                                };
+                                                status: {
+                                                    type: string;
+                                                };
+                                                currency: {
+                                                    type: string;
+                                                };
+                                            };
+                                            example: {
+                                                createdAt: string;
+                                                amount: number;
+                                                platformTransactionId: string;
+                                                kind: string;
+                                                currency: string;
+                                                sourceName: string;
+                                                paymentDetails: {
+                                                    avsResultCode: string;
+                                                    cvvResultCode: string;
+                                                    method: string;
+                                                    creditCardNumber: string;
+                                                    creditCardBin: string;
+                                                    creditCardCompany: string;
+                                                    cardHolder: string;
+                                                    cardExpiration: string;
+                                                    gateway: string;
+                                                };
+                                                gateway: string;
+                                                status: string;
+                                            };
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                    canceledAt: {
+                                        type: string;
+                                        format: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    canceledBy: {
+                                        type: string;
+                                    };
+                                    cancelReason: {
+                                        type: string;
+                                    };
+                                    approvedAt: {
+                                        type: string;
+                                        format: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    approvedBy: {
+                                        type: string;
+                                    };
+                                    hasGiftCard: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                };
+                                example: {
+                                    totalPrice: number;
+                                    approvedBy: string;
+                                    canceledBy: string;
+                                    tax: number;
+                                    approvedAt: string;
+                                    platform: string;
+                                    createdAt: string;
+                                    transctions: {
+                                        createdAt: string;
+                                        amount: number;
+                                        platformTransactionId: string;
+                                        kind: string;
+                                        currency: string;
+                                        sourceName: string;
+                                        paymentDetails: {
+                                            avsResultCode: string;
+                                            cvvResultCode: string;
+                                            method: string;
+                                            creditCardNumber: string;
+                                            creditCardBin: string;
+                                            creditCardCompany: string;
+                                            cardHolder: string;
+                                            cardExpiration: string;
+                                            gateway: string;
+                                        };
+                                        gateway: string;
+                                        status: string;
+                                    }[];
+                                    canceledAt: string;
+                                    hasGiftCard: boolean;
+                                    processingMethod: string;
+                                    shippingAddress: {
+                                        zip: string;
+                                        address2: string;
+                                        city: string;
+                                        address1: string;
+                                        provinceCode: string;
+                                        countryCode: string;
+                                        company: string;
+                                    };
+                                    currency: string;
+                                    shopId: number;
+                                    billingAddress: {
+                                        zip: string;
+                                        address2: string;
+                                        city: string;
+                                        address1: string;
+                                        provinceCode: string;
+                                        countryCode: string;
+                                        company: string;
+                                    };
+                                    sourceName: string;
+                                    platformOrderId: string;
+                                    cancelReason: string;
+                                    updatedAt: string;
+                                    customer: {
+                                        birthday: string;
+                                        lastName: string;
+                                        totalSpent: number;
+                                        gender: string;
+                                        platformCustomerId: string;
+                                        isEmailVerified: boolean;
+                                        firstName: string;
+                                        createdAt: string;
+                                        ordersCount: number;
+                                        isPayingCustomer: boolean;
+                                        phone: string;
+                                        company: string;
+                                        email: string;
+                                        updatedAt: string;
+                                    };
+                                    status: string;
+                                };
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                };
+            };
         };
         securityDefinitions: {
             Bearer: {
@@ -8669,6 +9483,655 @@ declare const Specs: {
                 };
                 example: {
                     query: string;
+                };
+                additionalProperties: boolean;
+            };
+            Order: {
+                required: string[];
+                properties: {
+                    platformOrderId: {
+                        type: string;
+                        description: string;
+                    };
+                    shopId: {
+                        type: string;
+                        description: string;
+                    };
+                    platform: {
+                        type: string;
+                        description: string;
+                    };
+                    tax: {
+                        type: string;
+                        description: string;
+                    };
+                    currency: {
+                        type: string;
+                        description: string;
+                    };
+                    billingAddress: {
+                        properties: {
+                            address1: {
+                                type: string;
+                            };
+                            address2: {
+                                type: string;
+                            };
+                            city: {
+                                type: string;
+                            };
+                            zip: {
+                                type: string;
+                            };
+                            provinceCode: {
+                                type: string;
+                                description: string;
+                            };
+                            countryCode: {
+                                type: string;
+                                description: string;
+                            };
+                            company: {
+                                type: string;
+                            };
+                        };
+                        example: {
+                            zip: string;
+                            address2: string;
+                            city: string;
+                            address1: string;
+                            provinceCode: string;
+                            countryCode: string;
+                            company: string;
+                        };
+                        additionalProperties: boolean;
+                    };
+                    shippingAddress: {
+                        properties: {
+                            address1: {
+                                type: string;
+                            };
+                            address2: {
+                                type: string;
+                            };
+                            city: {
+                                type: string;
+                            };
+                            zip: {
+                                type: string;
+                            };
+                            provinceCode: {
+                                type: string;
+                                description: string;
+                            };
+                            countryCode: {
+                                type: string;
+                                description: string;
+                            };
+                            company: {
+                                type: string;
+                            };
+                        };
+                        example: {
+                            zip: string;
+                            address2: string;
+                            city: string;
+                            address1: string;
+                            provinceCode: string;
+                            countryCode: string;
+                            company: string;
+                        };
+                        additionalProperties: boolean;
+                    };
+                    createdAt: {
+                        type: string;
+                        format: string;
+                        convertStringToDate: boolean;
+                    };
+                    updatedAt: {
+                        type: string;
+                        format: string;
+                        convertStringToDate: boolean;
+                    };
+                    customer: {
+                        required: string[];
+                        properties: {
+                            platformCustomerId: {
+                                type: string;
+                                description: string;
+                            };
+                            firstName: {
+                                type: string;
+                            };
+                            lastName: {
+                                type: string;
+                            };
+                            email: {
+                                type: string;
+                            };
+                            phone: {
+                                type: string;
+                            };
+                            createdAt: {
+                                type: string;
+                                format: string;
+                                convertStringToDate: boolean;
+                            };
+                            updatedAt: {
+                                type: string;
+                                format: string;
+                                convertStringToDate: boolean;
+                            };
+                            gender: {
+                                type: string;
+                                enum: string[];
+                            };
+                            birthday: {
+                                type: string;
+                                format: string;
+                            };
+                            company: {
+                                type: string;
+                            };
+                            ordersCount: {
+                                type: string;
+                                description: string;
+                            };
+                            totalSpent: {
+                                type: string;
+                            };
+                            isEmailVerified: {
+                                type: string;
+                            };
+                            isPayingCustomer: {
+                                type: string;
+                            };
+                        };
+                        example: {
+                            birthday: string;
+                            lastName: string;
+                            totalSpent: number;
+                            gender: string;
+                            platformCustomerId: string;
+                            isEmailVerified: boolean;
+                            firstName: string;
+                            createdAt: string;
+                            ordersCount: number;
+                            isPayingCustomer: boolean;
+                            phone: string;
+                            company: string;
+                            email: string;
+                            updatedAt: string;
+                        };
+                        additionalProperties: boolean;
+                    };
+                    status: {
+                        type: string;
+                        description: string;
+                        enum: string[];
+                    };
+                    processingMethod: {
+                        type: string;
+                        description: string;
+                        enum: string[];
+                    };
+                    sourceName: {
+                        type: string;
+                        description: string;
+                        enum: string[];
+                    };
+                    totalPrice: {
+                        type: string;
+                        description: string;
+                    };
+                    transctions: {
+                        type: string;
+                        items: {
+                            required: string[];
+                            properties: {
+                                platformTransactionId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                amount: {
+                                    type: string;
+                                };
+                                createdAt: {
+                                    type: string;
+                                    format: string;
+                                    convertStringToDate: boolean;
+                                };
+                                gateway: {
+                                    type: string;
+                                };
+                                sourceName: {
+                                    type: string;
+                                };
+                                paymentDetails: {
+                                    properties: {
+                                        creditCardNumber: {
+                                            type: string;
+                                        };
+                                        creditCardCompany: {
+                                            type: string;
+                                        };
+                                        cardExpiration: {
+                                            type: string;
+                                        };
+                                        cardHolder: {
+                                            type: string;
+                                        };
+                                        avsResultCode: {
+                                            type: string;
+                                        };
+                                        cvvResultCode: {
+                                            type: string;
+                                        };
+                                        creditCardBin: {
+                                            type: string;
+                                        };
+                                        method: {
+                                            type: string;
+                                        };
+                                        gateway: {
+                                            type: string;
+                                        };
+                                    };
+                                    example: {
+                                        avsResultCode: string;
+                                        cvvResultCode: string;
+                                        method: string;
+                                        creditCardNumber: string;
+                                        creditCardBin: string;
+                                        creditCardCompany: string;
+                                        cardHolder: string;
+                                        cardExpiration: string;
+                                        gateway: string;
+                                    };
+                                    additionalProperties: boolean;
+                                };
+                                kind: {
+                                    type: string;
+                                    enum: string[];
+                                };
+                                status: {
+                                    type: string;
+                                };
+                                currency: {
+                                    type: string;
+                                };
+                            };
+                            example: {
+                                createdAt: string;
+                                amount: number;
+                                platformTransactionId: string;
+                                kind: string;
+                                currency: string;
+                                sourceName: string;
+                                paymentDetails: {
+                                    avsResultCode: string;
+                                    cvvResultCode: string;
+                                    method: string;
+                                    creditCardNumber: string;
+                                    creditCardBin: string;
+                                    creditCardCompany: string;
+                                    cardHolder: string;
+                                    cardExpiration: string;
+                                    gateway: string;
+                                };
+                                gateway: string;
+                                status: string;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    };
+                    canceledAt: {
+                        type: string;
+                        format: string;
+                        convertStringToDate: boolean;
+                    };
+                    canceledBy: {
+                        type: string;
+                    };
+                    cancelReason: {
+                        type: string;
+                    };
+                    approvedAt: {
+                        type: string;
+                        format: string;
+                        convertStringToDate: boolean;
+                    };
+                    approvedBy: {
+                        type: string;
+                    };
+                    hasGiftCard: {
+                        type: string;
+                        description: string;
+                    };
+                };
+                example: {
+                    totalPrice: number;
+                    approvedBy: string;
+                    canceledBy: string;
+                    tax: number;
+                    approvedAt: string;
+                    platform: string;
+                    createdAt: string;
+                    transctions: {
+                        createdAt: string;
+                        amount: number;
+                        platformTransactionId: string;
+                        kind: string;
+                        currency: string;
+                        sourceName: string;
+                        paymentDetails: {
+                            avsResultCode: string;
+                            cvvResultCode: string;
+                            method: string;
+                            creditCardNumber: string;
+                            creditCardBin: string;
+                            creditCardCompany: string;
+                            cardHolder: string;
+                            cardExpiration: string;
+                            gateway: string;
+                        };
+                        gateway: string;
+                        status: string;
+                    }[];
+                    canceledAt: string;
+                    hasGiftCard: boolean;
+                    processingMethod: string;
+                    shippingAddress: {
+                        zip: string;
+                        address2: string;
+                        city: string;
+                        address1: string;
+                        provinceCode: string;
+                        countryCode: string;
+                        company: string;
+                    };
+                    currency: string;
+                    shopId: number;
+                    billingAddress: {
+                        zip: string;
+                        address2: string;
+                        city: string;
+                        address1: string;
+                        provinceCode: string;
+                        countryCode: string;
+                        company: string;
+                    };
+                    sourceName: string;
+                    platformOrderId: string;
+                    cancelReason: string;
+                    updatedAt: string;
+                    customer: {
+                        birthday: string;
+                        lastName: string;
+                        totalSpent: number;
+                        gender: string;
+                        platformCustomerId: string;
+                        isEmailVerified: boolean;
+                        firstName: string;
+                        createdAt: string;
+                        ordersCount: number;
+                        isPayingCustomer: boolean;
+                        phone: string;
+                        company: string;
+                        email: string;
+                        updatedAt: string;
+                    };
+                    status: string;
+                };
+                additionalProperties: boolean;
+            };
+            Address: {
+                properties: {
+                    address1: {
+                        type: string;
+                    };
+                    address2: {
+                        type: string;
+                    };
+                    city: {
+                        type: string;
+                    };
+                    zip: {
+                        type: string;
+                    };
+                    provinceCode: {
+                        type: string;
+                        description: string;
+                    };
+                    countryCode: {
+                        type: string;
+                        description: string;
+                    };
+                    company: {
+                        type: string;
+                    };
+                };
+                example: {
+                    zip: string;
+                    address2: string;
+                    city: string;
+                    address1: string;
+                    provinceCode: string;
+                    countryCode: string;
+                    company: string;
+                };
+                additionalProperties: boolean;
+            };
+            Customer: {
+                required: string[];
+                properties: {
+                    platformCustomerId: {
+                        type: string;
+                        description: string;
+                    };
+                    firstName: {
+                        type: string;
+                    };
+                    lastName: {
+                        type: string;
+                    };
+                    email: {
+                        type: string;
+                    };
+                    phone: {
+                        type: string;
+                    };
+                    createdAt: {
+                        type: string;
+                        format: string;
+                        convertStringToDate: boolean;
+                    };
+                    updatedAt: {
+                        type: string;
+                        format: string;
+                        convertStringToDate: boolean;
+                    };
+                    gender: {
+                        type: string;
+                        enum: string[];
+                    };
+                    birthday: {
+                        type: string;
+                        format: string;
+                    };
+                    company: {
+                        type: string;
+                    };
+                    ordersCount: {
+                        type: string;
+                        description: string;
+                    };
+                    totalSpent: {
+                        type: string;
+                    };
+                    isEmailVerified: {
+                        type: string;
+                    };
+                    isPayingCustomer: {
+                        type: string;
+                    };
+                };
+                example: {
+                    birthday: string;
+                    lastName: string;
+                    totalSpent: number;
+                    gender: string;
+                    platformCustomerId: string;
+                    isEmailVerified: boolean;
+                    firstName: string;
+                    createdAt: string;
+                    ordersCount: number;
+                    isPayingCustomer: boolean;
+                    phone: string;
+                    company: string;
+                    email: string;
+                    updatedAt: string;
+                };
+                additionalProperties: boolean;
+            };
+            Transaction: {
+                required: string[];
+                properties: {
+                    platformTransactionId: {
+                        type: string;
+                        description: string;
+                    };
+                    amount: {
+                        type: string;
+                    };
+                    createdAt: {
+                        type: string;
+                        format: string;
+                        convertStringToDate: boolean;
+                    };
+                    gateway: {
+                        type: string;
+                    };
+                    sourceName: {
+                        type: string;
+                    };
+                    paymentDetails: {
+                        properties: {
+                            creditCardNumber: {
+                                type: string;
+                            };
+                            creditCardCompany: {
+                                type: string;
+                            };
+                            cardExpiration: {
+                                type: string;
+                            };
+                            cardHolder: {
+                                type: string;
+                            };
+                            avsResultCode: {
+                                type: string;
+                            };
+                            cvvResultCode: {
+                                type: string;
+                            };
+                            creditCardBin: {
+                                type: string;
+                            };
+                            method: {
+                                type: string;
+                            };
+                            gateway: {
+                                type: string;
+                            };
+                        };
+                        example: {
+                            avsResultCode: string;
+                            cvvResultCode: string;
+                            method: string;
+                            creditCardNumber: string;
+                            creditCardBin: string;
+                            creditCardCompany: string;
+                            cardHolder: string;
+                            cardExpiration: string;
+                            gateway: string;
+                        };
+                        additionalProperties: boolean;
+                    };
+                    kind: {
+                        type: string;
+                        enum: string[];
+                    };
+                    status: {
+                        type: string;
+                    };
+                    currency: {
+                        type: string;
+                    };
+                };
+                example: {
+                    createdAt: string;
+                    amount: number;
+                    platformTransactionId: string;
+                    kind: string;
+                    currency: string;
+                    sourceName: string;
+                    paymentDetails: {
+                        avsResultCode: string;
+                        cvvResultCode: string;
+                        method: string;
+                        creditCardNumber: string;
+                        creditCardBin: string;
+                        creditCardCompany: string;
+                        cardHolder: string;
+                        cardExpiration: string;
+                        gateway: string;
+                    };
+                    gateway: string;
+                    status: string;
+                };
+                additionalProperties: boolean;
+            };
+            PaymentDetails: {
+                properties: {
+                    creditCardNumber: {
+                        type: string;
+                    };
+                    creditCardCompany: {
+                        type: string;
+                    };
+                    cardExpiration: {
+                        type: string;
+                    };
+                    cardHolder: {
+                        type: string;
+                    };
+                    avsResultCode: {
+                        type: string;
+                    };
+                    cvvResultCode: {
+                        type: string;
+                    };
+                    creditCardBin: {
+                        type: string;
+                    };
+                    method: {
+                        type: string;
+                    };
+                    gateway: {
+                        type: string;
+                    };
+                };
+                example: {
+                    avsResultCode: string;
+                    cvvResultCode: string;
+                    method: string;
+                    creditCardNumber: string;
+                    creditCardBin: string;
+                    creditCardCompany: string;
+                    cardHolder: string;
+                    cardExpiration: string;
+                    gateway: string;
                 };
                 additionalProperties: boolean;
             };

@@ -41,6 +41,21 @@ var Analytics;
     class QueryParams {
     }
     Analytics.QueryParams = QueryParams;
+    class Order {
+    }
+    Analytics.Order = Order;
+    class Address {
+    }
+    Analytics.Address = Address;
+    class Customer {
+    }
+    Analytics.Customer = Customer;
+    class Transaction {
+    }
+    Analytics.Transaction = Transaction;
+    class PaymentDetails {
+    }
+    Analytics.PaymentDetails = PaymentDetails;
     class inline_response_200 {
     }
     Analytics.inline_response_200 = inline_response_200;

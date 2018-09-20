@@ -7510,7 +7510,7 @@ const Specs = {
                                                 }
                                             },
                                             example: {
-                                                createdDate: "2000-01-23T00:00:00.000Z",
+                                                createdDate: "2000-01-23",
                                                 name: "name",
                                                 params: "{}"
                                             },
@@ -7522,16 +7522,8 @@ const Specs = {
                                     accessToken: "accessToken",
                                     projectId: 0,
                                     dashboards: [
-                                        {
-                                            createdDate: "2000-01-23T00:00:00.000Z",
-                                            name: "name",
-                                            params: "{}"
-                                        },
-                                        {
-                                            createdDate: "2000-01-23T00:00:00.000Z",
-                                            name: "name",
-                                            params: "{}"
-                                        }
+                                        { createdDate: "2000-01-23", name: "name", params: "{}" },
+                                        { createdDate: "2000-01-23", name: "name", params: "{}" }
                                     ]
                                 },
                                 additionalProperties: false
@@ -7547,6 +7539,760 @@ const Specs = {
                                     message: { type: "string" }
                                 },
                                 example: { code: 0, message: "message" },
+                                additionalProperties: false
+                            }
+                        }
+                    }
+                }
+            },
+            "/protect/order": {
+                post: {
+                    summary: "Creates an order",
+                    parameters: [
+                        {
+                            in: "body",
+                            name: "body",
+                            description: "The order",
+                            required: true,
+                            schema: {
+                                required: [
+                                    "createdAt",
+                                    "currency",
+                                    "customer",
+                                    "platform",
+                                    "platformOrderId",
+                                    "tax",
+                                    "totalPrice"
+                                ],
+                                properties: {
+                                    platformOrderId: {
+                                        type: "string",
+                                        description: "The platform's primary key for the order."
+                                    },
+                                    shopId: {
+                                        type: "number",
+                                        description: "The numeric id of the shop.  This is an attribute on orders."
+                                    },
+                                    platform: {
+                                        type: "string",
+                                        description: "The platform the order was created on, like 'presta'"
+                                    },
+                                    tax: {
+                                        type: "number",
+                                        description: "The total tax on the order in the currency of the order."
+                                    },
+                                    currency: {
+                                        type: "string",
+                                        description: "The three-character currency of the order."
+                                    },
+                                    billingAddress: {
+                                        properties: {
+                                            address1: { type: "string" },
+                                            address2: { type: "string" },
+                                            city: { type: "string" },
+                                            zip: { type: "string" },
+                                            provinceCode: {
+                                                type: "string",
+                                                description: "The ISO code for the state/province"
+                                            },
+                                            countryCode: {
+                                                type: "string",
+                                                description: "The two-character ISO code for the country."
+                                            },
+                                            company: { type: "string" }
+                                        },
+                                        example: {
+                                            zip: "zip",
+                                            address2: "address2",
+                                            city: "city",
+                                            address1: "address1",
+                                            provinceCode: "provinceCode",
+                                            countryCode: "countryCode",
+                                            company: "company"
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    shippingAddress: {
+                                        properties: {
+                                            address1: { type: "string" },
+                                            address2: { type: "string" },
+                                            city: { type: "string" },
+                                            zip: { type: "string" },
+                                            provinceCode: {
+                                                type: "string",
+                                                description: "The ISO code for the state/province"
+                                            },
+                                            countryCode: {
+                                                type: "string",
+                                                description: "The two-character ISO code for the country."
+                                            },
+                                            company: { type: "string" }
+                                        },
+                                        example: {
+                                            zip: "zip",
+                                            address2: "address2",
+                                            city: "city",
+                                            address1: "address1",
+                                            provinceCode: "provinceCode",
+                                            countryCode: "countryCode",
+                                            company: "company"
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    createdAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    updatedAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    customer: {
+                                        required: ["email", "firstName", "lastName"],
+                                        properties: {
+                                            platformCustomerId: {
+                                                type: "string",
+                                                description: "The platform-specific id of the customer"
+                                            },
+                                            firstName: { type: "string" },
+                                            lastName: { type: "string" },
+                                            email: { type: "string" },
+                                            phone: { type: "string" },
+                                            createdAt: {
+                                                type: "string",
+                                                format: "date-time",
+                                                convertStringToDate: true
+                                            },
+                                            updatedAt: {
+                                                type: "string",
+                                                format: "date-time",
+                                                convertStringToDate: true
+                                            },
+                                            gender: { type: "string", enum: ["M", "F"] },
+                                            birthday: { type: "string", format: "date" },
+                                            company: { type: "string" },
+                                            ordersCount: {
+                                                type: "number",
+                                                description: "The total number of orders the customer has placed with the shop."
+                                            },
+                                            totalSpent: { type: "number" },
+                                            isEmailVerified: { type: "boolean" },
+                                            isPayingCustomer: { type: "boolean" }
+                                        },
+                                        example: {
+                                            birthday: "2000-01-23",
+                                            lastName: "lastName",
+                                            totalSpent: 5.962133916683182,
+                                            gender: "M",
+                                            platformCustomerId: "platformCustomerId",
+                                            isEmailVerified: true,
+                                            firstName: "firstName",
+                                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                                            ordersCount: 1.4658129805029452,
+                                            isPayingCustomer: true,
+                                            phone: "phone",
+                                            company: "company",
+                                            email: "email",
+                                            updatedAt: "2000-01-23T04:56:07.000+00:00"
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    status: {
+                                        type: "string",
+                                        description: "the status of the payment",
+                                        enum: [
+                                            "PENDING",
+                                            "AUTHORIZED",
+                                            "PARTIALLY_PAID",
+                                            "PAID",
+                                            "PARTIALLY_REFUNDED",
+                                            "REFUNDED",
+                                            "VOIDED"
+                                        ]
+                                    },
+                                    processingMethod: {
+                                        type: "string",
+                                        description: "The payment method.",
+                                        enum: ["CHECKOUT", "DIRECT", "MANUAL", "OFFSITE", "EXPRESS"]
+                                    },
+                                    sourceName: {
+                                        type: "string",
+                                        description: "The source of the payment.",
+                                        enum: ["WEB", "POS", "IPHONE", "ANDROID"]
+                                    },
+                                    totalPrice: {
+                                        type: "number",
+                                        description: "The total price of the order, not including discounts."
+                                    },
+                                    transctions: {
+                                        type: "array",
+                                        items: {
+                                            required: ["amount", "createdAt"],
+                                            properties: {
+                                                platformTransactionId: {
+                                                    type: "string",
+                                                    description: "The platform-specific primary key for the transaction."
+                                                },
+                                                amount: { type: "number" },
+                                                createdAt: {
+                                                    type: "string",
+                                                    format: "date-time",
+                                                    convertStringToDate: true
+                                                },
+                                                gateway: { type: "string" },
+                                                sourceName: { type: "string" },
+                                                paymentDetails: {
+                                                    properties: {
+                                                        creditCardNumber: { type: "string" },
+                                                        creditCardCompany: { type: "string" },
+                                                        cardExpiration: { type: "string" },
+                                                        cardHolder: { type: "string" },
+                                                        avsResultCode: { type: "string" },
+                                                        cvvResultCode: { type: "string" },
+                                                        creditCardBin: { type: "string" },
+                                                        method: { type: "string" },
+                                                        gateway: { type: "string" }
+                                                    },
+                                                    example: {
+                                                        avsResultCode: "avsResultCode",
+                                                        cvvResultCode: "cvvResultCode",
+                                                        method: "method",
+                                                        creditCardNumber: "creditCardNumber",
+                                                        creditCardBin: "creditCardBin",
+                                                        creditCardCompany: "creditCardCompany",
+                                                        cardHolder: "cardHolder",
+                                                        cardExpiration: "cardExpiration",
+                                                        gateway: "gateway"
+                                                    },
+                                                    additionalProperties: false
+                                                },
+                                                kind: {
+                                                    type: "string",
+                                                    enum: [
+                                                        "SALE",
+                                                        "AUTHORIZATION",
+                                                        "CAPTURE",
+                                                        "VOID",
+                                                        "REFUND"
+                                                    ]
+                                                },
+                                                status: { type: "string" },
+                                                currency: { type: "string" }
+                                            },
+                                            example: {
+                                                createdAt: "2000-01-23T04:56:07.000+00:00",
+                                                amount: 2.3021358869347655,
+                                                platformTransactionId: "platformTransactionId",
+                                                kind: "SALE",
+                                                currency: "currency",
+                                                sourceName: "sourceName",
+                                                paymentDetails: {
+                                                    avsResultCode: "avsResultCode",
+                                                    cvvResultCode: "cvvResultCode",
+                                                    method: "method",
+                                                    creditCardNumber: "creditCardNumber",
+                                                    creditCardBin: "creditCardBin",
+                                                    creditCardCompany: "creditCardCompany",
+                                                    cardHolder: "cardHolder",
+                                                    cardExpiration: "cardExpiration",
+                                                    gateway: "gateway"
+                                                },
+                                                gateway: "gateway",
+                                                status: "status"
+                                            },
+                                            additionalProperties: false
+                                        }
+                                    },
+                                    canceledAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    canceledBy: { type: "string" },
+                                    cancelReason: { type: "string" },
+                                    approvedAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    approvedBy: { type: "string" },
+                                    hasGiftCard: {
+                                        type: "boolean",
+                                        description: "was the order was paid with a gift card or not"
+                                    }
+                                },
+                                example: {
+                                    totalPrice: 5.637376656633329,
+                                    approvedBy: "approvedBy",
+                                    canceledBy: "canceledBy",
+                                    tax: 6.027456183070403,
+                                    approvedAt: "2000-01-23T04:56:07.000+00:00",
+                                    platform: "platform",
+                                    createdAt: "2000-01-23T04:56:07.000+00:00",
+                                    transctions: [
+                                        {
+                                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                                            amount: 2.3021358869347655,
+                                            platformTransactionId: "platformTransactionId",
+                                            kind: "SALE",
+                                            currency: "currency",
+                                            sourceName: "sourceName",
+                                            paymentDetails: {
+                                                avsResultCode: "avsResultCode",
+                                                cvvResultCode: "cvvResultCode",
+                                                method: "method",
+                                                creditCardNumber: "creditCardNumber",
+                                                creditCardBin: "creditCardBin",
+                                                creditCardCompany: "creditCardCompany",
+                                                cardHolder: "cardHolder",
+                                                cardExpiration: "cardExpiration",
+                                                gateway: "gateway"
+                                            },
+                                            gateway: "gateway",
+                                            status: "status"
+                                        },
+                                        {
+                                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                                            amount: 2.3021358869347655,
+                                            platformTransactionId: "platformTransactionId",
+                                            kind: "SALE",
+                                            currency: "currency",
+                                            sourceName: "sourceName",
+                                            paymentDetails: {
+                                                avsResultCode: "avsResultCode",
+                                                cvvResultCode: "cvvResultCode",
+                                                method: "method",
+                                                creditCardNumber: "creditCardNumber",
+                                                creditCardBin: "creditCardBin",
+                                                creditCardCompany: "creditCardCompany",
+                                                cardHolder: "cardHolder",
+                                                cardExpiration: "cardExpiration",
+                                                gateway: "gateway"
+                                            },
+                                            gateway: "gateway",
+                                            status: "status"
+                                        }
+                                    ],
+                                    canceledAt: "2000-01-23T04:56:07.000+00:00",
+                                    hasGiftCard: true,
+                                    processingMethod: "CHECKOUT",
+                                    shippingAddress: {
+                                        zip: "zip",
+                                        address2: "address2",
+                                        city: "city",
+                                        address1: "address1",
+                                        provinceCode: "provinceCode",
+                                        countryCode: "countryCode",
+                                        company: "company"
+                                    },
+                                    currency: "currency",
+                                    shopId: 0.8008281904610115,
+                                    billingAddress: {
+                                        zip: "zip",
+                                        address2: "address2",
+                                        city: "city",
+                                        address1: "address1",
+                                        provinceCode: "provinceCode",
+                                        countryCode: "countryCode",
+                                        company: "company"
+                                    },
+                                    sourceName: "WEB",
+                                    platformOrderId: "platformOrderId",
+                                    cancelReason: "cancelReason",
+                                    updatedAt: "2000-01-23T04:56:07.000+00:00",
+                                    customer: {
+                                        birthday: "2000-01-23",
+                                        lastName: "lastName",
+                                        totalSpent: 5.962133916683182,
+                                        gender: "M",
+                                        platformCustomerId: "platformCustomerId",
+                                        isEmailVerified: true,
+                                        firstName: "firstName",
+                                        createdAt: "2000-01-23T04:56:07.000+00:00",
+                                        ordersCount: 1.4658129805029452,
+                                        isPayingCustomer: true,
+                                        phone: "phone",
+                                        company: "company",
+                                        email: "email",
+                                        updatedAt: "2000-01-23T04:56:07.000+00:00"
+                                    },
+                                    status: "PENDING"
+                                },
+                                additionalProperties: false
+                            }
+                        }
+                    ],
+                    responses: {
+                        "200": {
+                            description: "The order",
+                            schema: {
+                                required: [
+                                    "createdAt",
+                                    "currency",
+                                    "customer",
+                                    "platform",
+                                    "platformOrderId",
+                                    "tax",
+                                    "totalPrice"
+                                ],
+                                properties: {
+                                    platformOrderId: {
+                                        type: "string",
+                                        description: "The platform's primary key for the order."
+                                    },
+                                    shopId: {
+                                        type: "number",
+                                        description: "The numeric id of the shop.  This is an attribute on orders."
+                                    },
+                                    platform: {
+                                        type: "string",
+                                        description: "The platform the order was created on, like 'presta'"
+                                    },
+                                    tax: {
+                                        type: "number",
+                                        description: "The total tax on the order in the currency of the order."
+                                    },
+                                    currency: {
+                                        type: "string",
+                                        description: "The three-character currency of the order."
+                                    },
+                                    billingAddress: {
+                                        properties: {
+                                            address1: { type: "string" },
+                                            address2: { type: "string" },
+                                            city: { type: "string" },
+                                            zip: { type: "string" },
+                                            provinceCode: {
+                                                type: "string",
+                                                description: "The ISO code for the state/province"
+                                            },
+                                            countryCode: {
+                                                type: "string",
+                                                description: "The two-character ISO code for the country."
+                                            },
+                                            company: { type: "string" }
+                                        },
+                                        example: {
+                                            zip: "zip",
+                                            address2: "address2",
+                                            city: "city",
+                                            address1: "address1",
+                                            provinceCode: "provinceCode",
+                                            countryCode: "countryCode",
+                                            company: "company"
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    shippingAddress: {
+                                        properties: {
+                                            address1: { type: "string" },
+                                            address2: { type: "string" },
+                                            city: { type: "string" },
+                                            zip: { type: "string" },
+                                            provinceCode: {
+                                                type: "string",
+                                                description: "The ISO code for the state/province"
+                                            },
+                                            countryCode: {
+                                                type: "string",
+                                                description: "The two-character ISO code for the country."
+                                            },
+                                            company: { type: "string" }
+                                        },
+                                        example: {
+                                            zip: "zip",
+                                            address2: "address2",
+                                            city: "city",
+                                            address1: "address1",
+                                            provinceCode: "provinceCode",
+                                            countryCode: "countryCode",
+                                            company: "company"
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    createdAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    updatedAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    customer: {
+                                        required: ["email", "firstName", "lastName"],
+                                        properties: {
+                                            platformCustomerId: {
+                                                type: "string",
+                                                description: "The platform-specific id of the customer"
+                                            },
+                                            firstName: { type: "string" },
+                                            lastName: { type: "string" },
+                                            email: { type: "string" },
+                                            phone: { type: "string" },
+                                            createdAt: {
+                                                type: "string",
+                                                format: "date-time",
+                                                convertStringToDate: true
+                                            },
+                                            updatedAt: {
+                                                type: "string",
+                                                format: "date-time",
+                                                convertStringToDate: true
+                                            },
+                                            gender: { type: "string", enum: ["M", "F"] },
+                                            birthday: { type: "string", format: "date" },
+                                            company: { type: "string" },
+                                            ordersCount: {
+                                                type: "number",
+                                                description: "The total number of orders the customer has placed with the shop."
+                                            },
+                                            totalSpent: { type: "number" },
+                                            isEmailVerified: { type: "boolean" },
+                                            isPayingCustomer: { type: "boolean" }
+                                        },
+                                        example: {
+                                            birthday: "2000-01-23",
+                                            lastName: "lastName",
+                                            totalSpent: 5.962133916683182,
+                                            gender: "M",
+                                            platformCustomerId: "platformCustomerId",
+                                            isEmailVerified: true,
+                                            firstName: "firstName",
+                                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                                            ordersCount: 1.4658129805029452,
+                                            isPayingCustomer: true,
+                                            phone: "phone",
+                                            company: "company",
+                                            email: "email",
+                                            updatedAt: "2000-01-23T04:56:07.000+00:00"
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    status: {
+                                        type: "string",
+                                        description: "the status of the payment",
+                                        enum: [
+                                            "PENDING",
+                                            "AUTHORIZED",
+                                            "PARTIALLY_PAID",
+                                            "PAID",
+                                            "PARTIALLY_REFUNDED",
+                                            "REFUNDED",
+                                            "VOIDED"
+                                        ]
+                                    },
+                                    processingMethod: {
+                                        type: "string",
+                                        description: "The payment method.",
+                                        enum: ["CHECKOUT", "DIRECT", "MANUAL", "OFFSITE", "EXPRESS"]
+                                    },
+                                    sourceName: {
+                                        type: "string",
+                                        description: "The source of the payment.",
+                                        enum: ["WEB", "POS", "IPHONE", "ANDROID"]
+                                    },
+                                    totalPrice: {
+                                        type: "number",
+                                        description: "The total price of the order, not including discounts."
+                                    },
+                                    transctions: {
+                                        type: "array",
+                                        items: {
+                                            required: ["amount", "createdAt"],
+                                            properties: {
+                                                platformTransactionId: {
+                                                    type: "string",
+                                                    description: "The platform-specific primary key for the transaction."
+                                                },
+                                                amount: { type: "number" },
+                                                createdAt: {
+                                                    type: "string",
+                                                    format: "date-time",
+                                                    convertStringToDate: true
+                                                },
+                                                gateway: { type: "string" },
+                                                sourceName: { type: "string" },
+                                                paymentDetails: {
+                                                    properties: {
+                                                        creditCardNumber: { type: "string" },
+                                                        creditCardCompany: { type: "string" },
+                                                        cardExpiration: { type: "string" },
+                                                        cardHolder: { type: "string" },
+                                                        avsResultCode: { type: "string" },
+                                                        cvvResultCode: { type: "string" },
+                                                        creditCardBin: { type: "string" },
+                                                        method: { type: "string" },
+                                                        gateway: { type: "string" }
+                                                    },
+                                                    example: {
+                                                        avsResultCode: "avsResultCode",
+                                                        cvvResultCode: "cvvResultCode",
+                                                        method: "method",
+                                                        creditCardNumber: "creditCardNumber",
+                                                        creditCardBin: "creditCardBin",
+                                                        creditCardCompany: "creditCardCompany",
+                                                        cardHolder: "cardHolder",
+                                                        cardExpiration: "cardExpiration",
+                                                        gateway: "gateway"
+                                                    },
+                                                    additionalProperties: false
+                                                },
+                                                kind: {
+                                                    type: "string",
+                                                    enum: [
+                                                        "SALE",
+                                                        "AUTHORIZATION",
+                                                        "CAPTURE",
+                                                        "VOID",
+                                                        "REFUND"
+                                                    ]
+                                                },
+                                                status: { type: "string" },
+                                                currency: { type: "string" }
+                                            },
+                                            example: {
+                                                createdAt: "2000-01-23T04:56:07.000+00:00",
+                                                amount: 2.3021358869347655,
+                                                platformTransactionId: "platformTransactionId",
+                                                kind: "SALE",
+                                                currency: "currency",
+                                                sourceName: "sourceName",
+                                                paymentDetails: {
+                                                    avsResultCode: "avsResultCode",
+                                                    cvvResultCode: "cvvResultCode",
+                                                    method: "method",
+                                                    creditCardNumber: "creditCardNumber",
+                                                    creditCardBin: "creditCardBin",
+                                                    creditCardCompany: "creditCardCompany",
+                                                    cardHolder: "cardHolder",
+                                                    cardExpiration: "cardExpiration",
+                                                    gateway: "gateway"
+                                                },
+                                                gateway: "gateway",
+                                                status: "status"
+                                            },
+                                            additionalProperties: false
+                                        }
+                                    },
+                                    canceledAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    canceledBy: { type: "string" },
+                                    cancelReason: { type: "string" },
+                                    approvedAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    approvedBy: { type: "string" },
+                                    hasGiftCard: {
+                                        type: "boolean",
+                                        description: "was the order was paid with a gift card or not"
+                                    }
+                                },
+                                example: {
+                                    totalPrice: 5.637376656633329,
+                                    approvedBy: "approvedBy",
+                                    canceledBy: "canceledBy",
+                                    tax: 6.027456183070403,
+                                    approvedAt: "2000-01-23T04:56:07.000+00:00",
+                                    platform: "platform",
+                                    createdAt: "2000-01-23T04:56:07.000+00:00",
+                                    transctions: [
+                                        {
+                                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                                            amount: 2.3021358869347655,
+                                            platformTransactionId: "platformTransactionId",
+                                            kind: "SALE",
+                                            currency: "currency",
+                                            sourceName: "sourceName",
+                                            paymentDetails: {
+                                                avsResultCode: "avsResultCode",
+                                                cvvResultCode: "cvvResultCode",
+                                                method: "method",
+                                                creditCardNumber: "creditCardNumber",
+                                                creditCardBin: "creditCardBin",
+                                                creditCardCompany: "creditCardCompany",
+                                                cardHolder: "cardHolder",
+                                                cardExpiration: "cardExpiration",
+                                                gateway: "gateway"
+                                            },
+                                            gateway: "gateway",
+                                            status: "status"
+                                        },
+                                        {
+                                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                                            amount: 2.3021358869347655,
+                                            platformTransactionId: "platformTransactionId",
+                                            kind: "SALE",
+                                            currency: "currency",
+                                            sourceName: "sourceName",
+                                            paymentDetails: {
+                                                avsResultCode: "avsResultCode",
+                                                cvvResultCode: "cvvResultCode",
+                                                method: "method",
+                                                creditCardNumber: "creditCardNumber",
+                                                creditCardBin: "creditCardBin",
+                                                creditCardCompany: "creditCardCompany",
+                                                cardHolder: "cardHolder",
+                                                cardExpiration: "cardExpiration",
+                                                gateway: "gateway"
+                                            },
+                                            gateway: "gateway",
+                                            status: "status"
+                                        }
+                                    ],
+                                    canceledAt: "2000-01-23T04:56:07.000+00:00",
+                                    hasGiftCard: true,
+                                    processingMethod: "CHECKOUT",
+                                    shippingAddress: {
+                                        zip: "zip",
+                                        address2: "address2",
+                                        city: "city",
+                                        address1: "address1",
+                                        provinceCode: "provinceCode",
+                                        countryCode: "countryCode",
+                                        company: "company"
+                                    },
+                                    currency: "currency",
+                                    shopId: 0.8008281904610115,
+                                    billingAddress: {
+                                        zip: "zip",
+                                        address2: "address2",
+                                        city: "city",
+                                        address1: "address1",
+                                        provinceCode: "provinceCode",
+                                        countryCode: "countryCode",
+                                        company: "company"
+                                    },
+                                    sourceName: "WEB",
+                                    platformOrderId: "platformOrderId",
+                                    cancelReason: "cancelReason",
+                                    updatedAt: "2000-01-23T04:56:07.000+00:00",
+                                    customer: {
+                                        birthday: "2000-01-23",
+                                        lastName: "lastName",
+                                        totalSpent: 5.962133916683182,
+                                        gender: "M",
+                                        platformCustomerId: "platformCustomerId",
+                                        isEmailVerified: true,
+                                        firstName: "firstName",
+                                        createdAt: "2000-01-23T04:56:07.000+00:00",
+                                        ordersCount: 1.4658129805029452,
+                                        isPayingCustomer: true,
+                                        phone: "phone",
+                                        company: "company",
+                                        email: "email",
+                                        updatedAt: "2000-01-23T04:56:07.000+00:00"
+                                    },
+                                    status: "PENDING"
+                                },
                                 additionalProperties: false
                             }
                         }
@@ -7777,11 +8523,7 @@ const Specs = {
                         properties: {}
                     }
                 },
-                example: {
-                    createdDate: "2000-01-23T00:00:00.000Z",
-                    name: "name",
-                    params: "{}"
-                },
+                example: { createdDate: "2000-01-23", name: "name", params: "{}" },
                 additionalProperties: false
             },
             DashboardsUpdateParams: {
@@ -7805,7 +8547,7 @@ const Specs = {
                                 }
                             },
                             example: {
-                                createdDate: "2000-01-23T00:00:00.000Z",
+                                createdDate: "2000-01-23",
                                 name: "name",
                                 params: "{}"
                             },
@@ -7817,16 +8559,8 @@ const Specs = {
                     accessToken: "accessToken",
                     projectId: 0,
                     dashboards: [
-                        {
-                            createdDate: "2000-01-23T00:00:00.000Z",
-                            name: "name",
-                            params: "{}"
-                        },
-                        {
-                            createdDate: "2000-01-23T00:00:00.000Z",
-                            name: "name",
-                            params: "{}"
-                        }
+                        { createdDate: "2000-01-23", name: "name", params: "{}" },
+                        { createdDate: "2000-01-23", name: "name", params: "{}" }
                     ]
                 },
                 additionalProperties: false
@@ -7841,6 +8575,540 @@ const Specs = {
                     }
                 },
                 example: { query: "{}" },
+                additionalProperties: false
+            },
+            Order: {
+                required: [
+                    "createdAt",
+                    "currency",
+                    "customer",
+                    "platform",
+                    "platformOrderId",
+                    "tax",
+                    "totalPrice"
+                ],
+                properties: {
+                    platformOrderId: {
+                        type: "string",
+                        description: "The platform's primary key for the order."
+                    },
+                    shopId: {
+                        type: "number",
+                        description: "The numeric id of the shop.  This is an attribute on orders."
+                    },
+                    platform: {
+                        type: "string",
+                        description: "The platform the order was created on, like 'presta'"
+                    },
+                    tax: {
+                        type: "number",
+                        description: "The total tax on the order in the currency of the order."
+                    },
+                    currency: {
+                        type: "string",
+                        description: "The three-character currency of the order."
+                    },
+                    billingAddress: {
+                        properties: {
+                            address1: { type: "string" },
+                            address2: { type: "string" },
+                            city: { type: "string" },
+                            zip: { type: "string" },
+                            provinceCode: {
+                                type: "string",
+                                description: "The ISO code for the state/province"
+                            },
+                            countryCode: {
+                                type: "string",
+                                description: "The two-character ISO code for the country."
+                            },
+                            company: { type: "string" }
+                        },
+                        example: {
+                            zip: "zip",
+                            address2: "address2",
+                            city: "city",
+                            address1: "address1",
+                            provinceCode: "provinceCode",
+                            countryCode: "countryCode",
+                            company: "company"
+                        },
+                        additionalProperties: false
+                    },
+                    shippingAddress: {
+                        properties: {
+                            address1: { type: "string" },
+                            address2: { type: "string" },
+                            city: { type: "string" },
+                            zip: { type: "string" },
+                            provinceCode: {
+                                type: "string",
+                                description: "The ISO code for the state/province"
+                            },
+                            countryCode: {
+                                type: "string",
+                                description: "The two-character ISO code for the country."
+                            },
+                            company: { type: "string" }
+                        },
+                        example: {
+                            zip: "zip",
+                            address2: "address2",
+                            city: "city",
+                            address1: "address1",
+                            provinceCode: "provinceCode",
+                            countryCode: "countryCode",
+                            company: "company"
+                        },
+                        additionalProperties: false
+                    },
+                    createdAt: {
+                        type: "string",
+                        format: "date-time",
+                        convertStringToDate: true
+                    },
+                    updatedAt: {
+                        type: "string",
+                        format: "date-time",
+                        convertStringToDate: true
+                    },
+                    customer: {
+                        required: ["email", "firstName", "lastName"],
+                        properties: {
+                            platformCustomerId: {
+                                type: "string",
+                                description: "The platform-specific id of the customer"
+                            },
+                            firstName: { type: "string" },
+                            lastName: { type: "string" },
+                            email: { type: "string" },
+                            phone: { type: "string" },
+                            createdAt: {
+                                type: "string",
+                                format: "date-time",
+                                convertStringToDate: true
+                            },
+                            updatedAt: {
+                                type: "string",
+                                format: "date-time",
+                                convertStringToDate: true
+                            },
+                            gender: { type: "string", enum: ["M", "F"] },
+                            birthday: { type: "string", format: "date" },
+                            company: { type: "string" },
+                            ordersCount: {
+                                type: "number",
+                                description: "The total number of orders the customer has placed with the shop."
+                            },
+                            totalSpent: { type: "number" },
+                            isEmailVerified: { type: "boolean" },
+                            isPayingCustomer: { type: "boolean" }
+                        },
+                        example: {
+                            birthday: "2000-01-23",
+                            lastName: "lastName",
+                            totalSpent: 5.962133916683182,
+                            gender: "M",
+                            platformCustomerId: "platformCustomerId",
+                            isEmailVerified: true,
+                            firstName: "firstName",
+                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                            ordersCount: 1.4658129805029452,
+                            isPayingCustomer: true,
+                            phone: "phone",
+                            company: "company",
+                            email: "email",
+                            updatedAt: "2000-01-23T04:56:07.000+00:00"
+                        },
+                        additionalProperties: false
+                    },
+                    status: {
+                        type: "string",
+                        description: "the status of the payment",
+                        enum: [
+                            "PENDING",
+                            "AUTHORIZED",
+                            "PARTIALLY_PAID",
+                            "PAID",
+                            "PARTIALLY_REFUNDED",
+                            "REFUNDED",
+                            "VOIDED"
+                        ]
+                    },
+                    processingMethod: {
+                        type: "string",
+                        description: "The payment method.",
+                        enum: ["CHECKOUT", "DIRECT", "MANUAL", "OFFSITE", "EXPRESS"]
+                    },
+                    sourceName: {
+                        type: "string",
+                        description: "The source of the payment.",
+                        enum: ["WEB", "POS", "IPHONE", "ANDROID"]
+                    },
+                    totalPrice: {
+                        type: "number",
+                        description: "The total price of the order, not including discounts."
+                    },
+                    transctions: {
+                        type: "array",
+                        items: {
+                            required: ["amount", "createdAt"],
+                            properties: {
+                                platformTransactionId: {
+                                    type: "string",
+                                    description: "The platform-specific primary key for the transaction."
+                                },
+                                amount: { type: "number" },
+                                createdAt: {
+                                    type: "string",
+                                    format: "date-time",
+                                    convertStringToDate: true
+                                },
+                                gateway: { type: "string" },
+                                sourceName: { type: "string" },
+                                paymentDetails: {
+                                    properties: {
+                                        creditCardNumber: { type: "string" },
+                                        creditCardCompany: { type: "string" },
+                                        cardExpiration: { type: "string" },
+                                        cardHolder: { type: "string" },
+                                        avsResultCode: { type: "string" },
+                                        cvvResultCode: { type: "string" },
+                                        creditCardBin: { type: "string" },
+                                        method: { type: "string" },
+                                        gateway: { type: "string" }
+                                    },
+                                    example: {
+                                        avsResultCode: "avsResultCode",
+                                        cvvResultCode: "cvvResultCode",
+                                        method: "method",
+                                        creditCardNumber: "creditCardNumber",
+                                        creditCardBin: "creditCardBin",
+                                        creditCardCompany: "creditCardCompany",
+                                        cardHolder: "cardHolder",
+                                        cardExpiration: "cardExpiration",
+                                        gateway: "gateway"
+                                    },
+                                    additionalProperties: false
+                                },
+                                kind: {
+                                    type: "string",
+                                    enum: ["SALE", "AUTHORIZATION", "CAPTURE", "VOID", "REFUND"]
+                                },
+                                status: { type: "string" },
+                                currency: { type: "string" }
+                            },
+                            example: {
+                                createdAt: "2000-01-23T04:56:07.000+00:00",
+                                amount: 2.3021358869347655,
+                                platformTransactionId: "platformTransactionId",
+                                kind: "SALE",
+                                currency: "currency",
+                                sourceName: "sourceName",
+                                paymentDetails: {
+                                    avsResultCode: "avsResultCode",
+                                    cvvResultCode: "cvvResultCode",
+                                    method: "method",
+                                    creditCardNumber: "creditCardNumber",
+                                    creditCardBin: "creditCardBin",
+                                    creditCardCompany: "creditCardCompany",
+                                    cardHolder: "cardHolder",
+                                    cardExpiration: "cardExpiration",
+                                    gateway: "gateway"
+                                },
+                                gateway: "gateway",
+                                status: "status"
+                            },
+                            additionalProperties: false
+                        }
+                    },
+                    canceledAt: {
+                        type: "string",
+                        format: "date-time",
+                        convertStringToDate: true
+                    },
+                    canceledBy: { type: "string" },
+                    cancelReason: { type: "string" },
+                    approvedAt: {
+                        type: "string",
+                        format: "date-time",
+                        convertStringToDate: true
+                    },
+                    approvedBy: { type: "string" },
+                    hasGiftCard: {
+                        type: "boolean",
+                        description: "was the order was paid with a gift card or not"
+                    }
+                },
+                example: {
+                    totalPrice: 5.637376656633329,
+                    approvedBy: "approvedBy",
+                    canceledBy: "canceledBy",
+                    tax: 6.027456183070403,
+                    approvedAt: "2000-01-23T04:56:07.000+00:00",
+                    platform: "platform",
+                    createdAt: "2000-01-23T04:56:07.000+00:00",
+                    transctions: [
+                        {
+                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                            amount: 2.3021358869347655,
+                            platformTransactionId: "platformTransactionId",
+                            kind: "SALE",
+                            currency: "currency",
+                            sourceName: "sourceName",
+                            paymentDetails: {
+                                avsResultCode: "avsResultCode",
+                                cvvResultCode: "cvvResultCode",
+                                method: "method",
+                                creditCardNumber: "creditCardNumber",
+                                creditCardBin: "creditCardBin",
+                                creditCardCompany: "creditCardCompany",
+                                cardHolder: "cardHolder",
+                                cardExpiration: "cardExpiration",
+                                gateway: "gateway"
+                            },
+                            gateway: "gateway",
+                            status: "status"
+                        },
+                        {
+                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                            amount: 2.3021358869347655,
+                            platformTransactionId: "platformTransactionId",
+                            kind: "SALE",
+                            currency: "currency",
+                            sourceName: "sourceName",
+                            paymentDetails: {
+                                avsResultCode: "avsResultCode",
+                                cvvResultCode: "cvvResultCode",
+                                method: "method",
+                                creditCardNumber: "creditCardNumber",
+                                creditCardBin: "creditCardBin",
+                                creditCardCompany: "creditCardCompany",
+                                cardHolder: "cardHolder",
+                                cardExpiration: "cardExpiration",
+                                gateway: "gateway"
+                            },
+                            gateway: "gateway",
+                            status: "status"
+                        }
+                    ],
+                    canceledAt: "2000-01-23T04:56:07.000+00:00",
+                    hasGiftCard: true,
+                    processingMethod: "CHECKOUT",
+                    shippingAddress: {
+                        zip: "zip",
+                        address2: "address2",
+                        city: "city",
+                        address1: "address1",
+                        provinceCode: "provinceCode",
+                        countryCode: "countryCode",
+                        company: "company"
+                    },
+                    currency: "currency",
+                    shopId: 0.8008281904610115,
+                    billingAddress: {
+                        zip: "zip",
+                        address2: "address2",
+                        city: "city",
+                        address1: "address1",
+                        provinceCode: "provinceCode",
+                        countryCode: "countryCode",
+                        company: "company"
+                    },
+                    sourceName: "WEB",
+                    platformOrderId: "platformOrderId",
+                    cancelReason: "cancelReason",
+                    updatedAt: "2000-01-23T04:56:07.000+00:00",
+                    customer: {
+                        birthday: "2000-01-23",
+                        lastName: "lastName",
+                        totalSpent: 5.962133916683182,
+                        gender: "M",
+                        platformCustomerId: "platformCustomerId",
+                        isEmailVerified: true,
+                        firstName: "firstName",
+                        createdAt: "2000-01-23T04:56:07.000+00:00",
+                        ordersCount: 1.4658129805029452,
+                        isPayingCustomer: true,
+                        phone: "phone",
+                        company: "company",
+                        email: "email",
+                        updatedAt: "2000-01-23T04:56:07.000+00:00"
+                    },
+                    status: "PENDING"
+                },
+                additionalProperties: false
+            },
+            Address: {
+                properties: {
+                    address1: { type: "string" },
+                    address2: { type: "string" },
+                    city: { type: "string" },
+                    zip: { type: "string" },
+                    provinceCode: {
+                        type: "string",
+                        description: "The ISO code for the state/province"
+                    },
+                    countryCode: {
+                        type: "string",
+                        description: "The two-character ISO code for the country."
+                    },
+                    company: { type: "string" }
+                },
+                example: {
+                    zip: "zip",
+                    address2: "address2",
+                    city: "city",
+                    address1: "address1",
+                    provinceCode: "provinceCode",
+                    countryCode: "countryCode",
+                    company: "company"
+                },
+                additionalProperties: false
+            },
+            Customer: {
+                required: ["email", "firstName", "lastName"],
+                properties: {
+                    platformCustomerId: {
+                        type: "string",
+                        description: "The platform-specific id of the customer"
+                    },
+                    firstName: { type: "string" },
+                    lastName: { type: "string" },
+                    email: { type: "string" },
+                    phone: { type: "string" },
+                    createdAt: {
+                        type: "string",
+                        format: "date-time",
+                        convertStringToDate: true
+                    },
+                    updatedAt: {
+                        type: "string",
+                        format: "date-time",
+                        convertStringToDate: true
+                    },
+                    gender: { type: "string", enum: ["M", "F"] },
+                    birthday: { type: "string", format: "date" },
+                    company: { type: "string" },
+                    ordersCount: {
+                        type: "number",
+                        description: "The total number of orders the customer has placed with the shop."
+                    },
+                    totalSpent: { type: "number" },
+                    isEmailVerified: { type: "boolean" },
+                    isPayingCustomer: { type: "boolean" }
+                },
+                example: {
+                    birthday: "2000-01-23",
+                    lastName: "lastName",
+                    totalSpent: 5.962133916683182,
+                    gender: "M",
+                    platformCustomerId: "platformCustomerId",
+                    isEmailVerified: true,
+                    firstName: "firstName",
+                    createdAt: "2000-01-23T04:56:07.000+00:00",
+                    ordersCount: 1.4658129805029452,
+                    isPayingCustomer: true,
+                    phone: "phone",
+                    company: "company",
+                    email: "email",
+                    updatedAt: "2000-01-23T04:56:07.000+00:00"
+                },
+                additionalProperties: false
+            },
+            Transaction: {
+                required: ["amount", "createdAt"],
+                properties: {
+                    platformTransactionId: {
+                        type: "string",
+                        description: "The platform-specific primary key for the transaction."
+                    },
+                    amount: { type: "number" },
+                    createdAt: {
+                        type: "string",
+                        format: "date-time",
+                        convertStringToDate: true
+                    },
+                    gateway: { type: "string" },
+                    sourceName: { type: "string" },
+                    paymentDetails: {
+                        properties: {
+                            creditCardNumber: { type: "string" },
+                            creditCardCompany: { type: "string" },
+                            cardExpiration: { type: "string" },
+                            cardHolder: { type: "string" },
+                            avsResultCode: { type: "string" },
+                            cvvResultCode: { type: "string" },
+                            creditCardBin: { type: "string" },
+                            method: { type: "string" },
+                            gateway: { type: "string" }
+                        },
+                        example: {
+                            avsResultCode: "avsResultCode",
+                            cvvResultCode: "cvvResultCode",
+                            method: "method",
+                            creditCardNumber: "creditCardNumber",
+                            creditCardBin: "creditCardBin",
+                            creditCardCompany: "creditCardCompany",
+                            cardHolder: "cardHolder",
+                            cardExpiration: "cardExpiration",
+                            gateway: "gateway"
+                        },
+                        additionalProperties: false
+                    },
+                    kind: {
+                        type: "string",
+                        enum: ["SALE", "AUTHORIZATION", "CAPTURE", "VOID", "REFUND"]
+                    },
+                    status: { type: "string" },
+                    currency: { type: "string" }
+                },
+                example: {
+                    createdAt: "2000-01-23T04:56:07.000+00:00",
+                    amount: 2.3021358869347655,
+                    platformTransactionId: "platformTransactionId",
+                    kind: "SALE",
+                    currency: "currency",
+                    sourceName: "sourceName",
+                    paymentDetails: {
+                        avsResultCode: "avsResultCode",
+                        cvvResultCode: "cvvResultCode",
+                        method: "method",
+                        creditCardNumber: "creditCardNumber",
+                        creditCardBin: "creditCardBin",
+                        creditCardCompany: "creditCardCompany",
+                        cardHolder: "cardHolder",
+                        cardExpiration: "cardExpiration",
+                        gateway: "gateway"
+                    },
+                    gateway: "gateway",
+                    status: "status"
+                },
+                additionalProperties: false
+            },
+            PaymentDetails: {
+                properties: {
+                    creditCardNumber: { type: "string" },
+                    creditCardCompany: { type: "string" },
+                    cardExpiration: { type: "string" },
+                    cardHolder: { type: "string" },
+                    avsResultCode: { type: "string" },
+                    cvvResultCode: { type: "string" },
+                    creditCardBin: { type: "string" },
+                    method: { type: "string" },
+                    gateway: { type: "string" }
+                },
+                example: {
+                    avsResultCode: "avsResultCode",
+                    cvvResultCode: "cvvResultCode",
+                    method: "method",
+                    creditCardNumber: "creditCardNumber",
+                    creditCardBin: "creditCardBin",
+                    creditCardCompany: "creditCardCompany",
+                    cardHolder: "cardHolder",
+                    cardExpiration: "cardExpiration",
+                    gateway: "gateway"
+                },
                 additionalProperties: false
             },
             inline_response_200: {
