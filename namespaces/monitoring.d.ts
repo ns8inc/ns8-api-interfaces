@@ -10,7 +10,7 @@ export declare namespace Monitoring {
     class Login {
         accessToken?: string;
         expiration?: string;
-        user?: undefined;
+        user?: User;
     }
     class APIError {
         code?: number;
@@ -50,7 +50,7 @@ export declare namespace Monitoring {
     }
     class Authorization {
         expiration?: string;
-        user?: undefined;
+        user?: User;
     }
     class ContactCreateParams {
         accessToken?: string;

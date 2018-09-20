@@ -19,7 +19,7 @@ export declare namespace Analytics {
     class Entity {
         name?: string;
         description?: string;
-        attributes?: Array<any>;
+        attributes?: Array<Attribute>;
     }
     class Attribute {
         name?: string;
@@ -39,7 +39,7 @@ export declare namespace Analytics {
     class CampaignIdsUpdateParams {
         accessToken?: string;
         projectId?: number;
-        campaignIds?: Array<undefined>;
+        campaignIds?: Array<CampaignReferrers>;
     }
     class CampaignReferrers {
         referrer?: string;
@@ -58,17 +58,17 @@ export declare namespace Analytics {
     class DashboardsUpdateParams {
         accessToken?: string;
         projectId?: number;
-        dashboards?: Array<undefined>;
+        dashboards?: Array<Dashboard>;
     }
     class QueryParams {
         query: any;
     }
     class inline_response_200 {
-        sessions?: any;
-        pages?: any;
-        events?: any;
-        timings?: any;
-        users?: any;
-        people?: any;
+        sessions?: Entity;
+        pages?: Entity;
+        events?: Entity;
+        timings?: Entity;
+        users?: Entity;
+        people?: Entity;
     }
 }

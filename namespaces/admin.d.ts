@@ -5,7 +5,7 @@ export declare namespace Admin {
         appId: number;
         accountId?: number;
         projectId?: number;
-        permissions?: Array<string>;
+        permissions?: Permissions;
         type?: string;
         createdDate?: string;
         expiration?: string;
@@ -48,9 +48,9 @@ export declare namespace Admin {
         website?: string;
         consoleHost?: string;
         commissions?: boolean;
-        permissions?: Array<any>;
+        permissions?: Array<ApplicationPermission>;
         supportEmail?: string;
-        reporting?: undefined;
+        reporting?: ApplicationReporting;
         userNameFormat?: string;
     }
     class ApplicationPermission {
@@ -61,15 +61,15 @@ export declare namespace Admin {
         apiEndpoint?: string;
     }
     class Authorization {
-        user: any;
-        account: any;
-        projects?: Array<any>;
+        user: User;
+        account: Account;
+        projects?: Array<Project>;
         expiration?: string;
         currentProjectId?: number;
         projectId?: number;
     }
     class AuthorizeParams {
-        accessToken?: undefined;
+        accessToken?: AccessToken;
     }
     class Notification {
         email: string;
@@ -118,7 +118,7 @@ export declare namespace Admin {
     class PaymentHistory {
         discount?: number;
         balance?: number;
-        payments?: Array<any>;
+        payments?: Array<Payment>;
     }
     class PaymentMethodCreateParams {
         stripeToken?: string;
@@ -127,8 +127,8 @@ export declare namespace Admin {
         id?: string;
     }
     class PaymentMethods {
-        customer?: any;
-        cards?: Array<any>;
+        customer?: PaymentCustomer;
+        cards?: Array<PaymentCard>;
     }
     class Permissions {
     }
@@ -141,7 +141,7 @@ export declare namespace Admin {
         enabled?: boolean;
         isDemo?: boolean;
         implemented?: boolean;
-        permissions?: string;
+        permissions?: ProjectPermissions;
         sharedByUserId?: number;
     }
     class ProjectCreateParams {
@@ -159,7 +159,7 @@ export declare namespace Admin {
         projectId?: number;
         userId?: number;
         userName?: string;
-        permissions?: string;
+        permissions?: ProjectPermissions;
         sharedByUserId?: number;
         createdDate?: string;
     }
@@ -223,7 +223,7 @@ export declare namespace Admin {
     class Error {
         code: number;
         message: string;
-        errors?: Array<any>;
+        errors?: Array<Error_errors>;
     }
     class Error_errors {
         name?: string;

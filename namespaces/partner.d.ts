@@ -27,12 +27,12 @@ export declare namespace Partner {
     class TestimonialsResponse {
         code?: number;
         message?: string;
-        data?: undefined;
+        data?: Testimonials;
     }
     class ShowcasesResponse {
         code?: number;
         message?: string;
-        data?: undefined;
+        data?: Showcases;
     }
     class Testimonials {
         testimonials?: Array<any>;
