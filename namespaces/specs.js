@@ -7559,6 +7559,8 @@ const Specs = {
                                     "createdAt",
                                     "currency",
                                     "customer",
+                                    "email",
+                                    "name",
                                     "platform",
                                     "platformOrderId",
                                     "tax",
@@ -7568,6 +7570,10 @@ const Specs = {
                                     platformOrderId: {
                                         type: "string",
                                         description: "The platform's primary key for the order."
+                                    },
+                                    name: {
+                                        type: "string",
+                                        description: "The display name for the order."
                                     },
                                     shopId: {
                                         type: "number",
@@ -7585,57 +7591,86 @@ const Specs = {
                                         type: "string",
                                         description: "The three-character currency of the order."
                                     },
+                                    email: {
+                                        type: "string",
+                                        format: "email",
+                                        description: "The email to contact regarding this order."
+                                    },
                                     billingAddress: {
                                         properties: {
+                                            name: { type: "string" },
+                                            company: { type: "string" },
                                             address1: { type: "string" },
                                             address2: { type: "string" },
                                             city: { type: "string" },
                                             zip: { type: "string" },
-                                            provinceCode: {
+                                            region: {
                                                 type: "string",
-                                                description: "The ISO code for the state/province"
+                                                description: "The full name of the region (state/province)"
+                                            },
+                                            regionCode: {
+                                                type: "string",
+                                                description: "The ISO code for the region (state/province)"
+                                            },
+                                            country: {
+                                                type: "string",
+                                                description: "The full name of the country"
                                             },
                                             countryCode: {
                                                 type: "string",
                                                 description: "The two-character ISO code for the country."
-                                            },
-                                            company: { type: "string" }
+                                            }
                                         },
                                         example: {
                                             zip: "zip",
+                                            country: "country",
+                                            regionCode: "regionCode",
                                             address2: "address2",
                                             city: "city",
                                             address1: "address1",
-                                            provinceCode: "provinceCode",
                                             countryCode: "countryCode",
-                                            company: "company"
+                                            name: "name",
+                                            company: "company",
+                                            region: "region"
                                         },
                                         additionalProperties: false
                                     },
                                     shippingAddress: {
                                         properties: {
+                                            name: { type: "string" },
+                                            company: { type: "string" },
                                             address1: { type: "string" },
                                             address2: { type: "string" },
                                             city: { type: "string" },
                                             zip: { type: "string" },
-                                            provinceCode: {
+                                            region: {
                                                 type: "string",
-                                                description: "The ISO code for the state/province"
+                                                description: "The full name of the region (state/province)"
+                                            },
+                                            regionCode: {
+                                                type: "string",
+                                                description: "The ISO code for the region (state/province)"
+                                            },
+                                            country: {
+                                                type: "string",
+                                                description: "The full name of the country"
                                             },
                                             countryCode: {
                                                 type: "string",
                                                 description: "The two-character ISO code for the country."
-                                            },
-                                            company: { type: "string" }
+                                            }
                                         },
                                         example: {
                                             zip: "zip",
+                                            country: "country",
+                                            regionCode: "regionCode",
                                             address2: "address2",
                                             city: "city",
                                             address1: "address1",
-                                            provinceCode: "provinceCode",
                                             countryCode: "countryCode",
-                                            company: "company"
+                                            name: "name",
+                                            company: "company",
+                                            region: "region"
                                         },
                                         additionalProperties: false
                                     },
@@ -7650,7 +7685,7 @@ const Specs = {
                                         convertStringToDate: true
                                     },
                                     customer: {
-                                        required: ["email", "firstName", "lastName"],
+                                        required: ["firstName", "lastName"],
                                         properties: {
                                             platformCustomerId: {
                                                 type: "string",
@@ -7658,7 +7693,6 @@ const Specs = {
                                             },
                                             firstName: { type: "string" },
                                             lastName: { type: "string" },
-                                            email: { type: "string" },
                                             phone: { type: "string" },
                                             createdAt: {
                                                 type: "string",
@@ -7675,11 +7709,20 @@ const Specs = {
                                             company: { type: "string" },
                                             ordersCount: {
                                                 type: "number",
-                                                description: "The total number of orders the customer has placed with the shop."
+                                                description: "The total number of orders the customer has placed with this shop."
                                             },
-                                            totalSpent: { type: "number" },
-                                            isEmailVerified: { type: "boolean" },
-                                            isPayingCustomer: { type: "boolean" }
+                                            totalSpent: {
+                                                type: "number",
+                                                description: "The total amount of all orders this customer has placed with this shop."
+                                            },
+                                            isEmailVerified: {
+                                                type: "boolean",
+                                                description: "Has the platform verified the email is owned by the customer."
+                                            },
+                                            isPayingCustomer: {
+                                                type: "boolean",
+                                                description: "has the customer ever paid for an order with this shop."
+                                            }
                                         },
                                         example: {
                                             birthday: "2000-01-23",
@@ -7694,7 +7737,6 @@ const Specs = {
                                             isPayingCustomer: true,
                                             phone: "phone",
                                             company: "company",
-                                            email: "email",
                                             updatedAt: "2000-01-23T04:56:07.000+00:00"
                                         },
                                         additionalProperties: false
@@ -7720,7 +7762,8 @@ const Specs = {
                                     sourceName: {
                                         type: "string",
                                         description: "The source of the payment.",
-                                        enum: ["WEB", "POS", "IPHONE", "ANDROID"]
+                                        enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
+                                        additionalProperties: false
                                     },
                                     totalPrice: {
                                         type: "number",
@@ -7735,14 +7778,22 @@ const Specs = {
                                                     type: "string",
                                                     description: "The platform-specific primary key for the transaction."
                                                 },
-                                                amount: { type: "number" },
+                                                amount: {
+                                                    type: "number",
+                                                    description: "The amount of the transaction."
+                                                },
                                                 createdAt: {
                                                     type: "string",
                                                     format: "date-time",
                                                     convertStringToDate: true
                                                 },
                                                 gateway: { type: "string" },
-                                                sourceName: { type: "string" },
+                                                sourceName: {
+                                                    type: "string",
+                                                    description: "The source of the payment.",
+                                                    enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
+                                                    additionalProperties: false
+                                                },
                                                 paymentDetails: {
                                                     properties: {
                                                         creditCardNumber: { type: "string" },
@@ -7779,15 +7830,19 @@ const Specs = {
                                                     ]
                                                 },
                                                 status: { type: "string" },
-                                                currency: { type: "string" }
+                                                currency: { type: "string" },
+                                                test: {
+                                                    type: "boolean",
+                                                    description: "whether the transaction is sandboxed or for testing purposes only"
+                                                }
                                             },
                                             example: {
                                                 createdAt: "2000-01-23T04:56:07.000+00:00",
                                                 amount: 2.3021358869347655,
+                                                test: true,
                                                 platformTransactionId: "platformTransactionId",
                                                 kind: "SALE",
                                                 currency: "currency",
-                                                sourceName: "sourceName",
                                                 paymentDetails: {
                                                     avsResultCode: "avsResultCode",
                                                     cvvResultCode: "cvvResultCode",
@@ -7801,6 +7856,58 @@ const Specs = {
                                                 },
                                                 gateway: "gateway",
                                                 status: "status"
+                                            },
+                                            additionalProperties: false
+                                        }
+                                    },
+                                    lineItems: {
+                                        type: "array",
+                                        items: {
+                                            required: ["name", "price", "quantity"],
+                                            properties: {
+                                                platformId: {
+                                                    type: "string",
+                                                    description: "The platform specific primary key for the line item"
+                                                },
+                                                title: { type: "string" },
+                                                name: { type: "string" },
+                                                quantity: { type: "number" },
+                                                price: { type: "number" },
+                                                sku: { type: "string" },
+                                                isbn: { type: "string" },
+                                                ean13: { type: "string" },
+                                                upc: { type: "string" },
+                                                variantId: {
+                                                    type: "string",
+                                                    description: "Customized product ids. Product that varies by color may have a different variantId"
+                                                },
+                                                variantTitle: { type: "string" },
+                                                vendor: { type: "string" },
+                                                platformProductId: {
+                                                    type: "string",
+                                                    description: "The platform specific primary key for the product"
+                                                },
+                                                giftCard: { type: "boolean" },
+                                                totalDiscount: { type: "number" },
+                                                manufacturer: { type: "string" }
+                                            },
+                                            example: {
+                                                variantTitle: "variantTitle",
+                                                platformProductId: "platformProductId",
+                                                quantity: 7.061401241503109,
+                                                isbn: "isbn",
+                                                ean13: "ean13",
+                                                upc: "upc",
+                                                platformId: "platformId",
+                                                title: "title",
+                                                manufacturer: "manufacturer",
+                                                price: 9.301444243932576,
+                                                vendor: "vendor",
+                                                name: "name",
+                                                giftCard: true,
+                                                totalDiscount: 3.616076749251911,
+                                                variantId: "variantId",
+                                                sku: "sku"
                                             },
                                             additionalProperties: false
                                         }
@@ -7830,15 +7937,53 @@ const Specs = {
                                     tax: 6.027456183070403,
                                     approvedAt: "2000-01-23T04:56:07.000+00:00",
                                     platform: "platform",
+                                    lineItems: [
+                                        {
+                                            variantTitle: "variantTitle",
+                                            platformProductId: "platformProductId",
+                                            quantity: 7.061401241503109,
+                                            isbn: "isbn",
+                                            ean13: "ean13",
+                                            upc: "upc",
+                                            platformId: "platformId",
+                                            title: "title",
+                                            manufacturer: "manufacturer",
+                                            price: 9.301444243932576,
+                                            vendor: "vendor",
+                                            name: "name",
+                                            giftCard: true,
+                                            totalDiscount: 3.616076749251911,
+                                            variantId: "variantId",
+                                            sku: "sku"
+                                        },
+                                        {
+                                            variantTitle: "variantTitle",
+                                            platformProductId: "platformProductId",
+                                            quantity: 7.061401241503109,
+                                            isbn: "isbn",
+                                            ean13: "ean13",
+                                            upc: "upc",
+                                            platformId: "platformId",
+                                            title: "title",
+                                            manufacturer: "manufacturer",
+                                            price: 9.301444243932576,
+                                            vendor: "vendor",
+                                            name: "name",
+                                            giftCard: true,
+                                            totalDiscount: 3.616076749251911,
+                                            variantId: "variantId",
+                                            sku: "sku"
+                                        }
+                                    ],
                                     createdAt: "2000-01-23T04:56:07.000+00:00",
                                     transctions: [
                                         {
                                             createdAt: "2000-01-23T04:56:07.000+00:00",
                                             amount: 2.3021358869347655,
+                                            test: true,
                                             platformTransactionId: "platformTransactionId",
                                             kind: "SALE",
                                             currency: "currency",
-                                            sourceName: "sourceName",
                                             paymentDetails: {
                                                 avsResultCode: "avsResultCode",
                                                 cvvResultCode: "cvvResultCode",
@@ -7856,10 +8001,10 @@ const Specs = {
                                         {
                                             createdAt: "2000-01-23T04:56:07.000+00:00",
                                             amount: 2.3021358869347655,
+                                            test: true,
                                             platformTransactionId: "platformTransactionId",
                                             kind: "SALE",
                                             currency: "currency",
-                                            sourceName: "sourceName",
                                             paymentDetails: {
                                                 avsResultCode: "avsResultCode",
                                                 cvvResultCode: "cvvResultCode",
@@ -7877,30 +8022,38 @@ const Specs = {
                                     ],
                                     canceledAt: "2000-01-23T04:56:07.000+00:00",
                                     hasGiftCard: true,
+                                    name: "name",
                                     processingMethod: "CHECKOUT",
                                     shippingAddress: {
                                         zip: "zip",
+                                        country: "country",
+                                        regionCode: "regionCode",
                                         address2: "address2",
                                         city: "city",
                                         address1: "address1",
-                                        provinceCode: "provinceCode",
                                         countryCode: "countryCode",
-                                        company: "company"
+                                        name: "name",
+                                        company: "company",
+                                        region: "region"
                                     },
                                     currency: "currency",
                                     shopId: 0.8008281904610115,
                                     billingAddress: {
                                         zip: "zip",
+                                        country: "country",
+                                        regionCode: "regionCode",
                                         address2: "address2",
                                         city: "city",
                                         address1: "address1",
-                                        provinceCode: "provinceCode",
                                         countryCode: "countryCode",
-                                        company: "company"
+                                        name: "name",
+                                        company: "company",
+                                        region: "region"
                                     },
-                                    sourceName: "WEB",
+                                    sourceName: {},
                                     platformOrderId: "platformOrderId",
                                     cancelReason: "cancelReason",
+                                    email: "email",
                                     updatedAt: "2000-01-23T04:56:07.000+00:00",
                                     customer: {
                                         birthday: "2000-01-23",
@@ -7915,7 +8068,6 @@ const Specs = {
                                         isPayingCustomer: true,
                                         phone: "phone",
                                         company: "company",
-                                        email: "email",
                                         updatedAt: "2000-01-23T04:56:07.000+00:00"
                                     },
                                     status: "PENDING"
@@ -7932,6 +8084,8 @@ const Specs = {
                                     "createdAt",
                                     "currency",
                                     "customer",
+                                    "email",
+                                    "name",
                                     "platform",
                                     "platformOrderId",
                                     "tax",
@@ -7941,6 +8095,10 @@ const Specs = {
                                     platformOrderId: {
                                         type: "string",
                                         description: "The platform's primary key for the order."
+                                    },
+                                    name: {
+                                        type: "string",
+                                        description: "The display name for the order."
                                     },
                                     shopId: {
                                         type: "number",
@@ -7958,57 +8116,86 @@ const Specs = {
                                         type: "string",
                                         description: "The three-character currency of the order."
                                     },
+                                    email: {
+                                        type: "string",
+                                        format: "email",
+                                        description: "The email to contact regarding this order."
+                                    },
                                     billingAddress: {
                                         properties: {
+                                            name: { type: "string" },
+                                            company: { type: "string" },
                                             address1: { type: "string" },
                                             address2: { type: "string" },
                                             city: { type: "string" },
                                             zip: { type: "string" },
-                                            provinceCode: {
+                                            region: {
                                                 type: "string",
-                                                description: "The ISO code for the state/province"
+                                                description: "The full name of the region (state/province)"
+                                            },
+                                            regionCode: {
+                                                type: "string",
+                                                description: "The ISO code for the region (state/province)"
+                                            },
+                                            country: {
+                                                type: "string",
+                                                description: "The full name of the country"
                                             },
                                             countryCode: {
                                                 type: "string",
                                                 description: "The two-character ISO code for the country."
-                                            },
-                                            company: { type: "string" }
+                                            }
                                         },
                                         example: {
                                             zip: "zip",
+                                            country: "country",
+                                            regionCode: "regionCode",
                                             address2: "address2",
                                             city: "city",
                                             address1: "address1",
-                                            provinceCode: "provinceCode",
                                             countryCode: "countryCode",
-                                            company: "company"
+                                            name: "name",
+                                            company: "company",
+                                            region: "region"
                                         },
                                         additionalProperties: false
                                     },
                                     shippingAddress: {
                                         properties: {
+                                            name: { type: "string" },
+                                            company: { type: "string" },
                                             address1: { type: "string" },
                                             address2: { type: "string" },
                                             city: { type: "string" },
                                             zip: { type: "string" },
-                                            provinceCode: {
+                                            region: {
                                                 type: "string",
-                                                description: "The ISO code for the state/province"
+                                                description: "The full name of the region (state/province)"
+                                            },
+                                            regionCode: {
+                                                type: "string",
+                                                description: "The ISO code for the region (state/province)"
+                                            },
+                                            country: {
+                                                type: "string",
+                                                description: "The full name of the country"
                                             },
                                             countryCode: {
                                                 type: "string",
                                                 description: "The two-character ISO code for the country."
-                                            },
-                                            company: { type: "string" }
+                                            }
                                         },
                                         example: {
                                             zip: "zip",
+                                            country: "country",
+                                            regionCode: "regionCode",
                                             address2: "address2",
                                             city: "city",
                                             address1: "address1",
-                                            provinceCode: "provinceCode",
                                             countryCode: "countryCode",
-                                            company: "company"
+                                            name: "name",
+                                            company: "company",
+                                            region: "region"
                                         },
                                         additionalProperties: false
                                     },
@@ -8023,7 +8210,7 @@ const Specs = {
                                         convertStringToDate: true
                                     },
                                     customer: {
-                                        required: ["email", "firstName", "lastName"],
+                                        required: ["firstName", "lastName"],
                                         properties: {
                                             platformCustomerId: {
                                                 type: "string",
@@ -8031,7 +8218,6 @@ const Specs = {
                                             },
                                             firstName: { type: "string" },
                                             lastName: { type: "string" },
-                                            email: { type: "string" },
                                             phone: { type: "string" },
                                             createdAt: {
                                                 type: "string",
@@ -8048,11 +8234,20 @@ const Specs = {
                                             company: { type: "string" },
                                             ordersCount: {
                                                 type: "number",
-                                                description: "The total number of orders the customer has placed with the shop."
+                                                description: "The total number of orders the customer has placed with this shop."
                                             },
-                                            totalSpent: { type: "number" },
-                                            isEmailVerified: { type: "boolean" },
-                                            isPayingCustomer: { type: "boolean" }
+                                            totalSpent: {
+                                                type: "number",
+                                                description: "The total amount of all orders this customer has placed with this shop."
+                                            },
+                                            isEmailVerified: {
+                                                type: "boolean",
+                                                description: "Has the platform verified the email is owned by the customer."
+                                            },
+                                            isPayingCustomer: {
+                                                type: "boolean",
+                                                description: "has the customer ever paid for an order with this shop."
+                                            }
                                         },
                                         example: {
                                             birthday: "2000-01-23",
@@ -8067,7 +8262,6 @@ const Specs = {
                                             isPayingCustomer: true,
                                             phone: "phone",
                                             company: "company",
-                                            email: "email",
                                             updatedAt: "2000-01-23T04:56:07.000+00:00"
                                         },
                                         additionalProperties: false
@@ -8093,7 +8287,8 @@ const Specs = {
                                     sourceName: {
                                         type: "string",
                                         description: "The source of the payment.",
-                                        enum: ["WEB", "POS", "IPHONE", "ANDROID"]
+                                        enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
+                                        additionalProperties: false
                                     },
                                     totalPrice: {
                                         type: "number",
@@ -8108,14 +8303,22 @@ const Specs = {
                                                     type: "string",
                                                     description: "The platform-specific primary key for the transaction."
                                                 },
-                                                amount: { type: "number" },
+                                                amount: {
+                                                    type: "number",
+                                                    description: "The amount of the transaction."
+                                                },
                                                 createdAt: {
                                                     type: "string",
                                                     format: "date-time",
                                                     convertStringToDate: true
                                                 },
                                                 gateway: { type: "string" },
-                                                sourceName: { type: "string" },
+                                                sourceName: {
+                                                    type: "string",
+                                                    description: "The source of the payment.",
+                                                    enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
+                                                    additionalProperties: false
+                                                },
                                                 paymentDetails: {
                                                     properties: {
                                                         creditCardNumber: { type: "string" },
@@ -8152,15 +8355,19 @@ const Specs = {
                                                     ]
                                                 },
                                                 status: { type: "string" },
-                                                currency: { type: "string" }
+                                                currency: { type: "string" },
+                                                test: {
+                                                    type: "boolean",
+                                                    description: "whether the transaction is sandboxed or for testing purposes only"
+                                                }
                                             },
                                             example: {
                                                 createdAt: "2000-01-23T04:56:07.000+00:00",
                                                 amount: 2.3021358869347655,
+                                                test: true,
                                                 platformTransactionId: "platformTransactionId",
                                                 kind: "SALE",
                                                 currency: "currency",
-                                                sourceName: "sourceName",
                                                 paymentDetails: {
                                                     avsResultCode: "avsResultCode",
                                                     cvvResultCode: "cvvResultCode",
@@ -8174,6 +8381,58 @@ const Specs = {
                                                 },
                                                 gateway: "gateway",
                                                 status: "status"
+                                            },
+                                            additionalProperties: false
+                                        }
+                                    },
+                                    lineItems: {
+                                        type: "array",
+                                        items: {
+                                            required: ["name", "price", "quantity"],
+                                            properties: {
+                                                platformId: {
+                                                    type: "string",
+                                                    description: "The platform specific primary key for the line item"
+                                                },
+                                                title: { type: "string" },
+                                                name: { type: "string" },
+                                                quantity: { type: "number" },
+                                                price: { type: "number" },
+                                                sku: { type: "string" },
+                                                isbn: { type: "string" },
+                                                ean13: { type: "string" },
+                                                upc: { type: "string" },
+                                                variantId: {
+                                                    type: "string",
+                                                    description: "Customized product ids. Product that varies by color may have a different variantId"
+                                                },
+                                                variantTitle: { type: "string" },
+                                                vendor: { type: "string" },
+                                                platformProductId: {
+                                                    type: "string",
+                                                    description: "The platform specific primary key for the product"
+                                                },
+                                                giftCard: { type: "boolean" },
+                                                totalDiscount: { type: "number" },
+                                                manufacturer: { type: "string" }
+                                            },
+                                            example: {
+                                                variantTitle: "variantTitle",
+                                                platformProductId: "platformProductId",
+                                                quantity: 7.061401241503109,
+                                                isbn: "isbn",
+                                                ean13: "ean13",
+                                                upc: "upc",
+                                                platformId: "platformId",
+                                                title: "title",
+                                                manufacturer: "manufacturer",
+                                                price: 9.301444243932576,
+                                                vendor: "vendor",
+                                                name: "name",
+                                                giftCard: true,
+                                                totalDiscount: 3.616076749251911,
+                                                variantId: "variantId",
+                                                sku: "sku"
                                             },
                                             additionalProperties: false
                                         }
@@ -8203,15 +8462,53 @@ const Specs = {
                                     tax: 6.027456183070403,
                                     approvedAt: "2000-01-23T04:56:07.000+00:00",
                                     platform: "platform",
+                                    lineItems: [
+                                        {
+                                            variantTitle: "variantTitle",
+                                            platformProductId: "platformProductId",
+                                            quantity: 7.061401241503109,
+                                            isbn: "isbn",
+                                            ean13: "ean13",
+                                            upc: "upc",
+                                            platformId: "platformId",
+                                            title: "title",
+                                            manufacturer: "manufacturer",
+                                            price: 9.301444243932576,
+                                            vendor: "vendor",
+                                            name: "name",
+                                            giftCard: true,
+                                            totalDiscount: 3.616076749251911,
+                                            variantId: "variantId",
+                                            sku: "sku"
+                                        },
+                                        {
+                                            variantTitle: "variantTitle",
+                                            platformProductId: "platformProductId",
+                                            quantity: 7.061401241503109,
+                                            isbn: "isbn",
+                                            ean13: "ean13",
+                                            upc: "upc",
+                                            platformId: "platformId",
+                                            title: "title",
+                                            manufacturer: "manufacturer",
+                                            price: 9.301444243932576,
+                                            vendor: "vendor",
+                                            name: "name",
+                                            giftCard: true,
+                                            totalDiscount: 3.616076749251911,
+                                            variantId: "variantId",
+                                            sku: "sku"
+                                        }
+                                    ],
                                     createdAt: "2000-01-23T04:56:07.000+00:00",
                                     transctions: [
                                         {
                                             createdAt: "2000-01-23T04:56:07.000+00:00",
                                             amount: 2.3021358869347655,
+                                            test: true,
                                             platformTransactionId: "platformTransactionId",
                                             kind: "SALE",
                                             currency: "currency",
-                                            sourceName: "sourceName",
                                             paymentDetails: {
                                                 avsResultCode: "avsResultCode",
                                                 cvvResultCode: "cvvResultCode",
@@ -8229,10 +8526,10 @@ const Specs = {
                                         {
                                             createdAt: "2000-01-23T04:56:07.000+00:00",
                                             amount: 2.3021358869347655,
+                                            test: true,
                                             platformTransactionId: "platformTransactionId",
                                             kind: "SALE",
                                             currency: "currency",
-                                            sourceName: "sourceName",
                                             paymentDetails: {
                                                 avsResultCode: "avsResultCode",
                                                 cvvResultCode: "cvvResultCode",
@@ -8250,30 +8547,38 @@ const Specs = {
                                     ],
                                     canceledAt: "2000-01-23T04:56:07.000+00:00",
                                     hasGiftCard: true,
+                                    name: "name",
                                     processingMethod: "CHECKOUT",
                                     shippingAddress: {
                                         zip: "zip",
+                                        country: "country",
+                                        regionCode: "regionCode",
                                         address2: "address2",
                                         city: "city",
                                         address1: "address1",
-                                        provinceCode: "provinceCode",
                                         countryCode: "countryCode",
-                                        company: "company"
+                                        name: "name",
+                                        company: "company",
+                                        region: "region"
                                     },
                                     currency: "currency",
                                     shopId: 0.8008281904610115,
                                     billingAddress: {
                                         zip: "zip",
+                                        country: "country",
+                                        regionCode: "regionCode",
                                         address2: "address2",
                                         city: "city",
                                         address1: "address1",
-                                        provinceCode: "provinceCode",
                                         countryCode: "countryCode",
-                                        company: "company"
+                                        name: "name",
+                                        company: "company",
+                                        region: "region"
                                     },
-                                    sourceName: "WEB",
+                                    sourceName: {},
                                     platformOrderId: "platformOrderId",
                                     cancelReason: "cancelReason",
+                                    email: "email",
                                     updatedAt: "2000-01-23T04:56:07.000+00:00",
                                     customer: {
                                         birthday: "2000-01-23",
@@ -8288,7 +8593,6 @@ const Specs = {
                                         isPayingCustomer: true,
                                         phone: "phone",
                                         company: "company",
-                                        email: "email",
                                         updatedAt: "2000-01-23T04:56:07.000+00:00"
                                     },
                                     status: "PENDING"
@@ -8582,6 +8886,8 @@ const Specs = {
                     "createdAt",
                     "currency",
                     "customer",
+                    "email",
+                    "name",
                     "platform",
                     "platformOrderId",
                     "tax",
@@ -8591,6 +8897,10 @@ const Specs = {
                     platformOrderId: {
                         type: "string",
                         description: "The platform's primary key for the order."
+                    },
+                    name: {
+                        type: "string",
+                        description: "The display name for the order."
                     },
                     shopId: {
                         type: "number",
@@ -8608,57 +8918,86 @@ const Specs = {
                         type: "string",
                         description: "The three-character currency of the order."
                     },
+                    email: {
+                        type: "string",
+                        format: "email",
+                        description: "The email to contact regarding this order."
+                    },
                     billingAddress: {
                         properties: {
+                            name: { type: "string" },
+                            company: { type: "string" },
                             address1: { type: "string" },
                             address2: { type: "string" },
                             city: { type: "string" },
                             zip: { type: "string" },
-                            provinceCode: {
+                            region: {
                                 type: "string",
-                                description: "The ISO code for the state/province"
+                                description: "The full name of the region (state/province)"
+                            },
+                            regionCode: {
+                                type: "string",
+                                description: "The ISO code for the region (state/province)"
+                            },
+                            country: {
+                                type: "string",
+                                description: "The full name of the country"
                             },
                             countryCode: {
                                 type: "string",
                                 description: "The two-character ISO code for the country."
-                            },
-                            company: { type: "string" }
+                            }
                         },
                         example: {
                             zip: "zip",
+                            country: "country",
+                            regionCode: "regionCode",
                             address2: "address2",
                             city: "city",
                             address1: "address1",
-                            provinceCode: "provinceCode",
                             countryCode: "countryCode",
-                            company: "company"
+                            name: "name",
+                            company: "company",
+                            region: "region"
                         },
                         additionalProperties: false
                     },
                     shippingAddress: {
                         properties: {
+                            name: { type: "string" },
+                            company: { type: "string" },
                             address1: { type: "string" },
                             address2: { type: "string" },
                             city: { type: "string" },
                             zip: { type: "string" },
-                            provinceCode: {
+                            region: {
                                 type: "string",
-                                description: "The ISO code for the state/province"
+                                description: "The full name of the region (state/province)"
+                            },
+                            regionCode: {
+                                type: "string",
+                                description: "The ISO code for the region (state/province)"
+                            },
+                            country: {
+                                type: "string",
+                                description: "The full name of the country"
                             },
                             countryCode: {
                                 type: "string",
                                 description: "The two-character ISO code for the country."
-                            },
-                            company: { type: "string" }
+                            }
                         },
                         example: {
                             zip: "zip",
+                            country: "country",
+                            regionCode: "regionCode",
                             address2: "address2",
                             city: "city",
                             address1: "address1",
-                            provinceCode: "provinceCode",
                             countryCode: "countryCode",
-                            company: "company"
+                            name: "name",
+                            company: "company",
+                            region: "region"
                         },
                         additionalProperties: false
                     },
@@ -8673,7 +9012,7 @@ const Specs = {
                         convertStringToDate: true
                     },
                     customer: {
-                        required: ["email", "firstName", "lastName"],
+                        required: ["firstName", "lastName"],
                         properties: {
                             platformCustomerId: {
                                 type: "string",
@@ -8681,7 +9020,6 @@ const Specs = {
                             },
                             firstName: { type: "string" },
                             lastName: { type: "string" },
-                            email: { type: "string" },
                             phone: { type: "string" },
                             createdAt: {
                                 type: "string",
@@ -8698,11 +9036,20 @@ const Specs = {
                             company: { type: "string" },
                             ordersCount: {
                                 type: "number",
-                                description: "The total number of orders the customer has placed with the shop."
+                                description: "The total number of orders the customer has placed with this shop."
                             },
-                            totalSpent: { type: "number" },
-                            isEmailVerified: { type: "boolean" },
-                            isPayingCustomer: { type: "boolean" }
+                            totalSpent: {
+                                type: "number",
+                                description: "The total amount of all orders this customer has placed with this shop."
+                            },
+                            isEmailVerified: {
+                                type: "boolean",
+                                description: "Has the platform verified the email is owned by the customer."
+                            },
+                            isPayingCustomer: {
+                                type: "boolean",
+                                description: "has the customer ever paid for an order with this shop."
+                            }
                         },
                         example: {
                             birthday: "2000-01-23",
@@ -8717,7 +9064,6 @@ const Specs = {
                             isPayingCustomer: true,
                             phone: "phone",
                             company: "company",
-                            email: "email",
                             updatedAt: "2000-01-23T04:56:07.000+00:00"
                         },
                         additionalProperties: false
@@ -8743,7 +9089,8 @@ const Specs = {
                     sourceName: {
                         type: "string",
                         description: "The source of the payment.",
-                        enum: ["WEB", "POS", "IPHONE", "ANDROID"]
+                        enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
+                        additionalProperties: false
                     },
                     totalPrice: {
                         type: "number",
@@ -8758,14 +9105,22 @@ const Specs = {
                                     type: "string",
                                     description: "The platform-specific primary key for the transaction."
                                 },
-                                amount: { type: "number" },
+                                amount: {
+                                    type: "number",
+                                    description: "The amount of the transaction."
+                                },
                                 createdAt: {
                                     type: "string",
                                     format: "date-time",
                                     convertStringToDate: true
                                 },
                                 gateway: { type: "string" },
-                                sourceName: { type: "string" },
+                                sourceName: {
+                                    type: "string",
+                                    description: "The source of the payment.",
+                                    enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
+                                    additionalProperties: false
+                                },
                                 paymentDetails: {
                                     properties: {
                                         creditCardNumber: { type: "string" },
@@ -8796,15 +9151,19 @@ const Specs = {
                                     enum: ["SALE", "AUTHORIZATION", "CAPTURE", "VOID", "REFUND"]
                                 },
                                 status: { type: "string" },
-                                currency: { type: "string" }
+                                currency: { type: "string" },
+                                test: {
+                                    type: "boolean",
+                                    description: "whether the transaction is sandboxed or for testing purposes only"
+                                }
                             },
                             example: {
                                 createdAt: "2000-01-23T04:56:07.000+00:00",
                                 amount: 2.3021358869347655,
+                                test: true,
                                 platformTransactionId: "platformTransactionId",
                                 kind: "SALE",
                                 currency: "currency",
-                                sourceName: "sourceName",
                                 paymentDetails: {
                                     avsResultCode: "avsResultCode",
                                     cvvResultCode: "cvvResultCode",
@@ -8818,6 +9177,58 @@ const Specs = {
                                 },
                                 gateway: "gateway",
                                 status: "status"
+                            },
+                            additionalProperties: false
+                        }
+                    },
+                    lineItems: {
+                        type: "array",
+                        items: {
+                            required: ["name", "price", "quantity"],
+                            properties: {
+                                platformId: {
+                                    type: "string",
+                                    description: "The platform specific primary key for the line item"
+                                },
+                                title: { type: "string" },
+                                name: { type: "string" },
+                                quantity: { type: "number" },
+                                price: { type: "number" },
+                                sku: { type: "string" },
+                                isbn: { type: "string" },
+                                ean13: { type: "string" },
+                                upc: { type: "string" },
+                                variantId: {
+                                    type: "string",
+                                    description: "Customized product ids. Product that varies by color may have a different variantId"
+                                },
+                                variantTitle: { type: "string" },
+                                vendor: { type: "string" },
+                                platformProductId: {
+                                    type: "string",
+                                    description: "The platform specific primary key for the product"
+                                },
+                                giftCard: { type: "boolean" },
+                                totalDiscount: { type: "number" },
+                                manufacturer: { type: "string" }
+                            },
+                            example: {
+                                variantTitle: "variantTitle",
+                                platformProductId: "platformProductId",
+                                quantity: 7.061401241503109,
+                                isbn: "isbn",
+                                ean13: "ean13",
+                                upc: "upc",
+                                platformId: "platformId",
+                                title: "title",
+                                manufacturer: "manufacturer",
+                                price: 9.301444243932576,
+                                vendor: "vendor",
+                                name: "name",
+                                giftCard: true,
+                                totalDiscount: 3.616076749251911,
+                                variantId: "variantId",
+                                sku: "sku"
                             },
                             additionalProperties: false
                         }
@@ -8847,15 +9258,53 @@ const Specs = {
                     tax: 6.027456183070403,
                     approvedAt: "2000-01-23T04:56:07.000+00:00",
                     platform: "platform",
+                    lineItems: [
+                        {
+                            variantTitle: "variantTitle",
+                            platformProductId: "platformProductId",
+                            quantity: 7.061401241503109,
+                            isbn: "isbn",
+                            ean13: "ean13",
+                            upc: "upc",
+                            platformId: "platformId",
+                            title: "title",
+                            manufacturer: "manufacturer",
+                            price: 9.301444243932576,
+                            vendor: "vendor",
+                            name: "name",
+                            giftCard: true,
+                            totalDiscount: 3.616076749251911,
+                            variantId: "variantId",
+                            sku: "sku"
+                        },
+                        {
+                            variantTitle: "variantTitle",
+                            platformProductId: "platformProductId",
+                            quantity: 7.061401241503109,
+                            isbn: "isbn",
+                            ean13: "ean13",
+                            upc: "upc",
+                            platformId: "platformId",
+                            title: "title",
+                            manufacturer: "manufacturer",
+                            price: 9.301444243932576,
+                            vendor: "vendor",
+                            name: "name",
+                            giftCard: true,
+                            totalDiscount: 3.616076749251911,
+                            variantId: "variantId",
+                            sku: "sku"
+                        }
+                    ],
                     createdAt: "2000-01-23T04:56:07.000+00:00",
                     transctions: [
                         {
                             createdAt: "2000-01-23T04:56:07.000+00:00",
                             amount: 2.3021358869347655,
+                            test: true,
                             platformTransactionId: "platformTransactionId",
                             kind: "SALE",
                             currency: "currency",
-                            sourceName: "sourceName",
                             paymentDetails: {
                                 avsResultCode: "avsResultCode",
                                 cvvResultCode: "cvvResultCode",
@@ -8873,10 +9322,10 @@ const Specs = {
                         {
                             createdAt: "2000-01-23T04:56:07.000+00:00",
                             amount: 2.3021358869347655,
+                            test: true,
                             platformTransactionId: "platformTransactionId",
                             kind: "SALE",
                             currency: "currency",
-                            sourceName: "sourceName",
                             paymentDetails: {
                                 avsResultCode: "avsResultCode",
                                 cvvResultCode: "cvvResultCode",
@@ -8894,30 +9343,38 @@ const Specs = {
                     ],
                     canceledAt: "2000-01-23T04:56:07.000+00:00",
                     hasGiftCard: true,
+                    name: "name",
                     processingMethod: "CHECKOUT",
                     shippingAddress: {
                         zip: "zip",
+                        country: "country",
+                        regionCode: "regionCode",
                         address2: "address2",
                         city: "city",
                         address1: "address1",
-                        provinceCode: "provinceCode",
                         countryCode: "countryCode",
-                        company: "company"
+                        name: "name",
+                        company: "company",
+                        region: "region"
                     },
                     currency: "currency",
                     shopId: 0.8008281904610115,
                     billingAddress: {
                         zip: "zip",
+                        country: "country",
+                        regionCode: "regionCode",
                         address2: "address2",
                         city: "city",
                         address1: "address1",
-                        provinceCode: "provinceCode",
                         countryCode: "countryCode",
-                        company: "company"
+                        name: "name",
+                        company: "company",
+                        region: "region"
                     },
-                    sourceName: "WEB",
+                    sourceName: {},
                     platformOrderId: "platformOrderId",
                     cancelReason: "cancelReason",
+                    email: "email",
                     updatedAt: "2000-01-23T04:56:07.000+00:00",
                     customer: {
                         birthday: "2000-01-23",
@@ -8932,7 +9389,6 @@ const Specs = {
                         isPayingCustomer: true,
                         phone: "phone",
                         company: "company",
-                        email: "email",
                         updatedAt: "2000-01-23T04:56:07.000+00:00"
                     },
                     status: "PENDING"
@@ -8941,33 +9397,45 @@ const Specs = {
             },
             Address: {
                 properties: {
+                    name: { type: "string" },
+                    company: { type: "string" },
                     address1: { type: "string" },
                     address2: { type: "string" },
                     city: { type: "string" },
                     zip: { type: "string" },
-                    provinceCode: {
+                    region: {
                         type: "string",
-                        description: "The ISO code for the state/province"
+                        description: "The full name of the region (state/province)"
+                    },
+                    regionCode: {
+                        type: "string",
+                        description: "The ISO code for the region (state/province)"
+                    },
+                    country: {
+                        type: "string",
+                        description: "The full name of the country"
                     },
                     countryCode: {
                         type: "string",
                         description: "The two-character ISO code for the country."
-                    },
-                    company: { type: "string" }
+                    }
                 },
                 example: {
                     zip: "zip",
+                    country: "country",
+                    regionCode: "regionCode",
                     address2: "address2",
                     city: "city",
                     address1: "address1",
-                    provinceCode: "provinceCode",
                     countryCode: "countryCode",
-                    company: "company"
+                    name: "name",
+                    company: "company",
+                    region: "region"
                 },
                 additionalProperties: false
             },
             Customer: {
-                required: ["email", "firstName", "lastName"],
+                required: ["firstName", "lastName"],
                 properties: {
                     platformCustomerId: {
                         type: "string",
@@ -8975,7 +9443,6 @@ const Specs = {
                     },
                     firstName: { type: "string" },
                     lastName: { type: "string" },
-                    email: { type: "string" },
                     phone: { type: "string" },
                     createdAt: {
                         type: "string",
@@ -8992,11 +9459,20 @@ const Specs = {
                     company: { type: "string" },
                     ordersCount: {
                         type: "number",
-                        description: "The total number of orders the customer has placed with the shop."
+                        description: "The total number of orders the customer has placed with this shop."
                     },
-                    totalSpent: { type: "number" },
-                    isEmailVerified: { type: "boolean" },
-                    isPayingCustomer: { type: "boolean" }
+                    totalSpent: {
+                        type: "number",
+                        description: "The total amount of all orders this customer has placed with this shop."
+                    },
+                    isEmailVerified: {
+                        type: "boolean",
+                        description: "Has the platform verified the email is owned by the customer."
+                    },
+                    isPayingCustomer: {
+                        type: "boolean",
+                        description: "has the customer ever paid for an order with this shop."
+                    }
                 },
                 example: {
                     birthday: "2000-01-23",
@@ -9011,7 +9487,6 @@ const Specs = {
                     isPayingCustomer: true,
                     phone: "phone",
                     company: "company",
-                    email: "email",
                     updatedAt: "2000-01-23T04:56:07.000+00:00"
                 },
                 additionalProperties: false
@@ -9023,14 +9498,22 @@ const Specs = {
                         type: "string",
                         description: "The platform-specific primary key for the transaction."
                     },
-                    amount: { type: "number" },
+                    amount: {
+                        type: "number",
+                        description: "The amount of the transaction."
+                    },
                     createdAt: {
                         type: "string",
                         format: "date-time",
                         convertStringToDate: true
                     },
                     gateway: { type: "string" },
-                    sourceName: { type: "string" },
+                    sourceName: {
+                        type: "string",
+                        description: "The source of the payment.",
+                        enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
+                        additionalProperties: false
+                    },
                     paymentDetails: {
                         properties: {
                             creditCardNumber: { type: "string" },
@@ -9061,15 +9544,19 @@ const Specs = {
                         enum: ["SALE", "AUTHORIZATION", "CAPTURE", "VOID", "REFUND"]
                     },
                     status: { type: "string" },
-                    currency: { type: "string" }
+                    currency: { type: "string" },
+                    test: {
+                        type: "boolean",
+                        description: "whether the transaction is sandboxed or for testing purposes only"
+                    }
                 },
                 example: {
                     createdAt: "2000-01-23T04:56:07.000+00:00",
                     amount: 2.3021358869347655,
+                    test: true,
                     platformTransactionId: "platformTransactionId",
                     kind: "SALE",
                     currency: "currency",
-                    sourceName: "sourceName",
                     paymentDetails: {
                         avsResultCode: "avsResultCode",
                         cvvResultCode: "cvvResultCode",
@@ -9109,6 +9596,61 @@ const Specs = {
                     cardExpiration: "cardExpiration",
                     gateway: "gateway"
                 },
+                additionalProperties: false
+            },
+            LineItem: {
+                required: ["name", "price", "quantity"],
+                properties: {
+                    platformId: {
+                        type: "string",
+                        description: "The platform specific primary key for the line item"
+                    },
+                    title: { type: "string" },
+                    name: { type: "string" },
+                    quantity: { type: "number" },
+                    price: { type: "number" },
+                    sku: { type: "string" },
+                    isbn: { type: "string" },
+                    ean13: { type: "string" },
+                    upc: { type: "string" },
+                    variantId: {
+                        type: "string",
+                        description: "Customized product ids. Product that varies by color may have a different variantId"
+                    },
+                    variantTitle: { type: "string" },
+                    vendor: { type: "string" },
+                    platformProductId: {
+                        type: "string",
+                        description: "The platform specific primary key for the product"
+                    },
+                    giftCard: { type: "boolean" },
+                    totalDiscount: { type: "number" },
+                    manufacturer: { type: "string" }
+                },
+                example: {
+                    variantTitle: "variantTitle",
+                    platformProductId: "platformProductId",
+                    quantity: 7.061401241503109,
+                    isbn: "isbn",
+                    ean13: "ean13",
+                    upc: "upc",
+                    platformId: "platformId",
+                    title: "title",
+                    manufacturer: "manufacturer",
+                    price: 9.301444243932576,
+                    vendor: "vendor",
+                    name: "name",
+                    giftCard: true,
+                    totalDiscount: 3.616076749251911,
+                    variantId: "variantId",
+                    sku: "sku"
+                },
+                additionalProperties: false
+            },
+            SourceName: {
+                type: "string",
+                description: "The source of the payment.",
+                enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
                 additionalProperties: false
             },
             inline_response_200: {

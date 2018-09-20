@@ -65,10 +65,12 @@ export declare namespace Analytics {
     }
     class Order {
         platformOrderId: string;
+        name: string;
         shopId?: number;
         platform: string;
         tax: number;
         currency: string;
+        email: string;
         billingAddress?: Address;
         shippingAddress?: Address;
         createdAt: string;
@@ -76,9 +78,10 @@ export declare namespace Analytics {
         customer: Customer;
         status?: string;
         processingMethod?: string;
-        sourceName?: string;
+        sourceName?: SourceName;
         totalPrice: number;
         transctions?: Array<Transaction>;
+        lineItems?: Array<LineItem>;
         canceledAt?: string;
         canceledBy?: string;
         cancelReason?: string;
@@ -87,19 +90,21 @@ export declare namespace Analytics {
         hasGiftCard?: boolean;
     }
     class Address {
+        name?: string;
+        company?: string;
         address1?: string;
         address2?: string;
         city?: string;
         zip?: string;
-        provinceCode?: string;
+        region?: string;
+        regionCode?: string;
+        country?: string;
         countryCode?: string;
-        company?: string;
     }
     class Customer {
         platformCustomerId?: string;
         firstName: string;
         lastName: string;
-        email: string;
         phone?: string;
         createdAt?: string;
         updatedAt?: string;
@@ -116,11 +121,12 @@ export declare namespace Analytics {
         amount: number;
         createdAt: string;
         gateway?: string;
-        sourceName?: string;
+        sourceName?: SourceName;
         paymentDetails?: PaymentDetails;
         kind?: string;
         status?: string;
         currency?: string;
+        test?: boolean;
     }
     class PaymentDetails {
         creditCardNumber?: string;
@@ -132,6 +138,26 @@ export declare namespace Analytics {
         creditCardBin?: string;
         method?: string;
         gateway?: string;
+    }
+    class LineItem {
+        platformId?: string;
+        title?: string;
+        name: string;
+        quantity: number;
+        price: number;
+        sku?: string;
+        isbn?: string;
+        ean13?: string;
+        upc?: string;
+        variantId?: string;
+        variantTitle?: string;
+        vendor?: string;
+        platformProductId?: string;
+        giftCard?: boolean;
+        totalDiscount?: number;
+        manufacturer?: string;
+    }
+    class SourceName {
     }
     class inline_response_200 {
         sessions?: Entity;

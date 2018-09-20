@@ -8306,6 +8306,10 @@ declare const Specs: {
                                     type: string;
                                     description: string;
                                 };
+                                name: {
+                                    type: string;
+                                    description: string;
+                                };
                                 shopId: {
                                     type: string;
                                     description: string;
@@ -8322,8 +8326,19 @@ declare const Specs: {
                                     type: string;
                                     description: string;
                                 };
+                                email: {
+                                    type: string;
+                                    format: string;
+                                    description: string;
+                                };
                                 billingAddress: {
                                     properties: {
+                                        name: {
+                                            type: string;
+                                        };
+                                        company: {
+                                            type: string;
+                                        };
                                         address1: {
                                             type: string;
                                         };
@@ -8336,7 +8351,15 @@ declare const Specs: {
                                         zip: {
                                             type: string;
                                         };
-                                        provinceCode: {
+                                        region: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        regionCode: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        country: {
                                             type: string;
                                             description: string;
                                         };
@@ -8344,23 +8367,29 @@ declare const Specs: {
                                             type: string;
                                             description: string;
                                         };
-                                        company: {
-                                            type: string;
-                                        };
                                     };
                                     example: {
                                         zip: string;
+                                        country: string;
+                                        regionCode: string;
                                         address2: string;
                                         city: string;
                                         address1: string;
-                                        provinceCode: string;
                                         countryCode: string;
+                                        name: string;
                                         company: string;
+                                        region: string;
                                     };
                                     additionalProperties: boolean;
                                 };
                                 shippingAddress: {
                                     properties: {
+                                        name: {
+                                            type: string;
+                                        };
+                                        company: {
+                                            type: string;
+                                        };
                                         address1: {
                                             type: string;
                                         };
@@ -8373,7 +8402,15 @@ declare const Specs: {
                                         zip: {
                                             type: string;
                                         };
-                                        provinceCode: {
+                                        region: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        regionCode: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        country: {
                                             type: string;
                                             description: string;
                                         };
@@ -8381,18 +8418,18 @@ declare const Specs: {
                                             type: string;
                                             description: string;
                                         };
-                                        company: {
-                                            type: string;
-                                        };
                                     };
                                     example: {
                                         zip: string;
+                                        country: string;
+                                        regionCode: string;
                                         address2: string;
                                         city: string;
                                         address1: string;
-                                        provinceCode: string;
                                         countryCode: string;
+                                        name: string;
                                         company: string;
+                                        region: string;
                                     };
                                     additionalProperties: boolean;
                                 };
@@ -8417,9 +8454,6 @@ declare const Specs: {
                                             type: string;
                                         };
                                         lastName: {
-                                            type: string;
-                                        };
-                                        email: {
                                             type: string;
                                         };
                                         phone: {
@@ -8452,12 +8486,15 @@ declare const Specs: {
                                         };
                                         totalSpent: {
                                             type: string;
+                                            description: string;
                                         };
                                         isEmailVerified: {
                                             type: string;
+                                            description: string;
                                         };
                                         isPayingCustomer: {
                                             type: string;
+                                            description: string;
                                         };
                                     };
                                     example: {
@@ -8473,7 +8510,6 @@ declare const Specs: {
                                         isPayingCustomer: boolean;
                                         phone: string;
                                         company: string;
-                                        email: string;
                                         updatedAt: string;
                                     };
                                     additionalProperties: boolean;
@@ -8492,6 +8528,7 @@ declare const Specs: {
                                     type: string;
                                     description: string;
                                     enum: string[];
+                                    additionalProperties: boolean;
                                 };
                                 totalPrice: {
                                     type: string;
@@ -8508,6 +8545,7 @@ declare const Specs: {
                                             };
                                             amount: {
                                                 type: string;
+                                                description: string;
                                             };
                                             createdAt: {
                                                 type: string;
@@ -8519,6 +8557,9 @@ declare const Specs: {
                                             };
                                             sourceName: {
                                                 type: string;
+                                                description: string;
+                                                enum: string[];
+                                                additionalProperties: boolean;
                                             };
                                             paymentDetails: {
                                                 properties: {
@@ -8573,14 +8614,18 @@ declare const Specs: {
                                             currency: {
                                                 type: string;
                                             };
+                                            test: {
+                                                type: string;
+                                                description: string;
+                                            };
                                         };
                                         example: {
                                             createdAt: string;
                                             amount: number;
+                                            test: boolean;
                                             platformTransactionId: string;
                                             kind: string;
                                             currency: string;
-                                            sourceName: string;
                                             paymentDetails: {
                                                 avsResultCode: string;
                                                 cvvResultCode: string;
@@ -8594,6 +8639,84 @@ declare const Specs: {
                                             };
                                             gateway: string;
                                             status: string;
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                };
+                                lineItems: {
+                                    type: string;
+                                    items: {
+                                        required: string[];
+                                        properties: {
+                                            platformId: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            title: {
+                                                type: string;
+                                            };
+                                            name: {
+                                                type: string;
+                                            };
+                                            quantity: {
+                                                type: string;
+                                            };
+                                            price: {
+                                                type: string;
+                                            };
+                                            sku: {
+                                                type: string;
+                                            };
+                                            isbn: {
+                                                type: string;
+                                            };
+                                            ean13: {
+                                                type: string;
+                                            };
+                                            upc: {
+                                                type: string;
+                                            };
+                                            variantId: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            variantTitle: {
+                                                type: string;
+                                            };
+                                            vendor: {
+                                                type: string;
+                                            };
+                                            platformProductId: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            giftCard: {
+                                                type: string;
+                                            };
+                                            totalDiscount: {
+                                                type: string;
+                                            };
+                                            manufacturer: {
+                                                type: string;
+                                            };
+                                        };
+                                        example: {
+                                            variantTitle: string;
+                                            platformProductId: string;
+                                            quantity: number;
+                                            isbn: string;
+                                            ean13: string;
+                                            upc: string;
+                                            platformId: string;
+                                            title: string;
+                                            manufacturer: string;
+                                            price: number;
+                                            vendor: string;
+                                            name: string;
+                                            giftCard: boolean;
+                                            totalDiscount: number;
+                                            variantId: string;
+                                            sku: string;
                                         };
                                         additionalProperties: boolean;
                                     };
@@ -8629,14 +8752,32 @@ declare const Specs: {
                                 tax: number;
                                 approvedAt: string;
                                 platform: string;
+                                lineItems: {
+                                    variantTitle: string;
+                                    platformProductId: string;
+                                    quantity: number;
+                                    isbn: string;
+                                    ean13: string;
+                                    upc: string;
+                                    platformId: string;
+                                    title: string;
+                                    manufacturer: string;
+                                    price: number;
+                                    vendor: string;
+                                    name: string;
+                                    giftCard: boolean;
+                                    totalDiscount: number;
+                                    variantId: string;
+                                    sku: string;
+                                }[];
                                 createdAt: string;
                                 transctions: {
                                     createdAt: string;
                                     amount: number;
+                                    test: boolean;
                                     platformTransactionId: string;
                                     kind: string;
                                     currency: string;
-                                    sourceName: string;
                                     paymentDetails: {
                                         avsResultCode: string;
                                         cvvResultCode: string;
@@ -8653,30 +8794,38 @@ declare const Specs: {
                                 }[];
                                 canceledAt: string;
                                 hasGiftCard: boolean;
+                                name: string;
                                 processingMethod: string;
                                 shippingAddress: {
                                     zip: string;
+                                    country: string;
+                                    regionCode: string;
                                     address2: string;
                                     city: string;
                                     address1: string;
-                                    provinceCode: string;
                                     countryCode: string;
+                                    name: string;
                                     company: string;
+                                    region: string;
                                 };
                                 currency: string;
                                 shopId: number;
                                 billingAddress: {
                                     zip: string;
+                                    country: string;
+                                    regionCode: string;
                                     address2: string;
                                     city: string;
                                     address1: string;
-                                    provinceCode: string;
                                     countryCode: string;
+                                    name: string;
                                     company: string;
+                                    region: string;
                                 };
-                                sourceName: string;
+                                sourceName: {};
                                 platformOrderId: string;
                                 cancelReason: string;
+                                email: string;
                                 updatedAt: string;
                                 customer: {
                                     birthday: string;
@@ -8691,7 +8840,6 @@ declare const Specs: {
                                     isPayingCustomer: boolean;
                                     phone: string;
                                     company: string;
-                                    email: string;
                                     updatedAt: string;
                                 };
                                 status: string;
@@ -8706,6 +8854,10 @@ declare const Specs: {
                                 required: string[];
                                 properties: {
                                     platformOrderId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    name: {
                                         type: string;
                                         description: string;
                                     };
@@ -8725,8 +8877,19 @@ declare const Specs: {
                                         type: string;
                                         description: string;
                                     };
+                                    email: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                    };
                                     billingAddress: {
                                         properties: {
+                                            name: {
+                                                type: string;
+                                            };
+                                            company: {
+                                                type: string;
+                                            };
                                             address1: {
                                                 type: string;
                                             };
@@ -8739,7 +8902,15 @@ declare const Specs: {
                                             zip: {
                                                 type: string;
                                             };
-                                            provinceCode: {
+                                            region: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            regionCode: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            country: {
                                                 type: string;
                                                 description: string;
                                             };
@@ -8747,23 +8918,29 @@ declare const Specs: {
                                                 type: string;
                                                 description: string;
                                             };
-                                            company: {
-                                                type: string;
-                                            };
                                         };
                                         example: {
                                             zip: string;
+                                            country: string;
+                                            regionCode: string;
                                             address2: string;
                                             city: string;
                                             address1: string;
-                                            provinceCode: string;
                                             countryCode: string;
+                                            name: string;
                                             company: string;
+                                            region: string;
                                         };
                                         additionalProperties: boolean;
                                     };
                                     shippingAddress: {
                                         properties: {
+                                            name: {
+                                                type: string;
+                                            };
+                                            company: {
+                                                type: string;
+                                            };
                                             address1: {
                                                 type: string;
                                             };
@@ -8776,7 +8953,15 @@ declare const Specs: {
                                             zip: {
                                                 type: string;
                                             };
-                                            provinceCode: {
+                                            region: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            regionCode: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            country: {
                                                 type: string;
                                                 description: string;
                                             };
@@ -8784,18 +8969,18 @@ declare const Specs: {
                                                 type: string;
                                                 description: string;
                                             };
-                                            company: {
-                                                type: string;
-                                            };
                                         };
                                         example: {
                                             zip: string;
+                                            country: string;
+                                            regionCode: string;
                                             address2: string;
                                             city: string;
                                             address1: string;
-                                            provinceCode: string;
                                             countryCode: string;
+                                            name: string;
                                             company: string;
+                                            region: string;
                                         };
                                         additionalProperties: boolean;
                                     };
@@ -8820,9 +9005,6 @@ declare const Specs: {
                                                 type: string;
                                             };
                                             lastName: {
-                                                type: string;
-                                            };
-                                            email: {
                                                 type: string;
                                             };
                                             phone: {
@@ -8855,12 +9037,15 @@ declare const Specs: {
                                             };
                                             totalSpent: {
                                                 type: string;
+                                                description: string;
                                             };
                                             isEmailVerified: {
                                                 type: string;
+                                                description: string;
                                             };
                                             isPayingCustomer: {
                                                 type: string;
+                                                description: string;
                                             };
                                         };
                                         example: {
@@ -8876,7 +9061,6 @@ declare const Specs: {
                                             isPayingCustomer: boolean;
                                             phone: string;
                                             company: string;
-                                            email: string;
                                             updatedAt: string;
                                         };
                                         additionalProperties: boolean;
@@ -8895,6 +9079,7 @@ declare const Specs: {
                                         type: string;
                                         description: string;
                                         enum: string[];
+                                        additionalProperties: boolean;
                                     };
                                     totalPrice: {
                                         type: string;
@@ -8911,6 +9096,7 @@ declare const Specs: {
                                                 };
                                                 amount: {
                                                     type: string;
+                                                    description: string;
                                                 };
                                                 createdAt: {
                                                     type: string;
@@ -8922,6 +9108,9 @@ declare const Specs: {
                                                 };
                                                 sourceName: {
                                                     type: string;
+                                                    description: string;
+                                                    enum: string[];
+                                                    additionalProperties: boolean;
                                                 };
                                                 paymentDetails: {
                                                     properties: {
@@ -8976,14 +9165,18 @@ declare const Specs: {
                                                 currency: {
                                                     type: string;
                                                 };
+                                                test: {
+                                                    type: string;
+                                                    description: string;
+                                                };
                                             };
                                             example: {
                                                 createdAt: string;
                                                 amount: number;
+                                                test: boolean;
                                                 platformTransactionId: string;
                                                 kind: string;
                                                 currency: string;
-                                                sourceName: string;
                                                 paymentDetails: {
                                                     avsResultCode: string;
                                                     cvvResultCode: string;
@@ -8997,6 +9190,84 @@ declare const Specs: {
                                                 };
                                                 gateway: string;
                                                 status: string;
+                                            };
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                    lineItems: {
+                                        type: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                platformId: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                title: {
+                                                    type: string;
+                                                };
+                                                name: {
+                                                    type: string;
+                                                };
+                                                quantity: {
+                                                    type: string;
+                                                };
+                                                price: {
+                                                    type: string;
+                                                };
+                                                sku: {
+                                                    type: string;
+                                                };
+                                                isbn: {
+                                                    type: string;
+                                                };
+                                                ean13: {
+                                                    type: string;
+                                                };
+                                                upc: {
+                                                    type: string;
+                                                };
+                                                variantId: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                variantTitle: {
+                                                    type: string;
+                                                };
+                                                vendor: {
+                                                    type: string;
+                                                };
+                                                platformProductId: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                giftCard: {
+                                                    type: string;
+                                                };
+                                                totalDiscount: {
+                                                    type: string;
+                                                };
+                                                manufacturer: {
+                                                    type: string;
+                                                };
+                                            };
+                                            example: {
+                                                variantTitle: string;
+                                                platformProductId: string;
+                                                quantity: number;
+                                                isbn: string;
+                                                ean13: string;
+                                                upc: string;
+                                                platformId: string;
+                                                title: string;
+                                                manufacturer: string;
+                                                price: number;
+                                                vendor: string;
+                                                name: string;
+                                                giftCard: boolean;
+                                                totalDiscount: number;
+                                                variantId: string;
+                                                sku: string;
                                             };
                                             additionalProperties: boolean;
                                         };
@@ -9032,14 +9303,32 @@ declare const Specs: {
                                     tax: number;
                                     approvedAt: string;
                                     platform: string;
+                                    lineItems: {
+                                        variantTitle: string;
+                                        platformProductId: string;
+                                        quantity: number;
+                                        isbn: string;
+                                        ean13: string;
+                                        upc: string;
+                                        platformId: string;
+                                        title: string;
+                                        manufacturer: string;
+                                        price: number;
+                                        vendor: string;
+                                        name: string;
+                                        giftCard: boolean;
+                                        totalDiscount: number;
+                                        variantId: string;
+                                        sku: string;
+                                    }[];
                                     createdAt: string;
                                     transctions: {
                                         createdAt: string;
                                         amount: number;
+                                        test: boolean;
                                         platformTransactionId: string;
                                         kind: string;
                                         currency: string;
-                                        sourceName: string;
                                         paymentDetails: {
                                             avsResultCode: string;
                                             cvvResultCode: string;
@@ -9056,30 +9345,38 @@ declare const Specs: {
                                     }[];
                                     canceledAt: string;
                                     hasGiftCard: boolean;
+                                    name: string;
                                     processingMethod: string;
                                     shippingAddress: {
                                         zip: string;
+                                        country: string;
+                                        regionCode: string;
                                         address2: string;
                                         city: string;
                                         address1: string;
-                                        provinceCode: string;
                                         countryCode: string;
+                                        name: string;
                                         company: string;
+                                        region: string;
                                     };
                                     currency: string;
                                     shopId: number;
                                     billingAddress: {
                                         zip: string;
+                                        country: string;
+                                        regionCode: string;
                                         address2: string;
                                         city: string;
                                         address1: string;
-                                        provinceCode: string;
                                         countryCode: string;
+                                        name: string;
                                         company: string;
+                                        region: string;
                                     };
-                                    sourceName: string;
+                                    sourceName: {};
                                     platformOrderId: string;
                                     cancelReason: string;
+                                    email: string;
                                     updatedAt: string;
                                     customer: {
                                         birthday: string;
@@ -9094,7 +9391,6 @@ declare const Specs: {
                                         isPayingCustomer: boolean;
                                         phone: string;
                                         company: string;
-                                        email: string;
                                         updatedAt: string;
                                     };
                                     status: string;
@@ -9493,6 +9789,10 @@ declare const Specs: {
                         type: string;
                         description: string;
                     };
+                    name: {
+                        type: string;
+                        description: string;
+                    };
                     shopId: {
                         type: string;
                         description: string;
@@ -9509,8 +9809,19 @@ declare const Specs: {
                         type: string;
                         description: string;
                     };
+                    email: {
+                        type: string;
+                        format: string;
+                        description: string;
+                    };
                     billingAddress: {
                         properties: {
+                            name: {
+                                type: string;
+                            };
+                            company: {
+                                type: string;
+                            };
                             address1: {
                                 type: string;
                             };
@@ -9523,7 +9834,15 @@ declare const Specs: {
                             zip: {
                                 type: string;
                             };
-                            provinceCode: {
+                            region: {
+                                type: string;
+                                description: string;
+                            };
+                            regionCode: {
+                                type: string;
+                                description: string;
+                            };
+                            country: {
                                 type: string;
                                 description: string;
                             };
@@ -9531,23 +9850,29 @@ declare const Specs: {
                                 type: string;
                                 description: string;
                             };
-                            company: {
-                                type: string;
-                            };
                         };
                         example: {
                             zip: string;
+                            country: string;
+                            regionCode: string;
                             address2: string;
                             city: string;
                             address1: string;
-                            provinceCode: string;
                             countryCode: string;
+                            name: string;
                             company: string;
+                            region: string;
                         };
                         additionalProperties: boolean;
                     };
                     shippingAddress: {
                         properties: {
+                            name: {
+                                type: string;
+                            };
+                            company: {
+                                type: string;
+                            };
                             address1: {
                                 type: string;
                             };
@@ -9560,7 +9885,15 @@ declare const Specs: {
                             zip: {
                                 type: string;
                             };
-                            provinceCode: {
+                            region: {
+                                type: string;
+                                description: string;
+                            };
+                            regionCode: {
+                                type: string;
+                                description: string;
+                            };
+                            country: {
                                 type: string;
                                 description: string;
                             };
@@ -9568,18 +9901,18 @@ declare const Specs: {
                                 type: string;
                                 description: string;
                             };
-                            company: {
-                                type: string;
-                            };
                         };
                         example: {
                             zip: string;
+                            country: string;
+                            regionCode: string;
                             address2: string;
                             city: string;
                             address1: string;
-                            provinceCode: string;
                             countryCode: string;
+                            name: string;
                             company: string;
+                            region: string;
                         };
                         additionalProperties: boolean;
                     };
@@ -9604,9 +9937,6 @@ declare const Specs: {
                                 type: string;
                             };
                             lastName: {
-                                type: string;
-                            };
-                            email: {
                                 type: string;
                             };
                             phone: {
@@ -9639,12 +9969,15 @@ declare const Specs: {
                             };
                             totalSpent: {
                                 type: string;
+                                description: string;
                             };
                             isEmailVerified: {
                                 type: string;
+                                description: string;
                             };
                             isPayingCustomer: {
                                 type: string;
+                                description: string;
                             };
                         };
                         example: {
@@ -9660,7 +9993,6 @@ declare const Specs: {
                             isPayingCustomer: boolean;
                             phone: string;
                             company: string;
-                            email: string;
                             updatedAt: string;
                         };
                         additionalProperties: boolean;
@@ -9679,6 +10011,7 @@ declare const Specs: {
                         type: string;
                         description: string;
                         enum: string[];
+                        additionalProperties: boolean;
                     };
                     totalPrice: {
                         type: string;
@@ -9695,6 +10028,7 @@ declare const Specs: {
                                 };
                                 amount: {
                                     type: string;
+                                    description: string;
                                 };
                                 createdAt: {
                                     type: string;
@@ -9706,6 +10040,9 @@ declare const Specs: {
                                 };
                                 sourceName: {
                                     type: string;
+                                    description: string;
+                                    enum: string[];
+                                    additionalProperties: boolean;
                                 };
                                 paymentDetails: {
                                     properties: {
@@ -9760,14 +10097,18 @@ declare const Specs: {
                                 currency: {
                                     type: string;
                                 };
+                                test: {
+                                    type: string;
+                                    description: string;
+                                };
                             };
                             example: {
                                 createdAt: string;
                                 amount: number;
+                                test: boolean;
                                 platformTransactionId: string;
                                 kind: string;
                                 currency: string;
-                                sourceName: string;
                                 paymentDetails: {
                                     avsResultCode: string;
                                     cvvResultCode: string;
@@ -9781,6 +10122,84 @@ declare const Specs: {
                                 };
                                 gateway: string;
                                 status: string;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    };
+                    lineItems: {
+                        type: string;
+                        items: {
+                            required: string[];
+                            properties: {
+                                platformId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                title: {
+                                    type: string;
+                                };
+                                name: {
+                                    type: string;
+                                };
+                                quantity: {
+                                    type: string;
+                                };
+                                price: {
+                                    type: string;
+                                };
+                                sku: {
+                                    type: string;
+                                };
+                                isbn: {
+                                    type: string;
+                                };
+                                ean13: {
+                                    type: string;
+                                };
+                                upc: {
+                                    type: string;
+                                };
+                                variantId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                variantTitle: {
+                                    type: string;
+                                };
+                                vendor: {
+                                    type: string;
+                                };
+                                platformProductId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                giftCard: {
+                                    type: string;
+                                };
+                                totalDiscount: {
+                                    type: string;
+                                };
+                                manufacturer: {
+                                    type: string;
+                                };
+                            };
+                            example: {
+                                variantTitle: string;
+                                platformProductId: string;
+                                quantity: number;
+                                isbn: string;
+                                ean13: string;
+                                upc: string;
+                                platformId: string;
+                                title: string;
+                                manufacturer: string;
+                                price: number;
+                                vendor: string;
+                                name: string;
+                                giftCard: boolean;
+                                totalDiscount: number;
+                                variantId: string;
+                                sku: string;
                             };
                             additionalProperties: boolean;
                         };
@@ -9816,14 +10235,32 @@ declare const Specs: {
                     tax: number;
                     approvedAt: string;
                     platform: string;
+                    lineItems: {
+                        variantTitle: string;
+                        platformProductId: string;
+                        quantity: number;
+                        isbn: string;
+                        ean13: string;
+                        upc: string;
+                        platformId: string;
+                        title: string;
+                        manufacturer: string;
+                        price: number;
+                        vendor: string;
+                        name: string;
+                        giftCard: boolean;
+                        totalDiscount: number;
+                        variantId: string;
+                        sku: string;
+                    }[];
                     createdAt: string;
                     transctions: {
                         createdAt: string;
                         amount: number;
+                        test: boolean;
                         platformTransactionId: string;
                         kind: string;
                         currency: string;
-                        sourceName: string;
                         paymentDetails: {
                             avsResultCode: string;
                             cvvResultCode: string;
@@ -9840,30 +10277,38 @@ declare const Specs: {
                     }[];
                     canceledAt: string;
                     hasGiftCard: boolean;
+                    name: string;
                     processingMethod: string;
                     shippingAddress: {
                         zip: string;
+                        country: string;
+                        regionCode: string;
                         address2: string;
                         city: string;
                         address1: string;
-                        provinceCode: string;
                         countryCode: string;
+                        name: string;
                         company: string;
+                        region: string;
                     };
                     currency: string;
                     shopId: number;
                     billingAddress: {
                         zip: string;
+                        country: string;
+                        regionCode: string;
                         address2: string;
                         city: string;
                         address1: string;
-                        provinceCode: string;
                         countryCode: string;
+                        name: string;
                         company: string;
+                        region: string;
                     };
-                    sourceName: string;
+                    sourceName: {};
                     platformOrderId: string;
                     cancelReason: string;
+                    email: string;
                     updatedAt: string;
                     customer: {
                         birthday: string;
@@ -9878,7 +10323,6 @@ declare const Specs: {
                         isPayingCustomer: boolean;
                         phone: string;
                         company: string;
-                        email: string;
                         updatedAt: string;
                     };
                     status: string;
@@ -9887,6 +10331,12 @@ declare const Specs: {
             };
             Address: {
                 properties: {
+                    name: {
+                        type: string;
+                    };
+                    company: {
+                        type: string;
+                    };
                     address1: {
                         type: string;
                     };
@@ -9899,7 +10349,15 @@ declare const Specs: {
                     zip: {
                         type: string;
                     };
-                    provinceCode: {
+                    region: {
+                        type: string;
+                        description: string;
+                    };
+                    regionCode: {
+                        type: string;
+                        description: string;
+                    };
+                    country: {
                         type: string;
                         description: string;
                     };
@@ -9907,18 +10365,18 @@ declare const Specs: {
                         type: string;
                         description: string;
                     };
-                    company: {
-                        type: string;
-                    };
                 };
                 example: {
                     zip: string;
+                    country: string;
+                    regionCode: string;
                     address2: string;
                     city: string;
                     address1: string;
-                    provinceCode: string;
                     countryCode: string;
+                    name: string;
                     company: string;
+                    region: string;
                 };
                 additionalProperties: boolean;
             };
@@ -9933,9 +10391,6 @@ declare const Specs: {
                         type: string;
                     };
                     lastName: {
-                        type: string;
-                    };
-                    email: {
                         type: string;
                     };
                     phone: {
@@ -9968,12 +10423,15 @@ declare const Specs: {
                     };
                     totalSpent: {
                         type: string;
+                        description: string;
                     };
                     isEmailVerified: {
                         type: string;
+                        description: string;
                     };
                     isPayingCustomer: {
                         type: string;
+                        description: string;
                     };
                 };
                 example: {
@@ -9989,7 +10447,6 @@ declare const Specs: {
                     isPayingCustomer: boolean;
                     phone: string;
                     company: string;
-                    email: string;
                     updatedAt: string;
                 };
                 additionalProperties: boolean;
@@ -10003,6 +10460,7 @@ declare const Specs: {
                     };
                     amount: {
                         type: string;
+                        description: string;
                     };
                     createdAt: {
                         type: string;
@@ -10014,6 +10472,9 @@ declare const Specs: {
                     };
                     sourceName: {
                         type: string;
+                        description: string;
+                        enum: string[];
+                        additionalProperties: boolean;
                     };
                     paymentDetails: {
                         properties: {
@@ -10068,14 +10529,18 @@ declare const Specs: {
                     currency: {
                         type: string;
                     };
+                    test: {
+                        type: string;
+                        description: string;
+                    };
                 };
                 example: {
                     createdAt: string;
                     amount: number;
+                    test: boolean;
                     platformTransactionId: string;
                     kind: string;
                     currency: string;
-                    sourceName: string;
                     paymentDetails: {
                         avsResultCode: string;
                         cvvResultCode: string;
@@ -10133,6 +10598,87 @@ declare const Specs: {
                     cardExpiration: string;
                     gateway: string;
                 };
+                additionalProperties: boolean;
+            };
+            LineItem: {
+                required: string[];
+                properties: {
+                    platformId: {
+                        type: string;
+                        description: string;
+                    };
+                    title: {
+                        type: string;
+                    };
+                    name: {
+                        type: string;
+                    };
+                    quantity: {
+                        type: string;
+                    };
+                    price: {
+                        type: string;
+                    };
+                    sku: {
+                        type: string;
+                    };
+                    isbn: {
+                        type: string;
+                    };
+                    ean13: {
+                        type: string;
+                    };
+                    upc: {
+                        type: string;
+                    };
+                    variantId: {
+                        type: string;
+                        description: string;
+                    };
+                    variantTitle: {
+                        type: string;
+                    };
+                    vendor: {
+                        type: string;
+                    };
+                    platformProductId: {
+                        type: string;
+                        description: string;
+                    };
+                    giftCard: {
+                        type: string;
+                    };
+                    totalDiscount: {
+                        type: string;
+                    };
+                    manufacturer: {
+                        type: string;
+                    };
+                };
+                example: {
+                    variantTitle: string;
+                    platformProductId: string;
+                    quantity: number;
+                    isbn: string;
+                    ean13: string;
+                    upc: string;
+                    platformId: string;
+                    title: string;
+                    manufacturer: string;
+                    price: number;
+                    vendor: string;
+                    name: string;
+                    giftCard: boolean;
+                    totalDiscount: number;
+                    variantId: string;
+                    sku: string;
+                };
+                additionalProperties: boolean;
+            };
+            SourceName: {
+                type: string;
+                description: string;
+                enum: string[];
                 additionalProperties: boolean;
             };
             inline_response_200: {

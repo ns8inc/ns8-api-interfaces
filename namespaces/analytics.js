@@ -56,6 +56,12 @@ var Analytics;
     class PaymentDetails {
     }
     Analytics.PaymentDetails = PaymentDetails;
+    class LineItem {
+    }
+    Analytics.LineItem = LineItem;
+    class SourceName {
+    }
+    Analytics.SourceName = SourceName;
     class inline_response_200 {
     }
     Analytics.inline_response_200 = inline_response_200;
