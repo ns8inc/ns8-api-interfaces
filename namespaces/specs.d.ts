@@ -13720,5 +13720,7606 @@ declare const Specs: {
             };
         };
     };
+    Protect: {
+        swagger: string;
+        info: {
+            description: string;
+            version: string;
+            title: string;
+            "x-namespace": string;
+        };
+        host: string;
+        basePath: string;
+        tags: ({
+            name: string;
+            description?: undefined;
+        } | {
+            name: string;
+            description: string;
+        })[];
+        schemes: string[];
+        produces: string[];
+        paths: {
+            "/protect/users": {
+                post: {
+                    tags: string[];
+                    summary: string;
+                    parameters: {
+                        in: string;
+                        name: string;
+                        description: string;
+                        required: boolean;
+                        schema: {
+                            type: string;
+                            required: string[];
+                            properties: {
+                                name: {
+                                    type: string;
+                                    description: string;
+                                    minLength: number;
+                                    transform: string[];
+                                };
+                                email: {
+                                    type: string;
+                                    format: string;
+                                };
+                                password: {
+                                    type: string;
+                                    minLength: number;
+                                };
+                                firstName: {
+                                    type: string;
+                                };
+                                lastName: {
+                                    type: string;
+                                };
+                                phone: {
+                                    type: string;
+                                    pattern: string;
+                                };
+                                timezone: {
+                                    type: string;
+                                    default: string;
+                                };
+                            };
+                            example: {
+                                firstName: string;
+                                lastName: string;
+                                password: string;
+                                phone: string;
+                                timezone: string;
+                                name: string;
+                                email: string;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    }[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    id: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    name: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    firstName: {
+                                        type: string;
+                                    };
+                                    lastName: {
+                                        type: string;
+                                    };
+                                    email: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                    };
+                                    status: {
+                                        type: string;
+                                    };
+                                    phone: {
+                                        type: string;
+                                    };
+                                    timezone: {
+                                        type: string;
+                                    };
+                                    createdDate: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    lastUpdated: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                };
+                                example: {
+                                    firstName: string;
+                                    lastName: string;
+                                    lastUpdated: string;
+                                    createdDate: string;
+                                    phone: string;
+                                    timezone: string;
+                                    name: string;
+                                    id: number;
+                                    email: string;
+                                    status: number;
+                                };
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "400": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "401": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "404": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "409": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "429": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    "x-rate-limit": number;
+                };
+                patch: {
+                    tags: string[];
+                    summary: string;
+                    parameters: {
+                        in: string;
+                        name: string;
+                        description: string;
+                        required: boolean;
+                        schema: {
+                            properties: {
+                                firstName: {
+                                    type: string;
+                                };
+                                lastName: {
+                                    type: string;
+                                };
+                                email: {
+                                    type: string;
+                                    format: string;
+                                };
+                                phone: {
+                                    type: string;
+                                    pattern: string;
+                                };
+                                timezone: {
+                                    type: string;
+                                };
+                            };
+                            description: string;
+                            example: {
+                                firstName: string;
+                                lastName: string;
+                                phone: string;
+                                timezone: string;
+                                email: string;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    }[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    id: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    name: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    firstName: {
+                                        type: string;
+                                    };
+                                    lastName: {
+                                        type: string;
+                                    };
+                                    email: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                    };
+                                    status: {
+                                        type: string;
+                                    };
+                                    phone: {
+                                        type: string;
+                                    };
+                                    timezone: {
+                                        type: string;
+                                    };
+                                    createdDate: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    lastUpdated: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                };
+                                example: {
+                                    firstName: string;
+                                    lastName: string;
+                                    lastUpdated: string;
+                                    createdDate: string;
+                                    phone: string;
+                                    timezone: string;
+                                    name: string;
+                                    id: number;
+                                    email: string;
+                                    status: number;
+                                };
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "400": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "401": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "404": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "409": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "429": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    security: {
+                        Bearer: any[];
+                    }[];
+                    "x-rate-limit": number;
+                };
+            };
+            "/protect/users/password": {
+                put: {
+                    tags: string[];
+                    summary: string;
+                    parameters: {
+                        in: string;
+                        name: string;
+                        description: string;
+                        required: boolean;
+                        schema: {
+                            type: string;
+                            required: string[];
+                            properties: {
+                                oldPassword: {
+                                    type: string;
+                                    format: string;
+                                    description: string;
+                                    minLength: number;
+                                };
+                                newPassword: {
+                                    type: string;
+                                    format: string;
+                                    description: string;
+                                    minLength: number;
+                                };
+                            };
+                            description: string;
+                            example: {
+                                oldPassword: string;
+                                newPassword: string;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    }[];
+                    responses: {
+                        "204": {
+                            description: string;
+                        };
+                        "400": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "401": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "429": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    security: {
+                        Bearer: any[];
+                    }[];
+                    "x-rate-limit": number;
+                };
+            };
+            "/protect/users/{id}/password": {
+                put: {
+                    tags: string[];
+                    summary: string;
+                    parameters: ({
+                        name: string;
+                        in: string;
+                        description: string;
+                        required: boolean;
+                        type: string;
+                        schema?: undefined;
+                    } | {
+                        in: string;
+                        name: string;
+                        description: string;
+                        required: boolean;
+                        schema: {
+                            type: string;
+                            required: string[];
+                            properties: {
+                                password: {
+                                    type: string;
+                                    description: string;
+                                    minLength: number;
+                                };
+                            };
+                            description: string;
+                            example: {
+                                password: string;
+                            };
+                            additionalProperties: boolean;
+                        };
+                        type?: undefined;
+                    })[];
+                    responses: {
+                        "204": {
+                            description: string;
+                        };
+                        "400": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "401": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "429": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    security: {
+                        Bearer: any[];
+                    }[];
+                    "x-permissions": string[];
+                    "x-rate-limit": number;
+                };
+            };
+            "/protect/users/name/{name}": {
+                get: {
+                    tags: string[];
+                    summary: string;
+                    parameters: {
+                        name: string;
+                        in: string;
+                        description: string;
+                        required: boolean;
+                        type: string;
+                    }[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    id: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    name: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    firstName: {
+                                        type: string;
+                                    };
+                                    lastName: {
+                                        type: string;
+                                    };
+                                    email: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                    };
+                                    status: {
+                                        type: string;
+                                    };
+                                    phone: {
+                                        type: string;
+                                    };
+                                    timezone: {
+                                        type: string;
+                                    };
+                                    createdDate: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    lastUpdated: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                };
+                                example: {
+                                    firstName: string;
+                                    lastName: string;
+                                    lastUpdated: string;
+                                    createdDate: string;
+                                    phone: string;
+                                    timezone: string;
+                                    name: string;
+                                    id: number;
+                                    email: string;
+                                    status: number;
+                                };
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "401": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "404": {
+                            description: string;
+                        };
+                        "429": {
+                            description: string;
+                        };
+                    };
+                    "x-rate-limit": number;
+                    "x-permissions": string[];
+                };
+            };
+            "/protect/accounts": {
+                post: {
+                    tags: string[];
+                    summary: string;
+                    parameters: {
+                        in: string;
+                        name: string;
+                        description: string;
+                        required: boolean;
+                        schema: {
+                            type: string;
+                            required: string[];
+                            properties: {
+                                appId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                userId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                status: {
+                                    type: string;
+                                    description: string;
+                                };
+                                type: {
+                                    type: string;
+                                    description: string;
+                                };
+                                partnerId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                discountPct: {
+                                    type: string;
+                                    description: string;
+                                    minimum: number;
+                                    maximum: number;
+                                };
+                            };
+                            description: string;
+                            example: {
+                                discountPct: number;
+                                appId: number;
+                                partnerId: number;
+                                type: string;
+                                userId: number;
+                                status: number;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    }[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    id: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    userId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    appId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    status: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    createdDate: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    lastUpdated: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    type: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    partnerId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                };
+                                description: string;
+                                example: {
+                                    lastUpdated: string;
+                                    createdDate: string;
+                                    appId: number;
+                                    id: number;
+                                    partnerId: number;
+                                    type: string;
+                                    userId: number;
+                                    status: number;
+                                };
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "400": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "401": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "409": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "429": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    "x-rate-limit": number;
+                };
+            };
+            "/protect/projects": {
+                get: {
+                    tags: string[];
+                    summary: string;
+                    parameters: any[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                items: {
+                                    type: string;
+                                    required: string[];
+                                    properties: {
+                                        id: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        accountId: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        appId: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        name: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        type: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        enabled: {
+                                            type: string;
+                                            description: string;
+                                            default: boolean;
+                                        };
+                                        isDemo: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        implemented: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        permissions: {
+                                            type: string;
+                                            description: string;
+                                            additionalProperties: boolean;
+                                        };
+                                        sharedByUserId: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                    };
+                                    description: string;
+                                    example: {
+                                        accountId: number;
+                                        permissions: {};
+                                        appId: number;
+                                        name: string;
+                                        implemented: boolean;
+                                        sharedByUserId: number;
+                                        id: number;
+                                        type: string;
+                                        isDemo: boolean;
+                                        enabled: boolean;
+                                    };
+                                    additionalProperties: boolean;
+                                };
+                            };
+                        };
+                        "400": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "401": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "404": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "429": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    security: {
+                        Bearer: any[];
+                    }[];
+                    "x-rate-limit": number;
+                };
+                post: {
+                    tags: string[];
+                    summary: string;
+                    parameters: {
+                        in: string;
+                        name: string;
+                        description: string;
+                        required: boolean;
+                        schema: {
+                            type: string;
+                            required: string[];
+                            properties: {
+                                name: {
+                                    type: string;
+                                };
+                                type: {
+                                    description: string;
+                                };
+                            };
+                            description: string;
+                            example: {
+                                name: string;
+                                type: string;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    }[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    id: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    accountId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    appId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    name: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    type: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    enabled: {
+                                        type: string;
+                                        description: string;
+                                        default: boolean;
+                                    };
+                                    isDemo: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    implemented: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    permissions: {
+                                        type: string;
+                                        description: string;
+                                        additionalProperties: boolean;
+                                    };
+                                    sharedByUserId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                };
+                                description: string;
+                                example: {
+                                    accountId: number;
+                                    permissions: {};
+                                    appId: number;
+                                    name: string;
+                                    implemented: boolean;
+                                    sharedByUserId: number;
+                                    id: number;
+                                    type: string;
+                                    isDemo: boolean;
+                                    enabled: boolean;
+                                };
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "400": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "401": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "404": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "429": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    security: {
+                        Bearer: any[];
+                    }[];
+                    "x-rate-limit": number;
+                };
+            };
+            "/protect/projects/{id}": {
+                delete: {
+                    tags: string[];
+                    summary: string;
+                    parameters: {
+                        name: string;
+                        in: string;
+                        description: string;
+                        required: boolean;
+                        type: string;
+                    }[];
+                    responses: {
+                        "204": {
+                            description: string;
+                        };
+                        "401": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "404": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "429": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    security: {
+                        Bearer: any[];
+                    }[];
+                    "x-rate-limit": number;
+                };
+                patch: {
+                    tags: string[];
+                    summary: string;
+                    parameters: ({
+                        name: string;
+                        in: string;
+                        description: string;
+                        required: boolean;
+                        type: string;
+                        schema?: undefined;
+                    } | {
+                        in: string;
+                        name: string;
+                        description: string;
+                        required: boolean;
+                        schema: {
+                            properties: {
+                                name: {
+                                    type: string;
+                                };
+                                enabled: {
+                                    type: string;
+                                };
+                                type: {
+                                    type: string;
+                                };
+                                implemented: {
+                                    type: string;
+                                };
+                            };
+                            description: string;
+                            example: {
+                                name: string;
+                                implemented: boolean;
+                                type: string;
+                                enabled: boolean;
+                            };
+                            additionalProperties: boolean;
+                        };
+                        type?: undefined;
+                    })[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    id: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    accountId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    appId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    name: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    type: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    enabled: {
+                                        type: string;
+                                        description: string;
+                                        default: boolean;
+                                    };
+                                    isDemo: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    implemented: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    permissions: {
+                                        type: string;
+                                        description: string;
+                                        additionalProperties: boolean;
+                                    };
+                                    sharedByUserId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                };
+                                description: string;
+                                example: {
+                                    accountId: number;
+                                    permissions: {};
+                                    appId: number;
+                                    name: string;
+                                    implemented: boolean;
+                                    sharedByUserId: number;
+                                    id: number;
+                                    type: string;
+                                    isDemo: boolean;
+                                    enabled: boolean;
+                                };
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "400": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "401": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "404": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "429": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    security: {
+                        Bearer: any[];
+                    }[];
+                    "x-rate-limit": number;
+                };
+            };
+            "/protect/access-tokens": {
+                post: {
+                    tags: string[];
+                    summary: string;
+                    description: string;
+                    parameters: {
+                        in: string;
+                        name: string;
+                        description: string;
+                        required: boolean;
+                        schema: {
+                            type: string;
+                            required: string[];
+                            properties: {
+                                name: {
+                                    type: string;
+                                };
+                                password: {
+                                    type: string;
+                                };
+                                appId: {
+                                    type: string;
+                                    description: string;
+                                };
+                            };
+                            description: string;
+                            example: {
+                                password: string;
+                                appId: number;
+                                name: string;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    }[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                required: string[];
+                                properties: {
+                                    id: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    userId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    appId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    accountId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    projectId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    permissions: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            type: string;
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                    type: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    createdDate: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    expiration: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                };
+                                description: string;
+                                example: {
+                                    accountId: number;
+                                    createdDate: string;
+                                    permissions: string;
+                                    appId: number;
+                                    expiration: string;
+                                    id: string;
+                                    type: string;
+                                    userId: number;
+                                    projectId: number;
+                                };
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "400": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "401": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "429": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    "x-rate-limit": number;
+                };
+            };
+            "/protect/authorizations": {
+                get: {
+                    tags: string[];
+                    summary: string;
+                    description: string;
+                    parameters: any[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    user: {
+                                        type: string;
+                                        required: string[];
+                                        properties: {
+                                            id: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            name: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            firstName: {
+                                                type: string;
+                                            };
+                                            lastName: {
+                                                type: string;
+                                            };
+                                            email: {
+                                                type: string;
+                                                format: string;
+                                                description: string;
+                                            };
+                                            status: {
+                                                type: string;
+                                            };
+                                            phone: {
+                                                type: string;
+                                            };
+                                            timezone: {
+                                                type: string;
+                                            };
+                                            createdDate: {
+                                                type: string;
+                                                format: string;
+                                                description: string;
+                                                convertStringToDate: boolean;
+                                            };
+                                            lastUpdated: {
+                                                type: string;
+                                                format: string;
+                                                description: string;
+                                                convertStringToDate: boolean;
+                                            };
+                                        };
+                                        example: {
+                                            firstName: string;
+                                            lastName: string;
+                                            lastUpdated: string;
+                                            createdDate: string;
+                                            phone: string;
+                                            timezone: string;
+                                            name: string;
+                                            id: number;
+                                            email: string;
+                                            status: number;
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                    account: {
+                                        type: string;
+                                        required: string[];
+                                        properties: {
+                                            id: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            userId: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            appId: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            status: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            createdDate: {
+                                                type: string;
+                                                format: string;
+                                                description: string;
+                                                convertStringToDate: boolean;
+                                            };
+                                            lastUpdated: {
+                                                type: string;
+                                                format: string;
+                                                description: string;
+                                                convertStringToDate: boolean;
+                                            };
+                                            type: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            partnerId: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                        };
+                                        description: string;
+                                        example: {
+                                            lastUpdated: string;
+                                            createdDate: string;
+                                            appId: number;
+                                            id: number;
+                                            partnerId: number;
+                                            type: string;
+                                            userId: number;
+                                            status: number;
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                    projects: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            type: string;
+                                            required: string[];
+                                            properties: {
+                                                id: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                accountId: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                appId: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                type: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                enabled: {
+                                                    type: string;
+                                                    description: string;
+                                                    default: boolean;
+                                                };
+                                                isDemo: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                implemented: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                permissions: {
+                                                    type: string;
+                                                    description: string;
+                                                    additionalProperties: boolean;
+                                                };
+                                                sharedByUserId: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                            };
+                                            description: string;
+                                            example: {
+                                                accountId: number;
+                                                permissions: {};
+                                                appId: number;
+                                                name: string;
+                                                implemented: boolean;
+                                                sharedByUserId: number;
+                                                id: number;
+                                                type: string;
+                                                isDemo: boolean;
+                                                enabled: boolean;
+                                            };
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                    expiration: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    currentProjectId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    projectId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                };
+                                description: string;
+                                example: {
+                                    currentProjectId: number;
+                                    projects: {
+                                        accountId: number;
+                                        permissions: {};
+                                        appId: number;
+                                        name: string;
+                                        implemented: boolean;
+                                        sharedByUserId: number;
+                                        id: number;
+                                        type: string;
+                                        isDemo: boolean;
+                                        enabled: boolean;
+                                    }[];
+                                    expiration: string;
+                                    user: {
+                                        firstName: string;
+                                        lastName: string;
+                                        lastUpdated: string;
+                                        createdDate: string;
+                                        phone: string;
+                                        timezone: string;
+                                        name: string;
+                                        id: number;
+                                        email: string;
+                                        status: number;
+                                    };
+                                    projectId: number;
+                                    account: {
+                                        lastUpdated: string;
+                                        createdDate: string;
+                                        appId: number;
+                                        id: number;
+                                        partnerId: number;
+                                        type: string;
+                                        userId: number;
+                                        status: number;
+                                    };
+                                };
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "401": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "404": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "429": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    "x-rate-limit": number;
+                };
+            };
+            "/protect/notifications": {
+                post: {
+                    tags: string[];
+                    summary: string;
+                    parameters: {
+                        in: string;
+                        name: string;
+                        description: string;
+                        required: boolean;
+                        schema: {
+                            type: string;
+                            required: string[];
+                            properties: {
+                                email: {
+                                    type: string;
+                                    format: string;
+                                    description: string;
+                                };
+                                templateName: {
+                                    type: string;
+                                    description: string;
+                                };
+                                templateData: {
+                                    type: string;
+                                    description: string;
+                                    additionalProperties: boolean;
+                                };
+                            };
+                            description: string;
+                            example: {
+                                templateName: string;
+                                templateData: {
+                                    key: string;
+                                };
+                                email: string;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    }[];
+                    responses: {
+                        "204": {
+                            description: string;
+                        };
+                        "400": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "401": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    security: {
+                        Bearer: any[];
+                    }[];
+                    "x-permissions": string[];
+                };
+            };
+            "/protect/stash": {
+                post: {
+                    tags: string[];
+                    summary: string;
+                    parameters: {
+                        in: string;
+                        name: string;
+                        description: string;
+                        required: boolean;
+                        schema: {
+                            type: string;
+                            required: string[];
+                            properties: {
+                                expires: {
+                                    type: string;
+                                    format: string;
+                                    description: string;
+                                    convertStringToDate: boolean;
+                                };
+                                data: {
+                                    type: string;
+                                    description: string;
+                                    additionalProperties: boolean;
+                                };
+                            };
+                            description: string;
+                            example: {
+                                expires: string;
+                                data: {
+                                    key: string;
+                                };
+                            };
+                            additionalProperties: boolean;
+                        };
+                    }[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    id: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    expires: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    data: {
+                                        type: string;
+                                        description: string;
+                                        additionalProperties: boolean;
+                                    };
+                                };
+                                example: {
+                                    expires: string;
+                                    data: {
+                                        key: string;
+                                    };
+                                    id: string;
+                                };
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "400": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "401": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "429": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    security: {
+                        Bearer: any[];
+                    }[];
+                    "x-rate-limit": number;
+                    "x-permissions": string[];
+                };
+            };
+            "/protect/stash/{id}": {
+                get: {
+                    tags: string[];
+                    summary: string;
+                    parameters: {
+                        name: string;
+                        in: string;
+                        description: string;
+                        required: boolean;
+                        type: string;
+                    }[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    id: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    expires: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    data: {
+                                        type: string;
+                                        description: string;
+                                        additionalProperties: boolean;
+                                    };
+                                };
+                                example: {
+                                    expires: string;
+                                    data: {
+                                        key: string;
+                                    };
+                                    id: string;
+                                };
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "400": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "401": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "404": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                        "429": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                required: string[];
+                                properties: {
+                                    code: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    errors: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                name: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                code: {
+                                                    type: string;
+                                                };
+                                                message: {
+                                                    type: string;
+                                                };
+                                            };
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                description: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    security: {
+                        Bearer: any[];
+                    }[];
+                    "x-permissions": string[];
+                    "x-rate-limit": number;
+                };
+            };
+            "/protect/entities": {
+                get: {
+                    tags: string[];
+                    summary: string;
+                    parameters: any[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                properties: {
+                                    sessions: {
+                                        type: string;
+                                        properties: {
+                                            name: {
+                                                type: string;
+                                            };
+                                            description: {
+                                                type: string;
+                                            };
+                                            attributes: {
+                                                type: string;
+                                                items: {
+                                                    type: string;
+                                                    properties: {
+                                                        name: {
+                                                            type: string;
+                                                        };
+                                                        title: {
+                                                            type: string;
+                                                        };
+                                                        description: {
+                                                            type: string;
+                                                        };
+                                                        dataType: {
+                                                            type: string;
+                                                        };
+                                                        isElement: {
+                                                            type: string;
+                                                        };
+                                                        isMetric: {
+                                                            type: string;
+                                                        };
+                                                    };
+                                                    example: {
+                                                        isElement: boolean;
+                                                        dataType: string;
+                                                        name: string;
+                                                        isMetric: boolean;
+                                                        description: string;
+                                                        title: string;
+                                                    };
+                                                    additionalProperties: boolean;
+                                                };
+                                            };
+                                        };
+                                        example: {
+                                            name: string;
+                                            description: string;
+                                            attributes: {
+                                                isElement: boolean;
+                                                dataType: string;
+                                                name: string;
+                                                isMetric: boolean;
+                                                description: string;
+                                                title: string;
+                                            }[];
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                    pages: {
+                                        type: string;
+                                        properties: {
+                                            name: {
+                                                type: string;
+                                            };
+                                            description: {
+                                                type: string;
+                                            };
+                                            attributes: {
+                                                type: string;
+                                                items: {
+                                                    type: string;
+                                                    properties: {
+                                                        name: {
+                                                            type: string;
+                                                        };
+                                                        title: {
+                                                            type: string;
+                                                        };
+                                                        description: {
+                                                            type: string;
+                                                        };
+                                                        dataType: {
+                                                            type: string;
+                                                        };
+                                                        isElement: {
+                                                            type: string;
+                                                        };
+                                                        isMetric: {
+                                                            type: string;
+                                                        };
+                                                    };
+                                                    example: {
+                                                        isElement: boolean;
+                                                        dataType: string;
+                                                        name: string;
+                                                        isMetric: boolean;
+                                                        description: string;
+                                                        title: string;
+                                                    };
+                                                    additionalProperties: boolean;
+                                                };
+                                            };
+                                        };
+                                        example: {
+                                            name: string;
+                                            description: string;
+                                            attributes: {
+                                                isElement: boolean;
+                                                dataType: string;
+                                                name: string;
+                                                isMetric: boolean;
+                                                description: string;
+                                                title: string;
+                                            }[];
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                    events: {
+                                        type: string;
+                                        properties: {
+                                            name: {
+                                                type: string;
+                                            };
+                                            description: {
+                                                type: string;
+                                            };
+                                            attributes: {
+                                                type: string;
+                                                items: {
+                                                    type: string;
+                                                    properties: {
+                                                        name: {
+                                                            type: string;
+                                                        };
+                                                        title: {
+                                                            type: string;
+                                                        };
+                                                        description: {
+                                                            type: string;
+                                                        };
+                                                        dataType: {
+                                                            type: string;
+                                                        };
+                                                        isElement: {
+                                                            type: string;
+                                                        };
+                                                        isMetric: {
+                                                            type: string;
+                                                        };
+                                                    };
+                                                    example: {
+                                                        isElement: boolean;
+                                                        dataType: string;
+                                                        name: string;
+                                                        isMetric: boolean;
+                                                        description: string;
+                                                        title: string;
+                                                    };
+                                                    additionalProperties: boolean;
+                                                };
+                                            };
+                                        };
+                                        example: {
+                                            name: string;
+                                            description: string;
+                                            attributes: {
+                                                isElement: boolean;
+                                                dataType: string;
+                                                name: string;
+                                                isMetric: boolean;
+                                                description: string;
+                                                title: string;
+                                            }[];
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                    timings: {
+                                        type: string;
+                                        properties: {
+                                            name: {
+                                                type: string;
+                                            };
+                                            description: {
+                                                type: string;
+                                            };
+                                            attributes: {
+                                                type: string;
+                                                items: {
+                                                    type: string;
+                                                    properties: {
+                                                        name: {
+                                                            type: string;
+                                                        };
+                                                        title: {
+                                                            type: string;
+                                                        };
+                                                        description: {
+                                                            type: string;
+                                                        };
+                                                        dataType: {
+                                                            type: string;
+                                                        };
+                                                        isElement: {
+                                                            type: string;
+                                                        };
+                                                        isMetric: {
+                                                            type: string;
+                                                        };
+                                                    };
+                                                    example: {
+                                                        isElement: boolean;
+                                                        dataType: string;
+                                                        name: string;
+                                                        isMetric: boolean;
+                                                        description: string;
+                                                        title: string;
+                                                    };
+                                                    additionalProperties: boolean;
+                                                };
+                                            };
+                                        };
+                                        example: {
+                                            name: string;
+                                            description: string;
+                                            attributes: {
+                                                isElement: boolean;
+                                                dataType: string;
+                                                name: string;
+                                                isMetric: boolean;
+                                                description: string;
+                                                title: string;
+                                            }[];
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                    users: {
+                                        type: string;
+                                        properties: {
+                                            name: {
+                                                type: string;
+                                            };
+                                            description: {
+                                                type: string;
+                                            };
+                                            attributes: {
+                                                type: string;
+                                                items: {
+                                                    type: string;
+                                                    properties: {
+                                                        name: {
+                                                            type: string;
+                                                        };
+                                                        title: {
+                                                            type: string;
+                                                        };
+                                                        description: {
+                                                            type: string;
+                                                        };
+                                                        dataType: {
+                                                            type: string;
+                                                        };
+                                                        isElement: {
+                                                            type: string;
+                                                        };
+                                                        isMetric: {
+                                                            type: string;
+                                                        };
+                                                    };
+                                                    example: {
+                                                        isElement: boolean;
+                                                        dataType: string;
+                                                        name: string;
+                                                        isMetric: boolean;
+                                                        description: string;
+                                                        title: string;
+                                                    };
+                                                    additionalProperties: boolean;
+                                                };
+                                            };
+                                        };
+                                        example: {
+                                            name: string;
+                                            description: string;
+                                            attributes: {
+                                                isElement: boolean;
+                                                dataType: string;
+                                                name: string;
+                                                isMetric: boolean;
+                                                description: string;
+                                                title: string;
+                                            }[];
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                    people: {
+                                        type: string;
+                                        properties: {
+                                            name: {
+                                                type: string;
+                                            };
+                                            description: {
+                                                type: string;
+                                            };
+                                            attributes: {
+                                                type: string;
+                                                items: {
+                                                    type: string;
+                                                    properties: {
+                                                        name: {
+                                                            type: string;
+                                                        };
+                                                        title: {
+                                                            type: string;
+                                                        };
+                                                        description: {
+                                                            type: string;
+                                                        };
+                                                        dataType: {
+                                                            type: string;
+                                                        };
+                                                        isElement: {
+                                                            type: string;
+                                                        };
+                                                        isMetric: {
+                                                            type: string;
+                                                        };
+                                                    };
+                                                    example: {
+                                                        isElement: boolean;
+                                                        dataType: string;
+                                                        name: string;
+                                                        isMetric: boolean;
+                                                        description: string;
+                                                        title: string;
+                                                    };
+                                                    additionalProperties: boolean;
+                                                };
+                                            };
+                                        };
+                                        example: {
+                                            name: string;
+                                            description: string;
+                                            attributes: {
+                                                isElement: boolean;
+                                                dataType: string;
+                                                name: string;
+                                                isMetric: boolean;
+                                                description: string;
+                                                title: string;
+                                            }[];
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                };
+                            };
+                        };
+                    };
+                };
+            };
+            "/protect/attributes": {
+                get: {
+                    tags: string[];
+                    summary: string;
+                    parameters: ({
+                        name: string;
+                        in: string;
+                        description: string;
+                        required: boolean;
+                        type: string;
+                        default: string;
+                    } | {
+                        name: string;
+                        in: string;
+                        description: string;
+                        required: boolean;
+                        type: string;
+                        default?: undefined;
+                    })[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                items: {
+                                    type: string;
+                                };
+                            };
+                        };
+                    };
+                    security: {
+                        Bearer: any[];
+                    }[];
+                };
+            };
+            "/protect/query": {
+                post: {
+                    tags: string[];
+                    summary: string;
+                    parameters: {
+                        in: string;
+                        name: string;
+                        description: string;
+                        required: boolean;
+                        schema: {
+                            required: string[];
+                            properties: {
+                                query: {
+                                    type: string;
+                                    description: string;
+                                    properties: {};
+                                };
+                            };
+                            example: {
+                                query: string;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    }[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                type: string;
+                                properties: {
+                                    query: {
+                                        type: string;
+                                        description: string;
+                                        additionalProperties: boolean;
+                                    };
+                                    columns: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                    rows: {
+                                        type: string;
+                                        description: string;
+                                        items: {
+                                            type: string;
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                };
+                                example: {
+                                    columns: {
+                                        key: string;
+                                    }[];
+                                    query: {
+                                        key: string;
+                                    };
+                                    rows: {
+                                        key: string;
+                                    }[];
+                                };
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    security: {
+                        Bearer: any[];
+                    }[];
+                };
+            };
+            "/protect/order": {
+                post: {
+                    tags: string[];
+                    summary: string;
+                    parameters: {
+                        in: string;
+                        name: string;
+                        description: string;
+                        required: boolean;
+                        schema: {
+                            required: string[];
+                            properties: {
+                                platformOrderId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                name: {
+                                    type: string;
+                                    description: string;
+                                };
+                                shopId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                platform: {
+                                    type: string;
+                                    description: string;
+                                };
+                                tax: {
+                                    type: string;
+                                    description: string;
+                                };
+                                currency: {
+                                    type: string;
+                                    description: string;
+                                };
+                                email: {
+                                    type: string;
+                                    format: string;
+                                    description: string;
+                                };
+                                billingAddress: {
+                                    properties: {
+                                        name: {
+                                            type: string;
+                                        };
+                                        company: {
+                                            type: string;
+                                        };
+                                        address1: {
+                                            type: string;
+                                        };
+                                        address2: {
+                                            type: string;
+                                        };
+                                        city: {
+                                            type: string;
+                                        };
+                                        zip: {
+                                            type: string;
+                                        };
+                                        region: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        regionCode: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        country: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        countryCode: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                    };
+                                    example: {
+                                        zip: string;
+                                        country: string;
+                                        regionCode: string;
+                                        address2: string;
+                                        city: string;
+                                        address1: string;
+                                        countryCode: string;
+                                        name: string;
+                                        company: string;
+                                        region: string;
+                                    };
+                                    additionalProperties: boolean;
+                                };
+                                shippingAddress: {
+                                    properties: {
+                                        name: {
+                                            type: string;
+                                        };
+                                        company: {
+                                            type: string;
+                                        };
+                                        address1: {
+                                            type: string;
+                                        };
+                                        address2: {
+                                            type: string;
+                                        };
+                                        city: {
+                                            type: string;
+                                        };
+                                        zip: {
+                                            type: string;
+                                        };
+                                        region: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        regionCode: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        country: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        countryCode: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                    };
+                                    example: {
+                                        zip: string;
+                                        country: string;
+                                        regionCode: string;
+                                        address2: string;
+                                        city: string;
+                                        address1: string;
+                                        countryCode: string;
+                                        name: string;
+                                        company: string;
+                                        region: string;
+                                    };
+                                    additionalProperties: boolean;
+                                };
+                                createdAt: {
+                                    type: string;
+                                    format: string;
+                                    convertStringToDate: boolean;
+                                };
+                                updatedAt: {
+                                    type: string;
+                                    format: string;
+                                    convertStringToDate: boolean;
+                                };
+                                customer: {
+                                    required: string[];
+                                    properties: {
+                                        platformCustomerId: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        firstName: {
+                                            type: string;
+                                        };
+                                        lastName: {
+                                            type: string;
+                                        };
+                                        phone: {
+                                            type: string;
+                                        };
+                                        createdAt: {
+                                            type: string;
+                                            format: string;
+                                            convertStringToDate: boolean;
+                                        };
+                                        updatedAt: {
+                                            type: string;
+                                            format: string;
+                                            convertStringToDate: boolean;
+                                        };
+                                        gender: {
+                                            type: string;
+                                            enum: string[];
+                                        };
+                                        birthday: {
+                                            type: string;
+                                            format: string;
+                                        };
+                                        company: {
+                                            type: string;
+                                        };
+                                        ordersCount: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        totalSpent: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        isEmailVerified: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        isPayingCustomer: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                    };
+                                    example: {
+                                        birthday: string;
+                                        lastName: string;
+                                        totalSpent: number;
+                                        gender: string;
+                                        platformCustomerId: string;
+                                        isEmailVerified: boolean;
+                                        firstName: string;
+                                        createdAt: string;
+                                        ordersCount: number;
+                                        isPayingCustomer: boolean;
+                                        phone: string;
+                                        company: string;
+                                        updatedAt: string;
+                                    };
+                                    additionalProperties: boolean;
+                                };
+                                status: {
+                                    type: string;
+                                    description: string;
+                                    enum: string[];
+                                };
+                                processingMethod: {
+                                    type: string;
+                                    description: string;
+                                    enum: string[];
+                                };
+                                sourceName: {
+                                    type: string;
+                                    description: string;
+                                    enum: string[];
+                                    additionalProperties: boolean;
+                                };
+                                totalPrice: {
+                                    type: string;
+                                    description: string;
+                                };
+                                transctions: {
+                                    type: string;
+                                    items: {
+                                        required: string[];
+                                        properties: {
+                                            platformTransactionId: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            amount: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            createdAt: {
+                                                type: string;
+                                                format: string;
+                                                convertStringToDate: boolean;
+                                            };
+                                            gateway: {
+                                                type: string;
+                                            };
+                                            sourceName: {
+                                                type: string;
+                                                description: string;
+                                                enum: string[];
+                                                additionalProperties: boolean;
+                                            };
+                                            paymentDetails: {
+                                                properties: {
+                                                    creditCardNumber: {
+                                                        type: string;
+                                                    };
+                                                    creditCardCompany: {
+                                                        type: string;
+                                                    };
+                                                    cardExpiration: {
+                                                        type: string;
+                                                    };
+                                                    cardHolder: {
+                                                        type: string;
+                                                    };
+                                                    avsResultCode: {
+                                                        type: string;
+                                                    };
+                                                    cvvResultCode: {
+                                                        type: string;
+                                                    };
+                                                    creditCardBin: {
+                                                        type: string;
+                                                    };
+                                                    method: {
+                                                        type: string;
+                                                    };
+                                                    gateway: {
+                                                        type: string;
+                                                    };
+                                                };
+                                                example: {
+                                                    avsResultCode: string;
+                                                    cvvResultCode: string;
+                                                    method: string;
+                                                    creditCardNumber: string;
+                                                    creditCardBin: string;
+                                                    creditCardCompany: string;
+                                                    cardHolder: string;
+                                                    cardExpiration: string;
+                                                    gateway: string;
+                                                };
+                                                additionalProperties: boolean;
+                                            };
+                                            kind: {
+                                                type: string;
+                                                enum: string[];
+                                            };
+                                            status: {
+                                                type: string;
+                                            };
+                                            currency: {
+                                                type: string;
+                                            };
+                                            test: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                        };
+                                        example: {
+                                            createdAt: string;
+                                            amount: number;
+                                            test: boolean;
+                                            platformTransactionId: string;
+                                            kind: string;
+                                            currency: string;
+                                            paymentDetails: {
+                                                avsResultCode: string;
+                                                cvvResultCode: string;
+                                                method: string;
+                                                creditCardNumber: string;
+                                                creditCardBin: string;
+                                                creditCardCompany: string;
+                                                cardHolder: string;
+                                                cardExpiration: string;
+                                                gateway: string;
+                                            };
+                                            gateway: string;
+                                            status: string;
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                };
+                                lineItems: {
+                                    type: string;
+                                    items: {
+                                        required: string[];
+                                        properties: {
+                                            platformId: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            title: {
+                                                type: string;
+                                            };
+                                            name: {
+                                                type: string;
+                                            };
+                                            quantity: {
+                                                type: string;
+                                            };
+                                            price: {
+                                                type: string;
+                                            };
+                                            sku: {
+                                                type: string;
+                                            };
+                                            isbn: {
+                                                type: string;
+                                            };
+                                            ean13: {
+                                                type: string;
+                                            };
+                                            upc: {
+                                                type: string;
+                                            };
+                                            variantId: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            variantTitle: {
+                                                type: string;
+                                            };
+                                            vendor: {
+                                                type: string;
+                                            };
+                                            platformProductId: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            giftCard: {
+                                                type: string;
+                                            };
+                                            totalDiscount: {
+                                                type: string;
+                                            };
+                                            manufacturer: {
+                                                type: string;
+                                            };
+                                        };
+                                        example: {
+                                            variantTitle: string;
+                                            platformProductId: string;
+                                            quantity: number;
+                                            isbn: string;
+                                            ean13: string;
+                                            upc: string;
+                                            platformId: string;
+                                            title: string;
+                                            manufacturer: string;
+                                            price: number;
+                                            vendor: string;
+                                            name: string;
+                                            giftCard: boolean;
+                                            totalDiscount: number;
+                                            variantId: string;
+                                            sku: string;
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                };
+                                canceledAt: {
+                                    type: string;
+                                    format: string;
+                                    convertStringToDate: boolean;
+                                };
+                                canceledBy: {
+                                    type: string;
+                                };
+                                cancelReason: {
+                                    type: string;
+                                };
+                                approvedAt: {
+                                    type: string;
+                                    format: string;
+                                    convertStringToDate: boolean;
+                                };
+                                approvedBy: {
+                                    type: string;
+                                };
+                                hasGiftCard: {
+                                    type: string;
+                                    description: string;
+                                };
+                            };
+                            example: {
+                                totalPrice: number;
+                                approvedBy: string;
+                                canceledBy: string;
+                                tax: number;
+                                approvedAt: string;
+                                platform: string;
+                                lineItems: {
+                                    variantTitle: string;
+                                    platformProductId: string;
+                                    quantity: number;
+                                    isbn: string;
+                                    ean13: string;
+                                    upc: string;
+                                    platformId: string;
+                                    title: string;
+                                    manufacturer: string;
+                                    price: number;
+                                    vendor: string;
+                                    name: string;
+                                    giftCard: boolean;
+                                    totalDiscount: number;
+                                    variantId: string;
+                                    sku: string;
+                                }[];
+                                createdAt: string;
+                                transctions: {
+                                    createdAt: string;
+                                    amount: number;
+                                    test: boolean;
+                                    platformTransactionId: string;
+                                    kind: string;
+                                    currency: string;
+                                    paymentDetails: {
+                                        avsResultCode: string;
+                                        cvvResultCode: string;
+                                        method: string;
+                                        creditCardNumber: string;
+                                        creditCardBin: string;
+                                        creditCardCompany: string;
+                                        cardHolder: string;
+                                        cardExpiration: string;
+                                        gateway: string;
+                                    };
+                                    gateway: string;
+                                    status: string;
+                                }[];
+                                canceledAt: string;
+                                hasGiftCard: boolean;
+                                name: string;
+                                processingMethod: string;
+                                shippingAddress: {
+                                    zip: string;
+                                    country: string;
+                                    regionCode: string;
+                                    address2: string;
+                                    city: string;
+                                    address1: string;
+                                    countryCode: string;
+                                    name: string;
+                                    company: string;
+                                    region: string;
+                                };
+                                currency: string;
+                                shopId: number;
+                                billingAddress: {
+                                    zip: string;
+                                    country: string;
+                                    regionCode: string;
+                                    address2: string;
+                                    city: string;
+                                    address1: string;
+                                    countryCode: string;
+                                    name: string;
+                                    company: string;
+                                    region: string;
+                                };
+                                sourceName: {};
+                                platformOrderId: string;
+                                cancelReason: string;
+                                email: string;
+                                updatedAt: string;
+                                customer: {
+                                    birthday: string;
+                                    lastName: string;
+                                    totalSpent: number;
+                                    gender: string;
+                                    platformCustomerId: string;
+                                    isEmailVerified: boolean;
+                                    firstName: string;
+                                    createdAt: string;
+                                    ordersCount: number;
+                                    isPayingCustomer: boolean;
+                                    phone: string;
+                                    company: string;
+                                    updatedAt: string;
+                                };
+                                status: string;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    }[];
+                    responses: {
+                        "200": {
+                            description: string;
+                            schema: {
+                                required: string[];
+                                properties: {
+                                    platformOrderId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    name: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    shopId: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    platform: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    tax: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    currency: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    email: {
+                                        type: string;
+                                        format: string;
+                                        description: string;
+                                    };
+                                    billingAddress: {
+                                        properties: {
+                                            name: {
+                                                type: string;
+                                            };
+                                            company: {
+                                                type: string;
+                                            };
+                                            address1: {
+                                                type: string;
+                                            };
+                                            address2: {
+                                                type: string;
+                                            };
+                                            city: {
+                                                type: string;
+                                            };
+                                            zip: {
+                                                type: string;
+                                            };
+                                            region: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            regionCode: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            country: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            countryCode: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                        };
+                                        example: {
+                                            zip: string;
+                                            country: string;
+                                            regionCode: string;
+                                            address2: string;
+                                            city: string;
+                                            address1: string;
+                                            countryCode: string;
+                                            name: string;
+                                            company: string;
+                                            region: string;
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                    shippingAddress: {
+                                        properties: {
+                                            name: {
+                                                type: string;
+                                            };
+                                            company: {
+                                                type: string;
+                                            };
+                                            address1: {
+                                                type: string;
+                                            };
+                                            address2: {
+                                                type: string;
+                                            };
+                                            city: {
+                                                type: string;
+                                            };
+                                            zip: {
+                                                type: string;
+                                            };
+                                            region: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            regionCode: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            country: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            countryCode: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                        };
+                                        example: {
+                                            zip: string;
+                                            country: string;
+                                            regionCode: string;
+                                            address2: string;
+                                            city: string;
+                                            address1: string;
+                                            countryCode: string;
+                                            name: string;
+                                            company: string;
+                                            region: string;
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                    createdAt: {
+                                        type: string;
+                                        format: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    updatedAt: {
+                                        type: string;
+                                        format: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    customer: {
+                                        required: string[];
+                                        properties: {
+                                            platformCustomerId: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            firstName: {
+                                                type: string;
+                                            };
+                                            lastName: {
+                                                type: string;
+                                            };
+                                            phone: {
+                                                type: string;
+                                            };
+                                            createdAt: {
+                                                type: string;
+                                                format: string;
+                                                convertStringToDate: boolean;
+                                            };
+                                            updatedAt: {
+                                                type: string;
+                                                format: string;
+                                                convertStringToDate: boolean;
+                                            };
+                                            gender: {
+                                                type: string;
+                                                enum: string[];
+                                            };
+                                            birthday: {
+                                                type: string;
+                                                format: string;
+                                            };
+                                            company: {
+                                                type: string;
+                                            };
+                                            ordersCount: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            totalSpent: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            isEmailVerified: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                            isPayingCustomer: {
+                                                type: string;
+                                                description: string;
+                                            };
+                                        };
+                                        example: {
+                                            birthday: string;
+                                            lastName: string;
+                                            totalSpent: number;
+                                            gender: string;
+                                            platformCustomerId: string;
+                                            isEmailVerified: boolean;
+                                            firstName: string;
+                                            createdAt: string;
+                                            ordersCount: number;
+                                            isPayingCustomer: boolean;
+                                            phone: string;
+                                            company: string;
+                                            updatedAt: string;
+                                        };
+                                        additionalProperties: boolean;
+                                    };
+                                    status: {
+                                        type: string;
+                                        description: string;
+                                        enum: string[];
+                                    };
+                                    processingMethod: {
+                                        type: string;
+                                        description: string;
+                                        enum: string[];
+                                    };
+                                    sourceName: {
+                                        type: string;
+                                        description: string;
+                                        enum: string[];
+                                        additionalProperties: boolean;
+                                    };
+                                    totalPrice: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    transctions: {
+                                        type: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                platformTransactionId: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                amount: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                createdAt: {
+                                                    type: string;
+                                                    format: string;
+                                                    convertStringToDate: boolean;
+                                                };
+                                                gateway: {
+                                                    type: string;
+                                                };
+                                                sourceName: {
+                                                    type: string;
+                                                    description: string;
+                                                    enum: string[];
+                                                    additionalProperties: boolean;
+                                                };
+                                                paymentDetails: {
+                                                    properties: {
+                                                        creditCardNumber: {
+                                                            type: string;
+                                                        };
+                                                        creditCardCompany: {
+                                                            type: string;
+                                                        };
+                                                        cardExpiration: {
+                                                            type: string;
+                                                        };
+                                                        cardHolder: {
+                                                            type: string;
+                                                        };
+                                                        avsResultCode: {
+                                                            type: string;
+                                                        };
+                                                        cvvResultCode: {
+                                                            type: string;
+                                                        };
+                                                        creditCardBin: {
+                                                            type: string;
+                                                        };
+                                                        method: {
+                                                            type: string;
+                                                        };
+                                                        gateway: {
+                                                            type: string;
+                                                        };
+                                                    };
+                                                    example: {
+                                                        avsResultCode: string;
+                                                        cvvResultCode: string;
+                                                        method: string;
+                                                        creditCardNumber: string;
+                                                        creditCardBin: string;
+                                                        creditCardCompany: string;
+                                                        cardHolder: string;
+                                                        cardExpiration: string;
+                                                        gateway: string;
+                                                    };
+                                                    additionalProperties: boolean;
+                                                };
+                                                kind: {
+                                                    type: string;
+                                                    enum: string[];
+                                                };
+                                                status: {
+                                                    type: string;
+                                                };
+                                                currency: {
+                                                    type: string;
+                                                };
+                                                test: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                            };
+                                            example: {
+                                                createdAt: string;
+                                                amount: number;
+                                                test: boolean;
+                                                platformTransactionId: string;
+                                                kind: string;
+                                                currency: string;
+                                                paymentDetails: {
+                                                    avsResultCode: string;
+                                                    cvvResultCode: string;
+                                                    method: string;
+                                                    creditCardNumber: string;
+                                                    creditCardBin: string;
+                                                    creditCardCompany: string;
+                                                    cardHolder: string;
+                                                    cardExpiration: string;
+                                                    gateway: string;
+                                                };
+                                                gateway: string;
+                                                status: string;
+                                            };
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                    lineItems: {
+                                        type: string;
+                                        items: {
+                                            required: string[];
+                                            properties: {
+                                                platformId: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                title: {
+                                                    type: string;
+                                                };
+                                                name: {
+                                                    type: string;
+                                                };
+                                                quantity: {
+                                                    type: string;
+                                                };
+                                                price: {
+                                                    type: string;
+                                                };
+                                                sku: {
+                                                    type: string;
+                                                };
+                                                isbn: {
+                                                    type: string;
+                                                };
+                                                ean13: {
+                                                    type: string;
+                                                };
+                                                upc: {
+                                                    type: string;
+                                                };
+                                                variantId: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                variantTitle: {
+                                                    type: string;
+                                                };
+                                                vendor: {
+                                                    type: string;
+                                                };
+                                                platformProductId: {
+                                                    type: string;
+                                                    description: string;
+                                                };
+                                                giftCard: {
+                                                    type: string;
+                                                };
+                                                totalDiscount: {
+                                                    type: string;
+                                                };
+                                                manufacturer: {
+                                                    type: string;
+                                                };
+                                            };
+                                            example: {
+                                                variantTitle: string;
+                                                platformProductId: string;
+                                                quantity: number;
+                                                isbn: string;
+                                                ean13: string;
+                                                upc: string;
+                                                platformId: string;
+                                                title: string;
+                                                manufacturer: string;
+                                                price: number;
+                                                vendor: string;
+                                                name: string;
+                                                giftCard: boolean;
+                                                totalDiscount: number;
+                                                variantId: string;
+                                                sku: string;
+                                            };
+                                            additionalProperties: boolean;
+                                        };
+                                    };
+                                    canceledAt: {
+                                        type: string;
+                                        format: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    canceledBy: {
+                                        type: string;
+                                    };
+                                    cancelReason: {
+                                        type: string;
+                                    };
+                                    approvedAt: {
+                                        type: string;
+                                        format: string;
+                                        convertStringToDate: boolean;
+                                    };
+                                    approvedBy: {
+                                        type: string;
+                                    };
+                                    hasGiftCard: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                };
+                                example: {
+                                    totalPrice: number;
+                                    approvedBy: string;
+                                    canceledBy: string;
+                                    tax: number;
+                                    approvedAt: string;
+                                    platform: string;
+                                    lineItems: {
+                                        variantTitle: string;
+                                        platformProductId: string;
+                                        quantity: number;
+                                        isbn: string;
+                                        ean13: string;
+                                        upc: string;
+                                        platformId: string;
+                                        title: string;
+                                        manufacturer: string;
+                                        price: number;
+                                        vendor: string;
+                                        name: string;
+                                        giftCard: boolean;
+                                        totalDiscount: number;
+                                        variantId: string;
+                                        sku: string;
+                                    }[];
+                                    createdAt: string;
+                                    transctions: {
+                                        createdAt: string;
+                                        amount: number;
+                                        test: boolean;
+                                        platformTransactionId: string;
+                                        kind: string;
+                                        currency: string;
+                                        paymentDetails: {
+                                            avsResultCode: string;
+                                            cvvResultCode: string;
+                                            method: string;
+                                            creditCardNumber: string;
+                                            creditCardBin: string;
+                                            creditCardCompany: string;
+                                            cardHolder: string;
+                                            cardExpiration: string;
+                                            gateway: string;
+                                        };
+                                        gateway: string;
+                                        status: string;
+                                    }[];
+                                    canceledAt: string;
+                                    hasGiftCard: boolean;
+                                    name: string;
+                                    processingMethod: string;
+                                    shippingAddress: {
+                                        zip: string;
+                                        country: string;
+                                        regionCode: string;
+                                        address2: string;
+                                        city: string;
+                                        address1: string;
+                                        countryCode: string;
+                                        name: string;
+                                        company: string;
+                                        region: string;
+                                    };
+                                    currency: string;
+                                    shopId: number;
+                                    billingAddress: {
+                                        zip: string;
+                                        country: string;
+                                        regionCode: string;
+                                        address2: string;
+                                        city: string;
+                                        address1: string;
+                                        countryCode: string;
+                                        name: string;
+                                        company: string;
+                                        region: string;
+                                    };
+                                    sourceName: {};
+                                    platformOrderId: string;
+                                    cancelReason: string;
+                                    email: string;
+                                    updatedAt: string;
+                                    customer: {
+                                        birthday: string;
+                                        lastName: string;
+                                        totalSpent: number;
+                                        gender: string;
+                                        platformCustomerId: string;
+                                        isEmailVerified: boolean;
+                                        firstName: string;
+                                        createdAt: string;
+                                        ordersCount: number;
+                                        isPayingCustomer: boolean;
+                                        phone: string;
+                                        company: string;
+                                        updatedAt: string;
+                                    };
+                                    status: string;
+                                };
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                };
+            };
+        };
+        securityDefinitions: {
+            Bearer: {
+                type: string;
+                name: string;
+                in: string;
+            };
+        };
+        definitions: {
+            AccessToken: {
+                required: string[];
+                properties: {
+                    id: {
+                        type: string;
+                        description: string;
+                    };
+                    userId: {
+                        type: string;
+                        description: string;
+                    };
+                    appId: {
+                        type: string;
+                        description: string;
+                    };
+                    accountId: {
+                        type: string;
+                        description: string;
+                    };
+                    projectId: {
+                        type: string;
+                        description: string;
+                    };
+                    permissions: {
+                        type: string;
+                        description: string;
+                        items: {
+                            type: string;
+                        };
+                        additionalProperties: boolean;
+                    };
+                    type: {
+                        type: string;
+                        description: string;
+                    };
+                    createdDate: {
+                        type: string;
+                        format: string;
+                        description: string;
+                        convertStringToDate: boolean;
+                    };
+                    expiration: {
+                        type: string;
+                        format: string;
+                        description: string;
+                        convertStringToDate: boolean;
+                    };
+                };
+                description: string;
+                example: {
+                    accountId: number;
+                    createdDate: string;
+                    permissions: string;
+                    appId: number;
+                    expiration: string;
+                    id: string;
+                    type: string;
+                    userId: number;
+                    projectId: number;
+                };
+                additionalProperties: boolean;
+            };
+            AccessTokenCreateParams: {
+                type: string;
+                required: string[];
+                properties: {
+                    name: {
+                        type: string;
+                    };
+                    password: {
+                        type: string;
+                    };
+                    appId: {
+                        type: string;
+                        description: string;
+                    };
+                };
+                description: string;
+                example: {
+                    password: string;
+                    appId: number;
+                    name: string;
+                };
+                additionalProperties: boolean;
+            };
+            Account: {
+                type: string;
+                required: string[];
+                properties: {
+                    id: {
+                        type: string;
+                        description: string;
+                    };
+                    userId: {
+                        type: string;
+                        description: string;
+                    };
+                    appId: {
+                        type: string;
+                        description: string;
+                    };
+                    status: {
+                        type: string;
+                        description: string;
+                    };
+                    createdDate: {
+                        type: string;
+                        format: string;
+                        description: string;
+                        convertStringToDate: boolean;
+                    };
+                    lastUpdated: {
+                        type: string;
+                        format: string;
+                        description: string;
+                        convertStringToDate: boolean;
+                    };
+                    type: {
+                        type: string;
+                        description: string;
+                    };
+                    partnerId: {
+                        type: string;
+                        description: string;
+                    };
+                };
+                description: string;
+                example: {
+                    lastUpdated: string;
+                    createdDate: string;
+                    appId: number;
+                    id: number;
+                    partnerId: number;
+                    type: string;
+                    userId: number;
+                    status: number;
+                };
+                additionalProperties: boolean;
+            };
+            AccountCreateParams: {
+                type: string;
+                required: string[];
+                properties: {
+                    appId: {
+                        type: string;
+                        description: string;
+                    };
+                    userId: {
+                        type: string;
+                        description: string;
+                    };
+                    status: {
+                        type: string;
+                        description: string;
+                    };
+                    type: {
+                        type: string;
+                        description: string;
+                    };
+                    partnerId: {
+                        type: string;
+                        description: string;
+                    };
+                    discountPct: {
+                        type: string;
+                        description: string;
+                        minimum: number;
+                        maximum: number;
+                    };
+                };
+                description: string;
+                example: {
+                    discountPct: number;
+                    appId: number;
+                    partnerId: number;
+                    type: string;
+                    userId: number;
+                    status: number;
+                };
+                additionalProperties: boolean;
+            };
+            Authorization: {
+                type: string;
+                required: string[];
+                properties: {
+                    user: {
+                        type: string;
+                        required: string[];
+                        properties: {
+                            id: {
+                                type: string;
+                                description: string;
+                            };
+                            name: {
+                                type: string;
+                                description: string;
+                            };
+                            firstName: {
+                                type: string;
+                            };
+                            lastName: {
+                                type: string;
+                            };
+                            email: {
+                                type: string;
+                                format: string;
+                                description: string;
+                            };
+                            status: {
+                                type: string;
+                            };
+                            phone: {
+                                type: string;
+                            };
+                            timezone: {
+                                type: string;
+                            };
+                            createdDate: {
+                                type: string;
+                                format: string;
+                                description: string;
+                                convertStringToDate: boolean;
+                            };
+                            lastUpdated: {
+                                type: string;
+                                format: string;
+                                description: string;
+                                convertStringToDate: boolean;
+                            };
+                        };
+                        example: {
+                            firstName: string;
+                            lastName: string;
+                            lastUpdated: string;
+                            createdDate: string;
+                            phone: string;
+                            timezone: string;
+                            name: string;
+                            id: number;
+                            email: string;
+                            status: number;
+                        };
+                        additionalProperties: boolean;
+                    };
+                    account: {
+                        type: string;
+                        required: string[];
+                        properties: {
+                            id: {
+                                type: string;
+                                description: string;
+                            };
+                            userId: {
+                                type: string;
+                                description: string;
+                            };
+                            appId: {
+                                type: string;
+                                description: string;
+                            };
+                            status: {
+                                type: string;
+                                description: string;
+                            };
+                            createdDate: {
+                                type: string;
+                                format: string;
+                                description: string;
+                                convertStringToDate: boolean;
+                            };
+                            lastUpdated: {
+                                type: string;
+                                format: string;
+                                description: string;
+                                convertStringToDate: boolean;
+                            };
+                            type: {
+                                type: string;
+                                description: string;
+                            };
+                            partnerId: {
+                                type: string;
+                                description: string;
+                            };
+                        };
+                        description: string;
+                        example: {
+                            lastUpdated: string;
+                            createdDate: string;
+                            appId: number;
+                            id: number;
+                            partnerId: number;
+                            type: string;
+                            userId: number;
+                            status: number;
+                        };
+                        additionalProperties: boolean;
+                    };
+                    projects: {
+                        type: string;
+                        description: string;
+                        items: {
+                            type: string;
+                            required: string[];
+                            properties: {
+                                id: {
+                                    type: string;
+                                    description: string;
+                                };
+                                accountId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                appId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                name: {
+                                    type: string;
+                                    description: string;
+                                };
+                                type: {
+                                    type: string;
+                                    description: string;
+                                };
+                                enabled: {
+                                    type: string;
+                                    description: string;
+                                    default: boolean;
+                                };
+                                isDemo: {
+                                    type: string;
+                                    description: string;
+                                };
+                                implemented: {
+                                    type: string;
+                                    description: string;
+                                };
+                                permissions: {
+                                    type: string;
+                                    description: string;
+                                    additionalProperties: boolean;
+                                };
+                                sharedByUserId: {
+                                    type: string;
+                                    description: string;
+                                };
+                            };
+                            description: string;
+                            example: {
+                                accountId: number;
+                                permissions: {};
+                                appId: number;
+                                name: string;
+                                implemented: boolean;
+                                sharedByUserId: number;
+                                id: number;
+                                type: string;
+                                isDemo: boolean;
+                                enabled: boolean;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    };
+                    expiration: {
+                        type: string;
+                        format: string;
+                        description: string;
+                        convertStringToDate: boolean;
+                    };
+                    currentProjectId: {
+                        type: string;
+                        description: string;
+                    };
+                    projectId: {
+                        type: string;
+                        description: string;
+                    };
+                };
+                description: string;
+                example: {
+                    currentProjectId: number;
+                    projects: {
+                        accountId: number;
+                        permissions: {};
+                        appId: number;
+                        name: string;
+                        implemented: boolean;
+                        sharedByUserId: number;
+                        id: number;
+                        type: string;
+                        isDemo: boolean;
+                        enabled: boolean;
+                    }[];
+                    expiration: string;
+                    user: {
+                        firstName: string;
+                        lastName: string;
+                        lastUpdated: string;
+                        createdDate: string;
+                        phone: string;
+                        timezone: string;
+                        name: string;
+                        id: number;
+                        email: string;
+                        status: number;
+                    };
+                    projectId: number;
+                    account: {
+                        lastUpdated: string;
+                        createdDate: string;
+                        appId: number;
+                        id: number;
+                        partnerId: number;
+                        type: string;
+                        userId: number;
+                        status: number;
+                    };
+                };
+                additionalProperties: boolean;
+            };
+            Notification: {
+                type: string;
+                required: string[];
+                properties: {
+                    email: {
+                        type: string;
+                        format: string;
+                        description: string;
+                    };
+                    templateName: {
+                        type: string;
+                        description: string;
+                    };
+                    templateData: {
+                        type: string;
+                        description: string;
+                        additionalProperties: boolean;
+                    };
+                };
+                description: string;
+                example: {
+                    templateName: string;
+                    templateData: {
+                        key: string;
+                    };
+                    email: string;
+                };
+                additionalProperties: boolean;
+            };
+            Permissions: {
+                type: string;
+                description: string;
+                items: {
+                    type: string;
+                };
+                additionalProperties: boolean;
+            };
+            Project: {
+                type: string;
+                required: string[];
+                properties: {
+                    id: {
+                        type: string;
+                        description: string;
+                    };
+                    accountId: {
+                        type: string;
+                        description: string;
+                    };
+                    appId: {
+                        type: string;
+                        description: string;
+                    };
+                    name: {
+                        type: string;
+                        description: string;
+                    };
+                    type: {
+                        type: string;
+                        description: string;
+                    };
+                    enabled: {
+                        type: string;
+                        description: string;
+                        default: boolean;
+                    };
+                    isDemo: {
+                        type: string;
+                        description: string;
+                    };
+                    implemented: {
+                        type: string;
+                        description: string;
+                    };
+                    permissions: {
+                        type: string;
+                        description: string;
+                        additionalProperties: boolean;
+                    };
+                    sharedByUserId: {
+                        type: string;
+                        description: string;
+                    };
+                };
+                description: string;
+                example: {
+                    accountId: number;
+                    permissions: {};
+                    appId: number;
+                    name: string;
+                    implemented: boolean;
+                    sharedByUserId: number;
+                    id: number;
+                    type: string;
+                    isDemo: boolean;
+                    enabled: boolean;
+                };
+                additionalProperties: boolean;
+            };
+            ProjectCreateParams: {
+                type: string;
+                required: string[];
+                properties: {
+                    name: {
+                        type: string;
+                    };
+                    type: {
+                        description: string;
+                    };
+                };
+                description: string;
+                example: {
+                    name: string;
+                    type: string;
+                };
+                additionalProperties: boolean;
+            };
+            ProjectPermissions: {
+                type: string;
+                description: string;
+                additionalProperties: boolean;
+            };
+            ProjectUpdateParams: {
+                properties: {
+                    name: {
+                        type: string;
+                    };
+                    enabled: {
+                        type: string;
+                    };
+                    type: {
+                        type: string;
+                    };
+                    implemented: {
+                        type: string;
+                    };
+                };
+                description: string;
+                example: {
+                    name: string;
+                    implemented: boolean;
+                    type: string;
+                    enabled: boolean;
+                };
+                additionalProperties: boolean;
+            };
+            Stash: {
+                type: string;
+                required: string[];
+                properties: {
+                    id: {
+                        type: string;
+                        description: string;
+                    };
+                    expires: {
+                        type: string;
+                        format: string;
+                        description: string;
+                        convertStringToDate: boolean;
+                    };
+                    data: {
+                        type: string;
+                        description: string;
+                        additionalProperties: boolean;
+                    };
+                };
+                example: {
+                    expires: string;
+                    data: {
+                        key: string;
+                    };
+                    id: string;
+                };
+                additionalProperties: boolean;
+            };
+            StashCreateParams: {
+                type: string;
+                required: string[];
+                properties: {
+                    expires: {
+                        type: string;
+                        format: string;
+                        description: string;
+                        convertStringToDate: boolean;
+                    };
+                    data: {
+                        type: string;
+                        description: string;
+                        additionalProperties: boolean;
+                    };
+                };
+                description: string;
+                example: {
+                    expires: string;
+                    data: {
+                        key: string;
+                    };
+                };
+                additionalProperties: boolean;
+            };
+            User: {
+                type: string;
+                required: string[];
+                properties: {
+                    id: {
+                        type: string;
+                        description: string;
+                    };
+                    name: {
+                        type: string;
+                        description: string;
+                    };
+                    firstName: {
+                        type: string;
+                    };
+                    lastName: {
+                        type: string;
+                    };
+                    email: {
+                        type: string;
+                        format: string;
+                        description: string;
+                    };
+                    status: {
+                        type: string;
+                    };
+                    phone: {
+                        type: string;
+                    };
+                    timezone: {
+                        type: string;
+                    };
+                    createdDate: {
+                        type: string;
+                        format: string;
+                        description: string;
+                        convertStringToDate: boolean;
+                    };
+                    lastUpdated: {
+                        type: string;
+                        format: string;
+                        description: string;
+                        convertStringToDate: boolean;
+                    };
+                };
+                example: {
+                    firstName: string;
+                    lastName: string;
+                    lastUpdated: string;
+                    createdDate: string;
+                    phone: string;
+                    timezone: string;
+                    name: string;
+                    id: number;
+                    email: string;
+                    status: number;
+                };
+                additionalProperties: boolean;
+            };
+            UserCreateParams: {
+                type: string;
+                required: string[];
+                properties: {
+                    name: {
+                        type: string;
+                        description: string;
+                        minLength: number;
+                        transform: string[];
+                    };
+                    email: {
+                        type: string;
+                        format: string;
+                    };
+                    password: {
+                        type: string;
+                        minLength: number;
+                    };
+                    firstName: {
+                        type: string;
+                    };
+                    lastName: {
+                        type: string;
+                    };
+                    phone: {
+                        type: string;
+                        pattern: string;
+                    };
+                    timezone: {
+                        type: string;
+                        default: string;
+                    };
+                };
+                example: {
+                    firstName: string;
+                    lastName: string;
+                    password: string;
+                    phone: string;
+                    timezone: string;
+                    name: string;
+                    email: string;
+                };
+                additionalProperties: boolean;
+            };
+            UserUpdateParams: {
+                properties: {
+                    firstName: {
+                        type: string;
+                    };
+                    lastName: {
+                        type: string;
+                    };
+                    email: {
+                        type: string;
+                        format: string;
+                    };
+                    phone: {
+                        type: string;
+                        pattern: string;
+                    };
+                    timezone: {
+                        type: string;
+                    };
+                };
+                description: string;
+                example: {
+                    firstName: string;
+                    lastName: string;
+                    phone: string;
+                    timezone: string;
+                    email: string;
+                };
+                additionalProperties: boolean;
+            };
+            PasswordChangeParams: {
+                type: string;
+                required: string[];
+                properties: {
+                    oldPassword: {
+                        type: string;
+                        format: string;
+                        description: string;
+                        minLength: number;
+                    };
+                    newPassword: {
+                        type: string;
+                        format: string;
+                        description: string;
+                        minLength: number;
+                    };
+                };
+                description: string;
+                example: {
+                    oldPassword: string;
+                    newPassword: string;
+                };
+                additionalProperties: boolean;
+            };
+            UpdatePasswordParams: {
+                type: string;
+                required: string[];
+                properties: {
+                    password: {
+                        type: string;
+                        description: string;
+                        minLength: number;
+                    };
+                };
+                description: string;
+                example: {
+                    password: string;
+                };
+                additionalProperties: boolean;
+            };
+            QueryResponse: {
+                type: string;
+                properties: {
+                    query: {
+                        type: string;
+                        description: string;
+                        additionalProperties: boolean;
+                    };
+                    columns: {
+                        type: string;
+                        description: string;
+                        items: {
+                            type: string;
+                            additionalProperties: boolean;
+                        };
+                    };
+                    rows: {
+                        type: string;
+                        description: string;
+                        items: {
+                            type: string;
+                            additionalProperties: boolean;
+                        };
+                    };
+                };
+                example: {
+                    columns: {
+                        key: string;
+                    }[];
+                    query: {
+                        key: string;
+                    };
+                    rows: {
+                        key: string;
+                    }[];
+                };
+                additionalProperties: boolean;
+            };
+            Entity: {
+                type: string;
+                properties: {
+                    name: {
+                        type: string;
+                    };
+                    description: {
+                        type: string;
+                    };
+                    attributes: {
+                        type: string;
+                        items: {
+                            type: string;
+                            properties: {
+                                name: {
+                                    type: string;
+                                };
+                                title: {
+                                    type: string;
+                                };
+                                description: {
+                                    type: string;
+                                };
+                                dataType: {
+                                    type: string;
+                                };
+                                isElement: {
+                                    type: string;
+                                };
+                                isMetric: {
+                                    type: string;
+                                };
+                            };
+                            example: {
+                                isElement: boolean;
+                                dataType: string;
+                                name: string;
+                                isMetric: boolean;
+                                description: string;
+                                title: string;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    };
+                };
+                example: {
+                    name: string;
+                    description: string;
+                    attributes: {
+                        isElement: boolean;
+                        dataType: string;
+                        name: string;
+                        isMetric: boolean;
+                        description: string;
+                        title: string;
+                    }[];
+                };
+                additionalProperties: boolean;
+            };
+            Attribute: {
+                type: string;
+                properties: {
+                    name: {
+                        type: string;
+                    };
+                    title: {
+                        type: string;
+                    };
+                    description: {
+                        type: string;
+                    };
+                    dataType: {
+                        type: string;
+                    };
+                    isElement: {
+                        type: string;
+                    };
+                    isMetric: {
+                        type: string;
+                    };
+                };
+                example: {
+                    isElement: boolean;
+                    dataType: string;
+                    name: string;
+                    isMetric: boolean;
+                    description: string;
+                    title: string;
+                };
+                additionalProperties: boolean;
+            };
+            QueryParams: {
+                required: string[];
+                properties: {
+                    query: {
+                        type: string;
+                        description: string;
+                        properties: {};
+                    };
+                };
+                example: {
+                    query: string;
+                };
+                additionalProperties: boolean;
+            };
+            Order: {
+                required: string[];
+                properties: {
+                    platformOrderId: {
+                        type: string;
+                        description: string;
+                    };
+                    name: {
+                        type: string;
+                        description: string;
+                    };
+                    shopId: {
+                        type: string;
+                        description: string;
+                    };
+                    platform: {
+                        type: string;
+                        description: string;
+                    };
+                    tax: {
+                        type: string;
+                        description: string;
+                    };
+                    currency: {
+                        type: string;
+                        description: string;
+                    };
+                    email: {
+                        type: string;
+                        format: string;
+                        description: string;
+                    };
+                    billingAddress: {
+                        properties: {
+                            name: {
+                                type: string;
+                            };
+                            company: {
+                                type: string;
+                            };
+                            address1: {
+                                type: string;
+                            };
+                            address2: {
+                                type: string;
+                            };
+                            city: {
+                                type: string;
+                            };
+                            zip: {
+                                type: string;
+                            };
+                            region: {
+                                type: string;
+                                description: string;
+                            };
+                            regionCode: {
+                                type: string;
+                                description: string;
+                            };
+                            country: {
+                                type: string;
+                                description: string;
+                            };
+                            countryCode: {
+                                type: string;
+                                description: string;
+                            };
+                        };
+                        example: {
+                            zip: string;
+                            country: string;
+                            regionCode: string;
+                            address2: string;
+                            city: string;
+                            address1: string;
+                            countryCode: string;
+                            name: string;
+                            company: string;
+                            region: string;
+                        };
+                        additionalProperties: boolean;
+                    };
+                    shippingAddress: {
+                        properties: {
+                            name: {
+                                type: string;
+                            };
+                            company: {
+                                type: string;
+                            };
+                            address1: {
+                                type: string;
+                            };
+                            address2: {
+                                type: string;
+                            };
+                            city: {
+                                type: string;
+                            };
+                            zip: {
+                                type: string;
+                            };
+                            region: {
+                                type: string;
+                                description: string;
+                            };
+                            regionCode: {
+                                type: string;
+                                description: string;
+                            };
+                            country: {
+                                type: string;
+                                description: string;
+                            };
+                            countryCode: {
+                                type: string;
+                                description: string;
+                            };
+                        };
+                        example: {
+                            zip: string;
+                            country: string;
+                            regionCode: string;
+                            address2: string;
+                            city: string;
+                            address1: string;
+                            countryCode: string;
+                            name: string;
+                            company: string;
+                            region: string;
+                        };
+                        additionalProperties: boolean;
+                    };
+                    createdAt: {
+                        type: string;
+                        format: string;
+                        convertStringToDate: boolean;
+                    };
+                    updatedAt: {
+                        type: string;
+                        format: string;
+                        convertStringToDate: boolean;
+                    };
+                    customer: {
+                        required: string[];
+                        properties: {
+                            platformCustomerId: {
+                                type: string;
+                                description: string;
+                            };
+                            firstName: {
+                                type: string;
+                            };
+                            lastName: {
+                                type: string;
+                            };
+                            phone: {
+                                type: string;
+                            };
+                            createdAt: {
+                                type: string;
+                                format: string;
+                                convertStringToDate: boolean;
+                            };
+                            updatedAt: {
+                                type: string;
+                                format: string;
+                                convertStringToDate: boolean;
+                            };
+                            gender: {
+                                type: string;
+                                enum: string[];
+                            };
+                            birthday: {
+                                type: string;
+                                format: string;
+                            };
+                            company: {
+                                type: string;
+                            };
+                            ordersCount: {
+                                type: string;
+                                description: string;
+                            };
+                            totalSpent: {
+                                type: string;
+                                description: string;
+                            };
+                            isEmailVerified: {
+                                type: string;
+                                description: string;
+                            };
+                            isPayingCustomer: {
+                                type: string;
+                                description: string;
+                            };
+                        };
+                        example: {
+                            birthday: string;
+                            lastName: string;
+                            totalSpent: number;
+                            gender: string;
+                            platformCustomerId: string;
+                            isEmailVerified: boolean;
+                            firstName: string;
+                            createdAt: string;
+                            ordersCount: number;
+                            isPayingCustomer: boolean;
+                            phone: string;
+                            company: string;
+                            updatedAt: string;
+                        };
+                        additionalProperties: boolean;
+                    };
+                    status: {
+                        type: string;
+                        description: string;
+                        enum: string[];
+                    };
+                    processingMethod: {
+                        type: string;
+                        description: string;
+                        enum: string[];
+                    };
+                    sourceName: {
+                        type: string;
+                        description: string;
+                        enum: string[];
+                        additionalProperties: boolean;
+                    };
+                    totalPrice: {
+                        type: string;
+                        description: string;
+                    };
+                    transctions: {
+                        type: string;
+                        items: {
+                            required: string[];
+                            properties: {
+                                platformTransactionId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                amount: {
+                                    type: string;
+                                    description: string;
+                                };
+                                createdAt: {
+                                    type: string;
+                                    format: string;
+                                    convertStringToDate: boolean;
+                                };
+                                gateway: {
+                                    type: string;
+                                };
+                                sourceName: {
+                                    type: string;
+                                    description: string;
+                                    enum: string[];
+                                    additionalProperties: boolean;
+                                };
+                                paymentDetails: {
+                                    properties: {
+                                        creditCardNumber: {
+                                            type: string;
+                                        };
+                                        creditCardCompany: {
+                                            type: string;
+                                        };
+                                        cardExpiration: {
+                                            type: string;
+                                        };
+                                        cardHolder: {
+                                            type: string;
+                                        };
+                                        avsResultCode: {
+                                            type: string;
+                                        };
+                                        cvvResultCode: {
+                                            type: string;
+                                        };
+                                        creditCardBin: {
+                                            type: string;
+                                        };
+                                        method: {
+                                            type: string;
+                                        };
+                                        gateway: {
+                                            type: string;
+                                        };
+                                    };
+                                    example: {
+                                        avsResultCode: string;
+                                        cvvResultCode: string;
+                                        method: string;
+                                        creditCardNumber: string;
+                                        creditCardBin: string;
+                                        creditCardCompany: string;
+                                        cardHolder: string;
+                                        cardExpiration: string;
+                                        gateway: string;
+                                    };
+                                    additionalProperties: boolean;
+                                };
+                                kind: {
+                                    type: string;
+                                    enum: string[];
+                                };
+                                status: {
+                                    type: string;
+                                };
+                                currency: {
+                                    type: string;
+                                };
+                                test: {
+                                    type: string;
+                                    description: string;
+                                };
+                            };
+                            example: {
+                                createdAt: string;
+                                amount: number;
+                                test: boolean;
+                                platformTransactionId: string;
+                                kind: string;
+                                currency: string;
+                                paymentDetails: {
+                                    avsResultCode: string;
+                                    cvvResultCode: string;
+                                    method: string;
+                                    creditCardNumber: string;
+                                    creditCardBin: string;
+                                    creditCardCompany: string;
+                                    cardHolder: string;
+                                    cardExpiration: string;
+                                    gateway: string;
+                                };
+                                gateway: string;
+                                status: string;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    };
+                    lineItems: {
+                        type: string;
+                        items: {
+                            required: string[];
+                            properties: {
+                                platformId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                title: {
+                                    type: string;
+                                };
+                                name: {
+                                    type: string;
+                                };
+                                quantity: {
+                                    type: string;
+                                };
+                                price: {
+                                    type: string;
+                                };
+                                sku: {
+                                    type: string;
+                                };
+                                isbn: {
+                                    type: string;
+                                };
+                                ean13: {
+                                    type: string;
+                                };
+                                upc: {
+                                    type: string;
+                                };
+                                variantId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                variantTitle: {
+                                    type: string;
+                                };
+                                vendor: {
+                                    type: string;
+                                };
+                                platformProductId: {
+                                    type: string;
+                                    description: string;
+                                };
+                                giftCard: {
+                                    type: string;
+                                };
+                                totalDiscount: {
+                                    type: string;
+                                };
+                                manufacturer: {
+                                    type: string;
+                                };
+                            };
+                            example: {
+                                variantTitle: string;
+                                platformProductId: string;
+                                quantity: number;
+                                isbn: string;
+                                ean13: string;
+                                upc: string;
+                                platformId: string;
+                                title: string;
+                                manufacturer: string;
+                                price: number;
+                                vendor: string;
+                                name: string;
+                                giftCard: boolean;
+                                totalDiscount: number;
+                                variantId: string;
+                                sku: string;
+                            };
+                            additionalProperties: boolean;
+                        };
+                    };
+                    canceledAt: {
+                        type: string;
+                        format: string;
+                        convertStringToDate: boolean;
+                    };
+                    canceledBy: {
+                        type: string;
+                    };
+                    cancelReason: {
+                        type: string;
+                    };
+                    approvedAt: {
+                        type: string;
+                        format: string;
+                        convertStringToDate: boolean;
+                    };
+                    approvedBy: {
+                        type: string;
+                    };
+                    hasGiftCard: {
+                        type: string;
+                        description: string;
+                    };
+                };
+                example: {
+                    totalPrice: number;
+                    approvedBy: string;
+                    canceledBy: string;
+                    tax: number;
+                    approvedAt: string;
+                    platform: string;
+                    lineItems: {
+                        variantTitle: string;
+                        platformProductId: string;
+                        quantity: number;
+                        isbn: string;
+                        ean13: string;
+                        upc: string;
+                        platformId: string;
+                        title: string;
+                        manufacturer: string;
+                        price: number;
+                        vendor: string;
+                        name: string;
+                        giftCard: boolean;
+                        totalDiscount: number;
+                        variantId: string;
+                        sku: string;
+                    }[];
+                    createdAt: string;
+                    transctions: {
+                        createdAt: string;
+                        amount: number;
+                        test: boolean;
+                        platformTransactionId: string;
+                        kind: string;
+                        currency: string;
+                        paymentDetails: {
+                            avsResultCode: string;
+                            cvvResultCode: string;
+                            method: string;
+                            creditCardNumber: string;
+                            creditCardBin: string;
+                            creditCardCompany: string;
+                            cardHolder: string;
+                            cardExpiration: string;
+                            gateway: string;
+                        };
+                        gateway: string;
+                        status: string;
+                    }[];
+                    canceledAt: string;
+                    hasGiftCard: boolean;
+                    name: string;
+                    processingMethod: string;
+                    shippingAddress: {
+                        zip: string;
+                        country: string;
+                        regionCode: string;
+                        address2: string;
+                        city: string;
+                        address1: string;
+                        countryCode: string;
+                        name: string;
+                        company: string;
+                        region: string;
+                    };
+                    currency: string;
+                    shopId: number;
+                    billingAddress: {
+                        zip: string;
+                        country: string;
+                        regionCode: string;
+                        address2: string;
+                        city: string;
+                        address1: string;
+                        countryCode: string;
+                        name: string;
+                        company: string;
+                        region: string;
+                    };
+                    sourceName: {};
+                    platformOrderId: string;
+                    cancelReason: string;
+                    email: string;
+                    updatedAt: string;
+                    customer: {
+                        birthday: string;
+                        lastName: string;
+                        totalSpent: number;
+                        gender: string;
+                        platformCustomerId: string;
+                        isEmailVerified: boolean;
+                        firstName: string;
+                        createdAt: string;
+                        ordersCount: number;
+                        isPayingCustomer: boolean;
+                        phone: string;
+                        company: string;
+                        updatedAt: string;
+                    };
+                    status: string;
+                };
+                additionalProperties: boolean;
+            };
+            Address: {
+                properties: {
+                    name: {
+                        type: string;
+                    };
+                    company: {
+                        type: string;
+                    };
+                    address1: {
+                        type: string;
+                    };
+                    address2: {
+                        type: string;
+                    };
+                    city: {
+                        type: string;
+                    };
+                    zip: {
+                        type: string;
+                    };
+                    region: {
+                        type: string;
+                        description: string;
+                    };
+                    regionCode: {
+                        type: string;
+                        description: string;
+                    };
+                    country: {
+                        type: string;
+                        description: string;
+                    };
+                    countryCode: {
+                        type: string;
+                        description: string;
+                    };
+                };
+                example: {
+                    zip: string;
+                    country: string;
+                    regionCode: string;
+                    address2: string;
+                    city: string;
+                    address1: string;
+                    countryCode: string;
+                    name: string;
+                    company: string;
+                    region: string;
+                };
+                additionalProperties: boolean;
+            };
+            Customer: {
+                required: string[];
+                properties: {
+                    platformCustomerId: {
+                        type: string;
+                        description: string;
+                    };
+                    firstName: {
+                        type: string;
+                    };
+                    lastName: {
+                        type: string;
+                    };
+                    phone: {
+                        type: string;
+                    };
+                    createdAt: {
+                        type: string;
+                        format: string;
+                        convertStringToDate: boolean;
+                    };
+                    updatedAt: {
+                        type: string;
+                        format: string;
+                        convertStringToDate: boolean;
+                    };
+                    gender: {
+                        type: string;
+                        enum: string[];
+                    };
+                    birthday: {
+                        type: string;
+                        format: string;
+                    };
+                    company: {
+                        type: string;
+                    };
+                    ordersCount: {
+                        type: string;
+                        description: string;
+                    };
+                    totalSpent: {
+                        type: string;
+                        description: string;
+                    };
+                    isEmailVerified: {
+                        type: string;
+                        description: string;
+                    };
+                    isPayingCustomer: {
+                        type: string;
+                        description: string;
+                    };
+                };
+                example: {
+                    birthday: string;
+                    lastName: string;
+                    totalSpent: number;
+                    gender: string;
+                    platformCustomerId: string;
+                    isEmailVerified: boolean;
+                    firstName: string;
+                    createdAt: string;
+                    ordersCount: number;
+                    isPayingCustomer: boolean;
+                    phone: string;
+                    company: string;
+                    updatedAt: string;
+                };
+                additionalProperties: boolean;
+            };
+            Transaction: {
+                required: string[];
+                properties: {
+                    platformTransactionId: {
+                        type: string;
+                        description: string;
+                    };
+                    amount: {
+                        type: string;
+                        description: string;
+                    };
+                    createdAt: {
+                        type: string;
+                        format: string;
+                        convertStringToDate: boolean;
+                    };
+                    gateway: {
+                        type: string;
+                    };
+                    sourceName: {
+                        type: string;
+                        description: string;
+                        enum: string[];
+                        additionalProperties: boolean;
+                    };
+                    paymentDetails: {
+                        properties: {
+                            creditCardNumber: {
+                                type: string;
+                            };
+                            creditCardCompany: {
+                                type: string;
+                            };
+                            cardExpiration: {
+                                type: string;
+                            };
+                            cardHolder: {
+                                type: string;
+                            };
+                            avsResultCode: {
+                                type: string;
+                            };
+                            cvvResultCode: {
+                                type: string;
+                            };
+                            creditCardBin: {
+                                type: string;
+                            };
+                            method: {
+                                type: string;
+                            };
+                            gateway: {
+                                type: string;
+                            };
+                        };
+                        example: {
+                            avsResultCode: string;
+                            cvvResultCode: string;
+                            method: string;
+                            creditCardNumber: string;
+                            creditCardBin: string;
+                            creditCardCompany: string;
+                            cardHolder: string;
+                            cardExpiration: string;
+                            gateway: string;
+                        };
+                        additionalProperties: boolean;
+                    };
+                    kind: {
+                        type: string;
+                        enum: string[];
+                    };
+                    status: {
+                        type: string;
+                    };
+                    currency: {
+                        type: string;
+                    };
+                    test: {
+                        type: string;
+                        description: string;
+                    };
+                };
+                example: {
+                    createdAt: string;
+                    amount: number;
+                    test: boolean;
+                    platformTransactionId: string;
+                    kind: string;
+                    currency: string;
+                    paymentDetails: {
+                        avsResultCode: string;
+                        cvvResultCode: string;
+                        method: string;
+                        creditCardNumber: string;
+                        creditCardBin: string;
+                        creditCardCompany: string;
+                        cardHolder: string;
+                        cardExpiration: string;
+                        gateway: string;
+                    };
+                    gateway: string;
+                    status: string;
+                };
+                additionalProperties: boolean;
+            };
+            PaymentDetails: {
+                properties: {
+                    creditCardNumber: {
+                        type: string;
+                    };
+                    creditCardCompany: {
+                        type: string;
+                    };
+                    cardExpiration: {
+                        type: string;
+                    };
+                    cardHolder: {
+                        type: string;
+                    };
+                    avsResultCode: {
+                        type: string;
+                    };
+                    cvvResultCode: {
+                        type: string;
+                    };
+                    creditCardBin: {
+                        type: string;
+                    };
+                    method: {
+                        type: string;
+                    };
+                    gateway: {
+                        type: string;
+                    };
+                };
+                example: {
+                    avsResultCode: string;
+                    cvvResultCode: string;
+                    method: string;
+                    creditCardNumber: string;
+                    creditCardBin: string;
+                    creditCardCompany: string;
+                    cardHolder: string;
+                    cardExpiration: string;
+                    gateway: string;
+                };
+                additionalProperties: boolean;
+            };
+            LineItem: {
+                required: string[];
+                properties: {
+                    platformId: {
+                        type: string;
+                        description: string;
+                    };
+                    title: {
+                        type: string;
+                    };
+                    name: {
+                        type: string;
+                    };
+                    quantity: {
+                        type: string;
+                    };
+                    price: {
+                        type: string;
+                    };
+                    sku: {
+                        type: string;
+                    };
+                    isbn: {
+                        type: string;
+                    };
+                    ean13: {
+                        type: string;
+                    };
+                    upc: {
+                        type: string;
+                    };
+                    variantId: {
+                        type: string;
+                        description: string;
+                    };
+                    variantTitle: {
+                        type: string;
+                    };
+                    vendor: {
+                        type: string;
+                    };
+                    platformProductId: {
+                        type: string;
+                        description: string;
+                    };
+                    giftCard: {
+                        type: string;
+                    };
+                    totalDiscount: {
+                        type: string;
+                    };
+                    manufacturer: {
+                        type: string;
+                    };
+                };
+                example: {
+                    variantTitle: string;
+                    platformProductId: string;
+                    quantity: number;
+                    isbn: string;
+                    ean13: string;
+                    upc: string;
+                    platformId: string;
+                    title: string;
+                    manufacturer: string;
+                    price: number;
+                    vendor: string;
+                    name: string;
+                    giftCard: boolean;
+                    totalDiscount: number;
+                    variantId: string;
+                    sku: string;
+                };
+                additionalProperties: boolean;
+            };
+            SourceName: {
+                type: string;
+                description: string;
+                enum: string[];
+                additionalProperties: boolean;
+            };
+            Error: {
+                type: string;
+                required: string[];
+                properties: {
+                    code: {
+                        type: string;
+                        description: string;
+                    };
+                    message: {
+                        type: string;
+                        description: string;
+                    };
+                    errors: {
+                        type: string;
+                        description: string;
+                        items: {
+                            required: string[];
+                            properties: {
+                                name: {
+                                    type: string;
+                                    description: string;
+                                };
+                                code: {
+                                    type: string;
+                                };
+                                message: {
+                                    type: string;
+                                };
+                            };
+                            type: string;
+                            additionalProperties: boolean;
+                        };
+                    };
+                };
+                description: string;
+                additionalProperties: boolean;
+            };
+            inline_response_200: {
+                properties: {
+                    sessions: {
+                        type: string;
+                        properties: {
+                            name: {
+                                type: string;
+                            };
+                            description: {
+                                type: string;
+                            };
+                            attributes: {
+                                type: string;
+                                items: {
+                                    type: string;
+                                    properties: {
+                                        name: {
+                                            type: string;
+                                        };
+                                        title: {
+                                            type: string;
+                                        };
+                                        description: {
+                                            type: string;
+                                        };
+                                        dataType: {
+                                            type: string;
+                                        };
+                                        isElement: {
+                                            type: string;
+                                        };
+                                        isMetric: {
+                                            type: string;
+                                        };
+                                    };
+                                    example: {
+                                        isElement: boolean;
+                                        dataType: string;
+                                        name: string;
+                                        isMetric: boolean;
+                                        description: string;
+                                        title: string;
+                                    };
+                                    additionalProperties: boolean;
+                                };
+                            };
+                        };
+                        example: {
+                            name: string;
+                            description: string;
+                            attributes: {
+                                isElement: boolean;
+                                dataType: string;
+                                name: string;
+                                isMetric: boolean;
+                                description: string;
+                                title: string;
+                            }[];
+                        };
+                        additionalProperties: boolean;
+                    };
+                    pages: {
+                        type: string;
+                        properties: {
+                            name: {
+                                type: string;
+                            };
+                            description: {
+                                type: string;
+                            };
+                            attributes: {
+                                type: string;
+                                items: {
+                                    type: string;
+                                    properties: {
+                                        name: {
+                                            type: string;
+                                        };
+                                        title: {
+                                            type: string;
+                                        };
+                                        description: {
+                                            type: string;
+                                        };
+                                        dataType: {
+                                            type: string;
+                                        };
+                                        isElement: {
+                                            type: string;
+                                        };
+                                        isMetric: {
+                                            type: string;
+                                        };
+                                    };
+                                    example: {
+                                        isElement: boolean;
+                                        dataType: string;
+                                        name: string;
+                                        isMetric: boolean;
+                                        description: string;
+                                        title: string;
+                                    };
+                                    additionalProperties: boolean;
+                                };
+                            };
+                        };
+                        example: {
+                            name: string;
+                            description: string;
+                            attributes: {
+                                isElement: boolean;
+                                dataType: string;
+                                name: string;
+                                isMetric: boolean;
+                                description: string;
+                                title: string;
+                            }[];
+                        };
+                        additionalProperties: boolean;
+                    };
+                    events: {
+                        type: string;
+                        properties: {
+                            name: {
+                                type: string;
+                            };
+                            description: {
+                                type: string;
+                            };
+                            attributes: {
+                                type: string;
+                                items: {
+                                    type: string;
+                                    properties: {
+                                        name: {
+                                            type: string;
+                                        };
+                                        title: {
+                                            type: string;
+                                        };
+                                        description: {
+                                            type: string;
+                                        };
+                                        dataType: {
+                                            type: string;
+                                        };
+                                        isElement: {
+                                            type: string;
+                                        };
+                                        isMetric: {
+                                            type: string;
+                                        };
+                                    };
+                                    example: {
+                                        isElement: boolean;
+                                        dataType: string;
+                                        name: string;
+                                        isMetric: boolean;
+                                        description: string;
+                                        title: string;
+                                    };
+                                    additionalProperties: boolean;
+                                };
+                            };
+                        };
+                        example: {
+                            name: string;
+                            description: string;
+                            attributes: {
+                                isElement: boolean;
+                                dataType: string;
+                                name: string;
+                                isMetric: boolean;
+                                description: string;
+                                title: string;
+                            }[];
+                        };
+                        additionalProperties: boolean;
+                    };
+                    timings: {
+                        type: string;
+                        properties: {
+                            name: {
+                                type: string;
+                            };
+                            description: {
+                                type: string;
+                            };
+                            attributes: {
+                                type: string;
+                                items: {
+                                    type: string;
+                                    properties: {
+                                        name: {
+                                            type: string;
+                                        };
+                                        title: {
+                                            type: string;
+                                        };
+                                        description: {
+                                            type: string;
+                                        };
+                                        dataType: {
+                                            type: string;
+                                        };
+                                        isElement: {
+                                            type: string;
+                                        };
+                                        isMetric: {
+                                            type: string;
+                                        };
+                                    };
+                                    example: {
+                                        isElement: boolean;
+                                        dataType: string;
+                                        name: string;
+                                        isMetric: boolean;
+                                        description: string;
+                                        title: string;
+                                    };
+                                    additionalProperties: boolean;
+                                };
+                            };
+                        };
+                        example: {
+                            name: string;
+                            description: string;
+                            attributes: {
+                                isElement: boolean;
+                                dataType: string;
+                                name: string;
+                                isMetric: boolean;
+                                description: string;
+                                title: string;
+                            }[];
+                        };
+                        additionalProperties: boolean;
+                    };
+                    users: {
+                        type: string;
+                        properties: {
+                            name: {
+                                type: string;
+                            };
+                            description: {
+                                type: string;
+                            };
+                            attributes: {
+                                type: string;
+                                items: {
+                                    type: string;
+                                    properties: {
+                                        name: {
+                                            type: string;
+                                        };
+                                        title: {
+                                            type: string;
+                                        };
+                                        description: {
+                                            type: string;
+                                        };
+                                        dataType: {
+                                            type: string;
+                                        };
+                                        isElement: {
+                                            type: string;
+                                        };
+                                        isMetric: {
+                                            type: string;
+                                        };
+                                    };
+                                    example: {
+                                        isElement: boolean;
+                                        dataType: string;
+                                        name: string;
+                                        isMetric: boolean;
+                                        description: string;
+                                        title: string;
+                                    };
+                                    additionalProperties: boolean;
+                                };
+                            };
+                        };
+                        example: {
+                            name: string;
+                            description: string;
+                            attributes: {
+                                isElement: boolean;
+                                dataType: string;
+                                name: string;
+                                isMetric: boolean;
+                                description: string;
+                                title: string;
+                            }[];
+                        };
+                        additionalProperties: boolean;
+                    };
+                    people: {
+                        type: string;
+                        properties: {
+                            name: {
+                                type: string;
+                            };
+                            description: {
+                                type: string;
+                            };
+                            attributes: {
+                                type: string;
+                                items: {
+                                    type: string;
+                                    properties: {
+                                        name: {
+                                            type: string;
+                                        };
+                                        title: {
+                                            type: string;
+                                        };
+                                        description: {
+                                            type: string;
+                                        };
+                                        dataType: {
+                                            type: string;
+                                        };
+                                        isElement: {
+                                            type: string;
+                                        };
+                                        isMetric: {
+                                            type: string;
+                                        };
+                                    };
+                                    example: {
+                                        isElement: boolean;
+                                        dataType: string;
+                                        name: string;
+                                        isMetric: boolean;
+                                        description: string;
+                                        title: string;
+                                    };
+                                    additionalProperties: boolean;
+                                };
+                            };
+                        };
+                        example: {
+                            name: string;
+                            description: string;
+                            attributes: {
+                                isElement: boolean;
+                                dataType: string;
+                                name: string;
+                                isMetric: boolean;
+                                description: string;
+                                title: string;
+                            }[];
+                        };
+                        additionalProperties: boolean;
+                    };
+                };
+                example: {
+                    sessions: {
+                        name: string;
+                        description: string;
+                        attributes: {
+                            isElement: boolean;
+                            dataType: string;
+                            name: string;
+                            isMetric: boolean;
+                            description: string;
+                            title: string;
+                        }[];
+                    };
+                    pages: {
+                        name: string;
+                        description: string;
+                        attributes: {
+                            isElement: boolean;
+                            dataType: string;
+                            name: string;
+                            isMetric: boolean;
+                            description: string;
+                            title: string;
+                        }[];
+                    };
+                    timings: {
+                        name: string;
+                        description: string;
+                        attributes: {
+                            isElement: boolean;
+                            dataType: string;
+                            name: string;
+                            isMetric: boolean;
+                            description: string;
+                            title: string;
+                        }[];
+                    };
+                    people: {
+                        name: string;
+                        description: string;
+                        attributes: {
+                            isElement: boolean;
+                            dataType: string;
+                            name: string;
+                            isMetric: boolean;
+                            description: string;
+                            title: string;
+                        }[];
+                    };
+                    events: {
+                        name: string;
+                        description: string;
+                        attributes: {
+                            isElement: boolean;
+                            dataType: string;
+                            name: string;
+                            isMetric: boolean;
+                            description: string;
+                            title: string;
+                        }[];
+                    };
+                    users: {
+                        name: string;
+                        description: string;
+                        attributes: {
+                            isElement: boolean;
+                            dataType: string;
+                            name: string;
+                            isMetric: boolean;
+                            description: string;
+                            title: string;
+                        }[];
+                    };
+                };
+                additionalProperties: boolean;
+            };
+            Error_errors: {
+                required: string[];
+                properties: {
+                    name: {
+                        type: string;
+                        description: string;
+                    };
+                    code: {
+                        type: string;
+                    };
+                    message: {
+                        type: string;
+                    };
+                };
+                type: string;
+                additionalProperties: boolean;
+            };
+        };
+        responses: {
+            OK: {
+                description: string;
+            };
+            NoContent: {
+                description: string;
+            };
+            BadRequest: {
+                description: string;
+                schema: {
+                    type: string;
+                    required: string[];
+                    properties: {
+                        code: {
+                            type: string;
+                            description: string;
+                        };
+                        message: {
+                            type: string;
+                            description: string;
+                        };
+                        errors: {
+                            type: string;
+                            description: string;
+                            items: {
+                                required: string[];
+                                properties: {
+                                    name: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    code: {
+                                        type: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                    };
+                                };
+                                type: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    description: string;
+                    additionalProperties: boolean;
+                };
+            };
+            Unauthorized: {
+                description: string;
+                schema: {
+                    type: string;
+                    required: string[];
+                    properties: {
+                        code: {
+                            type: string;
+                            description: string;
+                        };
+                        message: {
+                            type: string;
+                            description: string;
+                        };
+                        errors: {
+                            type: string;
+                            description: string;
+                            items: {
+                                required: string[];
+                                properties: {
+                                    name: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    code: {
+                                        type: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                    };
+                                };
+                                type: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    description: string;
+                    additionalProperties: boolean;
+                };
+            };
+            NotFound: {
+                description: string;
+                schema: {
+                    type: string;
+                    required: string[];
+                    properties: {
+                        code: {
+                            type: string;
+                            description: string;
+                        };
+                        message: {
+                            type: string;
+                            description: string;
+                        };
+                        errors: {
+                            type: string;
+                            description: string;
+                            items: {
+                                required: string[];
+                                properties: {
+                                    name: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    code: {
+                                        type: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                    };
+                                };
+                                type: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    description: string;
+                    additionalProperties: boolean;
+                };
+            };
+            Duplicate: {
+                description: string;
+                schema: {
+                    type: string;
+                    required: string[];
+                    properties: {
+                        code: {
+                            type: string;
+                            description: string;
+                        };
+                        message: {
+                            type: string;
+                            description: string;
+                        };
+                        errors: {
+                            type: string;
+                            description: string;
+                            items: {
+                                required: string[];
+                                properties: {
+                                    name: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    code: {
+                                        type: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                    };
+                                };
+                                type: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    description: string;
+                    additionalProperties: boolean;
+                };
+            };
+            Timeout: {
+                description: string;
+                schema: {
+                    type: string;
+                    required: string[];
+                    properties: {
+                        code: {
+                            type: string;
+                            description: string;
+                        };
+                        message: {
+                            type: string;
+                            description: string;
+                        };
+                        errors: {
+                            type: string;
+                            description: string;
+                            items: {
+                                required: string[];
+                                properties: {
+                                    name: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    code: {
+                                        type: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                    };
+                                };
+                                type: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    description: string;
+                    additionalProperties: boolean;
+                };
+            };
+            TooManyRequests: {
+                description: string;
+                schema: {
+                    type: string;
+                    required: string[];
+                    properties: {
+                        code: {
+                            type: string;
+                            description: string;
+                        };
+                        message: {
+                            type: string;
+                            description: string;
+                        };
+                        errors: {
+                            type: string;
+                            description: string;
+                            items: {
+                                required: string[];
+                                properties: {
+                                    name: {
+                                        type: string;
+                                        description: string;
+                                    };
+                                    code: {
+                                        type: string;
+                                    };
+                                    message: {
+                                        type: string;
+                                    };
+                                };
+                                type: string;
+                                additionalProperties: boolean;
+                            };
+                        };
+                    };
+                    description: string;
+                    additionalProperties: boolean;
+                };
+            };
+        };
+    };
 };
 export { Specs };

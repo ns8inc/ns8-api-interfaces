@@ -12197,6 +12197,6953 @@ const Specs = {
                 additionalProperties: false
             }
         }
+    },
+    Protect: {
+        swagger: "2.0",
+        info: {
+            description: "Fraud protection",
+            version: "2.0",
+            title: "Protect API",
+            "x-namespace": "Protect"
+        },
+        host: "test-api.ns8.com",
+        basePath: "/",
+        tags: [
+            { name: "applications" },
+            { name: "fraud", description: "fraud" },
+            { name: "protection", description: "protection" }
+        ],
+        schemes: ["https"],
+        produces: ["application/json"],
+        paths: {
+            "/protect/users": {
+                post: {
+                    tags: ["users"],
+                    summary: "Create a new user.",
+                    parameters: [
+                        {
+                            in: "body",
+                            name: "body",
+                            description: "The user parameters",
+                            required: true,
+                            schema: {
+                                type: "object",
+                                required: ["name", "password"],
+                                properties: {
+                                    name: {
+                                        type: "string",
+                                        description: "The name of the user, which is generally an email address unless if the  application's user name format allows other types.",
+                                        minLength: 4,
+                                        transform: ["trim", "toLowerCase"]
+                                    },
+                                    email: { type: "string", format: "email" },
+                                    password: { type: "string", minLength: 6 },
+                                    firstName: { type: "string" },
+                                    lastName: { type: "string" },
+                                    phone: { type: "string", pattern: "^\\d{10}$" },
+                                    timezone: { type: "string", default: "UTC" }
+                                },
+                                example: {
+                                    firstName: "firstName",
+                                    lastName: "lastName",
+                                    password: "password",
+                                    phone: "phone",
+                                    timezone: "UTC",
+                                    name: "name",
+                                    email: "email"
+                                },
+                                additionalProperties: false
+                            }
+                        }
+                    ],
+                    responses: {
+                        "200": {
+                            description: "User created",
+                            schema: {
+                                type: "object",
+                                required: ["id", "name"],
+                                properties: {
+                                    id: {
+                                        type: "integer",
+                                        description: "The user id. This is the primary key."
+                                    },
+                                    name: {
+                                        type: "string",
+                                        description: "The user name, which is the user's email address unless the application allows for other formats."
+                                    },
+                                    firstName: { type: "string" },
+                                    lastName: { type: "string" },
+                                    email: {
+                                        type: "string",
+                                        format: "email",
+                                        description: "The email to use to communicate with the user.  If this is not provided, the user's name is used."
+                                    },
+                                    status: { type: "integer" },
+                                    phone: { type: "string" },
+                                    timezone: { type: "string" },
+                                    createdDate: {
+                                        type: "string",
+                                        format: "date-time",
+                                        description: "The date the user was created.",
+                                        convertStringToDate: true
+                                    },
+                                    lastUpdated: {
+                                        type: "string",
+                                        format: "date-time",
+                                        description: "The date the user was last updated.",
+                                        convertStringToDate: true
+                                    }
+                                },
+                                example: {
+                                    firstName: "firstName",
+                                    lastName: "lastName",
+                                    lastUpdated: "2000-01-23T04:56:07.000+00:00",
+                                    createdDate: "2000-01-23T04:56:07.000+00:00",
+                                    phone: "phone",
+                                    timezone: "timezone",
+                                    name: "name",
+                                    id: 0,
+                                    email: "email",
+                                    status: 6
+                                },
+                                additionalProperties: false
+                            }
+                        },
+                        "400": {
+                            description: "Bad request",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "401": {
+                            description: "Unauthorized",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "404": {
+                            description: "Not found",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "409": {
+                            description: "Duplicate",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "429": {
+                            description: "Too many requests",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    "x-rate-limit": 3
+                },
+                patch: {
+                    tags: ["users"],
+                    summary: "Update an authenticated user.",
+                    parameters: [
+                        {
+                            in: "body",
+                            name: "body",
+                            description: "The default user change parameters",
+                            required: true,
+                            schema: {
+                                properties: {
+                                    firstName: { type: "string" },
+                                    lastName: { type: "string" },
+                                    email: { type: "string", format: "email" },
+                                    phone: { type: "string", pattern: "^\\d{10}$" },
+                                    timezone: { type: "string" }
+                                },
+                                description: "The set of attributes to update. Use the merge-patch format  https://tools.ietf.org/html/rfc7396",
+                                example: {
+                                    firstName: "firstName",
+                                    lastName: "lastName",
+                                    phone: "phone",
+                                    timezone: "timezone",
+                                    email: "email"
+                                },
+                                additionalProperties: false
+                            }
+                        }
+                    ],
+                    responses: {
+                        "200": {
+                            description: "User updated",
+                            schema: {
+                                type: "object",
+                                required: ["id", "name"],
+                                properties: {
+                                    id: {
+                                        type: "integer",
+                                        description: "The user id. This is the primary key."
+                                    },
+                                    name: {
+                                        type: "string",
+                                        description: "The user name, which is the user's email address unless the application allows for other formats."
+                                    },
+                                    firstName: { type: "string" },
+                                    lastName: { type: "string" },
+                                    email: {
+                                        type: "string",
+                                        format: "email",
+                                        description: "The email to use to communicate with the user.  If this is not provided, the user's name is used."
+                                    },
+                                    status: { type: "integer" },
+                                    phone: { type: "string" },
+                                    timezone: { type: "string" },
+                                    createdDate: {
+                                        type: "string",
+                                        format: "date-time",
+                                        description: "The date the user was created.",
+                                        convertStringToDate: true
+                                    },
+                                    lastUpdated: {
+                                        type: "string",
+                                        format: "date-time",
+                                        description: "The date the user was last updated.",
+                                        convertStringToDate: true
+                                    }
+                                },
+                                example: {
+                                    firstName: "firstName",
+                                    lastName: "lastName",
+                                    lastUpdated: "2000-01-23T04:56:07.000+00:00",
+                                    createdDate: "2000-01-23T04:56:07.000+00:00",
+                                    phone: "phone",
+                                    timezone: "timezone",
+                                    name: "name",
+                                    id: 0,
+                                    email: "email",
+                                    status: 6
+                                },
+                                additionalProperties: false
+                            }
+                        },
+                        "400": {
+                            description: "Bad request",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "401": {
+                            description: "Unauthorized",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "404": {
+                            description: "Not found",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "409": {
+                            description: "Duplicate",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "429": {
+                            description: "Too many requests",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    security: [{ Bearer: [] }],
+                    "x-rate-limit": 3
+                }
+            },
+            "/protect/users/password": {
+                put: {
+                    tags: ["users"],
+                    summary: "Change the password for the currently authenticated user.",
+                    parameters: [
+                        {
+                            in: "body",
+                            name: "body",
+                            description: "The password change parameters",
+                            required: true,
+                            schema: {
+                                type: "object",
+                                required: ["newPassword", "oldPassword"],
+                                properties: {
+                                    oldPassword: {
+                                        type: "string",
+                                        format: "password",
+                                        description: "The user's existing password.",
+                                        minLength: 6
+                                    },
+                                    newPassword: {
+                                        type: "string",
+                                        format: "password",
+                                        description: "The new password for the user.",
+                                        minLength: 6
+                                    }
+                                },
+                                description: "Parameters for changing a user's password.",
+                                example: {
+                                    oldPassword: "oldPassword",
+                                    newPassword: "newPassword"
+                                },
+                                additionalProperties: false
+                            }
+                        }
+                    ],
+                    responses: {
+                        "204": { description: "Success with no content" },
+                        "400": {
+                            description: "Bad request",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "401": {
+                            description: "Unauthorized",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "429": {
+                            description: "Too many requests",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    security: [{ Bearer: [] }],
+                    "x-rate-limit": 3
+                }
+            },
+            "/protect/users/{id}/password": {
+                put: {
+                    tags: ["users"],
+                    summary: "Change the password for the specified user.",
+                    parameters: [
+                        {
+                            name: "id",
+                            in: "path",
+                            description: "The user id to update",
+                            required: true,
+                            type: "integer"
+                        },
+                        {
+                            in: "body",
+                            name: "body",
+                            description: "The password change parameters",
+                            required: true,
+                            schema: {
+                                type: "object",
+                                required: ["password"],
+                                properties: {
+                                    password: {
+                                        type: "string",
+                                        description: "The new password.",
+                                        minLength: 6
+                                    }
+                                },
+                                description: "Parameters to complete a password reset.",
+                                example: { password: "password" },
+                                additionalProperties: false
+                            }
+                        }
+                    ],
+                    responses: {
+                        "204": { description: "Success with no content" },
+                        "400": {
+                            description: "Bad request",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "401": {
+                            description: "Unauthorized",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "429": {
+                            description: "Too many requests",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    security: [{ Bearer: [] }],
+                    "x-permissions": ["internalService"],
+                    "x-rate-limit": 3
+                }
+            },
+            "/protect/users/name/{name}": {
+                get: {
+                    tags: ["users"],
+                    summary: "Get user information.",
+                    parameters: [
+                        {
+                            name: "name",
+                            in: "path",
+                            description: "The user name to check.",
+                            required: true,
+                            type: "string"
+                        }
+                    ],
+                    responses: {
+                        "200": {
+                            description: "User info",
+                            schema: {
+                                type: "object",
+                                required: ["id", "name"],
+                                properties: {
+                                    id: {
+                                        type: "integer",
+                                        description: "The user id. This is the primary key."
+                                    },
+                                    name: {
+                                        type: "string",
+                                        description: "The user name, which is the user's email address unless the application allows for other formats."
+                                    },
+                                    firstName: { type: "string" },
+                                    lastName: { type: "string" },
+                                    email: {
+                                        type: "string",
+                                        format: "email",
+                                        description: "The email to use to communicate with the user.  If this is not provided, the user's name is used."
+                                    },
+                                    status: { type: "integer" },
+                                    phone: { type: "string" },
+                                    timezone: { type: "string" },
+                                    createdDate: {
+                                        type: "string",
+                                        format: "date-time",
+                                        description: "The date the user was created.",
+                                        convertStringToDate: true
+                                    },
+                                    lastUpdated: {
+                                        type: "string",
+                                        format: "date-time",
+                                        description: "The date the user was last updated.",
+                                        convertStringToDate: true
+                                    }
+                                },
+                                example: {
+                                    firstName: "firstName",
+                                    lastName: "lastName",
+                                    lastUpdated: "2000-01-23T04:56:07.000+00:00",
+                                    createdDate: "2000-01-23T04:56:07.000+00:00",
+                                    phone: "phone",
+                                    timezone: "timezone",
+                                    name: "name",
+                                    id: 0,
+                                    email: "email",
+                                    status: 6
+                                },
+                                additionalProperties: false
+                            }
+                        },
+                        "401": {
+                            description: "Unauthorized",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "404": { description: "The user does not exist." },
+                        "429": { description: "Too many requests." }
+                    },
+                    "x-rate-limit": 3,
+                    "x-permissions": ["internalService"]
+                }
+            },
+            "/protect/accounts": {
+                post: {
+                    tags: ["accounts"],
+                    summary: "Create a new account for the currently authenticated user.",
+                    parameters: [
+                        {
+                            in: "body",
+                            name: "body",
+                            description: "The account parameters",
+                            required: true,
+                            schema: {
+                                type: "object",
+                                required: ["appId", "userId"],
+                                properties: {
+                                    appId: {
+                                        type: "integer",
+                                        description: "The application id to user for the account.  Call /applications to see a list of applications supported."
+                                    },
+                                    userId: {
+                                        type: "integer",
+                                        description: "The id of the user who owns the account."
+                                    },
+                                    status: {
+                                        type: "integer",
+                                        description: "The status of the account.  0 is active, 3 is canceled."
+                                    },
+                                    type: {
+                                        type: "string",
+                                        description: "The application specific account type."
+                                    },
+                                    partnerId: {
+                                        type: "integer",
+                                        description: "The partner id credited with this account."
+                                    },
+                                    discountPct: {
+                                        type: "number",
+                                        description: "The discount percentage for billing.",
+                                        minimum: 0,
+                                        maximum: 100
+                                    }
+                                },
+                                description: "Parameters to create an account",
+                                example: {
+                                    discountPct: 56.37376656633328,
+                                    appId: 0,
+                                    partnerId: 5,
+                                    type: "type",
+                                    userId: 6,
+                                    status: 1
+                                },
+                                additionalProperties: false
+                            }
+                        }
+                    ],
+                    responses: {
+                        "200": {
+                            description: "Account created",
+                            schema: {
+                                type: "object",
+                                required: ["appId", "id", "userId"],
+                                properties: {
+                                    id: {
+                                        type: "integer",
+                                        description: "The account id. This is the primary key."
+                                    },
+                                    userId: {
+                                        type: "integer",
+                                        description: "The id of the user that created the account."
+                                    },
+                                    appId: {
+                                        type: "integer",
+                                        description: "The application id of the account.  Call /v2/applications to see a list of applications supported."
+                                    },
+                                    status: {
+                                        type: "integer",
+                                        description: "The status of the account.  0 is active, 3 is canceled."
+                                    },
+                                    createdDate: {
+                                        type: "string",
+                                        format: "date-time",
+                                        description: "The date the account was created.",
+                                        convertStringToDate: true
+                                    },
+                                    lastUpdated: {
+                                        type: "string",
+                                        format: "date-time",
+                                        description: "The date the account was last updated.",
+                                        convertStringToDate: true
+                                    },
+                                    type: {
+                                        type: "string",
+                                        description: "The application specific account type."
+                                    },
+                                    partnerId: {
+                                        type: "integer",
+                                        description: "The partner id credited with this account."
+                                    }
+                                },
+                                description: "Represents an account.  Users can have an account for each application.",
+                                example: {
+                                    lastUpdated: "2000-01-23T04:56:07.000+00:00",
+                                    createdDate: "2000-01-23T04:56:07.000+00:00",
+                                    appId: 1,
+                                    id: 0,
+                                    partnerId: 5,
+                                    type: "type",
+                                    userId: 6,
+                                    status: 5
+                                },
+                                additionalProperties: false
+                            }
+                        },
+                        "400": {
+                            description: "Bad request",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "401": {
+                            description: "Unauthorized",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "409": {
+                            description: "Duplicate",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "429": {
+                            description: "Too many requests",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    "x-rate-limit": 3
+                }
+            },
+            "/protect/projects": {
+                get: {
+                    tags: ["projects"],
+                    summary: "Get all projects for the currently authenticated user and account.",
+                    parameters: [],
+                    responses: {
+                        "200": {
+                            description: "An array of projects.",
+                            schema: {
+                                type: "array",
+                                items: {
+                                    type: "object",
+                                    required: ["accountId", "appId", "id", "name"],
+                                    properties: {
+                                        id: {
+                                            type: "integer",
+                                            description: "The project id. This is the primary key."
+                                        },
+                                        accountId: {
+                                            type: "integer",
+                                            description: "The id of the account."
+                                        },
+                                        appId: {
+                                            type: "integer",
+                                            description: "The id of the application."
+                                        },
+                                        name: {
+                                            type: "string",
+                                            description: "The name of the project. This must be unique to the account."
+                                        },
+                                        type: {
+                                            type: "string",
+                                            description: "The application-specific type of the project."
+                                        },
+                                        enabled: {
+                                            type: "boolean",
+                                            description: "Whether the project is enabled.",
+                                            default: true
+                                        },
+                                        isDemo: {
+                                            type: "boolean",
+                                            description: "Whether the project is for a demo account. Demo projects are generally read-only in the user interface."
+                                        },
+                                        implemented: {
+                                            type: "boolean",
+                                            description: "Application specific indicator of whether the project has been implemented. For example, whether a website project has tracked any data."
+                                        },
+                                        permissions: {
+                                            type: "string",
+                                            description: "The application-specific permissions for a shared project.",
+                                            additionalProperties: false
+                                        },
+                                        sharedByUserId: {
+                                            type: "integer",
+                                            description: "For shared project, the id of the user that shared the project."
+                                        }
+                                    },
+                                    description: "Represents a website or other entity within an account. An account can have multiple projects. For example, the analytics product requires management of multiple websites. ",
+                                    example: {
+                                        accountId: 6,
+                                        permissions: {},
+                                        appId: 1,
+                                        name: "name",
+                                        implemented: true,
+                                        sharedByUserId: 5,
+                                        id: 0,
+                                        type: "type",
+                                        isDemo: true,
+                                        enabled: true
+                                    },
+                                    additionalProperties: false
+                                }
+                            }
+                        },
+                        "400": {
+                            description: "Bad request",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "401": {
+                            description: "Unauthorized",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "404": {
+                            description: "Not found",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "429": {
+                            description: "Too many requests",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    security: [{ Bearer: [] }],
+                    "x-rate-limit": 10
+                },
+                post: {
+                    tags: ["projects"],
+                    summary: "Create a new project for the currently authenticated user and account.",
+                    parameters: [
+                        {
+                            in: "body",
+                            name: "body",
+                            description: "The project parameters",
+                            required: true,
+                            schema: {
+                                type: "object",
+                                required: ["name"],
+                                properties: {
+                                    name: { type: "string" },
+                                    type: {
+                                        description: "The application-specific type of the project."
+                                    }
+                                },
+                                description: "Parameters to create a project.",
+                                example: { name: "name", type: "" },
+                                additionalProperties: false
+                            }
+                        }
+                    ],
+                    responses: {
+                        "200": {
+                            description: "Project created",
+                            schema: {
+                                type: "object",
+                                required: ["accountId", "appId", "id", "name"],
+                                properties: {
+                                    id: {
+                                        type: "integer",
+                                        description: "The project id. This is the primary key."
+                                    },
+                                    accountId: {
+                                        type: "integer",
+                                        description: "The id of the account."
+                                    },
+                                    appId: {
+                                        type: "integer",
+                                        description: "The id of the application."
+                                    },
+                                    name: {
+                                        type: "string",
+                                        description: "The name of the project. This must be unique to the account."
+                                    },
+                                    type: {
+                                        type: "string",
+                                        description: "The application-specific type of the project."
+                                    },
+                                    enabled: {
+                                        type: "boolean",
+                                        description: "Whether the project is enabled.",
+                                        default: true
+                                    },
+                                    isDemo: {
+                                        type: "boolean",
+                                        description: "Whether the project is for a demo account. Demo projects are generally read-only in the user interface."
+                                    },
+                                    implemented: {
+                                        type: "boolean",
+                                        description: "Application specific indicator of whether the project has been implemented. For example, whether a website project has tracked any data."
+                                    },
+                                    permissions: {
+                                        type: "string",
+                                        description: "The application-specific permissions for a shared project.",
+                                        additionalProperties: false
+                                    },
+                                    sharedByUserId: {
+                                        type: "integer",
+                                        description: "For shared project, the id of the user that shared the project."
+                                    }
+                                },
+                                description: "Represents a website or other entity within an account. An account can have multiple projects. For example, the analytics product requires management of multiple websites. ",
+                                example: {
+                                    accountId: 6,
+                                    permissions: {},
+                                    appId: 1,
+                                    name: "name",
+                                    implemented: true,
+                                    sharedByUserId: 5,
+                                    id: 0,
+                                    type: "type",
+                                    isDemo: true,
+                                    enabled: true
+                                },
+                                additionalProperties: false
+                            }
+                        },
+                        "400": {
+                            description: "Bad request",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "401": {
+                            description: "Unauthorized",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "404": {
+                            description: "Not found",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "429": {
+                            description: "Too many requests",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    security: [{ Bearer: [] }],
+                    "x-rate-limit": 10
+                }
+            },
+            "/protect/projects/{id}": {
+                delete: {
+                    tags: ["projects"],
+                    summary: "Delete a project.",
+                    parameters: [
+                        {
+                            name: "id",
+                            in: "path",
+                            description: "The project id to delete.",
+                            required: true,
+                            type: "integer"
+                        }
+                    ],
+                    responses: {
+                        "204": { description: "Success with no content" },
+                        "401": {
+                            description: "Unauthorized",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "404": {
+                            description: "Not found",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "429": {
+                            description: "Too many requests",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    security: [{ Bearer: [] }],
+                    "x-rate-limit": 10
+                },
+                patch: {
+                    tags: ["projects"],
+                    summary: "Update an existing project.",
+                    parameters: [
+                        {
+                            name: "id",
+                            in: "path",
+                            description: "The project id to update.",
+                            required: true,
+                            type: "integer"
+                        },
+                        {
+                            in: "body",
+                            name: "body",
+                            description: "The project parameters",
+                            required: true,
+                            schema: {
+                                properties: {
+                                    name: { type: "string" },
+                                    enabled: { type: "boolean" },
+                                    type: { type: "string" },
+                                    implemented: { type: "boolean" }
+                                },
+                                description: "The set of attributes to update. Use the merge-patch format  https://tools.ietf.org/html/rfc7396",
+                                example: {
+                                    name: "name",
+                                    implemented: true,
+                                    type: "type",
+                                    enabled: true
+                                },
+                                additionalProperties: false
+                            }
+                        }
+                    ],
+                    responses: {
+                        "200": {
+                            description: "Project updated",
+                            schema: {
+                                type: "object",
+                                required: ["accountId", "appId", "id", "name"],
+                                properties: {
+                                    id: {
+                                        type: "integer",
+                                        description: "The project id. This is the primary key."
+                                    },
+                                    accountId: {
+                                        type: "integer",
+                                        description: "The id of the account."
+                                    },
+                                    appId: {
+                                        type: "integer",
+                                        description: "The id of the application."
+                                    },
+                                    name: {
+                                        type: "string",
+                                        description: "The name of the project. This must be unique to the account."
+                                    },
+                                    type: {
+                                        type: "string",
+                                        description: "The application-specific type of the project."
+                                    },
+                                    enabled: {
+                                        type: "boolean",
+                                        description: "Whether the project is enabled.",
+                                        default: true
+                                    },
+                                    isDemo: {
+                                        type: "boolean",
+                                        description: "Whether the project is for a demo account. Demo projects are generally read-only in the user interface."
+                                    },
+                                    implemented: {
+                                        type: "boolean",
+                                        description: "Application specific indicator of whether the project has been implemented. For example, whether a website project has tracked any data."
+                                    },
+                                    permissions: {
+                                        type: "string",
+                                        description: "The application-specific permissions for a shared project.",
+                                        additionalProperties: false
+                                    },
+                                    sharedByUserId: {
+                                        type: "integer",
+                                        description: "For shared project, the id of the user that shared the project."
+                                    }
+                                },
+                                description: "Represents a website or other entity within an account. An account can have multiple projects. For example, the analytics product requires management of multiple websites. ",
+                                example: {
+                                    accountId: 6,
+                                    permissions: {},
+                                    appId: 1,
+                                    name: "name",
+                                    implemented: true,
+                                    sharedByUserId: 5,
+                                    id: 0,
+                                    type: "type",
+                                    isDemo: true,
+                                    enabled: true
+                                },
+                                additionalProperties: false
+                            }
+                        },
+                        "400": {
+                            description: "Bad request",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "401": {
+                            description: "Unauthorized",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "404": {
+                            description: "Not found",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "429": {
+                            description: "Too many requests",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    security: [{ Bearer: [] }],
+                    "x-rate-limit": 10
+                }
+            },
+            "/protect/access-tokens": {
+                post: {
+                    tags: ["authentication"],
+                    summary: "Create an access token for a user/password.",
+                    description: "This call authorizes a user/password combination and returns an access token.",
+                    parameters: [
+                        {
+                            in: "body",
+                            name: "body",
+                            description: "The login parameters.",
+                            required: true,
+                            schema: {
+                                type: "object",
+                                required: ["appId", "name", "password"],
+                                properties: {
+                                    name: { type: "string" },
+                                    password: { type: "string" },
+                                    appId: {
+                                        type: "integer",
+                                        description: "The id of the application the access token is for."
+                                    }
+                                },
+                                description: "Parameters for creating an access token.",
+                                example: { password: "password", appId: 0, name: "name" },
+                                additionalProperties: false
+                            }
+                        }
+                    ],
+                    responses: {
+                        "200": {
+                            description: "An AccessToken object.",
+                            schema: {
+                                required: ["appId", "id", "userId"],
+                                properties: {
+                                    id: {
+                                        type: "string",
+                                        description: "A key used for authenticating API calls. Place this access token in the Authorization header when making API calls as described in  https://tools.ietf.org/html/rfc6750.  For example Authorization: 'Bearer: token'"
+                                    },
+                                    userId: {
+                                        type: "integer",
+                                        description: "The user id the token was issued to."
+                                    },
+                                    appId: {
+                                        type: "integer",
+                                        description: "The application id the token was issued for."
+                                    },
+                                    accountId: {
+                                        type: "integer",
+                                        description: "The account id the token was issued for. If this is set, the token is restricted to this account."
+                                    },
+                                    projectId: {
+                                        type: "integer",
+                                        description: "The project id the token was issued for. If this is set, the token is restricted to this project."
+                                    },
+                                    permissions: {
+                                        type: "array",
+                                        description: "An array of permissions.",
+                                        items: { type: "string" },
+                                        additionalProperties: false
+                                    },
+                                    type: {
+                                        type: "string",
+                                        description: "A description of the source of token, like 'api'."
+                                    },
+                                    createdDate: {
+                                        type: "string",
+                                        format: "date-time",
+                                        description: "The date and time the token was created.",
+                                        convertStringToDate: true
+                                    },
+                                    expiration: {
+                                        type: "string",
+                                        format: "date-time",
+                                        description: "The date and time the token expires.",
+                                        convertStringToDate: true
+                                    }
+                                },
+                                description: "Represents an access token's data.",
+                                example: {
+                                    accountId: 1,
+                                    createdDate: "2000-01-23T04:56:07.000+00:00",
+                                    permissions: "",
+                                    appId: 6,
+                                    expiration: "2000-01-23T04:56:07.000+00:00",
+                                    id: "id",
+                                    type: "type",
+                                    userId: 0,
+                                    projectId: 5
+                                },
+                                additionalProperties: false
+                            }
+                        },
+                        "400": {
+                            description: "Bad request",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "401": {
+                            description: "Unauthorized",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "429": {
+                            description: "Too many requests",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    "x-rate-limit": 3
+                }
+            },
+            "/protect/authorizations": {
+                get: {
+                    tags: ["authentication"],
+                    summary: "Get Authorization information for the current user",
+                    description: "Gets the authorization for the current user",
+                    parameters: [],
+                    responses: {
+                        "200": {
+                            description: "An Authorization object.",
+                            schema: {
+                                type: "object",
+                                required: ["account", "user"],
+                                properties: {
+                                    user: {
+                                        type: "object",
+                                        required: ["id", "name"],
+                                        properties: {
+                                            id: {
+                                                type: "integer",
+                                                description: "The user id. This is the primary key."
+                                            },
+                                            name: {
+                                                type: "string",
+                                                description: "The user name, which is the user's email address unless the application allows for other formats."
+                                            },
+                                            firstName: { type: "string" },
+                                            lastName: { type: "string" },
+                                            email: {
+                                                type: "string",
+                                                format: "email",
+                                                description: "The email to use to communicate with the user.  If this is not provided, the user's name is used."
+                                            },
+                                            status: { type: "integer" },
+                                            phone: { type: "string" },
+                                            timezone: { type: "string" },
+                                            createdDate: {
+                                                type: "string",
+                                                format: "date-time",
+                                                description: "The date the user was created.",
+                                                convertStringToDate: true
+                                            },
+                                            lastUpdated: {
+                                                type: "string",
+                                                format: "date-time",
+                                                description: "The date the user was last updated.",
+                                                convertStringToDate: true
+                                            }
+                                        },
+                                        example: {
+                                            firstName: "firstName",
+                                            lastName: "lastName",
+                                            lastUpdated: "2000-01-23T04:56:07.000+00:00",
+                                            createdDate: "2000-01-23T04:56:07.000+00:00",
+                                            phone: "phone",
+                                            timezone: "timezone",
+                                            name: "name",
+                                            id: 0,
+                                            email: "email",
+                                            status: 6
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    account: {
+                                        type: "object",
+                                        required: ["appId", "id", "userId"],
+                                        properties: {
+                                            id: {
+                                                type: "integer",
+                                                description: "The account id. This is the primary key."
+                                            },
+                                            userId: {
+                                                type: "integer",
+                                                description: "The id of the user that created the account."
+                                            },
+                                            appId: {
+                                                type: "integer",
+                                                description: "The application id of the account.  Call /v2/applications to see a list of applications supported."
+                                            },
+                                            status: {
+                                                type: "integer",
+                                                description: "The status of the account.  0 is active, 3 is canceled."
+                                            },
+                                            createdDate: {
+                                                type: "string",
+                                                format: "date-time",
+                                                description: "The date the account was created.",
+                                                convertStringToDate: true
+                                            },
+                                            lastUpdated: {
+                                                type: "string",
+                                                format: "date-time",
+                                                description: "The date the account was last updated.",
+                                                convertStringToDate: true
+                                            },
+                                            type: {
+                                                type: "string",
+                                                description: "The application specific account type."
+                                            },
+                                            partnerId: {
+                                                type: "integer",
+                                                description: "The partner id credited with this account."
+                                            }
+                                        },
+                                        description: "Represents an account.  Users can have an account for each application.",
+                                        example: {
+                                            lastUpdated: "2000-01-23T04:56:07.000+00:00",
+                                            createdDate: "2000-01-23T04:56:07.000+00:00",
+                                            appId: 1,
+                                            id: 0,
+                                            partnerId: 5,
+                                            type: "type",
+                                            userId: 6,
+                                            status: 5
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    projects: {
+                                        type: "array",
+                                        description: "An array of authorized projects.",
+                                        items: {
+                                            type: "object",
+                                            required: ["accountId", "appId", "id", "name"],
+                                            properties: {
+                                                id: {
+                                                    type: "integer",
+                                                    description: "The project id. This is the primary key."
+                                                },
+                                                accountId: {
+                                                    type: "integer",
+                                                    description: "The id of the account."
+                                                },
+                                                appId: {
+                                                    type: "integer",
+                                                    description: "The id of the application."
+                                                },
+                                                name: {
+                                                    type: "string",
+                                                    description: "The name of the project. This must be unique to the account."
+                                                },
+                                                type: {
+                                                    type: "string",
+                                                    description: "The application-specific type of the project."
+                                                },
+                                                enabled: {
+                                                    type: "boolean",
+                                                    description: "Whether the project is enabled.",
+                                                    default: true
+                                                },
+                                                isDemo: {
+                                                    type: "boolean",
+                                                    description: "Whether the project is for a demo account. Demo projects are generally read-only in the user interface."
+                                                },
+                                                implemented: {
+                                                    type: "boolean",
+                                                    description: "Application specific indicator of whether the project has been implemented. For example, whether a website project has tracked any data."
+                                                },
+                                                permissions: {
+                                                    type: "string",
+                                                    description: "The application-specific permissions for a shared project.",
+                                                    additionalProperties: false
+                                                },
+                                                sharedByUserId: {
+                                                    type: "integer",
+                                                    description: "For shared project, the id of the user that shared the project."
+                                                }
+                                            },
+                                            description: "Represents a website or other entity within an account. An account can have multiple projects. For example, the analytics product requires management of multiple websites. ",
+                                            example: {
+                                                accountId: 6,
+                                                permissions: {},
+                                                appId: 1,
+                                                name: "name",
+                                                implemented: true,
+                                                sharedByUserId: 5,
+                                                id: 0,
+                                                type: "type",
+                                                isDemo: true,
+                                                enabled: true
+                                            },
+                                            additionalProperties: false
+                                        }
+                                    },
+                                    expiration: {
+                                        type: "string",
+                                        format: "date-time",
+                                        description: "The date and time when the authorization expires.",
+                                        convertStringToDate: true
+                                    },
+                                    currentProjectId: {
+                                        type: "integer",
+                                        description: "For multi-project applications, which project the user has set as the default."
+                                    },
+                                    projectId: {
+                                        type: "integer",
+                                        description: "If an authorization has been set for a specific project, this is the id."
+                                    }
+                                },
+                                description: "Represents what an access token is authorized for. Authorizations include the user object that created the access token, an account and projects.",
+                                example: {
+                                    currentProjectId: 0,
+                                    projects: [
+                                        {
+                                            accountId: 6,
+                                            permissions: {},
+                                            appId: 1,
+                                            name: "name",
+                                            implemented: true,
+                                            sharedByUserId: 5,
+                                            id: 0,
+                                            type: "type",
+                                            isDemo: true,
+                                            enabled: true
+                                        },
+                                        {
+                                            accountId: 6,
+                                            permissions: {},
+                                            appId: 1,
+                                            name: "name",
+                                            implemented: true,
+                                            sharedByUserId: 5,
+                                            id: 0,
+                                            type: "type",
+                                            isDemo: true,
+                                            enabled: true
+                                        }
+                                    ],
+                                    expiration: "2000-01-23T04:56:07.000+00:00",
+                                    user: {
+                                        firstName: "firstName",
+                                        lastName: "lastName",
+                                        lastUpdated: "2000-01-23T04:56:07.000+00:00",
+                                        createdDate: "2000-01-23T04:56:07.000+00:00",
+                                        phone: "phone",
+                                        timezone: "timezone",
+                                        name: "name",
+                                        id: 0,
+                                        email: "email",
+                                        status: 6
+                                    },
+                                    projectId: 6,
+                                    account: {
+                                        lastUpdated: "2000-01-23T04:56:07.000+00:00",
+                                        createdDate: "2000-01-23T04:56:07.000+00:00",
+                                        appId: 1,
+                                        id: 0,
+                                        partnerId: 5,
+                                        type: "type",
+                                        userId: 6,
+                                        status: 5
+                                    }
+                                },
+                                additionalProperties: false
+                            }
+                        },
+                        "401": {
+                            description: "Unauthorized",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "404": {
+                            description: "Not found",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "429": {
+                            description: "Too many requests",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    "x-rate-limit": 3
+                }
+            },
+            "/protect/notifications": {
+                post: {
+                    tags: ["notifications"],
+                    summary: "Sends an notification via email",
+                    parameters: [
+                        {
+                            in: "body",
+                            name: "body",
+                            description: "The notification item parameters",
+                            required: true,
+                            schema: {
+                                type: "object",
+                                required: ["email", "templateData", "templateName"],
+                                properties: {
+                                    email: {
+                                        type: "string",
+                                        format: "email",
+                                        description: "The recipient's email address"
+                                    },
+                                    templateName: {
+                                        type: "string",
+                                        description: "The name of the template to use to send the notification"
+                                    },
+                                    templateData: {
+                                        type: "object",
+                                        description: "The dynamic data to pass to the template",
+                                        additionalProperties: true
+                                    }
+                                },
+                                description: "Parameters for sending a notification",
+                                example: {
+                                    templateName: "templateName",
+                                    templateData: { key: "" },
+                                    email: "email"
+                                },
+                                additionalProperties: false
+                            }
+                        }
+                    ],
+                    responses: {
+                        "204": { description: "Success with no content" },
+                        "400": {
+                            description: "Bad request",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "401": {
+                            description: "Unauthorized",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    security: [{ Bearer: [] }],
+                    "x-permissions": ["internalService"]
+                }
+            },
+            "/protect/stash": {
+                post: {
+                    tags: ["stash"],
+                    summary: "Create a new stash item.",
+                    parameters: [
+                        {
+                            in: "body",
+                            name: "body",
+                            description: "The stash item parameters",
+                            required: true,
+                            schema: {
+                                type: "object",
+                                required: ["data"],
+                                properties: {
+                                    expires: {
+                                        type: "string",
+                                        format: "date-time",
+                                        description: "When the item should expire. Defaults to 24 hours.",
+                                        convertStringToDate: true
+                                    },
+                                    data: {
+                                        type: "object",
+                                        description: "The data to stash.",
+                                        additionalProperties: true
+                                    }
+                                },
+                                description: "Parameters for creating a stash item.",
+                                example: {
+                                    expires: "2000-01-23T04:56:07.000+00:00",
+                                    data: { key: "" }
+                                },
+                                additionalProperties: false
+                            }
+                        }
+                    ],
+                    responses: {
+                        "200": {
+                            description: "Stash item created",
+                            schema: {
+                                type: "object",
+                                required: ["id"],
+                                properties: {
+                                    id: {
+                                        type: "string",
+                                        description: "The uuid of the stash item. This is the primary key."
+                                    },
+                                    expires: {
+                                        type: "string",
+                                        format: "date-time",
+                                        description: "When the item expires.",
+                                        convertStringToDate: true
+                                    },
+                                    data: {
+                                        type: "object",
+                                        description: "The stash item data.",
+                                        additionalProperties: true
+                                    }
+                                },
+                                example: {
+                                    expires: "2000-01-23T04:56:07.000+00:00",
+                                    data: { key: "" },
+                                    id: "id"
+                                },
+                                additionalProperties: false
+                            }
+                        },
+                        "400": {
+                            description: "Bad request",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "401": {
+                            description: "Unauthorized",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "429": {
+                            description: "Too many requests",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    security: [{ Bearer: [] }],
+                    "x-rate-limit": 3,
+                    "x-permissions": ["internalService"]
+                }
+            },
+            "/protect/stash/{id}": {
+                get: {
+                    tags: ["stash"],
+                    summary: "Get a stash item.",
+                    parameters: [
+                        {
+                            name: "id",
+                            in: "path",
+                            description: "The id of the stash item to get.",
+                            required: true,
+                            type: "string"
+                        }
+                    ],
+                    responses: {
+                        "200": {
+                            description: "A stash item.",
+                            schema: {
+                                type: "object",
+                                required: ["id"],
+                                properties: {
+                                    id: {
+                                        type: "string",
+                                        description: "The uuid of the stash item. This is the primary key."
+                                    },
+                                    expires: {
+                                        type: "string",
+                                        format: "date-time",
+                                        description: "When the item expires.",
+                                        convertStringToDate: true
+                                    },
+                                    data: {
+                                        type: "object",
+                                        description: "The stash item data.",
+                                        additionalProperties: true
+                                    }
+                                },
+                                example: {
+                                    expires: "2000-01-23T04:56:07.000+00:00",
+                                    data: { key: "" },
+                                    id: "id"
+                                },
+                                additionalProperties: false
+                            }
+                        },
+                        "400": {
+                            description: "Bad request",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "401": {
+                            description: "Unauthorized",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "404": {
+                            description: "Not found",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        },
+                        "429": {
+                            description: "Too many requests",
+                            schema: {
+                                type: "object",
+                                required: ["code", "message"],
+                                properties: {
+                                    code: {
+                                        type: "integer",
+                                        description: "HTTP status code for the error."
+                                    },
+                                    message: {
+                                        type: "string",
+                                        description: "A high-level description of the error."
+                                    },
+                                    errors: {
+                                        type: "array",
+                                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                                        items: {
+                                            required: ["message"],
+                                            properties: {
+                                                name: {
+                                                    type: "string",
+                                                    description: "The attribute or field name that failed validation."
+                                                },
+                                                code: { type: "integer" },
+                                                message: { type: "string" }
+                                            },
+                                            type: "object",
+                                            additionalProperties: false
+                                        }
+                                    }
+                                },
+                                description: "A REST error.",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    security: [{ Bearer: [] }],
+                    "x-permissions": ["internalService"],
+                    "x-rate-limit": 3
+                }
+            },
+            "/protect/entities": {
+                get: {
+                    tags: ["Analytics"],
+                    summary: "Get all the available entities and attributes for reporting.",
+                    parameters: [],
+                    responses: {
+                        "200": {
+                            description: "An object containing each entity available, each with an array of attributes",
+                            schema: {
+                                type: "object",
+                                properties: {
+                                    sessions: {
+                                        type: "object",
+                                        properties: {
+                                            name: { type: "string" },
+                                            description: { type: "string" },
+                                            attributes: {
+                                                type: "array",
+                                                items: {
+                                                    type: "object",
+                                                    properties: {
+                                                        name: { type: "string" },
+                                                        title: { type: "string" },
+                                                        description: { type: "string" },
+                                                        dataType: { type: "string" },
+                                                        isElement: { type: "boolean" },
+                                                        isMetric: { type: "boolean" }
+                                                    },
+                                                    example: {
+                                                        isElement: true,
+                                                        dataType: "dataType",
+                                                        name: "name",
+                                                        isMetric: true,
+                                                        description: "description",
+                                                        title: "title"
+                                                    },
+                                                    additionalProperties: false
+                                                }
+                                            }
+                                        },
+                                        example: {
+                                            name: "name",
+                                            description: "description",
+                                            attributes: [
+                                                {
+                                                    isElement: true,
+                                                    dataType: "dataType",
+                                                    name: "name",
+                                                    isMetric: true,
+                                                    description: "description",
+                                                    title: "title"
+                                                },
+                                                {
+                                                    isElement: true,
+                                                    dataType: "dataType",
+                                                    name: "name",
+                                                    isMetric: true,
+                                                    description: "description",
+                                                    title: "title"
+                                                }
+                                            ]
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    pages: {
+                                        type: "object",
+                                        properties: {
+                                            name: { type: "string" },
+                                            description: { type: "string" },
+                                            attributes: {
+                                                type: "array",
+                                                items: {
+                                                    type: "object",
+                                                    properties: {
+                                                        name: { type: "string" },
+                                                        title: { type: "string" },
+                                                        description: { type: "string" },
+                                                        dataType: { type: "string" },
+                                                        isElement: { type: "boolean" },
+                                                        isMetric: { type: "boolean" }
+                                                    },
+                                                    example: {
+                                                        isElement: true,
+                                                        dataType: "dataType",
+                                                        name: "name",
+                                                        isMetric: true,
+                                                        description: "description",
+                                                        title: "title"
+                                                    },
+                                                    additionalProperties: false
+                                                }
+                                            }
+                                        },
+                                        example: {
+                                            name: "name",
+                                            description: "description",
+                                            attributes: [
+                                                {
+                                                    isElement: true,
+                                                    dataType: "dataType",
+                                                    name: "name",
+                                                    isMetric: true,
+                                                    description: "description",
+                                                    title: "title"
+                                                },
+                                                {
+                                                    isElement: true,
+                                                    dataType: "dataType",
+                                                    name: "name",
+                                                    isMetric: true,
+                                                    description: "description",
+                                                    title: "title"
+                                                }
+                                            ]
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    events: {
+                                        type: "object",
+                                        properties: {
+                                            name: { type: "string" },
+                                            description: { type: "string" },
+                                            attributes: {
+                                                type: "array",
+                                                items: {
+                                                    type: "object",
+                                                    properties: {
+                                                        name: { type: "string" },
+                                                        title: { type: "string" },
+                                                        description: { type: "string" },
+                                                        dataType: { type: "string" },
+                                                        isElement: { type: "boolean" },
+                                                        isMetric: { type: "boolean" }
+                                                    },
+                                                    example: {
+                                                        isElement: true,
+                                                        dataType: "dataType",
+                                                        name: "name",
+                                                        isMetric: true,
+                                                        description: "description",
+                                                        title: "title"
+                                                    },
+                                                    additionalProperties: false
+                                                }
+                                            }
+                                        },
+                                        example: {
+                                            name: "name",
+                                            description: "description",
+                                            attributes: [
+                                                {
+                                                    isElement: true,
+                                                    dataType: "dataType",
+                                                    name: "name",
+                                                    isMetric: true,
+                                                    description: "description",
+                                                    title: "title"
+                                                },
+                                                {
+                                                    isElement: true,
+                                                    dataType: "dataType",
+                                                    name: "name",
+                                                    isMetric: true,
+                                                    description: "description",
+                                                    title: "title"
+                                                }
+                                            ]
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    timings: {
+                                        type: "object",
+                                        properties: {
+                                            name: { type: "string" },
+                                            description: { type: "string" },
+                                            attributes: {
+                                                type: "array",
+                                                items: {
+                                                    type: "object",
+                                                    properties: {
+                                                        name: { type: "string" },
+                                                        title: { type: "string" },
+                                                        description: { type: "string" },
+                                                        dataType: { type: "string" },
+                                                        isElement: { type: "boolean" },
+                                                        isMetric: { type: "boolean" }
+                                                    },
+                                                    example: {
+                                                        isElement: true,
+                                                        dataType: "dataType",
+                                                        name: "name",
+                                                        isMetric: true,
+                                                        description: "description",
+                                                        title: "title"
+                                                    },
+                                                    additionalProperties: false
+                                                }
+                                            }
+                                        },
+                                        example: {
+                                            name: "name",
+                                            description: "description",
+                                            attributes: [
+                                                {
+                                                    isElement: true,
+                                                    dataType: "dataType",
+                                                    name: "name",
+                                                    isMetric: true,
+                                                    description: "description",
+                                                    title: "title"
+                                                },
+                                                {
+                                                    isElement: true,
+                                                    dataType: "dataType",
+                                                    name: "name",
+                                                    isMetric: true,
+                                                    description: "description",
+                                                    title: "title"
+                                                }
+                                            ]
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    users: {
+                                        type: "object",
+                                        properties: {
+                                            name: { type: "string" },
+                                            description: { type: "string" },
+                                            attributes: {
+                                                type: "array",
+                                                items: {
+                                                    type: "object",
+                                                    properties: {
+                                                        name: { type: "string" },
+                                                        title: { type: "string" },
+                                                        description: { type: "string" },
+                                                        dataType: { type: "string" },
+                                                        isElement: { type: "boolean" },
+                                                        isMetric: { type: "boolean" }
+                                                    },
+                                                    example: {
+                                                        isElement: true,
+                                                        dataType: "dataType",
+                                                        name: "name",
+                                                        isMetric: true,
+                                                        description: "description",
+                                                        title: "title"
+                                                    },
+                                                    additionalProperties: false
+                                                }
+                                            }
+                                        },
+                                        example: {
+                                            name: "name",
+                                            description: "description",
+                                            attributes: [
+                                                {
+                                                    isElement: true,
+                                                    dataType: "dataType",
+                                                    name: "name",
+                                                    isMetric: true,
+                                                    description: "description",
+                                                    title: "title"
+                                                },
+                                                {
+                                                    isElement: true,
+                                                    dataType: "dataType",
+                                                    name: "name",
+                                                    isMetric: true,
+                                                    description: "description",
+                                                    title: "title"
+                                                }
+                                            ]
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    people: {
+                                        type: "object",
+                                        properties: {
+                                            name: { type: "string" },
+                                            description: { type: "string" },
+                                            attributes: {
+                                                type: "array",
+                                                items: {
+                                                    type: "object",
+                                                    properties: {
+                                                        name: { type: "string" },
+                                                        title: { type: "string" },
+                                                        description: { type: "string" },
+                                                        dataType: { type: "string" },
+                                                        isElement: { type: "boolean" },
+                                                        isMetric: { type: "boolean" }
+                                                    },
+                                                    example: {
+                                                        isElement: true,
+                                                        dataType: "dataType",
+                                                        name: "name",
+                                                        isMetric: true,
+                                                        description: "description",
+                                                        title: "title"
+                                                    },
+                                                    additionalProperties: false
+                                                }
+                                            }
+                                        },
+                                        example: {
+                                            name: "name",
+                                            description: "description",
+                                            attributes: [
+                                                {
+                                                    isElement: true,
+                                                    dataType: "dataType",
+                                                    name: "name",
+                                                    isMetric: true,
+                                                    description: "description",
+                                                    title: "title"
+                                                },
+                                                {
+                                                    isElement: true,
+                                                    dataType: "dataType",
+                                                    name: "name",
+                                                    isMetric: true,
+                                                    description: "description",
+                                                    title: "title"
+                                                }
+                                            ]
+                                        },
+                                        additionalProperties: false
+                                    }
+                                }
+                            }
+                        }
+                    }
+                }
+            },
+            "/protect/attributes": {
+                get: {
+                    tags: ["Analytics"],
+                    summary: "Get values for an attribute that begin with a string.  This is primarily used for typeahead support.",
+                    parameters: [
+                        {
+                            name: "attribute",
+                            in: "query",
+                            description: "The attribute name to search, for example, 'platformVersion'",
+                            required: true,
+                            type: "string",
+                            default: "platformVersion"
+                        },
+                        {
+                            name: "projectId",
+                            in: "query",
+                            description: "The project id of the caller.  This is used to return project specific values.",
+                            required: true,
+                            type: "integer"
+                        },
+                        {
+                            name: "value",
+                            in: "query",
+                            description: "The search string.  The call will return found values that being with this.",
+                            required: true,
+                            type: "string"
+                        }
+                    ],
+                    responses: {
+                        "200": {
+                            description: "An array of values",
+                            schema: { type: "array", items: { type: "string" } }
+                        }
+                    },
+                    security: [{ Bearer: [] }]
+                }
+            },
+            "/protect/query": {
+                post: {
+                    tags: ["Analytics"],
+                    summary: "Query for data.",
+                    parameters: [
+                        {
+                            in: "body",
+                            name: "body",
+                            description: "The query parameters",
+                            required: true,
+                            schema: {
+                                required: ["query"],
+                                properties: {
+                                    query: {
+                                        type: "object",
+                                        description: "The query.  See the main site for help on query syntax.",
+                                        properties: {}
+                                    }
+                                },
+                                example: { query: "{}" },
+                                additionalProperties: false
+                            }
+                        }
+                    ],
+                    responses: {
+                        "200": {
+                            description: "The query results",
+                            schema: {
+                                type: "object",
+                                properties: {
+                                    query: {
+                                        type: "object",
+                                        description: "The query that was run",
+                                        additionalProperties: true
+                                    },
+                                    columns: {
+                                        type: "array",
+                                        description: "Columns description",
+                                        items: { type: "object", additionalProperties: true }
+                                    },
+                                    rows: {
+                                        type: "array",
+                                        description: "Rows description",
+                                        items: { type: "object", additionalProperties: true }
+                                    }
+                                },
+                                example: {
+                                    columns: [{ key: "" }, { key: "" }],
+                                    query: { key: "" },
+                                    rows: [{ key: "" }, { key: "" }]
+                                },
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    security: [{ Bearer: [] }]
+                }
+            },
+            "/protect/order": {
+                post: {
+                    tags: ["order"],
+                    summary: "Creates an order",
+                    parameters: [
+                        {
+                            in: "body",
+                            name: "body",
+                            description: "The order",
+                            required: true,
+                            schema: {
+                                required: [
+                                    "createdAt",
+                                    "currency",
+                                    "customer",
+                                    "email",
+                                    "name",
+                                    "platform",
+                                    "platformOrderId",
+                                    "tax",
+                                    "totalPrice"
+                                ],
+                                properties: {
+                                    platformOrderId: {
+                                        type: "string",
+                                        description: "The platform's primary key for the order."
+                                    },
+                                    name: {
+                                        type: "string",
+                                        description: "The display name for the order."
+                                    },
+                                    shopId: {
+                                        type: "number",
+                                        description: "The numeric id of the shop.  This is an attribute on orders."
+                                    },
+                                    platform: {
+                                        type: "string",
+                                        description: "The platform the order was created on, like 'presta'"
+                                    },
+                                    tax: {
+                                        type: "number",
+                                        description: "The total tax on the order in the currency of the order."
+                                    },
+                                    currency: {
+                                        type: "string",
+                                        description: "The three-character currency of the order."
+                                    },
+                                    email: {
+                                        type: "string",
+                                        format: "email",
+                                        description: "The email to contact regarding this order."
+                                    },
+                                    billingAddress: {
+                                        properties: {
+                                            name: { type: "string" },
+                                            company: { type: "string" },
+                                            address1: { type: "string" },
+                                            address2: { type: "string" },
+                                            city: { type: "string" },
+                                            zip: { type: "string" },
+                                            region: {
+                                                type: "string",
+                                                description: "The full name of the region (state/province)."
+                                            },
+                                            regionCode: {
+                                                type: "string",
+                                                description: "The ISO code for the region (state/province)."
+                                            },
+                                            country: {
+                                                type: "string",
+                                                description: "The full name of the country."
+                                            },
+                                            countryCode: {
+                                                type: "string",
+                                                description: "The two-character ISO code for the country."
+                                            }
+                                        },
+                                        example: {
+                                            zip: "zip",
+                                            country: "country",
+                                            regionCode: "regionCode",
+                                            address2: "address2",
+                                            city: "city",
+                                            address1: "address1",
+                                            countryCode: "countryCode",
+                                            name: "name",
+                                            company: "company",
+                                            region: "region"
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    shippingAddress: {
+                                        properties: {
+                                            name: { type: "string" },
+                                            company: { type: "string" },
+                                            address1: { type: "string" },
+                                            address2: { type: "string" },
+                                            city: { type: "string" },
+                                            zip: { type: "string" },
+                                            region: {
+                                                type: "string",
+                                                description: "The full name of the region (state/province)."
+                                            },
+                                            regionCode: {
+                                                type: "string",
+                                                description: "The ISO code for the region (state/province)."
+                                            },
+                                            country: {
+                                                type: "string",
+                                                description: "The full name of the country."
+                                            },
+                                            countryCode: {
+                                                type: "string",
+                                                description: "The two-character ISO code for the country."
+                                            }
+                                        },
+                                        example: {
+                                            zip: "zip",
+                                            country: "country",
+                                            regionCode: "regionCode",
+                                            address2: "address2",
+                                            city: "city",
+                                            address1: "address1",
+                                            countryCode: "countryCode",
+                                            name: "name",
+                                            company: "company",
+                                            region: "region"
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    createdAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    updatedAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    customer: {
+                                        required: ["firstName", "lastName"],
+                                        properties: {
+                                            platformCustomerId: {
+                                                type: "string",
+                                                description: "The platform-specific id of the customer."
+                                            },
+                                            firstName: { type: "string" },
+                                            lastName: { type: "string" },
+                                            phone: { type: "string" },
+                                            createdAt: {
+                                                type: "string",
+                                                format: "date-time",
+                                                convertStringToDate: true
+                                            },
+                                            updatedAt: {
+                                                type: "string",
+                                                format: "date-time",
+                                                convertStringToDate: true
+                                            },
+                                            gender: { type: "string", enum: ["M", "F"] },
+                                            birthday: { type: "string", format: "date" },
+                                            company: { type: "string" },
+                                            ordersCount: {
+                                                type: "number",
+                                                description: "The total number of orders the customer has placed with this shop."
+                                            },
+                                            totalSpent: {
+                                                type: "number",
+                                                description: "The total amount of all orders this customer has placed with this shop."
+                                            },
+                                            isEmailVerified: {
+                                                type: "boolean",
+                                                description: "Has the platform verified the email is owned by the customer."
+                                            },
+                                            isPayingCustomer: {
+                                                type: "boolean",
+                                                description: "Has the customer ever paid for an order with this shop."
+                                            }
+                                        },
+                                        example: {
+                                            birthday: "2000-01-23",
+                                            lastName: "lastName",
+                                            totalSpent: 5.962133916683182,
+                                            gender: "M",
+                                            platformCustomerId: "platformCustomerId",
+                                            isEmailVerified: true,
+                                            firstName: "firstName",
+                                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                                            ordersCount: 1.4658129805029452,
+                                            isPayingCustomer: true,
+                                            phone: "phone",
+                                            company: "company",
+                                            updatedAt: "2000-01-23T04:56:07.000+00:00"
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    status: {
+                                        type: "string",
+                                        description: "The status of the payment",
+                                        enum: [
+                                            "PENDING",
+                                            "AUTHORIZED",
+                                            "PARTIALLY_PAID",
+                                            "PAID",
+                                            "PARTIALLY_REFUNDED",
+                                            "REFUNDED",
+                                            "VOIDED"
+                                        ]
+                                    },
+                                    processingMethod: {
+                                        type: "string",
+                                        description: "The payment method.",
+                                        enum: ["CHECKOUT", "DIRECT", "MANUAL", "OFFSITE", "EXPRESS"]
+                                    },
+                                    sourceName: {
+                                        type: "string",
+                                        description: "The source of the payment.",
+                                        enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
+                                        additionalProperties: false
+                                    },
+                                    totalPrice: {
+                                        type: "number",
+                                        description: "The total price of the order, not including discounts."
+                                    },
+                                    transctions: {
+                                        type: "array",
+                                        items: {
+                                            required: ["amount", "createdAt"],
+                                            properties: {
+                                                platformTransactionId: {
+                                                    type: "string",
+                                                    description: "The platform-specific primary key for the transaction."
+                                                },
+                                                amount: {
+                                                    type: "number",
+                                                    description: "The amount of the transaction."
+                                                },
+                                                createdAt: {
+                                                    type: "string",
+                                                    format: "date-time",
+                                                    convertStringToDate: true
+                                                },
+                                                gateway: { type: "string" },
+                                                sourceName: {
+                                                    type: "string",
+                                                    description: "The source of the payment.",
+                                                    enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
+                                                    additionalProperties: false
+                                                },
+                                                paymentDetails: {
+                                                    properties: {
+                                                        creditCardNumber: { type: "string" },
+                                                        creditCardCompany: { type: "string" },
+                                                        cardExpiration: { type: "string" },
+                                                        cardHolder: { type: "string" },
+                                                        avsResultCode: { type: "string" },
+                                                        cvvResultCode: { type: "string" },
+                                                        creditCardBin: { type: "string" },
+                                                        method: { type: "string" },
+                                                        gateway: { type: "string" }
+                                                    },
+                                                    example: {
+                                                        avsResultCode: "avsResultCode",
+                                                        cvvResultCode: "cvvResultCode",
+                                                        method: "method",
+                                                        creditCardNumber: "creditCardNumber",
+                                                        creditCardBin: "creditCardBin",
+                                                        creditCardCompany: "creditCardCompany",
+                                                        cardHolder: "cardHolder",
+                                                        cardExpiration: "cardExpiration",
+                                                        gateway: "gateway"
+                                                    },
+                                                    additionalProperties: false
+                                                },
+                                                kind: {
+                                                    type: "string",
+                                                    enum: [
+                                                        "SALE",
+                                                        "AUTHORIZATION",
+                                                        "CAPTURE",
+                                                        "VOID",
+                                                        "REFUND"
+                                                    ]
+                                                },
+                                                status: { type: "string" },
+                                                currency: { type: "string" },
+                                                test: {
+                                                    type: "boolean",
+                                                    description: "Whether the transaction is sandboxed for testing purposes only"
+                                                }
+                                            },
+                                            example: {
+                                                createdAt: "2000-01-23T04:56:07.000+00:00",
+                                                amount: 2.3021358869347655,
+                                                test: true,
+                                                platformTransactionId: "platformTransactionId",
+                                                kind: "SALE",
+                                                currency: "currency",
+                                                paymentDetails: {
+                                                    avsResultCode: "avsResultCode",
+                                                    cvvResultCode: "cvvResultCode",
+                                                    method: "method",
+                                                    creditCardNumber: "creditCardNumber",
+                                                    creditCardBin: "creditCardBin",
+                                                    creditCardCompany: "creditCardCompany",
+                                                    cardHolder: "cardHolder",
+                                                    cardExpiration: "cardExpiration",
+                                                    gateway: "gateway"
+                                                },
+                                                gateway: "gateway",
+                                                status: "status"
+                                            },
+                                            additionalProperties: false
+                                        }
+                                    },
+                                    lineItems: {
+                                        type: "array",
+                                        items: {
+                                            required: ["name", "price", "quantity"],
+                                            properties: {
+                                                platformId: {
+                                                    type: "string",
+                                                    description: "The platform specific primary key for the line item"
+                                                },
+                                                title: { type: "string" },
+                                                name: { type: "string" },
+                                                quantity: { type: "number" },
+                                                price: { type: "number" },
+                                                sku: { type: "string" },
+                                                isbn: { type: "string" },
+                                                ean13: { type: "string" },
+                                                upc: { type: "string" },
+                                                variantId: {
+                                                    type: "string",
+                                                    description: "Customized product ids. Product that varies by color may have a different variantId"
+                                                },
+                                                variantTitle: { type: "string" },
+                                                vendor: { type: "string" },
+                                                platformProductId: {
+                                                    type: "string",
+                                                    description: "The platform specific primary key for the product"
+                                                },
+                                                giftCard: { type: "boolean" },
+                                                totalDiscount: { type: "number" },
+                                                manufacturer: { type: "string" }
+                                            },
+                                            example: {
+                                                variantTitle: "variantTitle",
+                                                platformProductId: "platformProductId",
+                                                quantity: 7.061401241503109,
+                                                isbn: "isbn",
+                                                ean13: "ean13",
+                                                upc: "upc",
+                                                platformId: "platformId",
+                                                title: "title",
+                                                manufacturer: "manufacturer",
+                                                price: 9.301444243932576,
+                                                vendor: "vendor",
+                                                name: "name",
+                                                giftCard: true,
+                                                totalDiscount: 3.616076749251911,
+                                                variantId: "variantId",
+                                                sku: "sku"
+                                            },
+                                            additionalProperties: false
+                                        }
+                                    },
+                                    canceledAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    canceledBy: { type: "string" },
+                                    cancelReason: { type: "string" },
+                                    approvedAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    approvedBy: { type: "string" },
+                                    hasGiftCard: {
+                                        type: "boolean",
+                                        description: "Was the order paid using a gift card"
+                                    }
+                                },
+                                example: {
+                                    totalPrice: 5.637376656633329,
+                                    approvedBy: "approvedBy",
+                                    canceledBy: "canceledBy",
+                                    tax: 6.027456183070403,
+                                    approvedAt: "2000-01-23T04:56:07.000+00:00",
+                                    platform: "platform",
+                                    lineItems: [
+                                        {
+                                            variantTitle: "variantTitle",
+                                            platformProductId: "platformProductId",
+                                            quantity: 7.061401241503109,
+                                            isbn: "isbn",
+                                            ean13: "ean13",
+                                            upc: "upc",
+                                            platformId: "platformId",
+                                            title: "title",
+                                            manufacturer: "manufacturer",
+                                            price: 9.301444243932576,
+                                            vendor: "vendor",
+                                            name: "name",
+                                            giftCard: true,
+                                            totalDiscount: 3.616076749251911,
+                                            variantId: "variantId",
+                                            sku: "sku"
+                                        },
+                                        {
+                                            variantTitle: "variantTitle",
+                                            platformProductId: "platformProductId",
+                                            quantity: 7.061401241503109,
+                                            isbn: "isbn",
+                                            ean13: "ean13",
+                                            upc: "upc",
+                                            platformId: "platformId",
+                                            title: "title",
+                                            manufacturer: "manufacturer",
+                                            price: 9.301444243932576,
+                                            vendor: "vendor",
+                                            name: "name",
+                                            giftCard: true,
+                                            totalDiscount: 3.616076749251911,
+                                            variantId: "variantId",
+                                            sku: "sku"
+                                        }
+                                    ],
+                                    createdAt: "2000-01-23T04:56:07.000+00:00",
+                                    transctions: [
+                                        {
+                                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                                            amount: 2.3021358869347655,
+                                            test: true,
+                                            platformTransactionId: "platformTransactionId",
+                                            kind: "SALE",
+                                            currency: "currency",
+                                            paymentDetails: {
+                                                avsResultCode: "avsResultCode",
+                                                cvvResultCode: "cvvResultCode",
+                                                method: "method",
+                                                creditCardNumber: "creditCardNumber",
+                                                creditCardBin: "creditCardBin",
+                                                creditCardCompany: "creditCardCompany",
+                                                cardHolder: "cardHolder",
+                                                cardExpiration: "cardExpiration",
+                                                gateway: "gateway"
+                                            },
+                                            gateway: "gateway",
+                                            status: "status"
+                                        },
+                                        {
+                                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                                            amount: 2.3021358869347655,
+                                            test: true,
+                                            platformTransactionId: "platformTransactionId",
+                                            kind: "SALE",
+                                            currency: "currency",
+                                            paymentDetails: {
+                                                avsResultCode: "avsResultCode",
+                                                cvvResultCode: "cvvResultCode",
+                                                method: "method",
+                                                creditCardNumber: "creditCardNumber",
+                                                creditCardBin: "creditCardBin",
+                                                creditCardCompany: "creditCardCompany",
+                                                cardHolder: "cardHolder",
+                                                cardExpiration: "cardExpiration",
+                                                gateway: "gateway"
+                                            },
+                                            gateway: "gateway",
+                                            status: "status"
+                                        }
+                                    ],
+                                    canceledAt: "2000-01-23T04:56:07.000+00:00",
+                                    hasGiftCard: true,
+                                    name: "name",
+                                    processingMethod: "CHECKOUT",
+                                    shippingAddress: {
+                                        zip: "zip",
+                                        country: "country",
+                                        regionCode: "regionCode",
+                                        address2: "address2",
+                                        city: "city",
+                                        address1: "address1",
+                                        countryCode: "countryCode",
+                                        name: "name",
+                                        company: "company",
+                                        region: "region"
+                                    },
+                                    currency: "currency",
+                                    shopId: 0.8008281904610115,
+                                    billingAddress: {
+                                        zip: "zip",
+                                        country: "country",
+                                        regionCode: "regionCode",
+                                        address2: "address2",
+                                        city: "city",
+                                        address1: "address1",
+                                        countryCode: "countryCode",
+                                        name: "name",
+                                        company: "company",
+                                        region: "region"
+                                    },
+                                    sourceName: {},
+                                    platformOrderId: "platformOrderId",
+                                    cancelReason: "cancelReason",
+                                    email: "email",
+                                    updatedAt: "2000-01-23T04:56:07.000+00:00",
+                                    customer: {
+                                        birthday: "2000-01-23",
+                                        lastName: "lastName",
+                                        totalSpent: 5.962133916683182,
+                                        gender: "M",
+                                        platformCustomerId: "platformCustomerId",
+                                        isEmailVerified: true,
+                                        firstName: "firstName",
+                                        createdAt: "2000-01-23T04:56:07.000+00:00",
+                                        ordersCount: 1.4658129805029452,
+                                        isPayingCustomer: true,
+                                        phone: "phone",
+                                        company: "company",
+                                        updatedAt: "2000-01-23T04:56:07.000+00:00"
+                                    },
+                                    status: "PENDING"
+                                },
+                                additionalProperties: false
+                            }
+                        }
+                    ],
+                    responses: {
+                        "200": {
+                            description: "The order",
+                            schema: {
+                                required: [
+                                    "createdAt",
+                                    "currency",
+                                    "customer",
+                                    "email",
+                                    "name",
+                                    "platform",
+                                    "platformOrderId",
+                                    "tax",
+                                    "totalPrice"
+                                ],
+                                properties: {
+                                    platformOrderId: {
+                                        type: "string",
+                                        description: "The platform's primary key for the order."
+                                    },
+                                    name: {
+                                        type: "string",
+                                        description: "The display name for the order."
+                                    },
+                                    shopId: {
+                                        type: "number",
+                                        description: "The numeric id of the shop.  This is an attribute on orders."
+                                    },
+                                    platform: {
+                                        type: "string",
+                                        description: "The platform the order was created on, like 'presta'"
+                                    },
+                                    tax: {
+                                        type: "number",
+                                        description: "The total tax on the order in the currency of the order."
+                                    },
+                                    currency: {
+                                        type: "string",
+                                        description: "The three-character currency of the order."
+                                    },
+                                    email: {
+                                        type: "string",
+                                        format: "email",
+                                        description: "The email to contact regarding this order."
+                                    },
+                                    billingAddress: {
+                                        properties: {
+                                            name: { type: "string" },
+                                            company: { type: "string" },
+                                            address1: { type: "string" },
+                                            address2: { type: "string" },
+                                            city: { type: "string" },
+                                            zip: { type: "string" },
+                                            region: {
+                                                type: "string",
+                                                description: "The full name of the region (state/province)."
+                                            },
+                                            regionCode: {
+                                                type: "string",
+                                                description: "The ISO code for the region (state/province)."
+                                            },
+                                            country: {
+                                                type: "string",
+                                                description: "The full name of the country."
+                                            },
+                                            countryCode: {
+                                                type: "string",
+                                                description: "The two-character ISO code for the country."
+                                            }
+                                        },
+                                        example: {
+                                            zip: "zip",
+                                            country: "country",
+                                            regionCode: "regionCode",
+                                            address2: "address2",
+                                            city: "city",
+                                            address1: "address1",
+                                            countryCode: "countryCode",
+                                            name: "name",
+                                            company: "company",
+                                            region: "region"
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    shippingAddress: {
+                                        properties: {
+                                            name: { type: "string" },
+                                            company: { type: "string" },
+                                            address1: { type: "string" },
+                                            address2: { type: "string" },
+                                            city: { type: "string" },
+                                            zip: { type: "string" },
+                                            region: {
+                                                type: "string",
+                                                description: "The full name of the region (state/province)."
+                                            },
+                                            regionCode: {
+                                                type: "string",
+                                                description: "The ISO code for the region (state/province)."
+                                            },
+                                            country: {
+                                                type: "string",
+                                                description: "The full name of the country."
+                                            },
+                                            countryCode: {
+                                                type: "string",
+                                                description: "The two-character ISO code for the country."
+                                            }
+                                        },
+                                        example: {
+                                            zip: "zip",
+                                            country: "country",
+                                            regionCode: "regionCode",
+                                            address2: "address2",
+                                            city: "city",
+                                            address1: "address1",
+                                            countryCode: "countryCode",
+                                            name: "name",
+                                            company: "company",
+                                            region: "region"
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    createdAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    updatedAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    customer: {
+                                        required: ["firstName", "lastName"],
+                                        properties: {
+                                            platformCustomerId: {
+                                                type: "string",
+                                                description: "The platform-specific id of the customer."
+                                            },
+                                            firstName: { type: "string" },
+                                            lastName: { type: "string" },
+                                            phone: { type: "string" },
+                                            createdAt: {
+                                                type: "string",
+                                                format: "date-time",
+                                                convertStringToDate: true
+                                            },
+                                            updatedAt: {
+                                                type: "string",
+                                                format: "date-time",
+                                                convertStringToDate: true
+                                            },
+                                            gender: { type: "string", enum: ["M", "F"] },
+                                            birthday: { type: "string", format: "date" },
+                                            company: { type: "string" },
+                                            ordersCount: {
+                                                type: "number",
+                                                description: "The total number of orders the customer has placed with this shop."
+                                            },
+                                            totalSpent: {
+                                                type: "number",
+                                                description: "The total amount of all orders this customer has placed with this shop."
+                                            },
+                                            isEmailVerified: {
+                                                type: "boolean",
+                                                description: "Has the platform verified the email is owned by the customer."
+                                            },
+                                            isPayingCustomer: {
+                                                type: "boolean",
+                                                description: "Has the customer ever paid for an order with this shop."
+                                            }
+                                        },
+                                        example: {
+                                            birthday: "2000-01-23",
+                                            lastName: "lastName",
+                                            totalSpent: 5.962133916683182,
+                                            gender: "M",
+                                            platformCustomerId: "platformCustomerId",
+                                            isEmailVerified: true,
+                                            firstName: "firstName",
+                                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                                            ordersCount: 1.4658129805029452,
+                                            isPayingCustomer: true,
+                                            phone: "phone",
+                                            company: "company",
+                                            updatedAt: "2000-01-23T04:56:07.000+00:00"
+                                        },
+                                        additionalProperties: false
+                                    },
+                                    status: {
+                                        type: "string",
+                                        description: "The status of the payment",
+                                        enum: [
+                                            "PENDING",
+                                            "AUTHORIZED",
+                                            "PARTIALLY_PAID",
+                                            "PAID",
+                                            "PARTIALLY_REFUNDED",
+                                            "REFUNDED",
+                                            "VOIDED"
+                                        ]
+                                    },
+                                    processingMethod: {
+                                        type: "string",
+                                        description: "The payment method.",
+                                        enum: ["CHECKOUT", "DIRECT", "MANUAL", "OFFSITE", "EXPRESS"]
+                                    },
+                                    sourceName: {
+                                        type: "string",
+                                        description: "The source of the payment.",
+                                        enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
+                                        additionalProperties: false
+                                    },
+                                    totalPrice: {
+                                        type: "number",
+                                        description: "The total price of the order, not including discounts."
+                                    },
+                                    transctions: {
+                                        type: "array",
+                                        items: {
+                                            required: ["amount", "createdAt"],
+                                            properties: {
+                                                platformTransactionId: {
+                                                    type: "string",
+                                                    description: "The platform-specific primary key for the transaction."
+                                                },
+                                                amount: {
+                                                    type: "number",
+                                                    description: "The amount of the transaction."
+                                                },
+                                                createdAt: {
+                                                    type: "string",
+                                                    format: "date-time",
+                                                    convertStringToDate: true
+                                                },
+                                                gateway: { type: "string" },
+                                                sourceName: {
+                                                    type: "string",
+                                                    description: "The source of the payment.",
+                                                    enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
+                                                    additionalProperties: false
+                                                },
+                                                paymentDetails: {
+                                                    properties: {
+                                                        creditCardNumber: { type: "string" },
+                                                        creditCardCompany: { type: "string" },
+                                                        cardExpiration: { type: "string" },
+                                                        cardHolder: { type: "string" },
+                                                        avsResultCode: { type: "string" },
+                                                        cvvResultCode: { type: "string" },
+                                                        creditCardBin: { type: "string" },
+                                                        method: { type: "string" },
+                                                        gateway: { type: "string" }
+                                                    },
+                                                    example: {
+                                                        avsResultCode: "avsResultCode",
+                                                        cvvResultCode: "cvvResultCode",
+                                                        method: "method",
+                                                        creditCardNumber: "creditCardNumber",
+                                                        creditCardBin: "creditCardBin",
+                                                        creditCardCompany: "creditCardCompany",
+                                                        cardHolder: "cardHolder",
+                                                        cardExpiration: "cardExpiration",
+                                                        gateway: "gateway"
+                                                    },
+                                                    additionalProperties: false
+                                                },
+                                                kind: {
+                                                    type: "string",
+                                                    enum: [
+                                                        "SALE",
+                                                        "AUTHORIZATION",
+                                                        "CAPTURE",
+                                                        "VOID",
+                                                        "REFUND"
+                                                    ]
+                                                },
+                                                status: { type: "string" },
+                                                currency: { type: "string" },
+                                                test: {
+                                                    type: "boolean",
+                                                    description: "Whether the transaction is sandboxed for testing purposes only"
+                                                }
+                                            },
+                                            example: {
+                                                createdAt: "2000-01-23T04:56:07.000+00:00",
+                                                amount: 2.3021358869347655,
+                                                test: true,
+                                                platformTransactionId: "platformTransactionId",
+                                                kind: "SALE",
+                                                currency: "currency",
+                                                paymentDetails: {
+                                                    avsResultCode: "avsResultCode",
+                                                    cvvResultCode: "cvvResultCode",
+                                                    method: "method",
+                                                    creditCardNumber: "creditCardNumber",
+                                                    creditCardBin: "creditCardBin",
+                                                    creditCardCompany: "creditCardCompany",
+                                                    cardHolder: "cardHolder",
+                                                    cardExpiration: "cardExpiration",
+                                                    gateway: "gateway"
+                                                },
+                                                gateway: "gateway",
+                                                status: "status"
+                                            },
+                                            additionalProperties: false
+                                        }
+                                    },
+                                    lineItems: {
+                                        type: "array",
+                                        items: {
+                                            required: ["name", "price", "quantity"],
+                                            properties: {
+                                                platformId: {
+                                                    type: "string",
+                                                    description: "The platform specific primary key for the line item"
+                                                },
+                                                title: { type: "string" },
+                                                name: { type: "string" },
+                                                quantity: { type: "number" },
+                                                price: { type: "number" },
+                                                sku: { type: "string" },
+                                                isbn: { type: "string" },
+                                                ean13: { type: "string" },
+                                                upc: { type: "string" },
+                                                variantId: {
+                                                    type: "string",
+                                                    description: "Customized product ids. Product that varies by color may have a different variantId"
+                                                },
+                                                variantTitle: { type: "string" },
+                                                vendor: { type: "string" },
+                                                platformProductId: {
+                                                    type: "string",
+                                                    description: "The platform specific primary key for the product"
+                                                },
+                                                giftCard: { type: "boolean" },
+                                                totalDiscount: { type: "number" },
+                                                manufacturer: { type: "string" }
+                                            },
+                                            example: {
+                                                variantTitle: "variantTitle",
+                                                platformProductId: "platformProductId",
+                                                quantity: 7.061401241503109,
+                                                isbn: "isbn",
+                                                ean13: "ean13",
+                                                upc: "upc",
+                                                platformId: "platformId",
+                                                title: "title",
+                                                manufacturer: "manufacturer",
+                                                price: 9.301444243932576,
+                                                vendor: "vendor",
+                                                name: "name",
+                                                giftCard: true,
+                                                totalDiscount: 3.616076749251911,
+                                                variantId: "variantId",
+                                                sku: "sku"
+                                            },
+                                            additionalProperties: false
+                                        }
+                                    },
+                                    canceledAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    canceledBy: { type: "string" },
+                                    cancelReason: { type: "string" },
+                                    approvedAt: {
+                                        type: "string",
+                                        format: "date-time",
+                                        convertStringToDate: true
+                                    },
+                                    approvedBy: { type: "string" },
+                                    hasGiftCard: {
+                                        type: "boolean",
+                                        description: "Was the order paid using a gift card"
+                                    }
+                                },
+                                example: {
+                                    totalPrice: 5.637376656633329,
+                                    approvedBy: "approvedBy",
+                                    canceledBy: "canceledBy",
+                                    tax: 6.027456183070403,
+                                    approvedAt: "2000-01-23T04:56:07.000+00:00",
+                                    platform: "platform",
+                                    lineItems: [
+                                        {
+                                            variantTitle: "variantTitle",
+                                            platformProductId: "platformProductId",
+                                            quantity: 7.061401241503109,
+                                            isbn: "isbn",
+                                            ean13: "ean13",
+                                            upc: "upc",
+                                            platformId: "platformId",
+                                            title: "title",
+                                            manufacturer: "manufacturer",
+                                            price: 9.301444243932576,
+                                            vendor: "vendor",
+                                            name: "name",
+                                            giftCard: true,
+                                            totalDiscount: 3.616076749251911,
+                                            variantId: "variantId",
+                                            sku: "sku"
+                                        },
+                                        {
+                                            variantTitle: "variantTitle",
+                                            platformProductId: "platformProductId",
+                                            quantity: 7.061401241503109,
+                                            isbn: "isbn",
+                                            ean13: "ean13",
+                                            upc: "upc",
+                                            platformId: "platformId",
+                                            title: "title",
+                                            manufacturer: "manufacturer",
+                                            price: 9.301444243932576,
+                                            vendor: "vendor",
+                                            name: "name",
+                                            giftCard: true,
+                                            totalDiscount: 3.616076749251911,
+                                            variantId: "variantId",
+                                            sku: "sku"
+                                        }
+                                    ],
+                                    createdAt: "2000-01-23T04:56:07.000+00:00",
+                                    transctions: [
+                                        {
+                                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                                            amount: 2.3021358869347655,
+                                            test: true,
+                                            platformTransactionId: "platformTransactionId",
+                                            kind: "SALE",
+                                            currency: "currency",
+                                            paymentDetails: {
+                                                avsResultCode: "avsResultCode",
+                                                cvvResultCode: "cvvResultCode",
+                                                method: "method",
+                                                creditCardNumber: "creditCardNumber",
+                                                creditCardBin: "creditCardBin",
+                                                creditCardCompany: "creditCardCompany",
+                                                cardHolder: "cardHolder",
+                                                cardExpiration: "cardExpiration",
+                                                gateway: "gateway"
+                                            },
+                                            gateway: "gateway",
+                                            status: "status"
+                                        },
+                                        {
+                                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                                            amount: 2.3021358869347655,
+                                            test: true,
+                                            platformTransactionId: "platformTransactionId",
+                                            kind: "SALE",
+                                            currency: "currency",
+                                            paymentDetails: {
+                                                avsResultCode: "avsResultCode",
+                                                cvvResultCode: "cvvResultCode",
+                                                method: "method",
+                                                creditCardNumber: "creditCardNumber",
+                                                creditCardBin: "creditCardBin",
+                                                creditCardCompany: "creditCardCompany",
+                                                cardHolder: "cardHolder",
+                                                cardExpiration: "cardExpiration",
+                                                gateway: "gateway"
+                                            },
+                                            gateway: "gateway",
+                                            status: "status"
+                                        }
+                                    ],
+                                    canceledAt: "2000-01-23T04:56:07.000+00:00",
+                                    hasGiftCard: true,
+                                    name: "name",
+                                    processingMethod: "CHECKOUT",
+                                    shippingAddress: {
+                                        zip: "zip",
+                                        country: "country",
+                                        regionCode: "regionCode",
+                                        address2: "address2",
+                                        city: "city",
+                                        address1: "address1",
+                                        countryCode: "countryCode",
+                                        name: "name",
+                                        company: "company",
+                                        region: "region"
+                                    },
+                                    currency: "currency",
+                                    shopId: 0.8008281904610115,
+                                    billingAddress: {
+                                        zip: "zip",
+                                        country: "country",
+                                        regionCode: "regionCode",
+                                        address2: "address2",
+                                        city: "city",
+                                        address1: "address1",
+                                        countryCode: "countryCode",
+                                        name: "name",
+                                        company: "company",
+                                        region: "region"
+                                    },
+                                    sourceName: {},
+                                    platformOrderId: "platformOrderId",
+                                    cancelReason: "cancelReason",
+                                    email: "email",
+                                    updatedAt: "2000-01-23T04:56:07.000+00:00",
+                                    customer: {
+                                        birthday: "2000-01-23",
+                                        lastName: "lastName",
+                                        totalSpent: 5.962133916683182,
+                                        gender: "M",
+                                        platformCustomerId: "platformCustomerId",
+                                        isEmailVerified: true,
+                                        firstName: "firstName",
+                                        createdAt: "2000-01-23T04:56:07.000+00:00",
+                                        ordersCount: 1.4658129805029452,
+                                        isPayingCustomer: true,
+                                        phone: "phone",
+                                        company: "company",
+                                        updatedAt: "2000-01-23T04:56:07.000+00:00"
+                                    },
+                                    status: "PENDING"
+                                },
+                                additionalProperties: false
+                            }
+                        }
+                    }
+                }
+            }
+        },
+        securityDefinitions: {
+            Bearer: { type: "apiKey", name: "Authorization", in: "header" }
+        },
+        definitions: {
+            AccessToken: {
+                required: ["appId", "id", "userId"],
+                properties: {
+                    id: {
+                        type: "string",
+                        description: "A key used for authenticating API calls. Place this access token in the Authorization header when making API calls as described in  https://tools.ietf.org/html/rfc6750.  For example Authorization: 'Bearer: token'"
+                    },
+                    userId: {
+                        type: "integer",
+                        description: "The user id the token was issued to."
+                    },
+                    appId: {
+                        type: "integer",
+                        description: "The application id the token was issued for."
+                    },
+                    accountId: {
+                        type: "integer",
+                        description: "The account id the token was issued for. If this is set, the token is restricted to this account."
+                    },
+                    projectId: {
+                        type: "integer",
+                        description: "The project id the token was issued for. If this is set, the token is restricted to this project."
+                    },
+                    permissions: {
+                        type: "array",
+                        description: "An array of permissions.",
+                        items: { type: "string" },
+                        additionalProperties: false
+                    },
+                    type: {
+                        type: "string",
+                        description: "A description of the source of token, like 'api'."
+                    },
+                    createdDate: {
+                        type: "string",
+                        format: "date-time",
+                        description: "The date and time the token was created.",
+                        convertStringToDate: true
+                    },
+                    expiration: {
+                        type: "string",
+                        format: "date-time",
+                        description: "The date and time the token expires.",
+                        convertStringToDate: true
+                    }
+                },
+                description: "Represents an access token's data.",
+                example: {
+                    accountId: 1,
+                    createdDate: "2000-01-23T04:56:07.000+00:00",
+                    permissions: "",
+                    appId: 6,
+                    expiration: "2000-01-23T04:56:07.000+00:00",
+                    id: "id",
+                    type: "type",
+                    userId: 0,
+                    projectId: 5
+                },
+                additionalProperties: false
+            },
+            AccessTokenCreateParams: {
+                type: "object",
+                required: ["appId", "name", "password"],
+                properties: {
+                    name: { type: "string" },
+                    password: { type: "string" },
+                    appId: {
+                        type: "integer",
+                        description: "The id of the application the access token is for."
+                    }
+                },
+                description: "Parameters for creating an access token.",
+                example: { password: "password", appId: 0, name: "name" },
+                additionalProperties: false
+            },
+            Account: {
+                type: "object",
+                required: ["appId", "id", "userId"],
+                properties: {
+                    id: {
+                        type: "integer",
+                        description: "The account id. This is the primary key."
+                    },
+                    userId: {
+                        type: "integer",
+                        description: "The id of the user that created the account."
+                    },
+                    appId: {
+                        type: "integer",
+                        description: "The application id of the account.  Call /v2/applications to see a list of applications supported."
+                    },
+                    status: {
+                        type: "integer",
+                        description: "The status of the account.  0 is active, 3 is canceled."
+                    },
+                    createdDate: {
+                        type: "string",
+                        format: "date-time",
+                        description: "The date the account was created.",
+                        convertStringToDate: true
+                    },
+                    lastUpdated: {
+                        type: "string",
+                        format: "date-time",
+                        description: "The date the account was last updated.",
+                        convertStringToDate: true
+                    },
+                    type: {
+                        type: "string",
+                        description: "The application specific account type."
+                    },
+                    partnerId: {
+                        type: "integer",
+                        description: "The partner id credited with this account."
+                    }
+                },
+                description: "Represents an account.  Users can have an account for each application.",
+                example: {
+                    lastUpdated: "2000-01-23T04:56:07.000+00:00",
+                    createdDate: "2000-01-23T04:56:07.000+00:00",
+                    appId: 1,
+                    id: 0,
+                    partnerId: 5,
+                    type: "type",
+                    userId: 6,
+                    status: 5
+                },
+                additionalProperties: false
+            },
+            AccountCreateParams: {
+                type: "object",
+                required: ["appId", "userId"],
+                properties: {
+                    appId: {
+                        type: "integer",
+                        description: "The application id to user for the account.  Call /applications to see a list of applications supported."
+                    },
+                    userId: {
+                        type: "integer",
+                        description: "The id of the user who owns the account."
+                    },
+                    status: {
+                        type: "integer",
+                        description: "The status of the account.  0 is active, 3 is canceled."
+                    },
+                    type: {
+                        type: "string",
+                        description: "The application specific account type."
+                    },
+                    partnerId: {
+                        type: "integer",
+                        description: "The partner id credited with this account."
+                    },
+                    discountPct: {
+                        type: "number",
+                        description: "The discount percentage for billing.",
+                        minimum: 0,
+                        maximum: 100
+                    }
+                },
+                description: "Parameters to create an account",
+                example: {
+                    discountPct: 56.37376656633328,
+                    appId: 0,
+                    partnerId: 5,
+                    type: "type",
+                    userId: 6,
+                    status: 1
+                },
+                additionalProperties: false
+            },
+            Authorization: {
+                type: "object",
+                required: ["account", "user"],
+                properties: {
+                    user: {
+                        type: "object",
+                        required: ["id", "name"],
+                        properties: {
+                            id: {
+                                type: "integer",
+                                description: "The user id. This is the primary key."
+                            },
+                            name: {
+                                type: "string",
+                                description: "The user name, which is the user's email address unless the application allows for other formats."
+                            },
+                            firstName: { type: "string" },
+                            lastName: { type: "string" },
+                            email: {
+                                type: "string",
+                                format: "email",
+                                description: "The email to use to communicate with the user.  If this is not provided, the user's name is used."
+                            },
+                            status: { type: "integer" },
+                            phone: { type: "string" },
+                            timezone: { type: "string" },
+                            createdDate: {
+                                type: "string",
+                                format: "date-time",
+                                description: "The date the user was created.",
+                                convertStringToDate: true
+                            },
+                            lastUpdated: {
+                                type: "string",
+                                format: "date-time",
+                                description: "The date the user was last updated.",
+                                convertStringToDate: true
+                            }
+                        },
+                        example: {
+                            firstName: "firstName",
+                            lastName: "lastName",
+                            lastUpdated: "2000-01-23T04:56:07.000+00:00",
+                            createdDate: "2000-01-23T04:56:07.000+00:00",
+                            phone: "phone",
+                            timezone: "timezone",
+                            name: "name",
+                            id: 0,
+                            email: "email",
+                            status: 6
+                        },
+                        additionalProperties: false
+                    },
+                    account: {
+                        type: "object",
+                        required: ["appId", "id", "userId"],
+                        properties: {
+                            id: {
+                                type: "integer",
+                                description: "The account id. This is the primary key."
+                            },
+                            userId: {
+                                type: "integer",
+                                description: "The id of the user that created the account."
+                            },
+                            appId: {
+                                type: "integer",
+                                description: "The application id of the account.  Call /v2/applications to see a list of applications supported."
+                            },
+                            status: {
+                                type: "integer",
+                                description: "The status of the account.  0 is active, 3 is canceled."
+                            },
+                            createdDate: {
+                                type: "string",
+                                format: "date-time",
+                                description: "The date the account was created.",
+                                convertStringToDate: true
+                            },
+                            lastUpdated: {
+                                type: "string",
+                                format: "date-time",
+                                description: "The date the account was last updated.",
+                                convertStringToDate: true
+                            },
+                            type: {
+                                type: "string",
+                                description: "The application specific account type."
+                            },
+                            partnerId: {
+                                type: "integer",
+                                description: "The partner id credited with this account."
+                            }
+                        },
+                        description: "Represents an account.  Users can have an account for each application.",
+                        example: {
+                            lastUpdated: "2000-01-23T04:56:07.000+00:00",
+                            createdDate: "2000-01-23T04:56:07.000+00:00",
+                            appId: 1,
+                            id: 0,
+                            partnerId: 5,
+                            type: "type",
+                            userId: 6,
+                            status: 5
+                        },
+                        additionalProperties: false
+                    },
+                    projects: {
+                        type: "array",
+                        description: "An array of authorized projects.",
+                        items: {
+                            type: "object",
+                            required: ["accountId", "appId", "id", "name"],
+                            properties: {
+                                id: {
+                                    type: "integer",
+                                    description: "The project id. This is the primary key."
+                                },
+                                accountId: {
+                                    type: "integer",
+                                    description: "The id of the account."
+                                },
+                                appId: {
+                                    type: "integer",
+                                    description: "The id of the application."
+                                },
+                                name: {
+                                    type: "string",
+                                    description: "The name of the project. This must be unique to the account."
+                                },
+                                type: {
+                                    type: "string",
+                                    description: "The application-specific type of the project."
+                                },
+                                enabled: {
+                                    type: "boolean",
+                                    description: "Whether the project is enabled.",
+                                    default: true
+                                },
+                                isDemo: {
+                                    type: "boolean",
+                                    description: "Whether the project is for a demo account. Demo projects are generally read-only in the user interface."
+                                },
+                                implemented: {
+                                    type: "boolean",
+                                    description: "Application specific indicator of whether the project has been implemented. For example, whether a website project has tracked any data."
+                                },
+                                permissions: {
+                                    type: "string",
+                                    description: "The application-specific permissions for a shared project.",
+                                    additionalProperties: false
+                                },
+                                sharedByUserId: {
+                                    type: "integer",
+                                    description: "For shared project, the id of the user that shared the project."
+                                }
+                            },
+                            description: "Represents a website or other entity within an account. An account can have multiple projects. For example, the analytics product requires management of multiple websites. ",
+                            example: {
+                                accountId: 6,
+                                permissions: {},
+                                appId: 1,
+                                name: "name",
+                                implemented: true,
+                                sharedByUserId: 5,
+                                id: 0,
+                                type: "type",
+                                isDemo: true,
+                                enabled: true
+                            },
+                            additionalProperties: false
+                        }
+                    },
+                    expiration: {
+                        type: "string",
+                        format: "date-time",
+                        description: "The date and time when the authorization expires.",
+                        convertStringToDate: true
+                    },
+                    currentProjectId: {
+                        type: "integer",
+                        description: "For multi-project applications, which project the user has set as the default."
+                    },
+                    projectId: {
+                        type: "integer",
+                        description: "If an authorization has been set for a specific project, this is the id."
+                    }
+                },
+                description: "Represents what an access token is authorized for. Authorizations include the user object that created the access token, an account and projects.",
+                example: {
+                    currentProjectId: 0,
+                    projects: [
+                        {
+                            accountId: 6,
+                            permissions: {},
+                            appId: 1,
+                            name: "name",
+                            implemented: true,
+                            sharedByUserId: 5,
+                            id: 0,
+                            type: "type",
+                            isDemo: true,
+                            enabled: true
+                        },
+                        {
+                            accountId: 6,
+                            permissions: {},
+                            appId: 1,
+                            name: "name",
+                            implemented: true,
+                            sharedByUserId: 5,
+                            id: 0,
+                            type: "type",
+                            isDemo: true,
+                            enabled: true
+                        }
+                    ],
+                    expiration: "2000-01-23T04:56:07.000+00:00",
+                    user: {
+                        firstName: "firstName",
+                        lastName: "lastName",
+                        lastUpdated: "2000-01-23T04:56:07.000+00:00",
+                        createdDate: "2000-01-23T04:56:07.000+00:00",
+                        phone: "phone",
+                        timezone: "timezone",
+                        name: "name",
+                        id: 0,
+                        email: "email",
+                        status: 6
+                    },
+                    projectId: 6,
+                    account: {
+                        lastUpdated: "2000-01-23T04:56:07.000+00:00",
+                        createdDate: "2000-01-23T04:56:07.000+00:00",
+                        appId: 1,
+                        id: 0,
+                        partnerId: 5,
+                        type: "type",
+                        userId: 6,
+                        status: 5
+                    }
+                },
+                additionalProperties: false
+            },
+            Notification: {
+                type: "object",
+                required: ["email", "templateData", "templateName"],
+                properties: {
+                    email: {
+                        type: "string",
+                        format: "email",
+                        description: "The recipient's email address"
+                    },
+                    templateName: {
+                        type: "string",
+                        description: "The name of the template to use to send the notification"
+                    },
+                    templateData: {
+                        type: "object",
+                        description: "The dynamic data to pass to the template",
+                        additionalProperties: true
+                    }
+                },
+                description: "Parameters for sending a notification",
+                example: {
+                    templateName: "templateName",
+                    templateData: { key: "" },
+                    email: "email"
+                },
+                additionalProperties: false
+            },
+            Permissions: {
+                type: "array",
+                description: "An array of permissions.",
+                items: { type: "string" },
+                additionalProperties: false
+            },
+            Project: {
+                type: "object",
+                required: ["accountId", "appId", "id", "name"],
+                properties: {
+                    id: {
+                        type: "integer",
+                        description: "The project id. This is the primary key."
+                    },
+                    accountId: { type: "integer", description: "The id of the account." },
+                    appId: { type: "integer", description: "The id of the application." },
+                    name: {
+                        type: "string",
+                        description: "The name of the project. This must be unique to the account."
+                    },
+                    type: {
+                        type: "string",
+                        description: "The application-specific type of the project."
+                    },
+                    enabled: {
+                        type: "boolean",
+                        description: "Whether the project is enabled.",
+                        default: true
+                    },
+                    isDemo: {
+                        type: "boolean",
+                        description: "Whether the project is for a demo account. Demo projects are generally read-only in the user interface."
+                    },
+                    implemented: {
+                        type: "boolean",
+                        description: "Application specific indicator of whether the project has been implemented. For example, whether a website project has tracked any data."
+                    },
+                    permissions: {
+                        type: "string",
+                        description: "The application-specific permissions for a shared project.",
+                        additionalProperties: false
+                    },
+                    sharedByUserId: {
+                        type: "integer",
+                        description: "For shared project, the id of the user that shared the project."
+                    }
+                },
+                description: "Represents a website or other entity within an account. An account can have multiple projects. For example, the analytics product requires management of multiple websites. ",
+                example: {
+                    accountId: 6,
+                    permissions: {},
+                    appId: 1,
+                    name: "name",
+                    implemented: true,
+                    sharedByUserId: 5,
+                    id: 0,
+                    type: "type",
+                    isDemo: true,
+                    enabled: true
+                },
+                additionalProperties: false
+            },
+            ProjectCreateParams: {
+                type: "object",
+                required: ["name"],
+                properties: {
+                    name: { type: "string" },
+                    type: { description: "The application-specific type of the project." }
+                },
+                description: "Parameters to create a project.",
+                example: { name: "name", type: "" },
+                additionalProperties: false
+            },
+            ProjectPermissions: {
+                type: "string",
+                description: "The application-specific permissions for a shared project.",
+                additionalProperties: false
+            },
+            ProjectUpdateParams: {
+                properties: {
+                    name: { type: "string" },
+                    enabled: { type: "boolean" },
+                    type: { type: "string" },
+                    implemented: { type: "boolean" }
+                },
+                description: "The set of attributes to update. Use the merge-patch format  https://tools.ietf.org/html/rfc7396",
+                example: {
+                    name: "name",
+                    implemented: true,
+                    type: "type",
+                    enabled: true
+                },
+                additionalProperties: false
+            },
+            Stash: {
+                type: "object",
+                required: ["id"],
+                properties: {
+                    id: {
+                        type: "string",
+                        description: "The uuid of the stash item. This is the primary key."
+                    },
+                    expires: {
+                        type: "string",
+                        format: "date-time",
+                        description: "When the item expires.",
+                        convertStringToDate: true
+                    },
+                    data: {
+                        type: "object",
+                        description: "The stash item data.",
+                        additionalProperties: true
+                    }
+                },
+                example: {
+                    expires: "2000-01-23T04:56:07.000+00:00",
+                    data: { key: "" },
+                    id: "id"
+                },
+                additionalProperties: false
+            },
+            StashCreateParams: {
+                type: "object",
+                required: ["data"],
+                properties: {
+                    expires: {
+                        type: "string",
+                        format: "date-time",
+                        description: "When the item should expire. Defaults to 24 hours.",
+                        convertStringToDate: true
+                    },
+                    data: {
+                        type: "object",
+                        description: "The data to stash.",
+                        additionalProperties: true
+                    }
+                },
+                description: "Parameters for creating a stash item.",
+                example: {
+                    expires: "2000-01-23T04:56:07.000+00:00",
+                    data: { key: "" }
+                },
+                additionalProperties: false
+            },
+            User: {
+                type: "object",
+                required: ["id", "name"],
+                properties: {
+                    id: {
+                        type: "integer",
+                        description: "The user id. This is the primary key."
+                    },
+                    name: {
+                        type: "string",
+                        description: "The user name, which is the user's email address unless the application allows for other formats."
+                    },
+                    firstName: { type: "string" },
+                    lastName: { type: "string" },
+                    email: {
+                        type: "string",
+                        format: "email",
+                        description: "The email to use to communicate with the user.  If this is not provided, the user's name is used."
+                    },
+                    status: { type: "integer" },
+                    phone: { type: "string" },
+                    timezone: { type: "string" },
+                    createdDate: {
+                        type: "string",
+                        format: "date-time",
+                        description: "The date the user was created.",
+                        convertStringToDate: true
+                    },
+                    lastUpdated: {
+                        type: "string",
+                        format: "date-time",
+                        description: "The date the user was last updated.",
+                        convertStringToDate: true
+                    }
+                },
+                example: {
+                    firstName: "firstName",
+                    lastName: "lastName",
+                    lastUpdated: "2000-01-23T04:56:07.000+00:00",
+                    createdDate: "2000-01-23T04:56:07.000+00:00",
+                    phone: "phone",
+                    timezone: "timezone",
+                    name: "name",
+                    id: 0,
+                    email: "email",
+                    status: 6
+                },
+                additionalProperties: false
+            },
+            UserCreateParams: {
+                type: "object",
+                required: ["name", "password"],
+                properties: {
+                    name: {
+                        type: "string",
+                        description: "The name of the user, which is generally an email address unless if the  application's user name format allows other types.",
+                        minLength: 4,
+                        transform: ["trim", "toLowerCase"]
+                    },
+                    email: { type: "string", format: "email" },
+                    password: { type: "string", minLength: 6 },
+                    firstName: { type: "string" },
+                    lastName: { type: "string" },
+                    phone: { type: "string", pattern: "^\\d{10}$" },
+                    timezone: { type: "string", default: "UTC" }
+                },
+                example: {
+                    firstName: "firstName",
+                    lastName: "lastName",
+                    password: "password",
+                    phone: "phone",
+                    timezone: "UTC",
+                    name: "name",
+                    email: "email"
+                },
+                additionalProperties: false
+            },
+            UserUpdateParams: {
+                properties: {
+                    firstName: { type: "string" },
+                    lastName: { type: "string" },
+                    email: { type: "string", format: "email" },
+                    phone: { type: "string", pattern: "^\\d{10}$" },
+                    timezone: { type: "string" }
+                },
+                description: "The set of attributes to update. Use the merge-patch format  https://tools.ietf.org/html/rfc7396",
+                example: {
+                    firstName: "firstName",
+                    lastName: "lastName",
+                    phone: "phone",
+                    timezone: "timezone",
+                    email: "email"
+                },
+                additionalProperties: false
+            },
+            PasswordChangeParams: {
+                type: "object",
+                required: ["newPassword", "oldPassword"],
+                properties: {
+                    oldPassword: {
+                        type: "string",
+                        format: "password",
+                        description: "The user's existing password.",
+                        minLength: 6
+                    },
+                    newPassword: {
+                        type: "string",
+                        format: "password",
+                        description: "The new password for the user.",
+                        minLength: 6
+                    }
+                },
+                description: "Parameters for changing a user's password.",
+                example: { oldPassword: "oldPassword", newPassword: "newPassword" },
+                additionalProperties: false
+            },
+            UpdatePasswordParams: {
+                type: "object",
+                required: ["password"],
+                properties: {
+                    password: {
+                        type: "string",
+                        description: "The new password.",
+                        minLength: 6
+                    }
+                },
+                description: "Parameters to complete a password reset.",
+                example: { password: "password" },
+                additionalProperties: false
+            },
+            QueryResponse: {
+                type: "object",
+                properties: {
+                    query: {
+                        type: "object",
+                        description: "The query that was run",
+                        additionalProperties: true
+                    },
+                    columns: {
+                        type: "array",
+                        description: "Columns description",
+                        items: { type: "object", additionalProperties: true }
+                    },
+                    rows: {
+                        type: "array",
+                        description: "Rows description",
+                        items: { type: "object", additionalProperties: true }
+                    }
+                },
+                example: {
+                    columns: [{ key: "" }, { key: "" }],
+                    query: { key: "" },
+                    rows: [{ key: "" }, { key: "" }]
+                },
+                additionalProperties: false
+            },
+            Entity: {
+                type: "object",
+                properties: {
+                    name: { type: "string" },
+                    description: { type: "string" },
+                    attributes: {
+                        type: "array",
+                        items: {
+                            type: "object",
+                            properties: {
+                                name: { type: "string" },
+                                title: { type: "string" },
+                                description: { type: "string" },
+                                dataType: { type: "string" },
+                                isElement: { type: "boolean" },
+                                isMetric: { type: "boolean" }
+                            },
+                            example: {
+                                isElement: true,
+                                dataType: "dataType",
+                                name: "name",
+                                isMetric: true,
+                                description: "description",
+                                title: "title"
+                            },
+                            additionalProperties: false
+                        }
+                    }
+                },
+                example: {
+                    name: "name",
+                    description: "description",
+                    attributes: [
+                        {
+                            isElement: true,
+                            dataType: "dataType",
+                            name: "name",
+                            isMetric: true,
+                            description: "description",
+                            title: "title"
+                        },
+                        {
+                            isElement: true,
+                            dataType: "dataType",
+                            name: "name",
+                            isMetric: true,
+                            description: "description",
+                            title: "title"
+                        }
+                    ]
+                },
+                additionalProperties: false
+            },
+            Attribute: {
+                type: "object",
+                properties: {
+                    name: { type: "string" },
+                    title: { type: "string" },
+                    description: { type: "string" },
+                    dataType: { type: "string" },
+                    isElement: { type: "boolean" },
+                    isMetric: { type: "boolean" }
+                },
+                example: {
+                    isElement: true,
+                    dataType: "dataType",
+                    name: "name",
+                    isMetric: true,
+                    description: "description",
+                    title: "title"
+                },
+                additionalProperties: false
+            },
+            QueryParams: {
+                required: ["query"],
+                properties: {
+                    query: {
+                        type: "object",
+                        description: "The query.  See the main site for help on query syntax.",
+                        properties: {}
+                    }
+                },
+                example: { query: "{}" },
+                additionalProperties: false
+            },
+            Order: {
+                required: [
+                    "createdAt",
+                    "currency",
+                    "customer",
+                    "email",
+                    "name",
+                    "platform",
+                    "platformOrderId",
+                    "tax",
+                    "totalPrice"
+                ],
+                properties: {
+                    platformOrderId: {
+                        type: "string",
+                        description: "The platform's primary key for the order."
+                    },
+                    name: {
+                        type: "string",
+                        description: "The display name for the order."
+                    },
+                    shopId: {
+                        type: "number",
+                        description: "The numeric id of the shop.  This is an attribute on orders."
+                    },
+                    platform: {
+                        type: "string",
+                        description: "The platform the order was created on, like 'presta'"
+                    },
+                    tax: {
+                        type: "number",
+                        description: "The total tax on the order in the currency of the order."
+                    },
+                    currency: {
+                        type: "string",
+                        description: "The three-character currency of the order."
+                    },
+                    email: {
+                        type: "string",
+                        format: "email",
+                        description: "The email to contact regarding this order."
+                    },
+                    billingAddress: {
+                        properties: {
+                            name: { type: "string" },
+                            company: { type: "string" },
+                            address1: { type: "string" },
+                            address2: { type: "string" },
+                            city: { type: "string" },
+                            zip: { type: "string" },
+                            region: {
+                                type: "string",
+                                description: "The full name of the region (state/province)."
+                            },
+                            regionCode: {
+                                type: "string",
+                                description: "The ISO code for the region (state/province)."
+                            },
+                            country: {
+                                type: "string",
+                                description: "The full name of the country."
+                            },
+                            countryCode: {
+                                type: "string",
+                                description: "The two-character ISO code for the country."
+                            }
+                        },
+                        example: {
+                            zip: "zip",
+                            country: "country",
+                            regionCode: "regionCode",
+                            address2: "address2",
+                            city: "city",
+                            address1: "address1",
+                            countryCode: "countryCode",
+                            name: "name",
+                            company: "company",
+                            region: "region"
+                        },
+                        additionalProperties: false
+                    },
+                    shippingAddress: {
+                        properties: {
+                            name: { type: "string" },
+                            company: { type: "string" },
+                            address1: { type: "string" },
+                            address2: { type: "string" },
+                            city: { type: "string" },
+                            zip: { type: "string" },
+                            region: {
+                                type: "string",
+                                description: "The full name of the region (state/province)."
+                            },
+                            regionCode: {
+                                type: "string",
+                                description: "The ISO code for the region (state/province)."
+                            },
+                            country: {
+                                type: "string",
+                                description: "The full name of the country."
+                            },
+                            countryCode: {
+                                type: "string",
+                                description: "The two-character ISO code for the country."
+                            }
+                        },
+                        example: {
+                            zip: "zip",
+                            country: "country",
+                            regionCode: "regionCode",
+                            address2: "address2",
+                            city: "city",
+                            address1: "address1",
+                            countryCode: "countryCode",
+                            name: "name",
+                            company: "company",
+                            region: "region"
+                        },
+                        additionalProperties: false
+                    },
+                    createdAt: {
+                        type: "string",
+                        format: "date-time",
+                        convertStringToDate: true
+                    },
+                    updatedAt: {
+                        type: "string",
+                        format: "date-time",
+                        convertStringToDate: true
+                    },
+                    customer: {
+                        required: ["firstName", "lastName"],
+                        properties: {
+                            platformCustomerId: {
+                                type: "string",
+                                description: "The platform-specific id of the customer."
+                            },
+                            firstName: { type: "string" },
+                            lastName: { type: "string" },
+                            phone: { type: "string" },
+                            createdAt: {
+                                type: "string",
+                                format: "date-time",
+                                convertStringToDate: true
+                            },
+                            updatedAt: {
+                                type: "string",
+                                format: "date-time",
+                                convertStringToDate: true
+                            },
+                            gender: { type: "string", enum: ["M", "F"] },
+                            birthday: { type: "string", format: "date" },
+                            company: { type: "string" },
+                            ordersCount: {
+                                type: "number",
+                                description: "The total number of orders the customer has placed with this shop."
+                            },
+                            totalSpent: {
+                                type: "number",
+                                description: "The total amount of all orders this customer has placed with this shop."
+                            },
+                            isEmailVerified: {
+                                type: "boolean",
+                                description: "Has the platform verified the email is owned by the customer."
+                            },
+                            isPayingCustomer: {
+                                type: "boolean",
+                                description: "Has the customer ever paid for an order with this shop."
+                            }
+                        },
+                        example: {
+                            birthday: "2000-01-23",
+                            lastName: "lastName",
+                            totalSpent: 5.962133916683182,
+                            gender: "M",
+                            platformCustomerId: "platformCustomerId",
+                            isEmailVerified: true,
+                            firstName: "firstName",
+                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                            ordersCount: 1.4658129805029452,
+                            isPayingCustomer: true,
+                            phone: "phone",
+                            company: "company",
+                            updatedAt: "2000-01-23T04:56:07.000+00:00"
+                        },
+                        additionalProperties: false
+                    },
+                    status: {
+                        type: "string",
+                        description: "The status of the payment",
+                        enum: [
+                            "PENDING",
+                            "AUTHORIZED",
+                            "PARTIALLY_PAID",
+                            "PAID",
+                            "PARTIALLY_REFUNDED",
+                            "REFUNDED",
+                            "VOIDED"
+                        ]
+                    },
+                    processingMethod: {
+                        type: "string",
+                        description: "The payment method.",
+                        enum: ["CHECKOUT", "DIRECT", "MANUAL", "OFFSITE", "EXPRESS"]
+                    },
+                    sourceName: {
+                        type: "string",
+                        description: "The source of the payment.",
+                        enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
+                        additionalProperties: false
+                    },
+                    totalPrice: {
+                        type: "number",
+                        description: "The total price of the order, not including discounts."
+                    },
+                    transctions: {
+                        type: "array",
+                        items: {
+                            required: ["amount", "createdAt"],
+                            properties: {
+                                platformTransactionId: {
+                                    type: "string",
+                                    description: "The platform-specific primary key for the transaction."
+                                },
+                                amount: {
+                                    type: "number",
+                                    description: "The amount of the transaction."
+                                },
+                                createdAt: {
+                                    type: "string",
+                                    format: "date-time",
+                                    convertStringToDate: true
+                                },
+                                gateway: { type: "string" },
+                                sourceName: {
+                                    type: "string",
+                                    description: "The source of the payment.",
+                                    enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
+                                    additionalProperties: false
+                                },
+                                paymentDetails: {
+                                    properties: {
+                                        creditCardNumber: { type: "string" },
+                                        creditCardCompany: { type: "string" },
+                                        cardExpiration: { type: "string" },
+                                        cardHolder: { type: "string" },
+                                        avsResultCode: { type: "string" },
+                                        cvvResultCode: { type: "string" },
+                                        creditCardBin: { type: "string" },
+                                        method: { type: "string" },
+                                        gateway: { type: "string" }
+                                    },
+                                    example: {
+                                        avsResultCode: "avsResultCode",
+                                        cvvResultCode: "cvvResultCode",
+                                        method: "method",
+                                        creditCardNumber: "creditCardNumber",
+                                        creditCardBin: "creditCardBin",
+                                        creditCardCompany: "creditCardCompany",
+                                        cardHolder: "cardHolder",
+                                        cardExpiration: "cardExpiration",
+                                        gateway: "gateway"
+                                    },
+                                    additionalProperties: false
+                                },
+                                kind: {
+                                    type: "string",
+                                    enum: ["SALE", "AUTHORIZATION", "CAPTURE", "VOID", "REFUND"]
+                                },
+                                status: { type: "string" },
+                                currency: { type: "string" },
+                                test: {
+                                    type: "boolean",
+                                    description: "Whether the transaction is sandboxed for testing purposes only"
+                                }
+                            },
+                            example: {
+                                createdAt: "2000-01-23T04:56:07.000+00:00",
+                                amount: 2.3021358869347655,
+                                test: true,
+                                platformTransactionId: "platformTransactionId",
+                                kind: "SALE",
+                                currency: "currency",
+                                paymentDetails: {
+                                    avsResultCode: "avsResultCode",
+                                    cvvResultCode: "cvvResultCode",
+                                    method: "method",
+                                    creditCardNumber: "creditCardNumber",
+                                    creditCardBin: "creditCardBin",
+                                    creditCardCompany: "creditCardCompany",
+                                    cardHolder: "cardHolder",
+                                    cardExpiration: "cardExpiration",
+                                    gateway: "gateway"
+                                },
+                                gateway: "gateway",
+                                status: "status"
+                            },
+                            additionalProperties: false
+                        }
+                    },
+                    lineItems: {
+                        type: "array",
+                        items: {
+                            required: ["name", "price", "quantity"],
+                            properties: {
+                                platformId: {
+                                    type: "string",
+                                    description: "The platform specific primary key for the line item"
+                                },
+                                title: { type: "string" },
+                                name: { type: "string" },
+                                quantity: { type: "number" },
+                                price: { type: "number" },
+                                sku: { type: "string" },
+                                isbn: { type: "string" },
+                                ean13: { type: "string" },
+                                upc: { type: "string" },
+                                variantId: {
+                                    type: "string",
+                                    description: "Customized product ids. Product that varies by color may have a different variantId"
+                                },
+                                variantTitle: { type: "string" },
+                                vendor: { type: "string" },
+                                platformProductId: {
+                                    type: "string",
+                                    description: "The platform specific primary key for the product"
+                                },
+                                giftCard: { type: "boolean" },
+                                totalDiscount: { type: "number" },
+                                manufacturer: { type: "string" }
+                            },
+                            example: {
+                                variantTitle: "variantTitle",
+                                platformProductId: "platformProductId",
+                                quantity: 7.061401241503109,
+                                isbn: "isbn",
+                                ean13: "ean13",
+                                upc: "upc",
+                                platformId: "platformId",
+                                title: "title",
+                                manufacturer: "manufacturer",
+                                price: 9.301444243932576,
+                                vendor: "vendor",
+                                name: "name",
+                                giftCard: true,
+                                totalDiscount: 3.616076749251911,
+                                variantId: "variantId",
+                                sku: "sku"
+                            },
+                            additionalProperties: false
+                        }
+                    },
+                    canceledAt: {
+                        type: "string",
+                        format: "date-time",
+                        convertStringToDate: true
+                    },
+                    canceledBy: { type: "string" },
+                    cancelReason: { type: "string" },
+                    approvedAt: {
+                        type: "string",
+                        format: "date-time",
+                        convertStringToDate: true
+                    },
+                    approvedBy: { type: "string" },
+                    hasGiftCard: {
+                        type: "boolean",
+                        description: "Was the order paid using a gift card"
+                    }
+                },
+                example: {
+                    totalPrice: 5.637376656633329,
+                    approvedBy: "approvedBy",
+                    canceledBy: "canceledBy",
+                    tax: 6.027456183070403,
+                    approvedAt: "2000-01-23T04:56:07.000+00:00",
+                    platform: "platform",
+                    lineItems: [
+                        {
+                            variantTitle: "variantTitle",
+                            platformProductId: "platformProductId",
+                            quantity: 7.061401241503109,
+                            isbn: "isbn",
+                            ean13: "ean13",
+                            upc: "upc",
+                            platformId: "platformId",
+                            title: "title",
+                            manufacturer: "manufacturer",
+                            price: 9.301444243932576,
+                            vendor: "vendor",
+                            name: "name",
+                            giftCard: true,
+                            totalDiscount: 3.616076749251911,
+                            variantId: "variantId",
+                            sku: "sku"
+                        },
+                        {
+                            variantTitle: "variantTitle",
+                            platformProductId: "platformProductId",
+                            quantity: 7.061401241503109,
+                            isbn: "isbn",
+                            ean13: "ean13",
+                            upc: "upc",
+                            platformId: "platformId",
+                            title: "title",
+                            manufacturer: "manufacturer",
+                            price: 9.301444243932576,
+                            vendor: "vendor",
+                            name: "name",
+                            giftCard: true,
+                            totalDiscount: 3.616076749251911,
+                            variantId: "variantId",
+                            sku: "sku"
+                        }
+                    ],
+                    createdAt: "2000-01-23T04:56:07.000+00:00",
+                    transctions: [
+                        {
+                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                            amount: 2.3021358869347655,
+                            test: true,
+                            platformTransactionId: "platformTransactionId",
+                            kind: "SALE",
+                            currency: "currency",
+                            paymentDetails: {
+                                avsResultCode: "avsResultCode",
+                                cvvResultCode: "cvvResultCode",
+                                method: "method",
+                                creditCardNumber: "creditCardNumber",
+                                creditCardBin: "creditCardBin",
+                                creditCardCompany: "creditCardCompany",
+                                cardHolder: "cardHolder",
+                                cardExpiration: "cardExpiration",
+                                gateway: "gateway"
+                            },
+                            gateway: "gateway",
+                            status: "status"
+                        },
+                        {
+                            createdAt: "2000-01-23T04:56:07.000+00:00",
+                            amount: 2.3021358869347655,
+                            test: true,
+                            platformTransactionId: "platformTransactionId",
+                            kind: "SALE",
+                            currency: "currency",
+                            paymentDetails: {
+                                avsResultCode: "avsResultCode",
+                                cvvResultCode: "cvvResultCode",
+                                method: "method",
+                                creditCardNumber: "creditCardNumber",
+                                creditCardBin: "creditCardBin",
+                                creditCardCompany: "creditCardCompany",
+                                cardHolder: "cardHolder",
+                                cardExpiration: "cardExpiration",
+                                gateway: "gateway"
+                            },
+                            gateway: "gateway",
+                            status: "status"
+                        }
+                    ],
+                    canceledAt: "2000-01-23T04:56:07.000+00:00",
+                    hasGiftCard: true,
+                    name: "name",
+                    processingMethod: "CHECKOUT",
+                    shippingAddress: {
+                        zip: "zip",
+                        country: "country",
+                        regionCode: "regionCode",
+                        address2: "address2",
+                        city: "city",
+                        address1: "address1",
+                        countryCode: "countryCode",
+                        name: "name",
+                        company: "company",
+                        region: "region"
+                    },
+                    currency: "currency",
+                    shopId: 0.8008281904610115,
+                    billingAddress: {
+                        zip: "zip",
+                        country: "country",
+                        regionCode: "regionCode",
+                        address2: "address2",
+                        city: "city",
+                        address1: "address1",
+                        countryCode: "countryCode",
+                        name: "name",
+                        company: "company",
+                        region: "region"
+                    },
+                    sourceName: {},
+                    platformOrderId: "platformOrderId",
+                    cancelReason: "cancelReason",
+                    email: "email",
+                    updatedAt: "2000-01-23T04:56:07.000+00:00",
+                    customer: {
+                        birthday: "2000-01-23",
+                        lastName: "lastName",
+                        totalSpent: 5.962133916683182,
+                        gender: "M",
+                        platformCustomerId: "platformCustomerId",
+                        isEmailVerified: true,
+                        firstName: "firstName",
+                        createdAt: "2000-01-23T04:56:07.000+00:00",
+                        ordersCount: 1.4658129805029452,
+                        isPayingCustomer: true,
+                        phone: "phone",
+                        company: "company",
+                        updatedAt: "2000-01-23T04:56:07.000+00:00"
+                    },
+                    status: "PENDING"
+                },
+                additionalProperties: false
+            },
+            Address: {
+                properties: {
+                    name: { type: "string" },
+                    company: { type: "string" },
+                    address1: { type: "string" },
+                    address2: { type: "string" },
+                    city: { type: "string" },
+                    zip: { type: "string" },
+                    region: {
+                        type: "string",
+                        description: "The full name of the region (state/province)."
+                    },
+                    regionCode: {
+                        type: "string",
+                        description: "The ISO code for the region (state/province)."
+                    },
+                    country: {
+                        type: "string",
+                        description: "The full name of the country."
+                    },
+                    countryCode: {
+                        type: "string",
+                        description: "The two-character ISO code for the country."
+                    }
+                },
+                example: {
+                    zip: "zip",
+                    country: "country",
+                    regionCode: "regionCode",
+                    address2: "address2",
+                    city: "city",
+                    address1: "address1",
+                    countryCode: "countryCode",
+                    name: "name",
+                    company: "company",
+                    region: "region"
+                },
+                additionalProperties: false
+            },
+            Customer: {
+                required: ["firstName", "lastName"],
+                properties: {
+                    platformCustomerId: {
+                        type: "string",
+                        description: "The platform-specific id of the customer."
+                    },
+                    firstName: { type: "string" },
+                    lastName: { type: "string" },
+                    phone: { type: "string" },
+                    createdAt: {
+                        type: "string",
+                        format: "date-time",
+                        convertStringToDate: true
+                    },
+                    updatedAt: {
+                        type: "string",
+                        format: "date-time",
+                        convertStringToDate: true
+                    },
+                    gender: { type: "string", enum: ["M", "F"] },
+                    birthday: { type: "string", format: "date" },
+                    company: { type: "string" },
+                    ordersCount: {
+                        type: "number",
+                        description: "The total number of orders the customer has placed with this shop."
+                    },
+                    totalSpent: {
+                        type: "number",
+                        description: "The total amount of all orders this customer has placed with this shop."
+                    },
+                    isEmailVerified: {
+                        type: "boolean",
+                        description: "Has the platform verified the email is owned by the customer."
+                    },
+                    isPayingCustomer: {
+                        type: "boolean",
+                        description: "Has the customer ever paid for an order with this shop."
+                    }
+                },
+                example: {
+                    birthday: "2000-01-23",
+                    lastName: "lastName",
+                    totalSpent: 5.962133916683182,
+                    gender: "M",
+                    platformCustomerId: "platformCustomerId",
+                    isEmailVerified: true,
+                    firstName: "firstName",
+                    createdAt: "2000-01-23T04:56:07.000+00:00",
+                    ordersCount: 1.4658129805029452,
+                    isPayingCustomer: true,
+                    phone: "phone",
+                    company: "company",
+                    updatedAt: "2000-01-23T04:56:07.000+00:00"
+                },
+                additionalProperties: false
+            },
+            Transaction: {
+                required: ["amount", "createdAt"],
+                properties: {
+                    platformTransactionId: {
+                        type: "string",
+                        description: "The platform-specific primary key for the transaction."
+                    },
+                    amount: {
+                        type: "number",
+                        description: "The amount of the transaction."
+                    },
+                    createdAt: {
+                        type: "string",
+                        format: "date-time",
+                        convertStringToDate: true
+                    },
+                    gateway: { type: "string" },
+                    sourceName: {
+                        type: "string",
+                        description: "The source of the payment.",
+                        enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
+                        additionalProperties: false
+                    },
+                    paymentDetails: {
+                        properties: {
+                            creditCardNumber: { type: "string" },
+                            creditCardCompany: { type: "string" },
+                            cardExpiration: { type: "string" },
+                            cardHolder: { type: "string" },
+                            avsResultCode: { type: "string" },
+                            cvvResultCode: { type: "string" },
+                            creditCardBin: { type: "string" },
+                            method: { type: "string" },
+                            gateway: { type: "string" }
+                        },
+                        example: {
+                            avsResultCode: "avsResultCode",
+                            cvvResultCode: "cvvResultCode",
+                            method: "method",
+                            creditCardNumber: "creditCardNumber",
+                            creditCardBin: "creditCardBin",
+                            creditCardCompany: "creditCardCompany",
+                            cardHolder: "cardHolder",
+                            cardExpiration: "cardExpiration",
+                            gateway: "gateway"
+                        },
+                        additionalProperties: false
+                    },
+                    kind: {
+                        type: "string",
+                        enum: ["SALE", "AUTHORIZATION", "CAPTURE", "VOID", "REFUND"]
+                    },
+                    status: { type: "string" },
+                    currency: { type: "string" },
+                    test: {
+                        type: "boolean",
+                        description: "Whether the transaction is sandboxed for testing purposes only"
+                    }
+                },
+                example: {
+                    createdAt: "2000-01-23T04:56:07.000+00:00",
+                    amount: 2.3021358869347655,
+                    test: true,
+                    platformTransactionId: "platformTransactionId",
+                    kind: "SALE",
+                    currency: "currency",
+                    paymentDetails: {
+                        avsResultCode: "avsResultCode",
+                        cvvResultCode: "cvvResultCode",
+                        method: "method",
+                        creditCardNumber: "creditCardNumber",
+                        creditCardBin: "creditCardBin",
+                        creditCardCompany: "creditCardCompany",
+                        cardHolder: "cardHolder",
+                        cardExpiration: "cardExpiration",
+                        gateway: "gateway"
+                    },
+                    gateway: "gateway",
+                    status: "status"
+                },
+                additionalProperties: false
+            },
+            PaymentDetails: {
+                properties: {
+                    creditCardNumber: { type: "string" },
+                    creditCardCompany: { type: "string" },
+                    cardExpiration: { type: "string" },
+                    cardHolder: { type: "string" },
+                    avsResultCode: { type: "string" },
+                    cvvResultCode: { type: "string" },
+                    creditCardBin: { type: "string" },
+                    method: { type: "string" },
+                    gateway: { type: "string" }
+                },
+                example: {
+                    avsResultCode: "avsResultCode",
+                    cvvResultCode: "cvvResultCode",
+                    method: "method",
+                    creditCardNumber: "creditCardNumber",
+                    creditCardBin: "creditCardBin",
+                    creditCardCompany: "creditCardCompany",
+                    cardHolder: "cardHolder",
+                    cardExpiration: "cardExpiration",
+                    gateway: "gateway"
+                },
+                additionalProperties: false
+            },
+            LineItem: {
+                required: ["name", "price", "quantity"],
+                properties: {
+                    platformId: {
+                        type: "string",
+                        description: "The platform specific primary key for the line item"
+                    },
+                    title: { type: "string" },
+                    name: { type: "string" },
+                    quantity: { type: "number" },
+                    price: { type: "number" },
+                    sku: { type: "string" },
+                    isbn: { type: "string" },
+                    ean13: { type: "string" },
+                    upc: { type: "string" },
+                    variantId: {
+                        type: "string",
+                        description: "Customized product ids. Product that varies by color may have a different variantId"
+                    },
+                    variantTitle: { type: "string" },
+                    vendor: { type: "string" },
+                    platformProductId: {
+                        type: "string",
+                        description: "The platform specific primary key for the product"
+                    },
+                    giftCard: { type: "boolean" },
+                    totalDiscount: { type: "number" },
+                    manufacturer: { type: "string" }
+                },
+                example: {
+                    variantTitle: "variantTitle",
+                    platformProductId: "platformProductId",
+                    quantity: 7.061401241503109,
+                    isbn: "isbn",
+                    ean13: "ean13",
+                    upc: "upc",
+                    platformId: "platformId",
+                    title: "title",
+                    manufacturer: "manufacturer",
+                    price: 9.301444243932576,
+                    vendor: "vendor",
+                    name: "name",
+                    giftCard: true,
+                    totalDiscount: 3.616076749251911,
+                    variantId: "variantId",
+                    sku: "sku"
+                },
+                additionalProperties: false
+            },
+            SourceName: {
+                type: "string",
+                description: "The source of the payment.",
+                enum: ["WEB", "POS", "IPHONE", "ANDROID", "DEMO"],
+                additionalProperties: false
+            },
+            Error: {
+                type: "object",
+                required: ["code", "message"],
+                properties: {
+                    code: {
+                        type: "integer",
+                        description: "HTTP status code for the error."
+                    },
+                    message: {
+                        type: "string",
+                        description: "A high-level description of the error."
+                    },
+                    errors: {
+                        type: "array",
+                        description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                        items: {
+                            required: ["message"],
+                            properties: {
+                                name: {
+                                    type: "string",
+                                    description: "The attribute or field name that failed validation."
+                                },
+                                code: { type: "integer" },
+                                message: { type: "string" }
+                            },
+                            type: "object",
+                            additionalProperties: false
+                        }
+                    }
+                },
+                description: "A REST error.",
+                additionalProperties: false
+            },
+            inline_response_200: {
+                properties: {
+                    sessions: {
+                        type: "object",
+                        properties: {
+                            name: { type: "string" },
+                            description: { type: "string" },
+                            attributes: {
+                                type: "array",
+                                items: {
+                                    type: "object",
+                                    properties: {
+                                        name: { type: "string" },
+                                        title: { type: "string" },
+                                        description: { type: "string" },
+                                        dataType: { type: "string" },
+                                        isElement: { type: "boolean" },
+                                        isMetric: { type: "boolean" }
+                                    },
+                                    example: {
+                                        isElement: true,
+                                        dataType: "dataType",
+                                        name: "name",
+                                        isMetric: true,
+                                        description: "description",
+                                        title: "title"
+                                    },
+                                    additionalProperties: false
+                                }
+                            }
+                        },
+                        example: {
+                            name: "name",
+                            description: "description",
+                            attributes: [
+                                {
+                                    isElement: true,
+                                    dataType: "dataType",
+                                    name: "name",
+                                    isMetric: true,
+                                    description: "description",
+                                    title: "title"
+                                },
+                                {
+                                    isElement: true,
+                                    dataType: "dataType",
+                                    name: "name",
+                                    isMetric: true,
+                                    description: "description",
+                                    title: "title"
+                                }
+                            ]
+                        },
+                        additionalProperties: false
+                    },
+                    pages: {
+                        type: "object",
+                        properties: {
+                            name: { type: "string" },
+                            description: { type: "string" },
+                            attributes: {
+                                type: "array",
+                                items: {
+                                    type: "object",
+                                    properties: {
+                                        name: { type: "string" },
+                                        title: { type: "string" },
+                                        description: { type: "string" },
+                                        dataType: { type: "string" },
+                                        isElement: { type: "boolean" },
+                                        isMetric: { type: "boolean" }
+                                    },
+                                    example: {
+                                        isElement: true,
+                                        dataType: "dataType",
+                                        name: "name",
+                                        isMetric: true,
+                                        description: "description",
+                                        title: "title"
+                                    },
+                                    additionalProperties: false
+                                }
+                            }
+                        },
+                        example: {
+                            name: "name",
+                            description: "description",
+                            attributes: [
+                                {
+                                    isElement: true,
+                                    dataType: "dataType",
+                                    name: "name",
+                                    isMetric: true,
+                                    description: "description",
+                                    title: "title"
+                                },
+                                {
+                                    isElement: true,
+                                    dataType: "dataType",
+                                    name: "name",
+                                    isMetric: true,
+                                    description: "description",
+                                    title: "title"
+                                }
+                            ]
+                        },
+                        additionalProperties: false
+                    },
+                    events: {
+                        type: "object",
+                        properties: {
+                            name: { type: "string" },
+                            description: { type: "string" },
+                            attributes: {
+                                type: "array",
+                                items: {
+                                    type: "object",
+                                    properties: {
+                                        name: { type: "string" },
+                                        title: { type: "string" },
+                                        description: { type: "string" },
+                                        dataType: { type: "string" },
+                                        isElement: { type: "boolean" },
+                                        isMetric: { type: "boolean" }
+                                    },
+                                    example: {
+                                        isElement: true,
+                                        dataType: "dataType",
+                                        name: "name",
+                                        isMetric: true,
+                                        description: "description",
+                                        title: "title"
+                                    },
+                                    additionalProperties: false
+                                }
+                            }
+                        },
+                        example: {
+                            name: "name",
+                            description: "description",
+                            attributes: [
+                                {
+                                    isElement: true,
+                                    dataType: "dataType",
+                                    name: "name",
+                                    isMetric: true,
+                                    description: "description",
+                                    title: "title"
+                                },
+                                {
+                                    isElement: true,
+                                    dataType: "dataType",
+                                    name: "name",
+                                    isMetric: true,
+                                    description: "description",
+                                    title: "title"
+                                }
+                            ]
+                        },
+                        additionalProperties: false
+                    },
+                    timings: {
+                        type: "object",
+                        properties: {
+                            name: { type: "string" },
+                            description: { type: "string" },
+                            attributes: {
+                                type: "array",
+                                items: {
+                                    type: "object",
+                                    properties: {
+                                        name: { type: "string" },
+                                        title: { type: "string" },
+                                        description: { type: "string" },
+                                        dataType: { type: "string" },
+                                        isElement: { type: "boolean" },
+                                        isMetric: { type: "boolean" }
+                                    },
+                                    example: {
+                                        isElement: true,
+                                        dataType: "dataType",
+                                        name: "name",
+                                        isMetric: true,
+                                        description: "description",
+                                        title: "title"
+                                    },
+                                    additionalProperties: false
+                                }
+                            }
+                        },
+                        example: {
+                            name: "name",
+                            description: "description",
+                            attributes: [
+                                {
+                                    isElement: true,
+                                    dataType: "dataType",
+                                    name: "name",
+                                    isMetric: true,
+                                    description: "description",
+                                    title: "title"
+                                },
+                                {
+                                    isElement: true,
+                                    dataType: "dataType",
+                                    name: "name",
+                                    isMetric: true,
+                                    description: "description",
+                                    title: "title"
+                                }
+                            ]
+                        },
+                        additionalProperties: false
+                    },
+                    users: {
+                        type: "object",
+                        properties: {
+                            name: { type: "string" },
+                            description: { type: "string" },
+                            attributes: {
+                                type: "array",
+                                items: {
+                                    type: "object",
+                                    properties: {
+                                        name: { type: "string" },
+                                        title: { type: "string" },
+                                        description: { type: "string" },
+                                        dataType: { type: "string" },
+                                        isElement: { type: "boolean" },
+                                        isMetric: { type: "boolean" }
+                                    },
+                                    example: {
+                                        isElement: true,
+                                        dataType: "dataType",
+                                        name: "name",
+                                        isMetric: true,
+                                        description: "description",
+                                        title: "title"
+                                    },
+                                    additionalProperties: false
+                                }
+                            }
+                        },
+                        example: {
+                            name: "name",
+                            description: "description",
+                            attributes: [
+                                {
+                                    isElement: true,
+                                    dataType: "dataType",
+                                    name: "name",
+                                    isMetric: true,
+                                    description: "description",
+                                    title: "title"
+                                },
+                                {
+                                    isElement: true,
+                                    dataType: "dataType",
+                                    name: "name",
+                                    isMetric: true,
+                                    description: "description",
+                                    title: "title"
+                                }
+                            ]
+                        },
+                        additionalProperties: false
+                    },
+                    people: {
+                        type: "object",
+                        properties: {
+                            name: { type: "string" },
+                            description: { type: "string" },
+                            attributes: {
+                                type: "array",
+                                items: {
+                                    type: "object",
+                                    properties: {
+                                        name: { type: "string" },
+                                        title: { type: "string" },
+                                        description: { type: "string" },
+                                        dataType: { type: "string" },
+                                        isElement: { type: "boolean" },
+                                        isMetric: { type: "boolean" }
+                                    },
+                                    example: {
+                                        isElement: true,
+                                        dataType: "dataType",
+                                        name: "name",
+                                        isMetric: true,
+                                        description: "description",
+                                        title: "title"
+                                    },
+                                    additionalProperties: false
+                                }
+                            }
+                        },
+                        example: {
+                            name: "name",
+                            description: "description",
+                            attributes: [
+                                {
+                                    isElement: true,
+                                    dataType: "dataType",
+                                    name: "name",
+                                    isMetric: true,
+                                    description: "description",
+                                    title: "title"
+                                },
+                                {
+                                    isElement: true,
+                                    dataType: "dataType",
+                                    name: "name",
+                                    isMetric: true,
+                                    description: "description",
+                                    title: "title"
+                                }
+                            ]
+                        },
+                        additionalProperties: false
+                    }
+                },
+                example: {
+                    sessions: {
+                        name: "name",
+                        description: "description",
+                        attributes: [
+                            {
+                                isElement: true,
+                                dataType: "dataType",
+                                name: "name",
+                                isMetric: true,
+                                description: "description",
+                                title: "title"
+                            },
+                            {
+                                isElement: true,
+                                dataType: "dataType",
+                                name: "name",
+                                isMetric: true,
+                                description: "description",
+                                title: "title"
+                            }
+                        ]
+                    },
+                    pages: {
+                        name: "name",
+                        description: "description",
+                        attributes: [
+                            {
+                                isElement: true,
+                                dataType: "dataType",
+                                name: "name",
+                                isMetric: true,
+                                description: "description",
+                                title: "title"
+                            },
+                            {
+                                isElement: true,
+                                dataType: "dataType",
+                                name: "name",
+                                isMetric: true,
+                                description: "description",
+                                title: "title"
+                            }
+                        ]
+                    },
+                    timings: {
+                        name: "name",
+                        description: "description",
+                        attributes: [
+                            {
+                                isElement: true,
+                                dataType: "dataType",
+                                name: "name",
+                                isMetric: true,
+                                description: "description",
+                                title: "title"
+                            },
+                            {
+                                isElement: true,
+                                dataType: "dataType",
+                                name: "name",
+                                isMetric: true,
+                                description: "description",
+                                title: "title"
+                            }
+                        ]
+                    },
+                    people: {
+                        name: "name",
+                        description: "description",
+                        attributes: [
+                            {
+                                isElement: true,
+                                dataType: "dataType",
+                                name: "name",
+                                isMetric: true,
+                                description: "description",
+                                title: "title"
+                            },
+                            {
+                                isElement: true,
+                                dataType: "dataType",
+                                name: "name",
+                                isMetric: true,
+                                description: "description",
+                                title: "title"
+                            }
+                        ]
+                    },
+                    events: {
+                        name: "name",
+                        description: "description",
+                        attributes: [
+                            {
+                                isElement: true,
+                                dataType: "dataType",
+                                name: "name",
+                                isMetric: true,
+                                description: "description",
+                                title: "title"
+                            },
+                            {
+                                isElement: true,
+                                dataType: "dataType",
+                                name: "name",
+                                isMetric: true,
+                                description: "description",
+                                title: "title"
+                            }
+                        ]
+                    },
+                    users: {
+                        name: "name",
+                        description: "description",
+                        attributes: [
+                            {
+                                isElement: true,
+                                dataType: "dataType",
+                                name: "name",
+                                isMetric: true,
+                                description: "description",
+                                title: "title"
+                            },
+                            {
+                                isElement: true,
+                                dataType: "dataType",
+                                name: "name",
+                                isMetric: true,
+                                description: "description",
+                                title: "title"
+                            }
+                        ]
+                    }
+                },
+                additionalProperties: false
+            },
+            Error_errors: {
+                required: ["message"],
+                properties: {
+                    name: {
+                        type: "string",
+                        description: "The attribute or field name that failed validation."
+                    },
+                    code: { type: "integer" },
+                    message: { type: "string" }
+                },
+                type: "object",
+                additionalProperties: false
+            }
+        },
+        responses: {
+            OK: { description: "OK" },
+            NoContent: { description: "Success with no content" },
+            BadRequest: {
+                description: "Bad request",
+                schema: {
+                    type: "object",
+                    required: ["code", "message"],
+                    properties: {
+                        code: {
+                            type: "integer",
+                            description: "HTTP status code for the error."
+                        },
+                        message: {
+                            type: "string",
+                            description: "A high-level description of the error."
+                        },
+                        errors: {
+                            type: "array",
+                            description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                            items: {
+                                required: ["message"],
+                                properties: {
+                                    name: {
+                                        type: "string",
+                                        description: "The attribute or field name that failed validation."
+                                    },
+                                    code: { type: "integer" },
+                                    message: { type: "string" }
+                                },
+                                type: "object",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    description: "A REST error.",
+                    additionalProperties: false
+                }
+            },
+            Unauthorized: {
+                description: "Unauthorized",
+                schema: {
+                    type: "object",
+                    required: ["code", "message"],
+                    properties: {
+                        code: {
+                            type: "integer",
+                            description: "HTTP status code for the error."
+                        },
+                        message: {
+                            type: "string",
+                            description: "A high-level description of the error."
+                        },
+                        errors: {
+                            type: "array",
+                            description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                            items: {
+                                required: ["message"],
+                                properties: {
+                                    name: {
+                                        type: "string",
+                                        description: "The attribute or field name that failed validation."
+                                    },
+                                    code: { type: "integer" },
+                                    message: { type: "string" }
+                                },
+                                type: "object",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    description: "A REST error.",
+                    additionalProperties: false
+                }
+            },
+            NotFound: {
+                description: "Not found",
+                schema: {
+                    type: "object",
+                    required: ["code", "message"],
+                    properties: {
+                        code: {
+                            type: "integer",
+                            description: "HTTP status code for the error."
+                        },
+                        message: {
+                            type: "string",
+                            description: "A high-level description of the error."
+                        },
+                        errors: {
+                            type: "array",
+                            description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                            items: {
+                                required: ["message"],
+                                properties: {
+                                    name: {
+                                        type: "string",
+                                        description: "The attribute or field name that failed validation."
+                                    },
+                                    code: { type: "integer" },
+                                    message: { type: "string" }
+                                },
+                                type: "object",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    description: "A REST error.",
+                    additionalProperties: false
+                }
+            },
+            Duplicate: {
+                description: "Duplicate",
+                schema: {
+                    type: "object",
+                    required: ["code", "message"],
+                    properties: {
+                        code: {
+                            type: "integer",
+                            description: "HTTP status code for the error."
+                        },
+                        message: {
+                            type: "string",
+                            description: "A high-level description of the error."
+                        },
+                        errors: {
+                            type: "array",
+                            description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                            items: {
+                                required: ["message"],
+                                properties: {
+                                    name: {
+                                        type: "string",
+                                        description: "The attribute or field name that failed validation."
+                                    },
+                                    code: { type: "integer" },
+                                    message: { type: "string" }
+                                },
+                                type: "object",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    description: "A REST error.",
+                    additionalProperties: false
+                }
+            },
+            Timeout: {
+                description: "Timeout",
+                schema: {
+                    type: "object",
+                    required: ["code", "message"],
+                    properties: {
+                        code: {
+                            type: "integer",
+                            description: "HTTP status code for the error."
+                        },
+                        message: {
+                            type: "string",
+                            description: "A high-level description of the error."
+                        },
+                        errors: {
+                            type: "array",
+                            description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                            items: {
+                                required: ["message"],
+                                properties: {
+                                    name: {
+                                        type: "string",
+                                        description: "The attribute or field name that failed validation."
+                                    },
+                                    code: { type: "integer" },
+                                    message: { type: "string" }
+                                },
+                                type: "object",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    description: "A REST error.",
+                    additionalProperties: false
+                }
+            },
+            TooManyRequests: {
+                description: "Too many requests",
+                schema: {
+                    type: "object",
+                    required: ["code", "message"],
+                    properties: {
+                        code: {
+                            type: "integer",
+                            description: "HTTP status code for the error."
+                        },
+                        message: {
+                            type: "string",
+                            description: "A high-level description of the error."
+                        },
+                        errors: {
+                            type: "array",
+                            description: "For API calls that need to return validation errors, this array contains a list of each failed validation.",
+                            items: {
+                                required: ["message"],
+                                properties: {
+                                    name: {
+                                        type: "string",
+                                        description: "The attribute or field name that failed validation."
+                                    },
+                                    code: { type: "integer" },
+                                    message: { type: "string" }
+                                },
+                                type: "object",
+                                additionalProperties: false
+                            }
+                        }
+                    },
+                    description: "A REST error.",
+                    additionalProperties: false
+                }
+            }
+        }
     }
 };
 exports.Specs = Specs;
