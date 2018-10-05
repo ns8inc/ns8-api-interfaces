@@ -13740,7 +13740,7 @@ declare const Specs: {
         schemes: string[];
         produces: string[];
         paths: {
-            "/protect/users": {
+            "/users": {
                 post: {
                     tags: string[];
                     summary: string;
@@ -14369,7 +14369,7 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/protect/users/password": {
+            "/users/password": {
                 put: {
                     tags: string[];
                     summary: string;
@@ -14534,7 +14534,7 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/protect/users/{id}/password": {
+            "/users/{id}/password": {
                 put: {
                     tags: string[];
                     summary: string;
@@ -14700,7 +14700,7 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/protect/users/name/{name}": {
+            "/users/name/{name}": {
                 get: {
                     tags: string[];
                     summary: string;
@@ -14825,7 +14825,7 @@ declare const Specs: {
                     "x-permissions": string[];
                 };
             };
-            "/protect/accounts": {
+            "/accounts": {
                 post: {
                     tags: string[];
                     summary: string;
@@ -15099,7 +15099,7 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/protect/projects": {
+            "/projects": {
                 get: {
                     tags: string[];
                     summary: string;
@@ -15599,7 +15599,7 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/protect/projects/{id}": {
+            "/projects/{id}": {
                 delete: {
                     tags: string[];
                     summary: string;
@@ -16014,7 +16014,7 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/protect/access-tokens": {
+            "/access-tokens": {
                 post: {
                     tags: string[];
                     summary: string;
@@ -16238,7 +16238,7 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/protect/authorizations": {
+            "/authorizations": {
                 get: {
                     tags: string[];
                     summary: string;
@@ -16612,7 +16612,7 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/protect/notifications": {
+            "/notifications": {
                 post: {
                     tags: string[];
                     summary: string;
@@ -16742,7 +16742,7 @@ declare const Specs: {
                     "x-permissions": string[];
                 };
             };
-            "/protect/stash": {
+            "/stash": {
                 post: {
                     tags: string[];
                     summary: string;
@@ -16938,7 +16938,7 @@ declare const Specs: {
                     "x-permissions": string[];
                 };
             };
-            "/protect/stash/{id}": {
+            "/stash/{id}": {
                 get: {
                     tags: string[];
                     summary: string;
@@ -17150,7 +17150,7 @@ declare const Specs: {
                     "x-rate-limit": number;
                 };
             };
-            "/protect/entities": {
+            "/entities": {
                 get: {
                     tags: string[];
                     summary: string;
@@ -17521,7 +17521,7 @@ declare const Specs: {
                     };
                 };
             };
-            "/protect/attributes": {
+            "/attributes": {
                 get: {
                     tags: string[];
                     summary: string;
@@ -17556,7 +17556,7 @@ declare const Specs: {
                     }[];
                 };
             };
-            "/protect/query": {
+            "/query": {
                 post: {
                     tags: string[];
                     summary: string;
@@ -17628,7 +17628,7 @@ declare const Specs: {
                     }[];
                 };
             };
-            "/protect/order": {
+            "/order": {
                 post: {
                     tags: string[];
                     summary: string;

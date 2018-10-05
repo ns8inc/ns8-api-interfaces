@@ -12207,7 +12207,7 @@ const Specs = {
             "x-namespace": "Protect"
         },
         host: "test-api.ns8.com",
-        basePath: "/",
+        basePath: "/protect",
         tags: [
             { name: "applications" },
             { name: "fraud", description: "fraud" },
@@ -12216,7 +12216,7 @@ const Specs = {
         schemes: ["https"],
         produces: ["application/json"],
         paths: {
-            "/protect/users": {
+            "/users": {
                 post: {
                     tags: ["users"],
                     summary: "Create a new user.",
@@ -12759,7 +12759,7 @@ const Specs = {
                     "x-rate-limit": 3
                 }
             },
-            "/protect/users/password": {
+            "/users/password": {
                 put: {
                     tags: ["users"],
                     summary: "Change the password for the currently authenticated user.",
@@ -12910,7 +12910,7 @@ const Specs = {
                     "x-rate-limit": 3
                 }
             },
-            "/protect/users/{id}/password": {
+            "/users/{id}/password": {
                 put: {
                     tags: ["users"],
                     summary: "Change the password for the specified user.",
@@ -13059,7 +13059,7 @@ const Specs = {
                     "x-rate-limit": 3
                 }
             },
-            "/protect/users/name/{name}": {
+            "/users/name/{name}": {
                 get: {
                     tags: ["users"],
                     summary: "Get user information.",
@@ -13168,7 +13168,7 @@ const Specs = {
                     "x-permissions": ["internalService"]
                 }
             },
-            "/protect/accounts": {
+            "/accounts": {
                 post: {
                     tags: ["accounts"],
                     summary: "Create a new account for the currently authenticated user.",
@@ -13428,7 +13428,7 @@ const Specs = {
                     "x-rate-limit": 3
                 }
             },
-            "/protect/projects": {
+            "/projects": {
                 get: {
                     tags: ["projects"],
                     summary: "Get all projects for the currently authenticated user and account.",
@@ -13889,7 +13889,7 @@ const Specs = {
                     "x-rate-limit": 10
                 }
             },
-            "/protect/projects/{id}": {
+            "/projects/{id}": {
                 delete: {
                     tags: ["projects"],
                     summary: "Delete a project.",
@@ -14265,7 +14265,7 @@ const Specs = {
                     "x-rate-limit": 10
                 }
             },
-            "/protect/access-tokens": {
+            "/access-tokens": {
                 post: {
                     tags: ["authentication"],
                     summary: "Create an access token for a user/password.",
@@ -14469,7 +14469,7 @@ const Specs = {
                     "x-rate-limit": 3
                 }
             },
-            "/protect/authorizations": {
+            "/authorizations": {
                 get: {
                     tags: ["authentication"],
                     summary: "Get Authorization information for the current user",
@@ -14835,7 +14835,7 @@ const Specs = {
                     "x-rate-limit": 3
                 }
             },
-            "/protect/notifications": {
+            "/notifications": {
                 post: {
                     tags: ["notifications"],
                     summary: "Sends an notification via email",
@@ -14953,7 +14953,7 @@ const Specs = {
                     "x-permissions": ["internalService"]
                 }
             },
-            "/protect/stash": {
+            "/stash": {
                 post: {
                     tags: ["stash"],
                     summary: "Create a new stash item.",
@@ -15133,7 +15133,7 @@ const Specs = {
                     "x-permissions": ["internalService"]
                 }
             },
-            "/protect/stash/{id}": {
+            "/stash/{id}": {
                 get: {
                     tags: ["stash"],
                     summary: "Get a stash item.",
@@ -15327,7 +15327,7 @@ const Specs = {
                     "x-rate-limit": 3
                 }
             },
-            "/protect/entities": {
+            "/entities": {
                 get: {
                     tags: ["Analytics"],
                     summary: "Get all the available entities and attributes for reporting.",
@@ -15662,7 +15662,7 @@ const Specs = {
                     }
                 }
             },
-            "/protect/attributes": {
+            "/attributes": {
                 get: {
                     tags: ["Analytics"],
                     summary: "Get values for an attribute that begin with a string.  This is primarily used for typeahead support.",
@@ -15699,7 +15699,7 @@ const Specs = {
                     security: [{ Bearer: [] }]
                 }
             },
-            "/protect/query": {
+            "/query": {
                 post: {
                     tags: ["Analytics"],
                     summary: "Query for data.",
@@ -15757,7 +15757,7 @@ const Specs = {
                     security: [{ Bearer: [] }]
                 }
             },
-            "/protect/order": {
+            "/order": {
                 post: {
                     tags: ["order"],
                     summary: "Creates an order",
