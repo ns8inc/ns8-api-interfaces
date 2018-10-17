@@ -141,26 +141,14 @@ export declare namespace Protect {
         platformOrderId: string;
         name: string;
         shopId?: number;
-        platform: string;
-        tax: number;
         currency: string;
-        email: string;
         billingAddress?: Address;
         shippingAddress?: Address;
-        createdAt: string;
-        updatedAt?: string;
         customer: Customer;
         status?: string;
-        processingMethod?: string;
-        sourceName?: SourceName;
         totalPrice: number;
-        transctions?: Array<Transaction>;
+        payments?: Array<Payment>;
         lineItems?: Array<LineItem>;
-        canceledAt?: string;
-        canceledBy?: string;
-        cancelReason?: string;
-        approvedAt?: string;
-        approvedBy?: string;
         hasGiftCard?: boolean;
     }
     class Address {
@@ -179,9 +167,8 @@ export declare namespace Protect {
         platformCustomerId?: string;
         firstName: string;
         lastName: string;
+        email: string;
         phone?: string;
-        createdAt?: string;
-        updatedAt?: string;
         gender?: string;
         birthday?: string;
         company?: string;
@@ -190,19 +177,15 @@ export declare namespace Protect {
         isEmailVerified?: boolean;
         isPayingCustomer?: boolean;
     }
-    class Transaction {
-        platformTransactionId?: string;
+    class Payment {
+        platformPaymentId?: string;
+        method?: string;
         amount: number;
-        createdAt: string;
-        gateway?: string;
-        sourceName?: SourceName;
-        paymentDetails?: PaymentDetails;
-        kind?: string;
-        status?: string;
-        currency?: string;
-        test?: boolean;
+        currency: string;
+        creditCard?: CreditCard;
     }
-    class PaymentDetails {
+    class CreditCard {
+        transactionType: string;
         creditCardNumber?: string;
         creditCardCompany?: string;
         cardExpiration?: string;
@@ -210,7 +193,6 @@ export declare namespace Protect {
         avsResultCode?: string;
         cvvResultCode?: string;
         creditCardBin?: string;
-        method?: string;
         gateway?: string;
     }
     class LineItem {
@@ -230,8 +212,6 @@ export declare namespace Protect {
         giftCard?: boolean;
         totalDiscount?: number;
         manufacturer?: string;
-    }
-    class SourceName {
     }
     class Error {
         code: number;

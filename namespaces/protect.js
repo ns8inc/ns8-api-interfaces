@@ -77,18 +77,15 @@ var Protect;
     class Customer {
     }
     Protect.Customer = Customer;
-    class Transaction {
+    class Payment {
     }
-    Protect.Transaction = Transaction;
-    class PaymentDetails {
+    Protect.Payment = Payment;
+    class CreditCard {
     }
-    Protect.PaymentDetails = PaymentDetails;
+    Protect.CreditCard = CreditCard;
     class LineItem {
     }
     Protect.LineItem = LineItem;
-    class SourceName {
-    }
-    Protect.SourceName = SourceName;
     class Error {
     }
     Protect.Error = Error;
