@@ -6076,10 +6076,14 @@ declare const Specs: {
                                                         isMetric: {
                                                             type: string;
                                                         };
+                                                        isLog: {
+                                                            type: string;
+                                                        };
                                                     };
                                                     example: {
                                                         isElement: boolean;
                                                         dataType: string;
+                                                        isLog: boolean;
                                                         name: string;
                                                         isMetric: boolean;
                                                         description: string;
@@ -6095,6 +6099,7 @@ declare const Specs: {
                                             attributes: {
                                                 isElement: boolean;
                                                 dataType: string;
+                                                isLog: boolean;
                                                 name: string;
                                                 isMetric: boolean;
                                                 description: string;
@@ -6135,10 +6140,14 @@ declare const Specs: {
                                                         isMetric: {
                                                             type: string;
                                                         };
+                                                        isLog: {
+                                                            type: string;
+                                                        };
                                                     };
                                                     example: {
                                                         isElement: boolean;
                                                         dataType: string;
+                                                        isLog: boolean;
                                                         name: string;
                                                         isMetric: boolean;
                                                         description: string;
@@ -6154,6 +6163,7 @@ declare const Specs: {
                                             attributes: {
                                                 isElement: boolean;
                                                 dataType: string;
+                                                isLog: boolean;
                                                 name: string;
                                                 isMetric: boolean;
                                                 description: string;
@@ -6194,10 +6204,14 @@ declare const Specs: {
                                                         isMetric: {
                                                             type: string;
                                                         };
+                                                        isLog: {
+                                                            type: string;
+                                                        };
                                                     };
                                                     example: {
                                                         isElement: boolean;
                                                         dataType: string;
+                                                        isLog: boolean;
                                                         name: string;
                                                         isMetric: boolean;
                                                         description: string;
@@ -6213,6 +6227,7 @@ declare const Specs: {
                                             attributes: {
                                                 isElement: boolean;
                                                 dataType: string;
+                                                isLog: boolean;
                                                 name: string;
                                                 isMetric: boolean;
                                                 description: string;
@@ -6253,10 +6268,14 @@ declare const Specs: {
                                                         isMetric: {
                                                             type: string;
                                                         };
+                                                        isLog: {
+                                                            type: string;
+                                                        };
                                                     };
                                                     example: {
                                                         isElement: boolean;
                                                         dataType: string;
+                                                        isLog: boolean;
                                                         name: string;
                                                         isMetric: boolean;
                                                         description: string;
@@ -6272,6 +6291,7 @@ declare const Specs: {
                                             attributes: {
                                                 isElement: boolean;
                                                 dataType: string;
+                                                isLog: boolean;
                                                 name: string;
                                                 isMetric: boolean;
                                                 description: string;
@@ -6312,10 +6332,14 @@ declare const Specs: {
                                                         isMetric: {
                                                             type: string;
                                                         };
+                                                        isLog: {
+                                                            type: string;
+                                                        };
                                                     };
                                                     example: {
                                                         isElement: boolean;
                                                         dataType: string;
+                                                        isLog: boolean;
                                                         name: string;
                                                         isMetric: boolean;
                                                         description: string;
@@ -6331,6 +6355,7 @@ declare const Specs: {
                                             attributes: {
                                                 isElement: boolean;
                                                 dataType: string;
+                                                isLog: boolean;
                                                 name: string;
                                                 isMetric: boolean;
                                                 description: string;
@@ -6371,10 +6396,14 @@ declare const Specs: {
                                                         isMetric: {
                                                             type: string;
                                                         };
+                                                        isLog: {
+                                                            type: string;
+                                                        };
                                                     };
                                                     example: {
                                                         isElement: boolean;
                                                         dataType: string;
+                                                        isLog: boolean;
                                                         name: string;
                                                         isMetric: boolean;
                                                         description: string;
@@ -6390,6 +6419,7 @@ declare const Specs: {
                                             attributes: {
                                                 isElement: boolean;
                                                 dataType: string;
+                                                isLog: boolean;
                                                 name: string;
                                                 isMetric: boolean;
                                                 description: string;
@@ -8325,10 +8355,14 @@ declare const Specs: {
                                 isMetric: {
                                     type: string;
                                 };
+                                isLog: {
+                                    type: string;
+                                };
                             };
                             example: {
                                 isElement: boolean;
                                 dataType: string;
+                                isLog: boolean;
                                 name: string;
                                 isMetric: boolean;
                                 description: string;
@@ -8344,6 +8378,7 @@ declare const Specs: {
                     attributes: {
                         isElement: boolean;
                         dataType: string;
+                        isLog: boolean;
                         name: string;
                         isMetric: boolean;
                         description: string;
@@ -8373,10 +8408,14 @@ declare const Specs: {
                     isMetric: {
                         type: string;
                     };
+                    isLog: {
+                        type: string;
+                    };
                 };
                 example: {
                     isElement: boolean;
                     dataType: string;
+                    isLog: boolean;
                     name: string;
                     isMetric: boolean;
                     description: string;
@@ -9270,10 +9309,14 @@ declare const Specs: {
                                         isMetric: {
                                             type: string;
                                         };
+                                        isLog: {
+                                            type: string;
+                                        };
                                     };
                                     example: {
                                         isElement: boolean;
                                         dataType: string;
+                                        isLog: boolean;
                                         name: string;
                                         isMetric: boolean;
                                         description: string;
@@ -9289,6 +9332,7 @@ declare const Specs: {
                             attributes: {
                                 isElement: boolean;
                                 dataType: string;
+                                isLog: boolean;
                                 name: string;
                                 isMetric: boolean;
                                 description: string;
@@ -9329,10 +9373,14 @@ declare const Specs: {
                                         isMetric: {
                                             type: string;
                                         };
+                                        isLog: {
+                                            type: string;
+                                        };
                                     };
                                     example: {
                                         isElement: boolean;
                                         dataType: string;
+                                        isLog: boolean;
                                         name: string;
                                         isMetric: boolean;
                                         description: string;
@@ -9348,6 +9396,7 @@ declare const Specs: {
                             attributes: {
                                 isElement: boolean;
                                 dataType: string;
+                                isLog: boolean;
                                 name: string;
                                 isMetric: boolean;
                                 description: string;
@@ -9388,10 +9437,14 @@ declare const Specs: {
                                         isMetric: {
                                             type: string;
                                         };
+                                        isLog: {
+                                            type: string;
+                                        };
                                     };
                                     example: {
                                         isElement: boolean;
                                         dataType: string;
+                                        isLog: boolean;
                                         name: string;
                                         isMetric: boolean;
                                         description: string;
@@ -9407,6 +9460,7 @@ declare const Specs: {
                             attributes: {
                                 isElement: boolean;
                                 dataType: string;
+                                isLog: boolean;
                                 name: string;
                                 isMetric: boolean;
                                 description: string;
@@ -9447,10 +9501,14 @@ declare const Specs: {
                                         isMetric: {
                                             type: string;
                                         };
+                                        isLog: {
+                                            type: string;
+                                        };
                                     };
                                     example: {
                                         isElement: boolean;
                                         dataType: string;
+                                        isLog: boolean;
                                         name: string;
                                         isMetric: boolean;
                                         description: string;
@@ -9466,6 +9524,7 @@ declare const Specs: {
                             attributes: {
                                 isElement: boolean;
                                 dataType: string;
+                                isLog: boolean;
                                 name: string;
                                 isMetric: boolean;
                                 description: string;
@@ -9506,10 +9565,14 @@ declare const Specs: {
                                         isMetric: {
                                             type: string;
                                         };
+                                        isLog: {
+                                            type: string;
+                                        };
                                     };
                                     example: {
                                         isElement: boolean;
                                         dataType: string;
+                                        isLog: boolean;
                                         name: string;
                                         isMetric: boolean;
                                         description: string;
@@ -9525,6 +9588,7 @@ declare const Specs: {
                             attributes: {
                                 isElement: boolean;
                                 dataType: string;
+                                isLog: boolean;
                                 name: string;
                                 isMetric: boolean;
                                 description: string;
@@ -9565,10 +9629,14 @@ declare const Specs: {
                                         isMetric: {
                                             type: string;
                                         };
+                                        isLog: {
+                                            type: string;
+                                        };
                                     };
                                     example: {
                                         isElement: boolean;
                                         dataType: string;
+                                        isLog: boolean;
                                         name: string;
                                         isMetric: boolean;
                                         description: string;
@@ -9584,6 +9652,7 @@ declare const Specs: {
                             attributes: {
                                 isElement: boolean;
                                 dataType: string;
+                                isLog: boolean;
                                 name: string;
                                 isMetric: boolean;
                                 description: string;
@@ -9600,6 +9669,7 @@ declare const Specs: {
                         attributes: {
                             isElement: boolean;
                             dataType: string;
+                            isLog: boolean;
                             name: string;
                             isMetric: boolean;
                             description: string;
@@ -9612,6 +9682,7 @@ declare const Specs: {
                         attributes: {
                             isElement: boolean;
                             dataType: string;
+                            isLog: boolean;
                             name: string;
                             isMetric: boolean;
                             description: string;
@@ -9624,6 +9695,7 @@ declare const Specs: {
                         attributes: {
                             isElement: boolean;
                             dataType: string;
+                            isLog: boolean;
                             name: string;
                             isMetric: boolean;
                             description: string;
@@ -9636,6 +9708,7 @@ declare const Specs: {
                         attributes: {
                             isElement: boolean;
                             dataType: string;
+                            isLog: boolean;
                             name: string;
                             isMetric: boolean;
                             description: string;
@@ -9648,6 +9721,7 @@ declare const Specs: {
                         attributes: {
                             isElement: boolean;
                             dataType: string;
+                            isLog: boolean;
                             name: string;
                             isMetric: boolean;
                             description: string;
@@ -9660,6 +9734,7 @@ declare const Specs: {
                         attributes: {
                             isElement: boolean;
                             dataType: string;
+                            isLog: boolean;
                             name: string;
                             isMetric: boolean;
                             description: string;

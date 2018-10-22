@@ -133,6 +133,7 @@ export declare namespace Protect {
         dataType?: string;
         isElement?: boolean;
         isMetric?: boolean;
+        isLog?: boolean;
     }
     class QueryParams {
         query: any;

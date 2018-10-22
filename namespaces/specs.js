@@ -5242,11 +5242,13 @@ const Specs = {
                                                         description: { type: "string" },
                                                         dataType: { type: "string" },
                                                         isElement: { type: "boolean" },
-                                                        isMetric: { type: "boolean" }
+                                                        isMetric: { type: "boolean" },
+                                                        isLog: { type: "boolean" }
                                                     },
                                                     example: {
                                                         isElement: true,
                                                         dataType: "dataType",
+                                                        isLog: true,
                                                         name: "name",
                                                         isMetric: true,
                                                         description: "description",
@@ -5263,6 +5265,7 @@ const Specs = {
                                                 {
                                                     isElement: true,
                                                     dataType: "dataType",
+                                                    isLog: true,
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
@@ -5271,6 +5274,7 @@ const Specs = {
                                                 {
                                                     isElement: true,
                                                     dataType: "dataType",
+                                                    isLog: true,
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
@@ -5295,11 +5299,13 @@ const Specs = {
                                                         description: { type: "string" },
                                                         dataType: { type: "string" },
                                                         isElement: { type: "boolean" },
-                                                        isMetric: { type: "boolean" }
+                                                        isMetric: { type: "boolean" },
+                                                        isLog: { type: "boolean" }
                                                     },
                                                     example: {
                                                         isElement: true,
                                                         dataType: "dataType",
+                                                        isLog: true,
                                                         name: "name",
                                                         isMetric: true,
                                                         description: "description",
@@ -5316,6 +5322,7 @@ const Specs = {
                                                 {
                                                     isElement: true,
                                                     dataType: "dataType",
+                                                    isLog: true,
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
@@ -5324,6 +5331,7 @@ const Specs = {
                                                 {
                                                     isElement: true,
                                                     dataType: "dataType",
+                                                    isLog: true,
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
@@ -5348,11 +5356,13 @@ const Specs = {
                                                         description: { type: "string" },
                                                         dataType: { type: "string" },
                                                         isElement: { type: "boolean" },
-                                                        isMetric: { type: "boolean" }
+                                                        isMetric: { type: "boolean" },
+                                                        isLog: { type: "boolean" }
                                                     },
                                                     example: {
                                                         isElement: true,
                                                         dataType: "dataType",
+                                                        isLog: true,
                                                         name: "name",
                                                         isMetric: true,
                                                         description: "description",
@@ -5369,6 +5379,7 @@ const Specs = {
                                                 {
                                                     isElement: true,
                                                     dataType: "dataType",
+                                                    isLog: true,
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
@@ -5377,6 +5388,7 @@ const Specs = {
                                                 {
                                                     isElement: true,
                                                     dataType: "dataType",
+                                                    isLog: true,
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
@@ -5401,11 +5413,13 @@ const Specs = {
                                                         description: { type: "string" },
                                                         dataType: { type: "string" },
                                                         isElement: { type: "boolean" },
-                                                        isMetric: { type: "boolean" }
+                                                        isMetric: { type: "boolean" },
+                                                        isLog: { type: "boolean" }
                                                     },
                                                     example: {
                                                         isElement: true,
                                                         dataType: "dataType",
+                                                        isLog: true,
                                                         name: "name",
                                                         isMetric: true,
                                                         description: "description",
@@ -5422,6 +5436,7 @@ const Specs = {
                                                 {
                                                     isElement: true,
                                                     dataType: "dataType",
+                                                    isLog: true,
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
@@ -5430,6 +5445,7 @@ const Specs = {
                                                 {
                                                     isElement: true,
                                                     dataType: "dataType",
+                                                    isLog: true,
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
@@ -5454,11 +5470,13 @@ const Specs = {
                                                         description: { type: "string" },
                                                         dataType: { type: "string" },
                                                         isElement: { type: "boolean" },
-                                                        isMetric: { type: "boolean" }
+                                                        isMetric: { type: "boolean" },
+                                                        isLog: { type: "boolean" }
                                                     },
                                                     example: {
                                                         isElement: true,
                                                         dataType: "dataType",
+                                                        isLog: true,
                                                         name: "name",
                                                         isMetric: true,
                                                         description: "description",
@@ -5475,6 +5493,7 @@ const Specs = {
                                                 {
                                                     isElement: true,
                                                     dataType: "dataType",
+                                                    isLog: true,
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
@@ -5483,6 +5502,7 @@ const Specs = {
                                                 {
                                                     isElement: true,
                                                     dataType: "dataType",
+                                                    isLog: true,
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
@@ -5507,11 +5527,13 @@ const Specs = {
                                                         description: { type: "string" },
                                                         dataType: { type: "string" },
                                                         isElement: { type: "boolean" },
-                                                        isMetric: { type: "boolean" }
+                                                        isMetric: { type: "boolean" },
+                                                        isLog: { type: "boolean" }
                                                     },
                                                     example: {
                                                         isElement: true,
                                                         dataType: "dataType",
+                                                        isLog: true,
                                                         name: "name",
                                                         isMetric: true,
                                                         description: "description",
@@ -5528,6 +5550,7 @@ const Specs = {
                                                 {
                                                     isElement: true,
                                                     dataType: "dataType",
+                                                    isLog: true,
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
@@ -5536,6 +5559,7 @@ const Specs = {
                                                 {
                                                     isElement: true,
                                                     dataType: "dataType",
+                                                    isLog: true,
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
@@ -7313,11 +7337,13 @@ const Specs = {
                                 description: { type: "string" },
                                 dataType: { type: "string" },
                                 isElement: { type: "boolean" },
-                                isMetric: { type: "boolean" }
+                                isMetric: { type: "boolean" },
+                                isLog: { type: "boolean" }
                             },
                             example: {
                                 isElement: true,
                                 dataType: "dataType",
+                                isLog: true,
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
@@ -7334,6 +7360,7 @@ const Specs = {
                         {
                             isElement: true,
                             dataType: "dataType",
+                            isLog: true,
                             name: "name",
                             isMetric: true,
                             description: "description",
@@ -7342,6 +7369,7 @@ const Specs = {
                         {
                             isElement: true,
                             dataType: "dataType",
+                            isLog: true,
                             name: "name",
                             isMetric: true,
                             description: "description",
@@ -7359,11 +7387,13 @@ const Specs = {
                     description: { type: "string" },
                     dataType: { type: "string" },
                     isElement: { type: "boolean" },
-                    isMetric: { type: "boolean" }
+                    isMetric: { type: "boolean" },
+                    isLog: { type: "boolean" }
                 },
                 example: {
                     isElement: true,
                     dataType: "dataType",
+                    isLog: true,
                     name: "name",
                     isMetric: true,
                     description: "description",
@@ -8151,11 +8181,13 @@ const Specs = {
                                         description: { type: "string" },
                                         dataType: { type: "string" },
                                         isElement: { type: "boolean" },
-                                        isMetric: { type: "boolean" }
+                                        isMetric: { type: "boolean" },
+                                        isLog: { type: "boolean" }
                                     },
                                     example: {
                                         isElement: true,
                                         dataType: "dataType",
+                                        isLog: true,
                                         name: "name",
                                         isMetric: true,
                                         description: "description",
@@ -8172,6 +8204,7 @@ const Specs = {
                                 {
                                     isElement: true,
                                     dataType: "dataType",
+                                    isLog: true,
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
@@ -8180,6 +8213,7 @@ const Specs = {
                                 {
                                     isElement: true,
                                     dataType: "dataType",
+                                    isLog: true,
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
@@ -8204,11 +8238,13 @@ const Specs = {
                                         description: { type: "string" },
                                         dataType: { type: "string" },
                                         isElement: { type: "boolean" },
-                                        isMetric: { type: "boolean" }
+                                        isMetric: { type: "boolean" },
+                                        isLog: { type: "boolean" }
                                     },
                                     example: {
                                         isElement: true,
                                         dataType: "dataType",
+                                        isLog: true,
                                         name: "name",
                                         isMetric: true,
                                         description: "description",
@@ -8225,6 +8261,7 @@ const Specs = {
                                 {
                                     isElement: true,
                                     dataType: "dataType",
+                                    isLog: true,
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
@@ -8233,6 +8270,7 @@ const Specs = {
                                 {
                                     isElement: true,
                                     dataType: "dataType",
+                                    isLog: true,
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
@@ -8257,11 +8295,13 @@ const Specs = {
                                         description: { type: "string" },
                                         dataType: { type: "string" },
                                         isElement: { type: "boolean" },
-                                        isMetric: { type: "boolean" }
+                                        isMetric: { type: "boolean" },
+                                        isLog: { type: "boolean" }
                                     },
                                     example: {
                                         isElement: true,
                                         dataType: "dataType",
+                                        isLog: true,
                                         name: "name",
                                         isMetric: true,
                                         description: "description",
@@ -8278,6 +8318,7 @@ const Specs = {
                                 {
                                     isElement: true,
                                     dataType: "dataType",
+                                    isLog: true,
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
@@ -8286,6 +8327,7 @@ const Specs = {
                                 {
                                     isElement: true,
                                     dataType: "dataType",
+                                    isLog: true,
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
@@ -8310,11 +8352,13 @@ const Specs = {
                                         description: { type: "string" },
                                         dataType: { type: "string" },
                                         isElement: { type: "boolean" },
-                                        isMetric: { type: "boolean" }
+                                        isMetric: { type: "boolean" },
+                                        isLog: { type: "boolean" }
                                     },
                                     example: {
                                         isElement: true,
                                         dataType: "dataType",
+                                        isLog: true,
                                         name: "name",
                                         isMetric: true,
                                         description: "description",
@@ -8331,6 +8375,7 @@ const Specs = {
                                 {
                                     isElement: true,
                                     dataType: "dataType",
+                                    isLog: true,
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
@@ -8339,6 +8384,7 @@ const Specs = {
                                 {
                                     isElement: true,
                                     dataType: "dataType",
+                                    isLog: true,
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
@@ -8363,11 +8409,13 @@ const Specs = {
                                         description: { type: "string" },
                                         dataType: { type: "string" },
                                         isElement: { type: "boolean" },
-                                        isMetric: { type: "boolean" }
+                                        isMetric: { type: "boolean" },
+                                        isLog: { type: "boolean" }
                                     },
                                     example: {
                                         isElement: true,
                                         dataType: "dataType",
+                                        isLog: true,
                                         name: "name",
                                         isMetric: true,
                                         description: "description",
@@ -8384,6 +8432,7 @@ const Specs = {
                                 {
                                     isElement: true,
                                     dataType: "dataType",
+                                    isLog: true,
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
@@ -8392,6 +8441,7 @@ const Specs = {
                                 {
                                     isElement: true,
                                     dataType: "dataType",
+                                    isLog: true,
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
@@ -8416,11 +8466,13 @@ const Specs = {
                                         description: { type: "string" },
                                         dataType: { type: "string" },
                                         isElement: { type: "boolean" },
-                                        isMetric: { type: "boolean" }
+                                        isMetric: { type: "boolean" },
+                                        isLog: { type: "boolean" }
                                     },
                                     example: {
                                         isElement: true,
                                         dataType: "dataType",
+                                        isLog: true,
                                         name: "name",
                                         isMetric: true,
                                         description: "description",
@@ -8437,6 +8489,7 @@ const Specs = {
                                 {
                                     isElement: true,
                                     dataType: "dataType",
+                                    isLog: true,
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
@@ -8445,6 +8498,7 @@ const Specs = {
                                 {
                                     isElement: true,
                                     dataType: "dataType",
+                                    isLog: true,
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
@@ -8463,6 +8517,7 @@ const Specs = {
                             {
                                 isElement: true,
                                 dataType: "dataType",
+                                isLog: true,
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
@@ -8471,6 +8526,7 @@ const Specs = {
                             {
                                 isElement: true,
                                 dataType: "dataType",
+                                isLog: true,
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
@@ -8485,6 +8541,7 @@ const Specs = {
                             {
                                 isElement: true,
                                 dataType: "dataType",
+                                isLog: true,
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
@@ -8493,6 +8550,7 @@ const Specs = {
                             {
                                 isElement: true,
                                 dataType: "dataType",
+                                isLog: true,
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
@@ -8507,6 +8565,7 @@ const Specs = {
                             {
                                 isElement: true,
                                 dataType: "dataType",
+                                isLog: true,
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
@@ -8515,6 +8574,7 @@ const Specs = {
                             {
                                 isElement: true,
                                 dataType: "dataType",
+                                isLog: true,
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
@@ -8529,6 +8589,7 @@ const Specs = {
                             {
                                 isElement: true,
                                 dataType: "dataType",
+                                isLog: true,
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
@@ -8537,6 +8598,7 @@ const Specs = {
                             {
                                 isElement: true,
                                 dataType: "dataType",
+                                isLog: true,
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
@@ -8551,6 +8613,7 @@ const Specs = {
                             {
                                 isElement: true,
                                 dataType: "dataType",
+                                isLog: true,
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
@@ -8559,6 +8622,7 @@ const Specs = {
                             {
                                 isElement: true,
                                 dataType: "dataType",
+                                isLog: true,
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
@@ -8573,6 +8637,7 @@ const Specs = {
                             {
                                 isElement: true,
                                 dataType: "dataType",
+                                isLog: true,
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
@@ -8581,6 +8646,7 @@ const Specs = {
                             {
                                 isElement: true,
                                 dataType: "dataType",
+                                isLog: true,
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
