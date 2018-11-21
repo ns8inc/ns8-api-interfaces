@@ -5243,16 +5243,46 @@ const Specs = {
                                                         dataType: { type: "string" },
                                                         isElement: { type: "boolean" },
                                                         isMetric: { type: "boolean" },
-                                                        isLog: { type: "boolean" }
+                                                        logAttribute: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute is applicable to log-style reports (reports that are not grouped)."
+                                                        },
+                                                        operators: {
+                                                            type: "array",
+                                                            description: "The allowed operators for this attribute when part of a filter.",
+                                                            items: { type: "string" }
+                                                        },
+                                                        values: {
+                                                            type: "array",
+                                                            description: "A static array of values allowed for the attribute.",
+                                                            items: { type: "string" }
+                                                        },
+                                                        searchable: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute is searchable via typeahead."
+                                                        },
+                                                        filterable: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute can be part of a filter."
+                                                        },
+                                                        rule: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute should be included in rulesets."
+                                                        }
                                                     },
                                                     example: {
+                                                        filterable: true,
+                                                        operators: ["operators", "operators"],
                                                         isElement: true,
                                                         dataType: "dataType",
-                                                        isLog: true,
+                                                        values: ["values", "values"],
                                                         name: "name",
                                                         isMetric: true,
                                                         description: "description",
-                                                        title: "title"
+                                                        logAttribute: true,
+                                                        rule: true,
+                                                        title: "title",
+                                                        searchable: true
                                                     },
                                                     additionalProperties: false
                                                 }
@@ -5263,22 +5293,32 @@ const Specs = {
                                             description: "description",
                                             attributes: [
                                                 {
+                                                    filterable: true,
+                                                    operators: ["operators", "operators"],
                                                     isElement: true,
                                                     dataType: "dataType",
-                                                    isLog: true,
+                                                    values: ["values", "values"],
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
-                                                    title: "title"
+                                                    logAttribute: true,
+                                                    rule: true,
+                                                    title: "title",
+                                                    searchable: true
                                                 },
                                                 {
+                                                    filterable: true,
+                                                    operators: ["operators", "operators"],
                                                     isElement: true,
                                                     dataType: "dataType",
-                                                    isLog: true,
+                                                    values: ["values", "values"],
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
-                                                    title: "title"
+                                                    logAttribute: true,
+                                                    rule: true,
+                                                    title: "title",
+                                                    searchable: true
                                                 }
                                             ]
                                         },
@@ -5300,16 +5340,46 @@ const Specs = {
                                                         dataType: { type: "string" },
                                                         isElement: { type: "boolean" },
                                                         isMetric: { type: "boolean" },
-                                                        isLog: { type: "boolean" }
+                                                        logAttribute: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute is applicable to log-style reports (reports that are not grouped)."
+                                                        },
+                                                        operators: {
+                                                            type: "array",
+                                                            description: "The allowed operators for this attribute when part of a filter.",
+                                                            items: { type: "string" }
+                                                        },
+                                                        values: {
+                                                            type: "array",
+                                                            description: "A static array of values allowed for the attribute.",
+                                                            items: { type: "string" }
+                                                        },
+                                                        searchable: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute is searchable via typeahead."
+                                                        },
+                                                        filterable: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute can be part of a filter."
+                                                        },
+                                                        rule: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute should be included in rulesets."
+                                                        }
                                                     },
                                                     example: {
+                                                        filterable: true,
+                                                        operators: ["operators", "operators"],
                                                         isElement: true,
                                                         dataType: "dataType",
-                                                        isLog: true,
+                                                        values: ["values", "values"],
                                                         name: "name",
                                                         isMetric: true,
                                                         description: "description",
-                                                        title: "title"
+                                                        logAttribute: true,
+                                                        rule: true,
+                                                        title: "title",
+                                                        searchable: true
                                                     },
                                                     additionalProperties: false
                                                 }
@@ -5320,22 +5390,32 @@ const Specs = {
                                             description: "description",
                                             attributes: [
                                                 {
+                                                    filterable: true,
+                                                    operators: ["operators", "operators"],
                                                     isElement: true,
                                                     dataType: "dataType",
-                                                    isLog: true,
+                                                    values: ["values", "values"],
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
-                                                    title: "title"
+                                                    logAttribute: true,
+                                                    rule: true,
+                                                    title: "title",
+                                                    searchable: true
                                                 },
                                                 {
+                                                    filterable: true,
+                                                    operators: ["operators", "operators"],
                                                     isElement: true,
                                                     dataType: "dataType",
-                                                    isLog: true,
+                                                    values: ["values", "values"],
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
-                                                    title: "title"
+                                                    logAttribute: true,
+                                                    rule: true,
+                                                    title: "title",
+                                                    searchable: true
                                                 }
                                             ]
                                         },
@@ -5357,16 +5437,46 @@ const Specs = {
                                                         dataType: { type: "string" },
                                                         isElement: { type: "boolean" },
                                                         isMetric: { type: "boolean" },
-                                                        isLog: { type: "boolean" }
+                                                        logAttribute: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute is applicable to log-style reports (reports that are not grouped)."
+                                                        },
+                                                        operators: {
+                                                            type: "array",
+                                                            description: "The allowed operators for this attribute when part of a filter.",
+                                                            items: { type: "string" }
+                                                        },
+                                                        values: {
+                                                            type: "array",
+                                                            description: "A static array of values allowed for the attribute.",
+                                                            items: { type: "string" }
+                                                        },
+                                                        searchable: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute is searchable via typeahead."
+                                                        },
+                                                        filterable: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute can be part of a filter."
+                                                        },
+                                                        rule: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute should be included in rulesets."
+                                                        }
                                                     },
                                                     example: {
+                                                        filterable: true,
+                                                        operators: ["operators", "operators"],
                                                         isElement: true,
                                                         dataType: "dataType",
-                                                        isLog: true,
+                                                        values: ["values", "values"],
                                                         name: "name",
                                                         isMetric: true,
                                                         description: "description",
-                                                        title: "title"
+                                                        logAttribute: true,
+                                                        rule: true,
+                                                        title: "title",
+                                                        searchable: true
                                                     },
                                                     additionalProperties: false
                                                 }
@@ -5377,22 +5487,32 @@ const Specs = {
                                             description: "description",
                                             attributes: [
                                                 {
+                                                    filterable: true,
+                                                    operators: ["operators", "operators"],
                                                     isElement: true,
                                                     dataType: "dataType",
-                                                    isLog: true,
+                                                    values: ["values", "values"],
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
-                                                    title: "title"
+                                                    logAttribute: true,
+                                                    rule: true,
+                                                    title: "title",
+                                                    searchable: true
                                                 },
                                                 {
+                                                    filterable: true,
+                                                    operators: ["operators", "operators"],
                                                     isElement: true,
                                                     dataType: "dataType",
-                                                    isLog: true,
+                                                    values: ["values", "values"],
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
-                                                    title: "title"
+                                                    logAttribute: true,
+                                                    rule: true,
+                                                    title: "title",
+                                                    searchable: true
                                                 }
                                             ]
                                         },
@@ -5414,16 +5534,46 @@ const Specs = {
                                                         dataType: { type: "string" },
                                                         isElement: { type: "boolean" },
                                                         isMetric: { type: "boolean" },
-                                                        isLog: { type: "boolean" }
+                                                        logAttribute: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute is applicable to log-style reports (reports that are not grouped)."
+                                                        },
+                                                        operators: {
+                                                            type: "array",
+                                                            description: "The allowed operators for this attribute when part of a filter.",
+                                                            items: { type: "string" }
+                                                        },
+                                                        values: {
+                                                            type: "array",
+                                                            description: "A static array of values allowed for the attribute.",
+                                                            items: { type: "string" }
+                                                        },
+                                                        searchable: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute is searchable via typeahead."
+                                                        },
+                                                        filterable: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute can be part of a filter."
+                                                        },
+                                                        rule: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute should be included in rulesets."
+                                                        }
                                                     },
                                                     example: {
+                                                        filterable: true,
+                                                        operators: ["operators", "operators"],
                                                         isElement: true,
                                                         dataType: "dataType",
-                                                        isLog: true,
+                                                        values: ["values", "values"],
                                                         name: "name",
                                                         isMetric: true,
                                                         description: "description",
-                                                        title: "title"
+                                                        logAttribute: true,
+                                                        rule: true,
+                                                        title: "title",
+                                                        searchable: true
                                                     },
                                                     additionalProperties: false
                                                 }
@@ -5434,22 +5584,32 @@ const Specs = {
                                             description: "description",
                                             attributes: [
                                                 {
+                                                    filterable: true,
+                                                    operators: ["operators", "operators"],
                                                     isElement: true,
                                                     dataType: "dataType",
-                                                    isLog: true,
+                                                    values: ["values", "values"],
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
-                                                    title: "title"
+                                                    logAttribute: true,
+                                                    rule: true,
+                                                    title: "title",
+                                                    searchable: true
                                                 },
                                                 {
+                                                    filterable: true,
+                                                    operators: ["operators", "operators"],
                                                     isElement: true,
                                                     dataType: "dataType",
-                                                    isLog: true,
+                                                    values: ["values", "values"],
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
-                                                    title: "title"
+                                                    logAttribute: true,
+                                                    rule: true,
+                                                    title: "title",
+                                                    searchable: true
                                                 }
                                             ]
                                         },
@@ -5471,16 +5631,46 @@ const Specs = {
                                                         dataType: { type: "string" },
                                                         isElement: { type: "boolean" },
                                                         isMetric: { type: "boolean" },
-                                                        isLog: { type: "boolean" }
+                                                        logAttribute: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute is applicable to log-style reports (reports that are not grouped)."
+                                                        },
+                                                        operators: {
+                                                            type: "array",
+                                                            description: "The allowed operators for this attribute when part of a filter.",
+                                                            items: { type: "string" }
+                                                        },
+                                                        values: {
+                                                            type: "array",
+                                                            description: "A static array of values allowed for the attribute.",
+                                                            items: { type: "string" }
+                                                        },
+                                                        searchable: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute is searchable via typeahead."
+                                                        },
+                                                        filterable: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute can be part of a filter."
+                                                        },
+                                                        rule: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute should be included in rulesets."
+                                                        }
                                                     },
                                                     example: {
+                                                        filterable: true,
+                                                        operators: ["operators", "operators"],
                                                         isElement: true,
                                                         dataType: "dataType",
-                                                        isLog: true,
+                                                        values: ["values", "values"],
                                                         name: "name",
                                                         isMetric: true,
                                                         description: "description",
-                                                        title: "title"
+                                                        logAttribute: true,
+                                                        rule: true,
+                                                        title: "title",
+                                                        searchable: true
                                                     },
                                                     additionalProperties: false
                                                 }
@@ -5491,22 +5681,32 @@ const Specs = {
                                             description: "description",
                                             attributes: [
                                                 {
+                                                    filterable: true,
+                                                    operators: ["operators", "operators"],
                                                     isElement: true,
                                                     dataType: "dataType",
-                                                    isLog: true,
+                                                    values: ["values", "values"],
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
-                                                    title: "title"
+                                                    logAttribute: true,
+                                                    rule: true,
+                                                    title: "title",
+                                                    searchable: true
                                                 },
                                                 {
+                                                    filterable: true,
+                                                    operators: ["operators", "operators"],
                                                     isElement: true,
                                                     dataType: "dataType",
-                                                    isLog: true,
+                                                    values: ["values", "values"],
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
-                                                    title: "title"
+                                                    logAttribute: true,
+                                                    rule: true,
+                                                    title: "title",
+                                                    searchable: true
                                                 }
                                             ]
                                         },
@@ -5528,16 +5728,46 @@ const Specs = {
                                                         dataType: { type: "string" },
                                                         isElement: { type: "boolean" },
                                                         isMetric: { type: "boolean" },
-                                                        isLog: { type: "boolean" }
+                                                        logAttribute: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute is applicable to log-style reports (reports that are not grouped)."
+                                                        },
+                                                        operators: {
+                                                            type: "array",
+                                                            description: "The allowed operators for this attribute when part of a filter.",
+                                                            items: { type: "string" }
+                                                        },
+                                                        values: {
+                                                            type: "array",
+                                                            description: "A static array of values allowed for the attribute.",
+                                                            items: { type: "string" }
+                                                        },
+                                                        searchable: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute is searchable via typeahead."
+                                                        },
+                                                        filterable: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute can be part of a filter."
+                                                        },
+                                                        rule: {
+                                                            type: "boolean",
+                                                            description: "Whether this attribute should be included in rulesets."
+                                                        }
                                                     },
                                                     example: {
+                                                        filterable: true,
+                                                        operators: ["operators", "operators"],
                                                         isElement: true,
                                                         dataType: "dataType",
-                                                        isLog: true,
+                                                        values: ["values", "values"],
                                                         name: "name",
                                                         isMetric: true,
                                                         description: "description",
-                                                        title: "title"
+                                                        logAttribute: true,
+                                                        rule: true,
+                                                        title: "title",
+                                                        searchable: true
                                                     },
                                                     additionalProperties: false
                                                 }
@@ -5548,22 +5778,32 @@ const Specs = {
                                             description: "description",
                                             attributes: [
                                                 {
+                                                    filterable: true,
+                                                    operators: ["operators", "operators"],
                                                     isElement: true,
                                                     dataType: "dataType",
-                                                    isLog: true,
+                                                    values: ["values", "values"],
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
-                                                    title: "title"
+                                                    logAttribute: true,
+                                                    rule: true,
+                                                    title: "title",
+                                                    searchable: true
                                                 },
                                                 {
+                                                    filterable: true,
+                                                    operators: ["operators", "operators"],
                                                     isElement: true,
                                                     dataType: "dataType",
-                                                    isLog: true,
+                                                    values: ["values", "values"],
                                                     name: "name",
                                                     isMetric: true,
                                                     description: "description",
-                                                    title: "title"
+                                                    logAttribute: true,
+                                                    rule: true,
+                                                    title: "title",
+                                                    searchable: true
                                                 }
                                             ]
                                         },
@@ -7338,16 +7578,46 @@ const Specs = {
                                 dataType: { type: "string" },
                                 isElement: { type: "boolean" },
                                 isMetric: { type: "boolean" },
-                                isLog: { type: "boolean" }
+                                logAttribute: {
+                                    type: "boolean",
+                                    description: "Whether this attribute is applicable to log-style reports (reports that are not grouped)."
+                                },
+                                operators: {
+                                    type: "array",
+                                    description: "The allowed operators for this attribute when part of a filter.",
+                                    items: { type: "string" }
+                                },
+                                values: {
+                                    type: "array",
+                                    description: "A static array of values allowed for the attribute.",
+                                    items: { type: "string" }
+                                },
+                                searchable: {
+                                    type: "boolean",
+                                    description: "Whether this attribute is searchable via typeahead."
+                                },
+                                filterable: {
+                                    type: "boolean",
+                                    description: "Whether this attribute can be part of a filter."
+                                },
+                                rule: {
+                                    type: "boolean",
+                                    description: "Whether this attribute should be included in rulesets."
+                                }
                             },
                             example: {
+                                filterable: true,
+                                operators: ["operators", "operators"],
                                 isElement: true,
                                 dataType: "dataType",
-                                isLog: true,
+                                values: ["values", "values"],
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
-                                title: "title"
+                                logAttribute: true,
+                                rule: true,
+                                title: "title",
+                                searchable: true
                             },
                             additionalProperties: false
                         }
@@ -7358,22 +7628,32 @@ const Specs = {
                     description: "description",
                     attributes: [
                         {
+                            filterable: true,
+                            operators: ["operators", "operators"],
                             isElement: true,
                             dataType: "dataType",
-                            isLog: true,
+                            values: ["values", "values"],
                             name: "name",
                             isMetric: true,
                             description: "description",
-                            title: "title"
+                            logAttribute: true,
+                            rule: true,
+                            title: "title",
+                            searchable: true
                         },
                         {
+                            filterable: true,
+                            operators: ["operators", "operators"],
                             isElement: true,
                             dataType: "dataType",
-                            isLog: true,
+                            values: ["values", "values"],
                             name: "name",
                             isMetric: true,
                             description: "description",
-                            title: "title"
+                            logAttribute: true,
+                            rule: true,
+                            title: "title",
+                            searchable: true
                         }
                     ]
                 },
@@ -7388,16 +7668,46 @@ const Specs = {
                     dataType: { type: "string" },
                     isElement: { type: "boolean" },
                     isMetric: { type: "boolean" },
-                    isLog: { type: "boolean" }
+                    logAttribute: {
+                        type: "boolean",
+                        description: "Whether this attribute is applicable to log-style reports (reports that are not grouped)."
+                    },
+                    operators: {
+                        type: "array",
+                        description: "The allowed operators for this attribute when part of a filter.",
+                        items: { type: "string" }
+                    },
+                    values: {
+                        type: "array",
+                        description: "A static array of values allowed for the attribute.",
+                        items: { type: "string" }
+                    },
+                    searchable: {
+                        type: "boolean",
+                        description: "Whether this attribute is searchable via typeahead."
+                    },
+                    filterable: {
+                        type: "boolean",
+                        description: "Whether this attribute can be part of a filter."
+                    },
+                    rule: {
+                        type: "boolean",
+                        description: "Whether this attribute should be included in rulesets."
+                    }
                 },
                 example: {
+                    filterable: true,
+                    operators: ["operators", "operators"],
                     isElement: true,
                     dataType: "dataType",
-                    isLog: true,
+                    values: ["values", "values"],
                     name: "name",
                     isMetric: true,
                     description: "description",
-                    title: "title"
+                    logAttribute: true,
+                    rule: true,
+                    title: "title",
+                    searchable: true
                 },
                 additionalProperties: false
             },
@@ -8182,16 +8492,46 @@ const Specs = {
                                         dataType: { type: "string" },
                                         isElement: { type: "boolean" },
                                         isMetric: { type: "boolean" },
-                                        isLog: { type: "boolean" }
+                                        logAttribute: {
+                                            type: "boolean",
+                                            description: "Whether this attribute is applicable to log-style reports (reports that are not grouped)."
+                                        },
+                                        operators: {
+                                            type: "array",
+                                            description: "The allowed operators for this attribute when part of a filter.",
+                                            items: { type: "string" }
+                                        },
+                                        values: {
+                                            type: "array",
+                                            description: "A static array of values allowed for the attribute.",
+                                            items: { type: "string" }
+                                        },
+                                        searchable: {
+                                            type: "boolean",
+                                            description: "Whether this attribute is searchable via typeahead."
+                                        },
+                                        filterable: {
+                                            type: "boolean",
+                                            description: "Whether this attribute can be part of a filter."
+                                        },
+                                        rule: {
+                                            type: "boolean",
+                                            description: "Whether this attribute should be included in rulesets."
+                                        }
                                     },
                                     example: {
+                                        filterable: true,
+                                        operators: ["operators", "operators"],
                                         isElement: true,
                                         dataType: "dataType",
-                                        isLog: true,
+                                        values: ["values", "values"],
                                         name: "name",
                                         isMetric: true,
                                         description: "description",
-                                        title: "title"
+                                        logAttribute: true,
+                                        rule: true,
+                                        title: "title",
+                                        searchable: true
                                     },
                                     additionalProperties: false
                                 }
@@ -8202,22 +8542,32 @@ const Specs = {
                             description: "description",
                             attributes: [
                                 {
+                                    filterable: true,
+                                    operators: ["operators", "operators"],
                                     isElement: true,
                                     dataType: "dataType",
-                                    isLog: true,
+                                    values: ["values", "values"],
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
-                                    title: "title"
+                                    logAttribute: true,
+                                    rule: true,
+                                    title: "title",
+                                    searchable: true
                                 },
                                 {
+                                    filterable: true,
+                                    operators: ["operators", "operators"],
                                     isElement: true,
                                     dataType: "dataType",
-                                    isLog: true,
+                                    values: ["values", "values"],
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
-                                    title: "title"
+                                    logAttribute: true,
+                                    rule: true,
+                                    title: "title",
+                                    searchable: true
                                 }
                             ]
                         },
@@ -8239,16 +8589,46 @@ const Specs = {
                                         dataType: { type: "string" },
                                         isElement: { type: "boolean" },
                                         isMetric: { type: "boolean" },
-                                        isLog: { type: "boolean" }
+                                        logAttribute: {
+                                            type: "boolean",
+                                            description: "Whether this attribute is applicable to log-style reports (reports that are not grouped)."
+                                        },
+                                        operators: {
+                                            type: "array",
+                                            description: "The allowed operators for this attribute when part of a filter.",
+                                            items: { type: "string" }
+                                        },
+                                        values: {
+                                            type: "array",
+                                            description: "A static array of values allowed for the attribute.",
+                                            items: { type: "string" }
+                                        },
+                                        searchable: {
+                                            type: "boolean",
+                                            description: "Whether this attribute is searchable via typeahead."
+                                        },
+                                        filterable: {
+                                            type: "boolean",
+                                            description: "Whether this attribute can be part of a filter."
+                                        },
+                                        rule: {
+                                            type: "boolean",
+                                            description: "Whether this attribute should be included in rulesets."
+                                        }
                                     },
                                     example: {
+                                        filterable: true,
+                                        operators: ["operators", "operators"],
                                         isElement: true,
                                         dataType: "dataType",
-                                        isLog: true,
+                                        values: ["values", "values"],
                                         name: "name",
                                         isMetric: true,
                                         description: "description",
-                                        title: "title"
+                                        logAttribute: true,
+                                        rule: true,
+                                        title: "title",
+                                        searchable: true
                                     },
                                     additionalProperties: false
                                 }
@@ -8259,22 +8639,32 @@ const Specs = {
                             description: "description",
                             attributes: [
                                 {
+                                    filterable: true,
+                                    operators: ["operators", "operators"],
                                     isElement: true,
                                     dataType: "dataType",
-                                    isLog: true,
+                                    values: ["values", "values"],
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
-                                    title: "title"
+                                    logAttribute: true,
+                                    rule: true,
+                                    title: "title",
+                                    searchable: true
                                 },
                                 {
+                                    filterable: true,
+                                    operators: ["operators", "operators"],
                                     isElement: true,
                                     dataType: "dataType",
-                                    isLog: true,
+                                    values: ["values", "values"],
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
-                                    title: "title"
+                                    logAttribute: true,
+                                    rule: true,
+                                    title: "title",
+                                    searchable: true
                                 }
                             ]
                         },
@@ -8296,16 +8686,46 @@ const Specs = {
                                         dataType: { type: "string" },
                                         isElement: { type: "boolean" },
                                         isMetric: { type: "boolean" },
-                                        isLog: { type: "boolean" }
+                                        logAttribute: {
+                                            type: "boolean",
+                                            description: "Whether this attribute is applicable to log-style reports (reports that are not grouped)."
+                                        },
+                                        operators: {
+                                            type: "array",
+                                            description: "The allowed operators for this attribute when part of a filter.",
+                                            items: { type: "string" }
+                                        },
+                                        values: {
+                                            type: "array",
+                                            description: "A static array of values allowed for the attribute.",
+                                            items: { type: "string" }
+                                        },
+                                        searchable: {
+                                            type: "boolean",
+                                            description: "Whether this attribute is searchable via typeahead."
+                                        },
+                                        filterable: {
+                                            type: "boolean",
+                                            description: "Whether this attribute can be part of a filter."
+                                        },
+                                        rule: {
+                                            type: "boolean",
+                                            description: "Whether this attribute should be included in rulesets."
+                                        }
                                     },
                                     example: {
+                                        filterable: true,
+                                        operators: ["operators", "operators"],
                                         isElement: true,
                                         dataType: "dataType",
-                                        isLog: true,
+                                        values: ["values", "values"],
                                         name: "name",
                                         isMetric: true,
                                         description: "description",
-                                        title: "title"
+                                        logAttribute: true,
+                                        rule: true,
+                                        title: "title",
+                                        searchable: true
                                     },
                                     additionalProperties: false
                                 }
@@ -8316,22 +8736,32 @@ const Specs = {
                             description: "description",
                             attributes: [
                                 {
+                                    filterable: true,
+                                    operators: ["operators", "operators"],
                                     isElement: true,
                                     dataType: "dataType",
-                                    isLog: true,
+                                    values: ["values", "values"],
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
-                                    title: "title"
+                                    logAttribute: true,
+                                    rule: true,
+                                    title: "title",
+                                    searchable: true
                                 },
                                 {
+                                    filterable: true,
+                                    operators: ["operators", "operators"],
                                     isElement: true,
                                     dataType: "dataType",
-                                    isLog: true,
+                                    values: ["values", "values"],
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
-                                    title: "title"
+                                    logAttribute: true,
+                                    rule: true,
+                                    title: "title",
+                                    searchable: true
                                 }
                             ]
                         },
@@ -8353,16 +8783,46 @@ const Specs = {
                                         dataType: { type: "string" },
                                         isElement: { type: "boolean" },
                                         isMetric: { type: "boolean" },
-                                        isLog: { type: "boolean" }
+                                        logAttribute: {
+                                            type: "boolean",
+                                            description: "Whether this attribute is applicable to log-style reports (reports that are not grouped)."
+                                        },
+                                        operators: {
+                                            type: "array",
+                                            description: "The allowed operators for this attribute when part of a filter.",
+                                            items: { type: "string" }
+                                        },
+                                        values: {
+                                            type: "array",
+                                            description: "A static array of values allowed for the attribute.",
+                                            items: { type: "string" }
+                                        },
+                                        searchable: {
+                                            type: "boolean",
+                                            description: "Whether this attribute is searchable via typeahead."
+                                        },
+                                        filterable: {
+                                            type: "boolean",
+                                            description: "Whether this attribute can be part of a filter."
+                                        },
+                                        rule: {
+                                            type: "boolean",
+                                            description: "Whether this attribute should be included in rulesets."
+                                        }
                                     },
                                     example: {
+                                        filterable: true,
+                                        operators: ["operators", "operators"],
                                         isElement: true,
                                         dataType: "dataType",
-                                        isLog: true,
+                                        values: ["values", "values"],
                                         name: "name",
                                         isMetric: true,
                                         description: "description",
-                                        title: "title"
+                                        logAttribute: true,
+                                        rule: true,
+                                        title: "title",
+                                        searchable: true
                                     },
                                     additionalProperties: false
                                 }
@@ -8373,22 +8833,32 @@ const Specs = {
                             description: "description",
                             attributes: [
                                 {
+                                    filterable: true,
+                                    operators: ["operators", "operators"],
                                     isElement: true,
                                     dataType: "dataType",
-                                    isLog: true,
+                                    values: ["values", "values"],
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
-                                    title: "title"
+                                    logAttribute: true,
+                                    rule: true,
+                                    title: "title",
+                                    searchable: true
                                 },
                                 {
+                                    filterable: true,
+                                    operators: ["operators", "operators"],
                                     isElement: true,
                                     dataType: "dataType",
-                                    isLog: true,
+                                    values: ["values", "values"],
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
-                                    title: "title"
+                                    logAttribute: true,
+                                    rule: true,
+                                    title: "title",
+                                    searchable: true
                                 }
                             ]
                         },
@@ -8410,16 +8880,46 @@ const Specs = {
                                         dataType: { type: "string" },
                                         isElement: { type: "boolean" },
                                         isMetric: { type: "boolean" },
-                                        isLog: { type: "boolean" }
+                                        logAttribute: {
+                                            type: "boolean",
+                                            description: "Whether this attribute is applicable to log-style reports (reports that are not grouped)."
+                                        },
+                                        operators: {
+                                            type: "array",
+                                            description: "The allowed operators for this attribute when part of a filter.",
+                                            items: { type: "string" }
+                                        },
+                                        values: {
+                                            type: "array",
+                                            description: "A static array of values allowed for the attribute.",
+                                            items: { type: "string" }
+                                        },
+                                        searchable: {
+                                            type: "boolean",
+                                            description: "Whether this attribute is searchable via typeahead."
+                                        },
+                                        filterable: {
+                                            type: "boolean",
+                                            description: "Whether this attribute can be part of a filter."
+                                        },
+                                        rule: {
+                                            type: "boolean",
+                                            description: "Whether this attribute should be included in rulesets."
+                                        }
                                     },
                                     example: {
+                                        filterable: true,
+                                        operators: ["operators", "operators"],
                                         isElement: true,
                                         dataType: "dataType",
-                                        isLog: true,
+                                        values: ["values", "values"],
                                         name: "name",
                                         isMetric: true,
                                         description: "description",
-                                        title: "title"
+                                        logAttribute: true,
+                                        rule: true,
+                                        title: "title",
+                                        searchable: true
                                     },
                                     additionalProperties: false
                                 }
@@ -8430,22 +8930,32 @@ const Specs = {
                             description: "description",
                             attributes: [
                                 {
+                                    filterable: true,
+                                    operators: ["operators", "operators"],
                                     isElement: true,
                                     dataType: "dataType",
-                                    isLog: true,
+                                    values: ["values", "values"],
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
-                                    title: "title"
+                                    logAttribute: true,
+                                    rule: true,
+                                    title: "title",
+                                    searchable: true
                                 },
                                 {
+                                    filterable: true,
+                                    operators: ["operators", "operators"],
                                     isElement: true,
                                     dataType: "dataType",
-                                    isLog: true,
+                                    values: ["values", "values"],
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
-                                    title: "title"
+                                    logAttribute: true,
+                                    rule: true,
+                                    title: "title",
+                                    searchable: true
                                 }
                             ]
                         },
@@ -8467,16 +8977,46 @@ const Specs = {
                                         dataType: { type: "string" },
                                         isElement: { type: "boolean" },
                                         isMetric: { type: "boolean" },
-                                        isLog: { type: "boolean" }
+                                        logAttribute: {
+                                            type: "boolean",
+                                            description: "Whether this attribute is applicable to log-style reports (reports that are not grouped)."
+                                        },
+                                        operators: {
+                                            type: "array",
+                                            description: "The allowed operators for this attribute when part of a filter.",
+                                            items: { type: "string" }
+                                        },
+                                        values: {
+                                            type: "array",
+                                            description: "A static array of values allowed for the attribute.",
+                                            items: { type: "string" }
+                                        },
+                                        searchable: {
+                                            type: "boolean",
+                                            description: "Whether this attribute is searchable via typeahead."
+                                        },
+                                        filterable: {
+                                            type: "boolean",
+                                            description: "Whether this attribute can be part of a filter."
+                                        },
+                                        rule: {
+                                            type: "boolean",
+                                            description: "Whether this attribute should be included in rulesets."
+                                        }
                                     },
                                     example: {
+                                        filterable: true,
+                                        operators: ["operators", "operators"],
                                         isElement: true,
                                         dataType: "dataType",
-                                        isLog: true,
+                                        values: ["values", "values"],
                                         name: "name",
                                         isMetric: true,
                                         description: "description",
-                                        title: "title"
+                                        logAttribute: true,
+                                        rule: true,
+                                        title: "title",
+                                        searchable: true
                                     },
                                     additionalProperties: false
                                 }
@@ -8487,22 +9027,32 @@ const Specs = {
                             description: "description",
                             attributes: [
                                 {
+                                    filterable: true,
+                                    operators: ["operators", "operators"],
                                     isElement: true,
                                     dataType: "dataType",
-                                    isLog: true,
+                                    values: ["values", "values"],
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
-                                    title: "title"
+                                    logAttribute: true,
+                                    rule: true,
+                                    title: "title",
+                                    searchable: true
                                 },
                                 {
+                                    filterable: true,
+                                    operators: ["operators", "operators"],
                                     isElement: true,
                                     dataType: "dataType",
-                                    isLog: true,
+                                    values: ["values", "values"],
                                     name: "name",
                                     isMetric: true,
                                     description: "description",
-                                    title: "title"
+                                    logAttribute: true,
+                                    rule: true,
+                                    title: "title",
+                                    searchable: true
                                 }
                             ]
                         },
@@ -8515,22 +9065,32 @@ const Specs = {
                         description: "description",
                         attributes: [
                             {
+                                filterable: true,
+                                operators: ["operators", "operators"],
                                 isElement: true,
                                 dataType: "dataType",
-                                isLog: true,
+                                values: ["values", "values"],
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
-                                title: "title"
+                                logAttribute: true,
+                                rule: true,
+                                title: "title",
+                                searchable: true
                             },
                             {
+                                filterable: true,
+                                operators: ["operators", "operators"],
                                 isElement: true,
                                 dataType: "dataType",
-                                isLog: true,
+                                values: ["values", "values"],
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
-                                title: "title"
+                                logAttribute: true,
+                                rule: true,
+                                title: "title",
+                                searchable: true
                             }
                         ]
                     },
@@ -8539,22 +9099,32 @@ const Specs = {
                         description: "description",
                         attributes: [
                             {
+                                filterable: true,
+                                operators: ["operators", "operators"],
                                 isElement: true,
                                 dataType: "dataType",
-                                isLog: true,
+                                values: ["values", "values"],
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
-                                title: "title"
+                                logAttribute: true,
+                                rule: true,
+                                title: "title",
+                                searchable: true
                             },
                             {
+                                filterable: true,
+                                operators: ["operators", "operators"],
                                 isElement: true,
                                 dataType: "dataType",
-                                isLog: true,
+                                values: ["values", "values"],
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
-                                title: "title"
+                                logAttribute: true,
+                                rule: true,
+                                title: "title",
+                                searchable: true
                             }
                         ]
                     },
@@ -8563,22 +9133,32 @@ const Specs = {
                         description: "description",
                         attributes: [
                             {
+                                filterable: true,
+                                operators: ["operators", "operators"],
                                 isElement: true,
                                 dataType: "dataType",
-                                isLog: true,
+                                values: ["values", "values"],
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
-                                title: "title"
+                                logAttribute: true,
+                                rule: true,
+                                title: "title",
+                                searchable: true
                             },
                             {
+                                filterable: true,
+                                operators: ["operators", "operators"],
                                 isElement: true,
                                 dataType: "dataType",
-                                isLog: true,
+                                values: ["values", "values"],
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
-                                title: "title"
+                                logAttribute: true,
+                                rule: true,
+                                title: "title",
+                                searchable: true
                             }
                         ]
                     },
@@ -8587,22 +9167,32 @@ const Specs = {
                         description: "description",
                         attributes: [
                             {
+                                filterable: true,
+                                operators: ["operators", "operators"],
                                 isElement: true,
                                 dataType: "dataType",
-                                isLog: true,
+                                values: ["values", "values"],
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
-                                title: "title"
+                                logAttribute: true,
+                                rule: true,
+                                title: "title",
+                                searchable: true
                             },
                             {
+                                filterable: true,
+                                operators: ["operators", "operators"],
                                 isElement: true,
                                 dataType: "dataType",
-                                isLog: true,
+                                values: ["values", "values"],
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
-                                title: "title"
+                                logAttribute: true,
+                                rule: true,
+                                title: "title",
+                                searchable: true
                             }
                         ]
                     },
@@ -8611,22 +9201,32 @@ const Specs = {
                         description: "description",
                         attributes: [
                             {
+                                filterable: true,
+                                operators: ["operators", "operators"],
                                 isElement: true,
                                 dataType: "dataType",
-                                isLog: true,
+                                values: ["values", "values"],
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
-                                title: "title"
+                                logAttribute: true,
+                                rule: true,
+                                title: "title",
+                                searchable: true
                             },
                             {
+                                filterable: true,
+                                operators: ["operators", "operators"],
                                 isElement: true,
                                 dataType: "dataType",
-                                isLog: true,
+                                values: ["values", "values"],
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
-                                title: "title"
+                                logAttribute: true,
+                                rule: true,
+                                title: "title",
+                                searchable: true
                             }
                         ]
                     },
@@ -8635,22 +9235,32 @@ const Specs = {
                         description: "description",
                         attributes: [
                             {
+                                filterable: true,
+                                operators: ["operators", "operators"],
                                 isElement: true,
                                 dataType: "dataType",
-                                isLog: true,
+                                values: ["values", "values"],
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
-                                title: "title"
+                                logAttribute: true,
+                                rule: true,
+                                title: "title",
+                                searchable: true
                             },
                             {
+                                filterable: true,
+                                operators: ["operators", "operators"],
                                 isElement: true,
                                 dataType: "dataType",
-                                isLog: true,
+                                values: ["values", "values"],
                                 name: "name",
                                 isMetric: true,
                                 description: "description",
-                                title: "title"
+                                logAttribute: true,
+                                rule: true,
+                                title: "title",
+                                searchable: true
                             }
                         ]
                     }

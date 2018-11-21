@@ -6076,18 +6076,50 @@ declare const Specs: {
                                                         isMetric: {
                                                             type: string;
                                                         };
-                                                        isLog: {
+                                                        logAttribute: {
                                                             type: string;
+                                                            description: string;
+                                                        };
+                                                        operators: {
+                                                            type: string;
+                                                            description: string;
+                                                            items: {
+                                                                type: string;
+                                                            };
+                                                        };
+                                                        values: {
+                                                            type: string;
+                                                            description: string;
+                                                            items: {
+                                                                type: string;
+                                                            };
+                                                        };
+                                                        searchable: {
+                                                            type: string;
+                                                            description: string;
+                                                        };
+                                                        filterable: {
+                                                            type: string;
+                                                            description: string;
+                                                        };
+                                                        rule: {
+                                                            type: string;
+                                                            description: string;
                                                         };
                                                     };
                                                     example: {
+                                                        filterable: boolean;
+                                                        operators: string[];
                                                         isElement: boolean;
                                                         dataType: string;
-                                                        isLog: boolean;
+                                                        values: string[];
                                                         name: string;
                                                         isMetric: boolean;
                                                         description: string;
+                                                        logAttribute: boolean;
+                                                        rule: boolean;
                                                         title: string;
+                                                        searchable: boolean;
                                                     };
                                                     additionalProperties: boolean;
                                                 };
@@ -6097,13 +6129,18 @@ declare const Specs: {
                                             name: string;
                                             description: string;
                                             attributes: {
+                                                filterable: boolean;
+                                                operators: string[];
                                                 isElement: boolean;
                                                 dataType: string;
-                                                isLog: boolean;
+                                                values: string[];
                                                 name: string;
                                                 isMetric: boolean;
                                                 description: string;
+                                                logAttribute: boolean;
+                                                rule: boolean;
                                                 title: string;
+                                                searchable: boolean;
                                             }[];
                                         };
                                         additionalProperties: boolean;
@@ -6140,18 +6177,50 @@ declare const Specs: {
                                                         isMetric: {
                                                             type: string;
                                                         };
-                                                        isLog: {
+                                                        logAttribute: {
                                                             type: string;
+                                                            description: string;
+                                                        };
+                                                        operators: {
+                                                            type: string;
+                                                            description: string;
+                                                            items: {
+                                                                type: string;
+                                                            };
+                                                        };
+                                                        values: {
+                                                            type: string;
+                                                            description: string;
+                                                            items: {
+                                                                type: string;
+                                                            };
+                                                        };
+                                                        searchable: {
+                                                            type: string;
+                                                            description: string;
+                                                        };
+                                                        filterable: {
+                                                            type: string;
+                                                            description: string;
+                                                        };
+                                                        rule: {
+                                                            type: string;
+                                                            description: string;
                                                         };
                                                     };
                                                     example: {
+                                                        filterable: boolean;
+                                                        operators: string[];
                                                         isElement: boolean;
                                                         dataType: string;
-                                                        isLog: boolean;
+                                                        values: string[];
                                                         name: string;
                                                         isMetric: boolean;
                                                         description: string;
+                                                        logAttribute: boolean;
+                                                        rule: boolean;
                                                         title: string;
+                                                        searchable: boolean;
                                                     };
                                                     additionalProperties: boolean;
                                                 };
@@ -6161,13 +6230,18 @@ declare const Specs: {
                                             name: string;
                                             description: string;
                                             attributes: {
+                                                filterable: boolean;
+                                                operators: string[];
                                                 isElement: boolean;
                                                 dataType: string;
-                                                isLog: boolean;
+                                                values: string[];
                                                 name: string;
                                                 isMetric: boolean;
                                                 description: string;
+                                                logAttribute: boolean;
+                                                rule: boolean;
                                                 title: string;
+                                                searchable: boolean;
                                             }[];
                                         };
                                         additionalProperties: boolean;
@@ -6204,18 +6278,50 @@ declare const Specs: {
                                                         isMetric: {
                                                             type: string;
                                                         };
-                                                        isLog: {
+                                                        logAttribute: {
                                                             type: string;
+                                                            description: string;
+                                                        };
+                                                        operators: {
+                                                            type: string;
+                                                            description: string;
+                                                            items: {
+                                                                type: string;
+                                                            };
+                                                        };
+                                                        values: {
+                                                            type: string;
+                                                            description: string;
+                                                            items: {
+                                                                type: string;
+                                                            };
+                                                        };
+                                                        searchable: {
+                                                            type: string;
+                                                            description: string;
+                                                        };
+                                                        filterable: {
+                                                            type: string;
+                                                            description: string;
+                                                        };
+                                                        rule: {
+                                                            type: string;
+                                                            description: string;
                                                         };
                                                     };
                                                     example: {
+                                                        filterable: boolean;
+                                                        operators: string[];
                                                         isElement: boolean;
                                                         dataType: string;
-                                                        isLog: boolean;
+                                                        values: string[];
                                                         name: string;
                                                         isMetric: boolean;
                                                         description: string;
+                                                        logAttribute: boolean;
+                                                        rule: boolean;
                                                         title: string;
+                                                        searchable: boolean;
                                                     };
                                                     additionalProperties: boolean;
                                                 };
@@ -6225,13 +6331,18 @@ declare const Specs: {
                                             name: string;
                                             description: string;
                                             attributes: {
+                                                filterable: boolean;
+                                                operators: string[];
                                                 isElement: boolean;
                                                 dataType: string;
-                                                isLog: boolean;
+                                                values: string[];
                                                 name: string;
                                                 isMetric: boolean;
                                                 description: string;
+                                                logAttribute: boolean;
+                                                rule: boolean;
                                                 title: string;
+                                                searchable: boolean;
                                             }[];
                                         };
                                         additionalProperties: boolean;
@@ -6268,18 +6379,50 @@ declare const Specs: {
                                                         isMetric: {
                                                             type: string;
                                                         };
-                                                        isLog: {
+                                                        logAttribute: {
                                                             type: string;
+                                                            description: string;
+                                                        };
+                                                        operators: {
+                                                            type: string;
+                                                            description: string;
+                                                            items: {
+                                                                type: string;
+                                                            };
+                                                        };
+                                                        values: {
+                                                            type: string;
+                                                            description: string;
+                                                            items: {
+                                                                type: string;
+                                                            };
+                                                        };
+                                                        searchable: {
+                                                            type: string;
+                                                            description: string;
+                                                        };
+                                                        filterable: {
+                                                            type: string;
+                                                            description: string;
+                                                        };
+                                                        rule: {
+                                                            type: string;
+                                                            description: string;
                                                         };
                                                     };
                                                     example: {
+                                                        filterable: boolean;
+                                                        operators: string[];
                                                         isElement: boolean;
                                                         dataType: string;
-                                                        isLog: boolean;
+                                                        values: string[];
                                                         name: string;
                                                         isMetric: boolean;
                                                         description: string;
+                                                        logAttribute: boolean;
+                                                        rule: boolean;
                                                         title: string;
+                                                        searchable: boolean;
                                                     };
                                                     additionalProperties: boolean;
                                                 };
@@ -6289,13 +6432,18 @@ declare const Specs: {
                                             name: string;
                                             description: string;
                                             attributes: {
+                                                filterable: boolean;
+                                                operators: string[];
                                                 isElement: boolean;
                                                 dataType: string;
-                                                isLog: boolean;
+                                                values: string[];
                                                 name: string;
                                                 isMetric: boolean;
                                                 description: string;
+                                                logAttribute: boolean;
+                                                rule: boolean;
                                                 title: string;
+                                                searchable: boolean;
                                             }[];
                                         };
                                         additionalProperties: boolean;
@@ -6332,18 +6480,50 @@ declare const Specs: {
                                                         isMetric: {
                                                             type: string;
                                                         };
-                                                        isLog: {
+                                                        logAttribute: {
                                                             type: string;
+                                                            description: string;
+                                                        };
+                                                        operators: {
+                                                            type: string;
+                                                            description: string;
+                                                            items: {
+                                                                type: string;
+                                                            };
+                                                        };
+                                                        values: {
+                                                            type: string;
+                                                            description: string;
+                                                            items: {
+                                                                type: string;
+                                                            };
+                                                        };
+                                                        searchable: {
+                                                            type: string;
+                                                            description: string;
+                                                        };
+                                                        filterable: {
+                                                            type: string;
+                                                            description: string;
+                                                        };
+                                                        rule: {
+                                                            type: string;
+                                                            description: string;
                                                         };
                                                     };
                                                     example: {
+                                                        filterable: boolean;
+                                                        operators: string[];
                                                         isElement: boolean;
                                                         dataType: string;
-                                                        isLog: boolean;
+                                                        values: string[];
                                                         name: string;
                                                         isMetric: boolean;
                                                         description: string;
+                                                        logAttribute: boolean;
+                                                        rule: boolean;
                                                         title: string;
+                                                        searchable: boolean;
                                                     };
                                                     additionalProperties: boolean;
                                                 };
@@ -6353,13 +6533,18 @@ declare const Specs: {
                                             name: string;
                                             description: string;
                                             attributes: {
+                                                filterable: boolean;
+                                                operators: string[];
                                                 isElement: boolean;
                                                 dataType: string;
-                                                isLog: boolean;
+                                                values: string[];
                                                 name: string;
                                                 isMetric: boolean;
                                                 description: string;
+                                                logAttribute: boolean;
+                                                rule: boolean;
                                                 title: string;
+                                                searchable: boolean;
                                             }[];
                                         };
                                         additionalProperties: boolean;
@@ -6396,18 +6581,50 @@ declare const Specs: {
                                                         isMetric: {
                                                             type: string;
                                                         };
-                                                        isLog: {
+                                                        logAttribute: {
                                                             type: string;
+                                                            description: string;
+                                                        };
+                                                        operators: {
+                                                            type: string;
+                                                            description: string;
+                                                            items: {
+                                                                type: string;
+                                                            };
+                                                        };
+                                                        values: {
+                                                            type: string;
+                                                            description: string;
+                                                            items: {
+                                                                type: string;
+                                                            };
+                                                        };
+                                                        searchable: {
+                                                            type: string;
+                                                            description: string;
+                                                        };
+                                                        filterable: {
+                                                            type: string;
+                                                            description: string;
+                                                        };
+                                                        rule: {
+                                                            type: string;
+                                                            description: string;
                                                         };
                                                     };
                                                     example: {
+                                                        filterable: boolean;
+                                                        operators: string[];
                                                         isElement: boolean;
                                                         dataType: string;
-                                                        isLog: boolean;
+                                                        values: string[];
                                                         name: string;
                                                         isMetric: boolean;
                                                         description: string;
+                                                        logAttribute: boolean;
+                                                        rule: boolean;
                                                         title: string;
+                                                        searchable: boolean;
                                                     };
                                                     additionalProperties: boolean;
                                                 };
@@ -6417,13 +6634,18 @@ declare const Specs: {
                                             name: string;
                                             description: string;
                                             attributes: {
+                                                filterable: boolean;
+                                                operators: string[];
                                                 isElement: boolean;
                                                 dataType: string;
-                                                isLog: boolean;
+                                                values: string[];
                                                 name: string;
                                                 isMetric: boolean;
                                                 description: string;
+                                                logAttribute: boolean;
+                                                rule: boolean;
                                                 title: string;
+                                                searchable: boolean;
                                             }[];
                                         };
                                         additionalProperties: boolean;
@@ -8355,18 +8577,50 @@ declare const Specs: {
                                 isMetric: {
                                     type: string;
                                 };
-                                isLog: {
+                                logAttribute: {
                                     type: string;
+                                    description: string;
+                                };
+                                operators: {
+                                    type: string;
+                                    description: string;
+                                    items: {
+                                        type: string;
+                                    };
+                                };
+                                values: {
+                                    type: string;
+                                    description: string;
+                                    items: {
+                                        type: string;
+                                    };
+                                };
+                                searchable: {
+                                    type: string;
+                                    description: string;
+                                };
+                                filterable: {
+                                    type: string;
+                                    description: string;
+                                };
+                                rule: {
+                                    type: string;
+                                    description: string;
                                 };
                             };
                             example: {
+                                filterable: boolean;
+                                operators: string[];
                                 isElement: boolean;
                                 dataType: string;
-                                isLog: boolean;
+                                values: string[];
                                 name: string;
                                 isMetric: boolean;
                                 description: string;
+                                logAttribute: boolean;
+                                rule: boolean;
                                 title: string;
+                                searchable: boolean;
                             };
                             additionalProperties: boolean;
                         };
@@ -8376,13 +8630,18 @@ declare const Specs: {
                     name: string;
                     description: string;
                     attributes: {
+                        filterable: boolean;
+                        operators: string[];
                         isElement: boolean;
                         dataType: string;
-                        isLog: boolean;
+                        values: string[];
                         name: string;
                         isMetric: boolean;
                         description: string;
+                        logAttribute: boolean;
+                        rule: boolean;
                         title: string;
+                        searchable: boolean;
                     }[];
                 };
                 additionalProperties: boolean;
@@ -8408,18 +8667,50 @@ declare const Specs: {
                     isMetric: {
                         type: string;
                     };
-                    isLog: {
+                    logAttribute: {
                         type: string;
+                        description: string;
+                    };
+                    operators: {
+                        type: string;
+                        description: string;
+                        items: {
+                            type: string;
+                        };
+                    };
+                    values: {
+                        type: string;
+                        description: string;
+                        items: {
+                            type: string;
+                        };
+                    };
+                    searchable: {
+                        type: string;
+                        description: string;
+                    };
+                    filterable: {
+                        type: string;
+                        description: string;
+                    };
+                    rule: {
+                        type: string;
+                        description: string;
                     };
                 };
                 example: {
+                    filterable: boolean;
+                    operators: string[];
                     isElement: boolean;
                     dataType: string;
-                    isLog: boolean;
+                    values: string[];
                     name: string;
                     isMetric: boolean;
                     description: string;
+                    logAttribute: boolean;
+                    rule: boolean;
                     title: string;
+                    searchable: boolean;
                 };
                 additionalProperties: boolean;
             };
@@ -9309,18 +9600,50 @@ declare const Specs: {
                                         isMetric: {
                                             type: string;
                                         };
-                                        isLog: {
+                                        logAttribute: {
                                             type: string;
+                                            description: string;
+                                        };
+                                        operators: {
+                                            type: string;
+                                            description: string;
+                                            items: {
+                                                type: string;
+                                            };
+                                        };
+                                        values: {
+                                            type: string;
+                                            description: string;
+                                            items: {
+                                                type: string;
+                                            };
+                                        };
+                                        searchable: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        filterable: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        rule: {
+                                            type: string;
+                                            description: string;
                                         };
                                     };
                                     example: {
+                                        filterable: boolean;
+                                        operators: string[];
                                         isElement: boolean;
                                         dataType: string;
-                                        isLog: boolean;
+                                        values: string[];
                                         name: string;
                                         isMetric: boolean;
                                         description: string;
+                                        logAttribute: boolean;
+                                        rule: boolean;
                                         title: string;
+                                        searchable: boolean;
                                     };
                                     additionalProperties: boolean;
                                 };
@@ -9330,13 +9653,18 @@ declare const Specs: {
                             name: string;
                             description: string;
                             attributes: {
+                                filterable: boolean;
+                                operators: string[];
                                 isElement: boolean;
                                 dataType: string;
-                                isLog: boolean;
+                                values: string[];
                                 name: string;
                                 isMetric: boolean;
                                 description: string;
+                                logAttribute: boolean;
+                                rule: boolean;
                                 title: string;
+                                searchable: boolean;
                             }[];
                         };
                         additionalProperties: boolean;
@@ -9373,18 +9701,50 @@ declare const Specs: {
                                         isMetric: {
                                             type: string;
                                         };
-                                        isLog: {
+                                        logAttribute: {
                                             type: string;
+                                            description: string;
+                                        };
+                                        operators: {
+                                            type: string;
+                                            description: string;
+                                            items: {
+                                                type: string;
+                                            };
+                                        };
+                                        values: {
+                                            type: string;
+                                            description: string;
+                                            items: {
+                                                type: string;
+                                            };
+                                        };
+                                        searchable: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        filterable: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        rule: {
+                                            type: string;
+                                            description: string;
                                         };
                                     };
                                     example: {
+                                        filterable: boolean;
+                                        operators: string[];
                                         isElement: boolean;
                                         dataType: string;
-                                        isLog: boolean;
+                                        values: string[];
                                         name: string;
                                         isMetric: boolean;
                                         description: string;
+                                        logAttribute: boolean;
+                                        rule: boolean;
                                         title: string;
+                                        searchable: boolean;
                                     };
                                     additionalProperties: boolean;
                                 };
@@ -9394,13 +9754,18 @@ declare const Specs: {
                             name: string;
                             description: string;
                             attributes: {
+                                filterable: boolean;
+                                operators: string[];
                                 isElement: boolean;
                                 dataType: string;
-                                isLog: boolean;
+                                values: string[];
                                 name: string;
                                 isMetric: boolean;
                                 description: string;
+                                logAttribute: boolean;
+                                rule: boolean;
                                 title: string;
+                                searchable: boolean;
                             }[];
                         };
                         additionalProperties: boolean;
@@ -9437,18 +9802,50 @@ declare const Specs: {
                                         isMetric: {
                                             type: string;
                                         };
-                                        isLog: {
+                                        logAttribute: {
                                             type: string;
+                                            description: string;
+                                        };
+                                        operators: {
+                                            type: string;
+                                            description: string;
+                                            items: {
+                                                type: string;
+                                            };
+                                        };
+                                        values: {
+                                            type: string;
+                                            description: string;
+                                            items: {
+                                                type: string;
+                                            };
+                                        };
+                                        searchable: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        filterable: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        rule: {
+                                            type: string;
+                                            description: string;
                                         };
                                     };
                                     example: {
+                                        filterable: boolean;
+                                        operators: string[];
                                         isElement: boolean;
                                         dataType: string;
-                                        isLog: boolean;
+                                        values: string[];
                                         name: string;
                                         isMetric: boolean;
                                         description: string;
+                                        logAttribute: boolean;
+                                        rule: boolean;
                                         title: string;
+                                        searchable: boolean;
                                     };
                                     additionalProperties: boolean;
                                 };
@@ -9458,13 +9855,18 @@ declare const Specs: {
                             name: string;
                             description: string;
                             attributes: {
+                                filterable: boolean;
+                                operators: string[];
                                 isElement: boolean;
                                 dataType: string;
-                                isLog: boolean;
+                                values: string[];
                                 name: string;
                                 isMetric: boolean;
                                 description: string;
+                                logAttribute: boolean;
+                                rule: boolean;
                                 title: string;
+                                searchable: boolean;
                             }[];
                         };
                         additionalProperties: boolean;
@@ -9501,18 +9903,50 @@ declare const Specs: {
                                         isMetric: {
                                             type: string;
                                         };
-                                        isLog: {
+                                        logAttribute: {
                                             type: string;
+                                            description: string;
+                                        };
+                                        operators: {
+                                            type: string;
+                                            description: string;
+                                            items: {
+                                                type: string;
+                                            };
+                                        };
+                                        values: {
+                                            type: string;
+                                            description: string;
+                                            items: {
+                                                type: string;
+                                            };
+                                        };
+                                        searchable: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        filterable: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        rule: {
+                                            type: string;
+                                            description: string;
                                         };
                                     };
                                     example: {
+                                        filterable: boolean;
+                                        operators: string[];
                                         isElement: boolean;
                                         dataType: string;
-                                        isLog: boolean;
+                                        values: string[];
                                         name: string;
                                         isMetric: boolean;
                                         description: string;
+                                        logAttribute: boolean;
+                                        rule: boolean;
                                         title: string;
+                                        searchable: boolean;
                                     };
                                     additionalProperties: boolean;
                                 };
@@ -9522,13 +9956,18 @@ declare const Specs: {
                             name: string;
                             description: string;
                             attributes: {
+                                filterable: boolean;
+                                operators: string[];
                                 isElement: boolean;
                                 dataType: string;
-                                isLog: boolean;
+                                values: string[];
                                 name: string;
                                 isMetric: boolean;
                                 description: string;
+                                logAttribute: boolean;
+                                rule: boolean;
                                 title: string;
+                                searchable: boolean;
                             }[];
                         };
                         additionalProperties: boolean;
@@ -9565,18 +10004,50 @@ declare const Specs: {
                                         isMetric: {
                                             type: string;
                                         };
-                                        isLog: {
+                                        logAttribute: {
                                             type: string;
+                                            description: string;
+                                        };
+                                        operators: {
+                                            type: string;
+                                            description: string;
+                                            items: {
+                                                type: string;
+                                            };
+                                        };
+                                        values: {
+                                            type: string;
+                                            description: string;
+                                            items: {
+                                                type: string;
+                                            };
+                                        };
+                                        searchable: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        filterable: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        rule: {
+                                            type: string;
+                                            description: string;
                                         };
                                     };
                                     example: {
+                                        filterable: boolean;
+                                        operators: string[];
                                         isElement: boolean;
                                         dataType: string;
-                                        isLog: boolean;
+                                        values: string[];
                                         name: string;
                                         isMetric: boolean;
                                         description: string;
+                                        logAttribute: boolean;
+                                        rule: boolean;
                                         title: string;
+                                        searchable: boolean;
                                     };
                                     additionalProperties: boolean;
                                 };
@@ -9586,13 +10057,18 @@ declare const Specs: {
                             name: string;
                             description: string;
                             attributes: {
+                                filterable: boolean;
+                                operators: string[];
                                 isElement: boolean;
                                 dataType: string;
-                                isLog: boolean;
+                                values: string[];
                                 name: string;
                                 isMetric: boolean;
                                 description: string;
+                                logAttribute: boolean;
+                                rule: boolean;
                                 title: string;
+                                searchable: boolean;
                             }[];
                         };
                         additionalProperties: boolean;
@@ -9629,18 +10105,50 @@ declare const Specs: {
                                         isMetric: {
                                             type: string;
                                         };
-                                        isLog: {
+                                        logAttribute: {
                                             type: string;
+                                            description: string;
+                                        };
+                                        operators: {
+                                            type: string;
+                                            description: string;
+                                            items: {
+                                                type: string;
+                                            };
+                                        };
+                                        values: {
+                                            type: string;
+                                            description: string;
+                                            items: {
+                                                type: string;
+                                            };
+                                        };
+                                        searchable: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        filterable: {
+                                            type: string;
+                                            description: string;
+                                        };
+                                        rule: {
+                                            type: string;
+                                            description: string;
                                         };
                                     };
                                     example: {
+                                        filterable: boolean;
+                                        operators: string[];
                                         isElement: boolean;
                                         dataType: string;
-                                        isLog: boolean;
+                                        values: string[];
                                         name: string;
                                         isMetric: boolean;
                                         description: string;
+                                        logAttribute: boolean;
+                                        rule: boolean;
                                         title: string;
+                                        searchable: boolean;
                                     };
                                     additionalProperties: boolean;
                                 };
@@ -9650,13 +10158,18 @@ declare const Specs: {
                             name: string;
                             description: string;
                             attributes: {
+                                filterable: boolean;
+                                operators: string[];
                                 isElement: boolean;
                                 dataType: string;
-                                isLog: boolean;
+                                values: string[];
                                 name: string;
                                 isMetric: boolean;
                                 description: string;
+                                logAttribute: boolean;
+                                rule: boolean;
                                 title: string;
+                                searchable: boolean;
                             }[];
                         };
                         additionalProperties: boolean;
@@ -9667,78 +10180,108 @@ declare const Specs: {
                         name: string;
                         description: string;
                         attributes: {
+                            filterable: boolean;
+                            operators: string[];
                             isElement: boolean;
                             dataType: string;
-                            isLog: boolean;
+                            values: string[];
                             name: string;
                             isMetric: boolean;
                             description: string;
+                            logAttribute: boolean;
+                            rule: boolean;
                             title: string;
+                            searchable: boolean;
                         }[];
                     };
                     pages: {
                         name: string;
                         description: string;
                         attributes: {
+                            filterable: boolean;
+                            operators: string[];
                             isElement: boolean;
                             dataType: string;
-                            isLog: boolean;
+                            values: string[];
                             name: string;
                             isMetric: boolean;
                             description: string;
+                            logAttribute: boolean;
+                            rule: boolean;
                             title: string;
+                            searchable: boolean;
                         }[];
                     };
                     timings: {
                         name: string;
                         description: string;
                         attributes: {
+                            filterable: boolean;
+                            operators: string[];
                             isElement: boolean;
                             dataType: string;
-                            isLog: boolean;
+                            values: string[];
                             name: string;
                             isMetric: boolean;
                             description: string;
+                            logAttribute: boolean;
+                            rule: boolean;
                             title: string;
+                            searchable: boolean;
                         }[];
                     };
                     people: {
                         name: string;
                         description: string;
                         attributes: {
+                            filterable: boolean;
+                            operators: string[];
                             isElement: boolean;
                             dataType: string;
-                            isLog: boolean;
+                            values: string[];
                             name: string;
                             isMetric: boolean;
                             description: string;
+                            logAttribute: boolean;
+                            rule: boolean;
                             title: string;
+                            searchable: boolean;
                         }[];
                     };
                     events: {
                         name: string;
                         description: string;
                         attributes: {
+                            filterable: boolean;
+                            operators: string[];
                             isElement: boolean;
                             dataType: string;
-                            isLog: boolean;
+                            values: string[];
                             name: string;
                             isMetric: boolean;
                             description: string;
+                            logAttribute: boolean;
+                            rule: boolean;
                             title: string;
+                            searchable: boolean;
                         }[];
                     };
                     users: {
                         name: string;
                         description: string;
                         attributes: {
+                            filterable: boolean;
+                            operators: string[];
                             isElement: boolean;
                             dataType: string;
-                            isLog: boolean;
+                            values: string[];
                             name: string;
                             isMetric: boolean;
                             description: string;
+                            logAttribute: boolean;
+                            rule: boolean;
                             title: string;
+                            searchable: boolean;
                         }[];
                     };
                 };
